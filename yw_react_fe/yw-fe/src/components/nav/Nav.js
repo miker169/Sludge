@@ -1,15 +1,13 @@
 import React from "react";
-import logo from '../../images/yw-logo-blue.png';
+import Button from "../Button/Button";
+import "./Nav.css";
 
 const Nav = () => {
   return (
-    <div>
-      <img src={logo} alt="logo" width="200" height="100"/>
-      <h1>Sludge Modelling Tool</h1>
-      <div>
-        A list of buttons
-      </div>
-    </div>
+    <ul data-testid="nav-container" className="nav">
+      <li><Button active title="Standard Modelling"/></li>
+      <li><Button title="Sludge Modelling Tool"/></li>
+    </ul>
   )
 }
 

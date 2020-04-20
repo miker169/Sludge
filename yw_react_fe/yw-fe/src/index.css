@@ -2,11 +2,13 @@
     box-sizing: border-box;
     --brand-blue: rgb(0, 76, 109);
     --medium-blue:  rgb(32, 161, 201);
+    --darker-blue: rgb(0,58,84);
     --white:  rgb(255, 255, 255);
+    --light-grey: #f4f5f7;
     --gray: rgb(244, 245, 247);
 
     --text-font: "roboto", sans-serif;
-    --heading-font: "Swiss", "helvetic rounded", Aria, sans-serif;
+    --heading-font: "roboto", "Helvetica Rounded", Aria, sans-serif;
 
 }
 
@@ -17,7 +19,7 @@
 }
 
 body * + * {
-    margin-top: 1.5em;
+    margin: 0;
 }
 
 body {
@@ -27,4 +29,10 @@ body {
 h1,h2,h3,h3,h5 {
     font-family: var(--heading-font);
 }
+
+/**ToDo
+    1. File Input Styling
+    2. Drop Down Boxes Styling
+    3. Include Icons.
+ */
 

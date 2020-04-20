@@ -102,24 +102,64 @@
 }
 
 
-.nav-container {
-    background-color: var(--white);
+
+.mainContainer {
+    background-color: var(--brand-blue);
+    width: 100%;
+    height: 400px;
+
 }
 
-.nav-container--home {
+.flowContainer{
+    margin-top: 3em;
     display: flex;
+    flex: 1 0 auto;;
+    list-style-type: none;
+    margin-right: 0;
 }
 
-.nav{
+
+.inputFlow {
+    padding: 2em 1em 0;
+    width: 20%;
 }
 
-.nav li {
+.updateFlow {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 0;
+    margin-top: 1em;
+}
+
+.updateFlow img {
+    width: 90%;
+    margin-bottom: 1.8em;
+}
+
+.next {
+    padding-top: 1em;
+    width: 20%;
+}
+
+.next img {
+    /*margin-top: 1.3rem;*/
+    /*align-self: flex-start;*/
+    width: 85%;
+    margin: 1.3rem 0.8rem 0;
 
 }
 
-.nav a{
-
+.runFlow {
+    padding: 2em 1em 0;
+    width: 20%
 }
+
+.resultsFlow {
+    padding: 2em 1em 0;
+    width: 20%;
+}
+
 
 
 

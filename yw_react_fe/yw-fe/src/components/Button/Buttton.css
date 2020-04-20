@@ -1,0 +1,22 @@
+a{
+    display: block;
+    padding: .8em 1.25em;
+    color: var(--white);
+    background: var(--medium-blue);
+    text-decoration: none;
+}
+
+.active {
+    background-color: var(--brand-blue)
+}
+
+a.flow {
+    color: var(--white);
+    border-radius: .2em;
+    text-align: center;
+    margin: 0;
+}
+
+a.flow:hover {
+    background-color: var(--darker-blue);
+}
