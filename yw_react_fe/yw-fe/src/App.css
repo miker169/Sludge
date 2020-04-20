@@ -1,0 +1,106 @@
+.page-title {
+  position: fixed;
+  top: 10%;
+  left: 38%;
+  color: #005164;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: right;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 3%;
+}
+
+.central-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+}
+
+.arrow {
+  align-self: center;
+  margin-top: 3.5%;
+}
+
+.arrow-2 {
+  align-self: center;
+  margin-top: .7%;
+}
+
+.lower-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 22%;
+  margin-top: 0.5%;;
+}
+
+.param-title {
+  position: fixed;
+  top: 30%;
+  left: 8.5%;
+  color: #005164;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.param-container {
+  display: flex;
+  margin-top: 2.5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 80%;
+  flex-wrap: nowrap;
+}
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: .5%;
+  margin-left: .5%;
+  margin-right: .5%;
+  flex: 0 25%;
+}
+
+.select-container-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.select-container-row>Div {
+  width: 75%;
+}
+
+.select-container-row>Form {
+  width: 20%;
+  margin-left: 2%;
+}
+
+.select-container>Button {
+  width: 50%;
+  margin-left: 22%;
+}
+
+.param-model-container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: .5%;
+  margin-right: .5%;
+  flex: 0 79%;
+}
+
+
+
+
