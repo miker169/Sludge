@@ -11,8 +11,10 @@ export const model_flow = (
 
 <div>
 
-<div class = "top-container">
-    <input type="file" id="files" name="file" onclick="displayProcess(0)"/>
+<div className = "top-container">
+    <input type="file" id="files" name="file" onClick={() => {
+      "displayProcess(0)"
+    }}/>
 
         <DropdownButton id="dropdown-basic-button" title="Output Type">
           <Dropdown.Item href="#/csv">CSV</Dropdown.Item>
@@ -30,25 +32,25 @@ export const model_flow = (
     `}
   </style>
 
-    <div class = "central-container">
+    <div className= "central-container">
         <Button variant="outline-primary" size="xxl">
           Input Static Data
         </Button>
 
-        <img src={arrow_1} alt="arrow_1" width="300" height="100" class = "arrow"/>
+        <img src={arrow_1} alt="arrow_1" width="300" height="100" className="arrow"/>
 
         <Button variant="outline-primary" size="xxl">
           Run Model
         </Button>
 
-        <img src={arrow_2} alt="arrow_2" width="260" height="100" class = "arrow-2"/>
- 
+        <img src={arrow_2} alt="arrow_2" width="260" height="100" className= "arrow-2"/>
+
         <Button variant="outline-primary" size="xxl">
           Get Results
         </Button>
     </div>
 
-    <div class = "lower-container"> 
+    <div className= "lower-container">
           <Button variant="outline-primary" size="xxl">
           Update Static Data
           </Button>

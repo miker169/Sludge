@@ -15,14 +15,14 @@ export const options = [
     { value: 'Sludge Production Modifier', label: 'Sludge Production Modifier' },
     { value: 'Sludge Throughput Modifier', label: 'Sludge Throughput Modifier' }
   ]
-  
+
 
 export const param_selector = (
 
-  <div class = "param-container">
+  <div className = "param-container">
 
-  <div class = "select-container">
-    <div class = "select-container-row">  
+  <div className = "select-container">
+    <div className = "select-container-row">
       <Select options={options}/>
       <Form>
       <Form.Group controlId="ParamForm">
@@ -30,8 +30,8 @@ export const param_selector = (
       </Form.Group>
       </Form>
     </div>
-  
-    <div class = "select-container-row">
+
+    <div className = "select-container-row">
     <Select options={options}/>
       <Form>
       <Form.Group controlId="ParamForm">
@@ -39,8 +39,8 @@ export const param_selector = (
       </Form.Group>
       </Form>
     </div>
-  
-    <div class = "select-container-row">
+
+    <div className = "select-container-row">
     <Select options={options}/>
       <Form>
       <Form.Group controlId="ParamForm">
@@ -48,8 +48,8 @@ export const param_selector = (
       </Form.Group>
       </Form>
     </div>
-  
-    <div class = "select-container-row">
+
+    <div className = "select-container-row">
     <Select options={options}/>
       <Form>
       <Form.Group controlId="ParamForm">
@@ -57,8 +57,8 @@ export const param_selector = (
       </Form.Group>
       </Form>
     </div>
-  
-    <div class = "select-container-row">
+
+    <div className = "select-container-row">
     <Select options={options}/>
       <Form>
       <Form.Group controlId="ParamForm">
@@ -66,8 +66,8 @@ export const param_selector = (
       </Form.Group>
       </Form>
     </div>
-  
-    <div class = "select-container-row">
+
+    <div className = "select-container-row">
     <Select options={options}/>
       <Form>
       <Form.Group controlId="ParamForm">
@@ -75,13 +75,13 @@ export const param_selector = (
       </Form.Group>
       </Form>
     </div>
-  
+
       <Button variant="outline-primary" size="lg">
             Submit
           </Button>
       </div>
 
-      <div class = "param-model-container">
+      <div className = "param-model-container">
 
       {modelConstants.model_flow}
 

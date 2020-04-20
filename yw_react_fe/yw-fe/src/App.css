@@ -102,5 +102,25 @@
 }
 
 
+.nav-container {
+    background-color: var(--white);
+}
+
+.nav-container--home {
+    display: flex;
+}
+
+.nav{
+}
+
+.nav li {
+
+}
+
+.nav a{
+
+}
+
+
 
 
