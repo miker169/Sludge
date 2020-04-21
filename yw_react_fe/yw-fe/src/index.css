@@ -8,7 +8,7 @@
     --gray: rgb(244, 245, 247);
 
     --text-font: "roboto", sans-serif;
-    --heading-font: "roboto", "Helvetica Rounded", Aria, sans-serif;
+    --heading-font: "Swiss", "Helvetica Rounded", Aria, sans-serif;
 
 }
 
@@ -16,6 +16,13 @@
 ::before,
 ::after {
     box-sizing: inherit;
+}
+
+@font-face {
+    font-family: "Swiss";
+    src: url("/fonts/swiss-webfont.woff2") format("woff2"), url("fonts/swiss-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
 body * + * {
@@ -29,10 +36,4 @@ body {
 h1,h2,h3,h3,h5 {
     font-family: var(--heading-font);
 }
-
-/**ToDo
-    1. File Input Styling
-    2. Drop Down Boxes Styling
-    3. Include Icons.
- */
 

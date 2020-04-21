@@ -4,6 +4,7 @@ a{
     color: var(--white);
     background: var(--medium-blue);
     text-decoration: none;
+    font-family: 'Swiss';
 }
 
 .active {

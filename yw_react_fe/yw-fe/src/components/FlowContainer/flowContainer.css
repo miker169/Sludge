@@ -1,0 +1,35 @@
+.flowContainer{
+    margin-top: 1em;
+    display: flex;
+    flex: 1 0 auto;;
+    list-style-type: none;
+    margin-right: 1em;
+}
+
+
+.inputFlow {
+    padding: 2em 1em 0 0;
+    width: 20%;
+}
+
+.updateFlow {
+    padding-top: 1em;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.next {
+    padding-top: 1em;
+    width: 20%;
+}
+
+.runFlow {
+    padding: 2em 1em 0;
+    width: 20%
+}
+
+.resultsFlow {
+    padding: 2em 1em 0;
+    width: 20%;
+}

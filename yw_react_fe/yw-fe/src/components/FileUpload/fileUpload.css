@@ -1,0 +1,53 @@
+.file {
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    background-color: var(--darker-blue);
+    color: var(--white);
+    width: 12.8em;
+    border-radius: 0.2em;
+    padding: .9em 0.3em;
+    cursor: pointer;
+}
+
+.file-label {
+    align-items: stretch;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    margin-right: 1.6em;
+    cursor: inherit;
+}
+
+.file-input {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    outline: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    cursor: inherit;
+}
+
+.file-cta {
+    display: flex;
+    color: var(--white);
+    background-color: var(--darker-blue);
+    font-size: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 0.5em;
+    white-space: nowrap;
+}
+
+.file-icon {
+    align-items: center;
+    display: flex;
+    height: 1em;
+    justify-content: center;
+    margin-right: .5em;
+    width: 1em;
+}
