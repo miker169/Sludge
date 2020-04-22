@@ -2,20 +2,22 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFileCsv } from  '@fortawesome/free-solid-svg-icons'
 import './fileUpload.css'
+import { Context as FlowContext } from "../../context/FlowContext";
 
 const FileInput = () => {
 
   const ref = React.useRef(null);
   const [label , setLabel] = React.useState('Choose a csv file…');
+  const {start} = React.useContext(FlowContext);
 
 
   const HiddenInput = () => (
-    <input accept=".csv, text/csv, application/csv"
+    <input accept=".csv, text/csv, application/csv. xsl, .xslx"
            onChange={(e) => {
-             //ToDo More robust error handling in case
-             // someone decides to bypass the accept.
              if(e.currentTarget.files[0].type.indexOf('csv') !== -1) {
-               setLabel(e.currentTarget.files[0].name)
+               setLabel(e.currentTarget.files[0].name);
+               debugger;
+               start()
              }
           } }
            data-testid="hidden-input"

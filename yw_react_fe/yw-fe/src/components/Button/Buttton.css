@@ -7,6 +7,10 @@ a{
     font-family: 'Swiss';
 }
 
+a.disabled {
+    background-color: var(--medium-blue--disabled);
+}
+
 .active {
     background-color: var(--brand-blue)
 }

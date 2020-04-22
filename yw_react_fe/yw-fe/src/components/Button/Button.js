@@ -2,13 +2,15 @@ import React from 'react';
 import classNames from 'classnames';
 import './Buttton.css'
 
-const Button = ({active, title, classes}) => {
+const Button = ({active, title, classes, name, disabled, clickHandler}) => {
 
   let btnClass = classNames({
     'active': !!active,
+    'disabled': disabled
   }, classes)
+
   return(
-    <a data-testid="component-btn" className={btnClass}>{title}</a>
+    <a onClick={clickHandler} data-testid={`${name}-component-btn`} className={btnClass}>{title}</a>
   )
 }
 
