@@ -20,9 +20,13 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: echo ls -a && echo $(Build.SourcesDirectory)
+
 - script: |
     # pushd $(uiSource)
-    echo $(Build.SourcesDirectory)
     echo ls -a
     yarn install
     yarn run test
