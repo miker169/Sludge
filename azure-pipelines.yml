@@ -48,3 +48,11 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+
+- task: AzureFileCopy@4
+  inputs:
+    sourcePath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    azureSubscription: 9RPBVkmtVRqmIQ6p8VQreI+QOW1WvIoCWbbGyitb9s/5bgEcnKCsBmHLPmRfsQ4zF+VpRkoiTXJ9LBMSbIZ5fw==
+    destination: azureBlob
+    storage: stywfe
+    containerName: $web
