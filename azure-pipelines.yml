@@ -7,8 +7,8 @@ trigger:
 - master
 
 variables:
-  projectFolder: 'yw_react-fe/yw_fe'
-  buildOutputFolder: "yw_react-fe/yw_fe/build"
+  projectFolder: 'yw_react_fe/yw_fe'
+  buildOutputFolder: "yw_react_fe/yw_fe/build"
 
 pool:
   vmImage: 'ubuntu-latest'
