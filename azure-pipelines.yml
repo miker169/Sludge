@@ -25,9 +25,7 @@ steps:
     script: echo ls -a && echo $(Build.SourcesDirectory)
 
 - script: |
-    pushd $(uiSource)
-    pushd $(uiSource)/package.json
-    pushd $(uiSource)/yarn.lock
+    pushd $(projectFolder)
     yarn install
     yarn run test
     yarn run build
@@ -35,7 +33,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(uiBuild)' 
+    sourceFolder: '$(buildOutputFolder)' 
     contents: '**/*' 
     targetFolder: '$(Build.ArtifactStagingDirectory)'
     cleanTargetFolder: true
