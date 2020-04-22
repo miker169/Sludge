@@ -8,7 +8,7 @@ trigger:
 
 variables:
   repoDir: 'yw-react-fe/yw-fe'
-  uiSource: '$(reposDir)/src'
+  uiSource: '$(repoDir)/src'
   uiBuild: "$(repoDir)/build"
 
 pool:
@@ -26,8 +26,9 @@ steps:
     script: echo ls -a && echo $(Build.SourcesDirectory)
 
 - script: |
-    # pushd $(uiSource)
-    echo ls -a
+    pushd $(uiSource)
+    pushd $(uiSource)/package.json
+    pushd $(uiSource)/yarn.lock
     yarn install
     yarn run test
     yarn run build
@@ -35,10 +36,20 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: '$(uiBuild)/**' # Pull the build directory (React)
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    sourceFolder: '$(uiBuild)' 
+    contents: '**/*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    cleanTargetFolder: true
 
+# Archive the files into a zip file for publishing
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: $(Build.ArtifactStagingDirectory)
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    includeRootFolder: false
+
+## Publish the zip file
 - task: PublishBuildArtifacts@1
-  inputs: 
-    pathtoPublish: $(Build.ArtifactStagingDirectory) # dist or build files
-    ArtifactName: 'www' # output artifact named wwww
+  inputs:
+    pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
