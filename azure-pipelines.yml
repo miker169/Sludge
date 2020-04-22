@@ -7,9 +7,8 @@ trigger:
 - master
 
 variables:
-  repoDir: 'yw-react-fe/yw-fe'
-  uiSource: '$(repoDir)/src'
-  uiBuild: "$(repoDir)/build"
+  projectFolder: 'yw_react-fe/yw_fe'
+  buildOutputFolder: "yw_react-fe/yw_fe/build"
 
 pool:
   vmImage: 'ubuntu-latest'
