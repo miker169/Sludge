@@ -21,7 +21,7 @@ steps:
 
 - script: |
     pushd $(projectFolder) && yarn install && popd
-    pushd $(projectFolder) && yarn run test && popd
+    pushd $(projectFolder) && yarn run jest && popd
     pushd $(projectFolder) && yarn run build && popd
   displayName: 'yarn install and build'
 
