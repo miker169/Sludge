@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
 
 import Nav from "./components/nav/Nav";
@@ -8,13 +8,13 @@ import { Provider as FlowProvider } from "./context/FlowContext";
 
 function App() {
   return (
-    <>
+    <div data-testid="app">
      <FlowProvider>
        <Header />
        <Nav/>
        <Main/>
      </FlowProvider>
-    </>
+    </div>
 );
 }
 

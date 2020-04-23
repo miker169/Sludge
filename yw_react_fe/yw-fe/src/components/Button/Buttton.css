@@ -11,6 +11,10 @@ a.disabled {
     background-color: var(--medium-blue--disabled);
 }
 
+a.disabled:hover{
+    background-color:  var(--medium-blue--disabled);
+}
+
 .active {
     background-color: var(--brand-blue)
 }
@@ -20,6 +24,10 @@ a.flow {
     border-radius: .2em;
     text-align: center;
     margin: 0;
+}
+
+a.flow.disabled:hover{
+    background-color:  var(--medium-blue--disabled);
 }
 
 a.flow:hover {

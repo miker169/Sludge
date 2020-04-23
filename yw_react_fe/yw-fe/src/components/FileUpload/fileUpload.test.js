@@ -19,7 +19,7 @@ describe('<FileUpload/>', () => {
   });
 
   test('Has a label with default text', () => {
-    const defaultText = "Choose a csv file…";
+    const defaultText = "Upload CSV";
     const fileLabelElement = queryByTestId('fileLabel')
     expect(fileLabelElement.textContent).toContain(defaultText);
   });
@@ -74,7 +74,7 @@ describe('<FileUpload/>', () => {
     });
 
     test('it can only accept csv', () => {
-      const defaultText = "Choose a csv file…";
+      const defaultText = "Upload CSV";
       const testFileName = 'my-test-file.js';
       const testFileType = 'application/json';
 

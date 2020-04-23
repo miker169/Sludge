@@ -5,10 +5,16 @@
     position: relative;
     background-color: var(--darker-blue);
     color: var(--white);
-    width: 12.8em;
-    border-radius: 0.2em;
-    padding: .9em 0.3em;
+    width: 13.8em;
+    padding: .7em 0.3em;
     cursor: pointer;
+    margin-right: 3em;
+    border-radius: .4em;
+    border: .1em solid var(--medium-blue--disabled);
+}
+
+.file:hover {
+    border: .1em solid var(--medium-blue);
 }
 
 .file-label {
@@ -17,8 +23,9 @@
     justify-content: flex-start;
     overflow: hidden;
     position: relative;
-    margin-right: 1.6em;
     cursor: inherit;
+    line-height: 1.8;
+    margin-left: .2em;
 }
 
 .file-input {
@@ -37,8 +44,6 @@
     color: var(--white);
     background-color: var(--darker-blue);
     font-size: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
     border-radius: 0.5em;
     white-space: nowrap;
 }
@@ -50,4 +55,12 @@
     justify-content: center;
     margin-right: .5em;
     width: 1em;
+    margin-left: .2em;
+}
+
+.down-icon {
+    height: 1.5em;
+    width: 1.5em;
+    padding-bottom: 1.1em;
+    margin-left: 4em;
 }

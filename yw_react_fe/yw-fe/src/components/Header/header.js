@@ -10,6 +10,9 @@ const Header = () => {
           <img className="logo" src={logo} alt="logo"/>
         </div>
         <h1>Sludge Modelling Tool</h1>
+        <div className="welcome" data-testid="welcome">
+          <span>Welcome: </span><span>Oliver Horne</span>
+        </div>
       </div>
     </div>
   )

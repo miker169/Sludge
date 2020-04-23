@@ -1,13 +1,26 @@
 .nav{
     display: flex;
     list-style-type: none;
-    margin-left: -1.5em;
+    padding:  0;
+
+}
+
+.nav li{
+    width: 18%
 }
 
 .nav li + li {
     margin-left: .525em;
-
 }
+
+.nav li > a {
+    text-align: center;
+}
+
+.nav li > a.active {
+    text-decoration: underline;
+}
+
 
 /*.nav a{*/
 /*    display: block;*/

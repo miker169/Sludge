@@ -12,4 +12,29 @@ describe('<Main/>',  () => {
     const mainComponent = queryByTestId('component-main');
     expect(mainComponent).toBeInTheDocument();
   });
+
+  describe('When enabled', () => {
+
+    beforeEach(() => {
+      jest.clearAllMocks();
+      jest.spyOn(React, 'useContext')
+      .mockImplementation((context) => {
+        return {
+          state: {enabled: true},
+          start: jest.fn()
+        }
+      })
+    });
+    // test('Hides the input field', () => {
+    //   const {queryByTestId } = wrapper();
+    //   const inputComponent = queryByTestId('component-file-upload');
+    //   expect(inputComponent).not.toBeInTheDocument();
+    // });
+    //
+    // test('Hides the help field', () => {
+    //   const {queryByTestId } = wrapper();
+    //   const helpField = queryByTestId('component-help');
+    //   expect(helpField).toBeInTheDocument();
+    // });
+  });
 })
