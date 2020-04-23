@@ -13,6 +13,28 @@ describe('<Main/>',  () => {
     expect(mainComponent).toBeInTheDocument();
   });
 
+
+  describe('When disabled', () => {
+
+    beforeEach(() => {
+      jest.clearAllMocks();
+      jest.spyOn(React, 'useContext')
+      .mockImplementation((context) => {
+        return {
+          state: {enabled: false},
+          start: jest.fn()
+        }
+      })
+    });
+
+    test('Displays the input field', () => {
+      const {queryByTestId } = wrapper();
+      const inputComponent = queryByTestId('component-file-upload');
+      expect(inputComponent).toBeInTheDocument();
+    });
+
+  });
+
   describe('When enabled', () => {
 
     beforeEach(() => {
@@ -25,16 +47,12 @@ describe('<Main/>',  () => {
         }
       })
     });
-    // test('Hides the input field', () => {
-    //   const {queryByTestId } = wrapper();
-    //   const inputComponent = queryByTestId('component-file-upload');
-    //   expect(inputComponent).not.toBeInTheDocument();
-    // });
-    //
-    // test('Hides the help field', () => {
-    //   const {queryByTestId } = wrapper();
-    //   const helpField = queryByTestId('component-help');
-    //   expect(helpField).toBeInTheDocument();
-    // });
+    test('Hides the input field', () => {
+      const {queryByTestId } = wrapper();
+      const inputComponent = queryByTestId('component-file-upload');
+      expect(inputComponent).not.toBeInTheDocument();
+    });
   });
+
+
 })

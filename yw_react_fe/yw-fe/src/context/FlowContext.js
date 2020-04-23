@@ -1,23 +1,22 @@
 import useDataContext from "./useDataContext";
 
 
-const START_FLOW = "START_FLOW";
-const INPUT_DATA = "INPUT_DATA"
-const UPLOADING_DATA = "UPLOADING_DATA";
-const RUN_DATA = "RUN_DATA";
-const RAN_DATA_MODEL = "RAN_DATA_MODEL";
-const START_UPDATE_DATA = "START_UPDATE_DATA"
-const DATA_UPDATED = "DATA_UPDATED";
-const STATIC_DATA_TEXT = (fileName) =>  `Click Input Static Data to upload ${fileName}`
+export const START_FLOW = "START_FLOW";
+export const INPUT_DATA = "INPUT_DATA"
+export const UPLOADING_DATA = "UPLOADING_DATA";
+export const RUN_DATA = "RUN_DATA";
+export const RAN_DATA_MODEL = "RAN_DATA_MODEL";
+export const START_UPDATE_DATA = "START_UPDATE_DATA"
+export const DATA_UPDATED = "DATA_UPDATED";
+export const STATIC_DATA_TEXT = (fileName) =>  `Click Input Static Data to upload ${fileName}`
 const UPLOAD_CSV_TEXT = 'Click \'Upload CSV\', then select a CSV/Excel file you want to run, from the pop up window.'
 const UPLOADING_CSV_TEXT = (fileName) => `Uploading ${fileName}`;
-// const UPDATE_RUN_CHOICE_TEXT = 'Select Run Model to run the model or Update Static Data to update the csv';
 const CHOOSE_RUN_MODEL_TEXT = (fileName) =>  `Select Run Model to run the model for ${fileName}`;
 const RUNNING_MODEL_TEXT = "Running the Model...";
 const GET_RESULTS_TEXT = "Model has ran click Get Results to get the results in a .csv format";
 
 
-const flowReducer = (state, { type, payload }) => {
+export const flowReducer = (state, { type, payload }) => {
   switch (type) {
     case START_FLOW:
       return {
@@ -47,22 +46,6 @@ const flowReducer = (state, { type, payload }) => {
         enableFileUpload: true,
         helpText: CHOOSE_RUN_MODEL_TEXT(state.csvFileName)
       }
-    case START_UPDATE_DATA:
-      return {
-        ...state,
-        updateArrowDisabled: false,
-        inputArrowDisabled: true,
-        updateDisabled: true,
-        enableFileUpload: false,
-        helpText: UPLOADING_CSV_TEXT(state.csvFileName)
-      }
-    case DATA_UPDATED:
-      return {
-        ...state,
-        updateArrowRan: true,
-        helpText: CHOOSE_RUN_MODEL_TEXT,
-        enableFileUpload: false,
-      }
     case RUN_DATA:
       return {
         ...state,
@@ -81,31 +64,29 @@ const flowReducer = (state, { type, payload }) => {
 }
 
 
-const start = (dispatch) => (fileName) => dispatch({type: START_FLOW, payload: fileName});
-const inputData = (dispatch) => () => dispatch({type: INPUT_DATA});
-const uploadData = (dispatch) => () =>{
+export const start = (dispatch) => (fileName) => {
+  dispatch({type: START_FLOW, payload: fileName});
+}
+export const inputData = (dispatch) => () =>{
+  dispatch({type: INPUT_DATA});
+}
+
+export const uploadData = (dispatch) => () =>{
   dispatch({type: UPLOADING_DATA});
   setTimeout(() => {
     dispatch({type: INPUT_DATA});
   }, 3000)
 
 }
-const runData = (dispatch) => () => {
+export const runData = (dispatch) => () => {
   dispatch({type: RUN_DATA});
   setTimeout(() => {
     dispatch({type: RAN_DATA_MODEL});
   }, 3000)
 }
 
-const updateData = (dispatch) => () => {
-  dispatch({type: START_UPDATE_DATA})
-  setTimeout(() => {
-    dispatch({type: DATA_UPDATED});
-  },3000);
-}
-
 export const { Provider, Context } =
-  useDataContext(flowReducer, { start, inputData, uploadData, runData, updateData }, {
+  useDataContext(flowReducer, { start, inputData, uploadData, runData }, {
     enabled: false,
     helpText: UPLOAD_CSV_TEXT,
     inputDisabled: true,
