@@ -20,31 +20,12 @@ describe('FlowContext', () => {
 
    describe('When type is START_FLOW', () => {
 
-     //   helpText: STATIC_DATA_TEXT(payload),
-     //   enableFileUpload: false,
-     //   csvFileName: payload
      test('it returns some default state', () => {
        state.testData = 'hello';
        let newState = flowReducer(state, {type: START_FLOW});
        expect(newState.testData).toBe('hello');
      });
 
-     // test('it sets enabled in the state', () => {
-     //   let newState = flowReducer({enabled: false}, {type: START_FLOW});
-     //   expect(newState.enabled).toBeTruthy();
-     // });
-     //
-     // test('it sets input Disabled to false in the state', () => {
-     //   let newState = flowReducer({inputDisabled: true}, {type: START_FLOW});
-     //   expect(newState.inputDisabled).toBeFalsy();
-     // });
-     //
-     // test('it sets the helpText according to the payload', () => {
-     //   let fileName = 'test.csv';
-     //   let helpText = STATIC_DATA_TEXT(fileName);
-     //   let newState = flowReducer({inputDisabled: true}, {type: START_FLOW, payload: fileName});
-     //   expect(newState.helpText).toBe(helpText);
-     // })
    });
 
     describe('When type is INPUT_DATA', () => {

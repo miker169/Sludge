@@ -5,15 +5,18 @@ import Nav from "./components/nav/Nav";
 import Header from "./components/Header/header";
 import Main from "./components/Main";
 import { Provider as FlowProvider } from "./context/FlowContext";
+import { Provider as ScenarioProvider } from "./context/ScenarioContext"
 
 function App() {
   return (
     <div data-testid="app">
-     <FlowProvider>
-       <Header />
-       <Nav/>
-       <Main/>
-     </FlowProvider>
+      <ScenarioProvider>
+        <FlowProvider>
+        <Header/>
+        <Nav/>
+        <Main/>
+      </FlowProvider>
+      </ScenarioProvider>
     </div>
 );
 }

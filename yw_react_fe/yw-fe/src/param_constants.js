@@ -4,7 +4,7 @@ import Select from 'react-select'
 import {Form} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 import './App.css';
-import * as modelConstants from './model_constants'
+// import * as modelConstants from './model_constants'
 
 export const options = [
     { value: '', label: '' },
@@ -22,71 +22,13 @@ export const param_selector = (
 
   <div className = "param-container">
 
-  <div className = "select-container">
-    <div className = "select-container-row">
-      <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
 
-    <div className = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
 
-    <div className = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
+      {/*<div className = "param-model-container">*/}
 
-    <div className = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
+      {/*{modelConstants.model_flow}*/}
 
-    <div className = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-
-    <div className = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-
-      <Button variant="outline-primary" size="lg">
-            Submit
-          </Button>
-      </div>
-
-      <div className = "param-model-container">
-
-      {modelConstants.model_flow}
-
-      </div>
+      {/*</div>*/}
 
     </div>
       )

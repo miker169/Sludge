@@ -1,0 +1,16 @@
+.scenario-row {
+    vertical-align: top;
+    position: relative;
+}
+
+header {
+    color: white;
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.scenario {
+    margin-bottom: 10em;
+}

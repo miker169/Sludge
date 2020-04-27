@@ -2,10 +2,12 @@ import React from 'react';
 import { render} from "@testing-library/react";
 import Main from './index';
 import { Provider as FlowProvider} from "../../context/FlowContext";
+import { Provider as ScenarioProvider} from "../../context/ScenarioContext";
+import scenario from "../../context/scenario";
 
 describe('<Main/>',  () => {
   const wrapper = () => {
-    return render(<FlowProvider><Main/></FlowProvider>)
+    return render(<ScenarioProvider><FlowProvider><Main/></FlowProvider></ScenarioProvider>)
   }
   test('it renders without error', () => {
     const {queryByTestId } = wrapper();
@@ -21,7 +23,7 @@ describe('<Main/>',  () => {
       jest.spyOn(React, 'useContext')
       .mockImplementation((context) => {
         return {
-          state: {enabled: false},
+          state: {enabled: false, scenarioOptions: scenario},
           start: jest.fn()
         }
       })
@@ -42,7 +44,7 @@ describe('<Main/>',  () => {
       jest.spyOn(React, 'useContext')
       .mockImplementation((context) => {
         return {
-          state: {enabled: true},
+          state: {enabled: true , scenarioOptions: scenario},
           start: jest.fn()
         }
       })

@@ -1,7 +1,11 @@
 .flowContainer{
-    margin-top: 4em;
     display: flex;
-    flex: 1 0 auto;;
+    /*flex: 1 0 auto;;*/
     list-style-type: none;
     margin-right: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 150px;
+    max-height: 5rem;
+
 }

@@ -4,6 +4,7 @@ import FlowContainer from "../FlowContainer";
 import './main.css';
 import { Context as FlowContext } from "../../context/FlowContext";
 import Help from "../Help";
+import ScenarioModelling from "../scenarioModelling";
 
 const Main = () => {
   const {state} = React.useContext(FlowContext);
@@ -15,6 +16,7 @@ const Main = () => {
         <Help />
       </div>
       <FlowContainer/>
+      <ScenarioModelling />
     </div>
   )
 }
