@@ -40,13 +40,6 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     includeRootFolder: false
 
-## Publish the zip file
-- task: AzureFileCopy@4
-  inputs:
-    SourcePath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    Destination: 'AzureBlob'
-    storage: 'stwyfe'
-    ContainerName: '$web'
 
 
 
