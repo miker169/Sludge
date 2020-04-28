@@ -12,6 +12,7 @@
 
 .csv-choose{
     display: flex;
-    align-items: center;
+    /*align-items: center;*/
+    max-height: 3.3rem;
 }
 

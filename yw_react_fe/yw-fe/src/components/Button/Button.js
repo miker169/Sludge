@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import './Buttton.css'
 
-const Button = ({active, title, classes, name, disabled, clickHandler}) => {
+const Button = ({active, title, classes, name, disabled, clickHandler,url}) => {
 
   let btnClass = classNames({
     'active': !!active,
@@ -10,7 +10,7 @@ const Button = ({active, title, classes, name, disabled, clickHandler}) => {
   }, classes)
 
   return(
-    <a onClick={clickHandler} data-testid={`${name}-component-btn`} className={btnClass}>{title}</a>
+    <a onClick={clickHandler} href={url} data-testid={`${name}-component-btn`} className={btnClass}>{title}</a>
   )
 }
 

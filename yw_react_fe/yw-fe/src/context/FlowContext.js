@@ -1,29 +1,44 @@
 import useDataContext from "./useDataContext";
-
+import { BlobServiceClient }  from "@azure/storage-blob";
+import axios from 'axios';
 
 export const START_FLOW = "START_FLOW";
 export const INPUT_DATA = "INPUT_DATA"
 export const UPLOADING_DATA = "UPLOADING_DATA";
 export const RUN_DATA = "RUN_DATA";
+export const SAVE_MESSAGES="SAVE_MESSAGES";
 export const RAN_DATA_MODEL = "RAN_DATA_MODEL";
-export const START_UPDATE_DATA = "START_UPDATE_DATA"
-export const DATA_UPDATED = "DATA_UPDATED";
-export const STATIC_DATA_TEXT = (fileName) =>  `Click Input Static Data to upload ${fileName}`
+export const STATIC_DATA_TEXT = `Click Input Static Data to upload: `;
 const UPLOAD_CSV_TEXT = 'Click \'Upload CSV\', then select a CSV/Excel file you want to run, from the pop up window.'
 const UPLOADING_CSV_TEXT = (fileName) => `Uploading ${fileName}`;
-const CHOOSE_RUN_MODEL_TEXT = (fileName) =>  `Select Run Model to run the model for ${fileName}`;
+const CHOOSE_RUN_MODEL_TEXT = `Select Run Model to run the model for:`;
 const RUNNING_MODEL_TEXT = "Running the Model...";
 const GET_RESULTS_TEXT = "Model has ran click Get Results to get the results in a .csv format";
+export const SET_FILE = "SET_FILE";
+const inputContainer = "data-inputs";
+const outputContainer = "data-outputs";
+
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
+const REACT_APP_BLOB_SAS=process.env.REACT_APP_BLOB_SAS;
+const REACT_APP_RUN_MODEL_URL=process.env.REACT_APP_RUN_MODEL_URL;
 
 
 export const flowReducer = (state, { type, payload }) => {
   switch (type) {
+    case SET_FILE:
+      return {
+        ...state,
+        files: [...state.files, payload]
+      }
     case START_FLOW:
       return {
         ...state,
         enabled: true,
         inputDisabled: false,
-        helpText: STATIC_DATA_TEXT(payload),
+        helpText: STATIC_DATA_TEXT,
         enableFileUpload: false,
         csvFileName: payload
       }
@@ -42,9 +57,10 @@ export const flowReducer = (state, { type, payload }) => {
         inputDisabled: true,
         runDisabled: false,
         updateDisabled: false,
+        fileInputDisabled: true,
         inputUpdateArrowRan: true,
         enableFileUpload: true,
-        helpText: CHOOSE_RUN_MODEL_TEXT(state.csvFileName)
+        helpText: CHOOSE_RUN_MODEL_TEXT
       }
     case RUN_DATA:
       return {
@@ -55,9 +71,12 @@ export const flowReducer = (state, { type, payload }) => {
         helpText: RUNNING_MODEL_TEXT
       }
     case RAN_DATA_MODEL:{
-      return {...state, nextArrowRan: true, runDisabled: true, getResultsDisabled: false,
-      helpText: GET_RESULTS_TEXT}
+      return {...state, fileDownloadUrl: payload, nextArrowRan: true, runDisabled: true, getResultsDisabled: false,
+      helpText: GET_RESULTS_TEXT
+      }
     }
+    case SAVE_MESSAGES:
+      return {...state, messages: payload}
     default:
       return state;
   }
@@ -71,22 +90,55 @@ export const inputData = (dispatch) => () =>{
   dispatch({type: INPUT_DATA});
 }
 
-export const uploadData = (dispatch) => () =>{
-  dispatch({type: UPLOADING_DATA});
-  setTimeout(() => {
-    dispatch({type: INPUT_DATA});
-  }, 3000)
+export const uploadFile = async (files) => {
+  const blobServiceClient = new BlobServiceClient(REACT_APP_BLOB_SAS);
+  const containerClient = blobServiceClient.getContainerClient(inputContainer);
 
+  try {
+    const promises = [];
+    [files].forEach(file => {
+      const blobName = new Date().getTime().toString() + file.name;
+      const blockBlobClient = containerClient.getBlockBlobClient(blobName);
+      promises.push(blockBlobClient.uploadBrowserData(file));
+    })
+    return await Promise.all(promises);
+  } catch (e) {
+    console.log(e.message)
+  }
 }
-export const runData = (dispatch) => () => {
+
+export const uploadData = (dispatch) => (file) =>{
+  dispatch({type: UPLOADING_DATA});
+  uploadFile(file).then((data) => {
+    dispatch({type: INPUT_DATA});
+  });
+}
+export const runData = (dispatch) => async () => {
   dispatch({type: RUN_DATA});
-  setTimeout(() => {
-    dispatch({type: RAN_DATA_MODEL});
-  }, 3000)
+
+  axios.get(REACT_APP_RUN_MODEL_URL, {
+    headers: {'Access-Control-Allow-Origin': '*'}
+  }).then(data => {
+    debugger
+    dispatch({type: SAVE_MESSAGES, payload: data.data})
+    const blobServiceClient = new BlobServiceClient(REACT_APP_BLOB_SAS);
+    const containerClient = blobServiceClient.getContainerClient(outputContainer);
+    const blockBlobClient = containerClient.getBlobClient("pp_test.csv");
+    return blockBlobClient.download()})
+    .then((blob) => blob.blobBody)
+    .then(body => body.text()).then(data => {
+      let blob = new Blob([data], {type: "text/csv"});
+      let item = window.URL.createObjectURL(blob);
+      dispatch({type: RAN_DATA_MODEL, payload: item});
+  });
+}
+
+export const setFile = (dispatch) => (file) => {
+  dispatch({type: SET_FILE, payload: file[0]});
 }
 
 export const { Provider, Context } =
-  useDataContext(flowReducer, { start, inputData, uploadData, runData }, {
+  useDataContext(flowReducer, { start, inputData, uploadData, runData, setFile }, {
     enabled: false,
     helpText: UPLOAD_CSV_TEXT,
     inputDisabled: true,
@@ -101,6 +153,9 @@ export const { Provider, Context } =
     nextArrowDisabled: true,
     nextArrowRan: false,
     getResultsDisabled: true,
-    enableFileUpload: true,
+    enableFileUpload: false,
+    fileDownloadUrl: 'https://wwmodelling.blob.core.windows.net/data-outputs/pp_test.csv',
+    fileInputDisabled: false,
+    files: []
   });
 

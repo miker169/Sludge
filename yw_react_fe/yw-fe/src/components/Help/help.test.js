@@ -15,8 +15,13 @@ describe('<Help/>', () => {
     jest.spyOn(React, 'useContext')
     .mockImplementation((context) => {
       return {
-        state: {helpText},
-        start: jest.fn()
+        state: {helpText, files: [
+            {name:'test'}
+          ],
+        inputDisabled: true,
+        getResultsDisabled: true,
+        runDisabled: true},
+        start: jest.fn(),
       }
     })
   });
@@ -30,6 +35,7 @@ describe('<Help/>', () => {
   test('Shows help text returned from context', () => {
     let {queryByTestId} = wrapper();
     const help = queryByTestId('component-help');
+    debugger;
     expect(help.textContent).toBe(helpText);
   });
 

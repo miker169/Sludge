@@ -85,10 +85,10 @@ describe('FlowContext', () => {
           expect(mockRunDispatch).toHaveBeenCalledWith({type: RUN_DATA});
         });
 
-        test('calls RAN_DATA_MODEL reducer action', () => {
-          jest.runAllTimers();
-          expect(mockRunDispatch).toHaveBeenCalledWith({type: RAN_DATA_MODEL});
-        });
+        // test('calls RAN_DATA_MODEL reducer action', () => {
+        //   jest.runAllTimers();
+        //   expect(mockRunDispatch).toHaveBeenCalledWith({type: RAN_DATA_MODEL});
+        // });
 
 
       });

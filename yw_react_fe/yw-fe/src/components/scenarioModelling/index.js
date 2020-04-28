@@ -6,7 +6,6 @@ import scenario from "../../context/scenario";
 import {buildInputOption} from "../../lib/inputOptionBuilder";
 
 const ScenarioModelling = () => {
-  debugger;
   const [inputOptions, setInputOptions] = React.useState([{...scenario, row: 1}])
 
   return (

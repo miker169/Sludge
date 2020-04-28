@@ -12,7 +12,7 @@ const Main = () => {
   return (
     <div data-testid="component-main" className="mainContainer">
       <div className="csv-choose">
-        {state.enabled ? null : <FileInput/> }
+        {state.fileInputDisabled ? null : <FileInput/> }
         <Help />
       </div>
       <FlowContainer/>

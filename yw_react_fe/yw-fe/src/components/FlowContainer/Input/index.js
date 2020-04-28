@@ -8,7 +8,7 @@ const Input = () => {
   return (
   <div className="inputFlow" data-testid="input-static">
     <Button
-      clickHandler={state.inputDisabled ? (evt) => evt.preventDefault() : uploadData}
+      clickHandler={state.inputDisabled ? (evt) => evt.preventDefault() : () => uploadData(state.files)}
       disabled={state.inputDisabled}
       name="input"
       classes={['flow']}

@@ -1,7 +1,6 @@
 import React from 'react';
 import './List.css'
 import ListItem from "../ListItem";
-import classNames from "classnames";
 
 const List = ({options, next }) => {
 

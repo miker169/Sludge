@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from "../Button/Button";
 import './flowContainer.css';
 import { Context as FlowContext } from "../../context/FlowContext";
 import Input from "./Input";
