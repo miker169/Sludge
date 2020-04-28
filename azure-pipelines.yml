@@ -1,4 +1,5 @@
 # Node.js with React
+
 # Build a Node.js project that uses React.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
@@ -33,11 +34,10 @@ steps:
     cleanTargetFolder: true
 
 # Archive the files into a zip file for publishing
-- task: PublishBuildArtifact@1
+- task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory'
-
 
 
 
