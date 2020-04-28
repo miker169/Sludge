@@ -35,7 +35,7 @@ steps:
 
 # Archive the files into a zip file for publishing
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
+  displayName: 'Publish Artifacts'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory'
 
