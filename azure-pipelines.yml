@@ -37,7 +37,15 @@ steps:
   inputs:
     sourceFolder: '$(buildOutputFolder)' 
     contents: '**/*' 
-    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    targetFolder: '$(Build.ArtifactStagingDirectory)/output'
+    cleanTargetFolder: true
+
+- task: CopyFiles@2
+  inputs:
+    displayName: 'Copy deployment content'
+    sourceFolder: '$(buildOutputFolder)/deployment' 
+    contents: '**/*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)/deployment'
     cleanTargetFolder: true
 
 # Archive the files into a zip file for publishing
