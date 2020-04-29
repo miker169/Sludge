@@ -97,8 +97,7 @@ export const uploadFile = async (files) => {
   try {
     const promises = [];
     [...files].forEach(file => {
-      const blobName = new Date().getTime().toString() + file.name;
-      const blockBlobClient = containerClient.getBlockBlobClient(blobName);
+      const blockBlobClient = containerClient.getBlockBlobClient(file.name);
       promises.push(blockBlobClient.uploadBrowserData(file));
     })
     return await Promise.all(promises);
