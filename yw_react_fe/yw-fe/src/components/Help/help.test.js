@@ -35,7 +35,6 @@ describe('<Help/>', () => {
   test('Shows help text returned from context', () => {
     let {queryByTestId} = wrapper();
     const help = queryByTestId('component-help');
-    debugger;
     expect(help.textContent).toBe(helpText);
   });
 

@@ -96,7 +96,7 @@ export const uploadFile = async (files) => {
 
   try {
     const promises = [];
-    [files].forEach(file => {
+    [...files].forEach(file => {
       const blobName = new Date().getTime().toString() + file.name;
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
       promises.push(blockBlobClient.uploadBrowserData(file));
@@ -119,7 +119,6 @@ export const runData = (dispatch) => async () => {
   axios.get(REACT_APP_RUN_MODEL_URL, {
     headers: {'Access-Control-Allow-Origin': '*'}
   }).then(data => {
-    debugger
     dispatch({type: SAVE_MESSAGES, payload: data.data})
     const blobServiceClient = new BlobServiceClient(REACT_APP_BLOB_SAS);
     const containerClient = blobServiceClient.getContainerClient(outputContainer);

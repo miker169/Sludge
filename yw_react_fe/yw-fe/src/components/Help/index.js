@@ -6,7 +6,6 @@ import { Context as FlowContext } from "../../context/FlowContext";
 
 const Help = () => {
  const {state} = React.useContext(FlowContext);
- debugger;
   return (
     <>
     {(!state.inputDisabled || !state.runDisabled)

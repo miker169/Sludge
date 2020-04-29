@@ -9,7 +9,6 @@ const List = ({options, next }) => {
   const [listOptions, setSelectedListOptions] = React.useState(options);
 
   const handleSelected = (option) => {
-    debugger;
     setSelected(!selected);
     setLabelText(option.label);
     const newSelectedOptions = listOptions.map(o => ({
