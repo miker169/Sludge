@@ -10,6 +10,7 @@ trigger:
 variables:
   projectFolder: 'yw_react_fe/yw-fe'
   buildOutputFolder: "yw_react_fe/yw-fe/build"
+  deploymentFolder: "yw_react_fe/yw-fe/deployment"
   storageAccount: "wwmodelling"
 pool:
   vmImage: 'ubuntu-latest'
@@ -42,7 +43,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: $(projectFolder)/deployment' 
+    sourceFolder: '$(deploymentFolder)'
     contents: '**/*' 
     targetFolder: '$(Build.ArtifactStagingDirectory)/deployment'
     cleanTargetFolder: true
