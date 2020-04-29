@@ -42,8 +42,7 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    displayName: 'Copy deployment content'
-    sourceFolder: '$(buildOutputFolder)/deployment' 
+    sourceFolder: $(projectFolder)/deployment' 
     contents: '**/*' 
     targetFolder: '$(Build.ArtifactStagingDirectory)/deployment'
     cleanTargetFolder: true
