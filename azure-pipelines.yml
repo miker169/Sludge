@@ -11,7 +11,7 @@ variables:
   projectFolder: 'yw_react_fe/yw-fe'
   buildOutputFolder: "yw_react_fe/yw-fe/build"
   storageAccount: "wwmodelling"
-  sasLogin: "https://wwmodelling.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacup&se=2020-04-28T16:47:37Z&st=2020-04-28T08:47:37Z&spr=https&sig=oT7FhnDO3xp7uzjKLcGDbw7Kwc6J0oad%2BN%2Bbu7o0Nh4%3D"
+  sasLogin: "https://wwmodelling.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacup&se=2020-04-30T17:24:56Z&st=2020-04-29T09:24:56Z&spr=https&sig=HnBaq8T52%2FLb0e4Au5Lno4r72KLuE57Fi5FSXRt8yxw%3D"
   runModelUrl: "https://ww-backend.azurewebsites.net/api/Http-model-trigger?code=GeHHgMS85gEWzzm2H0bf17uznyeVb5w0hXNU2EhXB1Gu3/2I6t0hlQ=="
 
 pool:
