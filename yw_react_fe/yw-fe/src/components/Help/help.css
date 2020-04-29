@@ -35,3 +35,14 @@
     color: var(--alert);
     border: 2px solid var(--medium-blue--disabled);
 }
+
+.infoErrors{
+    display: flex;
+    flex-direction: column;
+}
+
+.help-title{
+    font-weight: 800;
+    font-size: 1.1em;
+    padding-bottom: .2em;
+}

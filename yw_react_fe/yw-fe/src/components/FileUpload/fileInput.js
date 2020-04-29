@@ -11,7 +11,7 @@ const FileInput = () => {
 
 
   const HiddenInput = () => (
-    <input accept=".csv, text/csv, application/csv. xsl, .xslx"
+    <input accept=".csv, text/csv, application/csv. xsl, .xlsx"
            onChange={(e) => {
              setFile(e.target.files);
              start(e.target.files[0].name)

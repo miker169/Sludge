@@ -20,10 +20,10 @@ const Help = () => {
         ?  <div>
         <span data-testid="component-help" className="step1"><FontAwesomeIcon className="help-icon" icon={faInfoCircle} />
           <div className="messageInfo">
-            <span>Load Message:</span>  {state.messages.Load_message}
+            <span className="help-title">Load Messages:</span>  <div className="infoErrors">{state.messages.Load_message.split('\n').map(s => <span>{s}</span>)}</div>
           </div>
            <div className="messageInfo">
-            <span>Distance Message:</span> <div>{state.messages.Distance_message.split('\n').map(s => <span>{s}</span>)}</div>
+            <span className="help-title">Distance Messages:</span> <div className="infoErrors">{state.messages.Distance_message.split('\n').map(s => <span>{s}</span>)}</div>
           </div>
         </span>
         </div>
