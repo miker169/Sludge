@@ -11,17 +11,16 @@ variables:
   projectFolder: 'yw_react_fe/yw-fe'
   buildOutputFolder: "yw_react_fe/yw-fe/build"
   storageAccount: "wwmodelling"
-  sasLogin: "https://wwmodelling.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacup&se=2020-04-30T17:24:56Z&st=2020-04-29T09:24:56Z&spr=https&sig=HnBaq8T52%2FLb0e4Au5Lno4r72KLuE57Fi5FSXRt8yxw%3D"
-  runModelUrl: "https://ww-backend.azurewebsites.net/api/Http-model-trigger?code=GeHHgMS85gEWzzm2H0bf17uznyeVb5w0hXNU2EhXB1Gu3/2I6t0hlQ=="
-
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
+
 - powershell: |
   env:
-    REACT_APP_AZURE_STORAGE_ACCOUNT_NAME: (storageAccount)
-    REACT_APP_BLOB_SAS: $(sasLogin)
+    REACT_APP_AZURE_STORAGE_ACCOUNT_NAME: $(storageAccountName)
+    REACT_APP_BLOB_SAS: $(sas_url)
     REACT_APP_RUN_MODEL_URL: $(runModelUrl)
 - task: NodeTool@0
   inputs:
