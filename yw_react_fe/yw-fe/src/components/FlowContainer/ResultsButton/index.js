@@ -7,7 +7,7 @@ const ResultsButton = () => {
   const {state} = React.useContext(FlowContext);
   return (
     <div className="resultsFlow" data-testid="results-component">
-      <Button url={state.fileDownloadUrl} name="results" disabled={state.getResultsDisabled} classes={['flow']} title="Get Results" />
+      <Button download="results.csv" url={state.fileDownloadUrl} name="results" disabled={state.getResultsDisabled} classes={['flow']} title="Get Results" />
     </div>
   )
 }
