@@ -11,6 +11,7 @@ variables:
   projectFolder: 'yw_react_fe/yw-fe'
   buildOutputFolder: "yw_react_fe/yw-fe/build"
   deploymentFolder: "yw_react_fe/yw-fe/deployment"
+  fontsFolder: "yw_react_fe/yw-fe/src/fonts"
   storageAccount: "wwmodelling"
 pool:
   vmImage: 'ubuntu-latest'
@@ -39,6 +40,13 @@ steps:
     sourceFolder: '$(buildOutputFolder)' 
     contents: '**/*' 
     targetFolder: '$(Build.ArtifactStagingDirectory)/output'
+    cleanTargetFolder: true
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(fontsFolder)' 
+    contents: '**/*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)/output/fonts'
     cleanTargetFolder: true
 
 - task: CopyFiles@2
