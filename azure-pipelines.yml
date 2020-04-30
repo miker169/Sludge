@@ -33,6 +33,8 @@ steps:
     pushd $(projectFolder) && yarn install && popd
     pushd $(projectFolder) && yarn run test && popd
     pushd $(projectFolder) && yarn run build && popd
+    pushd $(projectFolder) && yarn run test --coverage --coverageDirectory=output/coverage/jest
+
   displayName: 'yarn install and build'
 
 - task: PublishTestResults@2
@@ -40,6 +42,13 @@ steps:
     testResultsFormat: 'VSTest'
     testResultsFiles: '**/src/jestResults.trx'
     failTaskOnFailedTests: true
+
+
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'Cobertura'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
 
 - task: CopyFiles@2
   inputs:
