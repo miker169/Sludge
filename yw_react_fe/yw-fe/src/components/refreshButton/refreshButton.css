@@ -1,0 +1,14 @@
+
+
+.refresh {
+    margin-left: .5em;
+}
+.refresh a {
+    background-color: var(--medium-blue--disabled);
+    border-radius: .3em;
+}
+
+
+.refresh a:hover {
+    border: 1px solid var(--medium-blue);
+}

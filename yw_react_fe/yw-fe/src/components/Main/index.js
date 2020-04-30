@@ -5,6 +5,7 @@ import './main.css';
 import { Context as FlowContext } from "../../context/FlowContext";
 import Help from "../Help";
 import ScenarioModelling from "../scenarioModelling";
+import RefreshButton from "../refreshButton";
 
 const Main = () => {
   const {state} = React.useContext(FlowContext);
@@ -14,6 +15,7 @@ const Main = () => {
       <div className="csv-choose">
         {state.fileInputDisabled ? null : <FileInput/> }
         <Help />
+        <RefreshButton/>
       </div>
       <FlowContainer/>
       <ScenarioModelling />

@@ -8,6 +8,7 @@ export const UPLOADING_DATA = "UPLOADING_DATA";
 export const RUN_DATA = "RUN_DATA";
 export const SAVE_MESSAGES="SAVE_MESSAGES";
 export const RAN_DATA_MODEL = "RAN_DATA_MODEL";
+export const REFRESH = "REFRESH"
 export const STATIC_DATA_TEXT = `Click Input Static Data to upload: `;
 const UPLOAD_CSV_TEXT = 'Click \'Upload CSV\', then select a CSV/Excel file you want to run, from the pop up window.'
 const UPLOADING_CSV_TEXT = (fileName) => `Uploading ${fileName}`;
@@ -25,9 +26,32 @@ if (process.env.NODE_ENV !== "production") {
 const REACT_APP_BLOB_SAS=process.env.REACT_APP_BLOB_SAS;
 const REACT_APP_RUN_MODEL_URL=process.env.REACT_APP_RUN_MODEL_URL;
 
+const initialState = {
+  enabled: false,
+  helpText: UPLOAD_CSV_TEXT,
+  inputDisabled: true,
+  updateDisabled: true,
+  inputArrowDisabled: true,
+  inputArrowRan: false,
+  inputUpdateArrowDisabled: true,
+  inputUpdateArrowRan: false,
+  updateArrowDisabled: true,
+  updateArrowRan: false,
+  runDisabled: true,
+  nextArrowDisabled: true,
+  nextArrowRan: false,
+  getResultsDisabled: true,
+  enableFileUpload: false,
+  fileDownloadUrl: 'https://wwmodelling.blob.core.windows.net/data-outputs/pp_test.csv',
+  fileInputDisabled: false,
+  files: []
+};
+
 
 export const flowReducer = (state, { type, payload }) => {
   switch (type) {
+    case REFRESH:
+      return initialState
     case SET_FILE:
       return {
         ...state,
@@ -106,6 +130,10 @@ export const uploadFile = async (files) => {
   }
 }
 
+export const refresh = (dispatch) => () => {
+  dispatch({type: REFRESH})
+}
+
 export const uploadData = (dispatch) => (file) =>{
   dispatch({type: UPLOADING_DATA});
   uploadFile(file).then((data) => {
@@ -136,24 +164,5 @@ export const setFile = (dispatch) => (file) => {
 }
 
 export const { Provider, Context } =
-  useDataContext(flowReducer, { start, inputData, uploadData, runData, setFile }, {
-    enabled: false,
-    helpText: UPLOAD_CSV_TEXT,
-    inputDisabled: true,
-    updateDisabled: true,
-    inputArrowDisabled: true,
-    inputArrowRan: false,
-    inputUpdateArrowDisabled: true,
-    inputUpdateArrowRan: false,
-    updateArrowDisabled: true,
-    updateArrowRan: false,
-    runDisabled: true,
-    nextArrowDisabled: true,
-    nextArrowRan: false,
-    getResultsDisabled: true,
-    enableFileUpload: false,
-    fileDownloadUrl: 'https://wwmodelling.blob.core.windows.net/data-outputs/pp_test.csv',
-    fileInputDisabled: false,
-    files: []
-  });
+  useDataContext(flowReducer, { start, inputData, uploadData, runData, setFile, refresh }, initialState);
 
