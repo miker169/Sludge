@@ -18,6 +18,7 @@ const Main = () => {
         <RefreshButton/>
       </div>
       <FlowContainer/>
+      <hr className="spacer"/>
       <ScenarioModelling />
     </div>
   )

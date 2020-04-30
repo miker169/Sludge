@@ -1,7 +1,9 @@
 
 
 .refresh {
-    margin-left: .5em;
+    margin-left: 1em;
+    align-self: flex-end;
+    margin-left: auto;
 }
 .refresh a {
     background-color: var(--medium-blue--disabled);
