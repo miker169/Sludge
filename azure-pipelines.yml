@@ -32,7 +32,7 @@ steps:
 - script: |
     pushd $(projectFolder) && yarn install && popd
     pushd $(projectFolder) && yarn run jest && popd
-    pushd $(projectFolder) && yarn run jest --coverage --coverageDirectory=output/coverage/jest
+    pushd $(projectFolder) && yarn run jest --coverage --coverageDirectory=output/coverage/jest && popd
     pushd $(projectFolder) && yarn run build && popd
 
   displayName: 'yarn install and build'
