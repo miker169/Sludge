@@ -1,0 +1,58 @@
+# Node.js with React
+
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+variables:
+  projectFolder: 'yw_react_fe/yw-fe'
+  buildOutputFolder: "yw_react_fe/yw-fe/build"
+  deploymentFolder: "yw_react_fe/yw-fe/deployment"
+  storageAccount: "wwmodelling"
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+
+- powershell: |
+  env:
+    REACT_APP_AZURE_STORAGE_ACCOUNT_NAME: $(storageAccountName)
+    REACT_APP_BLOB_SAS: $(sas_url)
+    REACT_APP_RUN_MODEL_URL: $(runModelUrl)
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    pushd $(projectFolder) && yarn install && popd
+    # pushd $(projectFolder) && yarn run jest && popd
+    pushd $(projectFolder) && yarn run build && popd
+  displayName: 'yarn install and build'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(buildOutputFolder)' 
+    contents: '**/*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)/output'
+    cleanTargetFolder: true
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(deploymentFolder)'
+    contents: '**/*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)/deployment'
+    cleanTargetFolder: true
+
+# Archive the files into a zip file for publishing
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifacts'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+
+
+

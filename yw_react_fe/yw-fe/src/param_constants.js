@@ -1,9 +1,10 @@
+/* istanbul ignore file */
 import React from 'react';
 import Select from 'react-select'
 import {Form} from 'react-bootstrap';
 import {Button} from 'react-bootstrap';
 import './App.css';
-import * as modelConstants from './model_constants'
+// import * as modelConstants from './model_constants'
 
 export const options = [
     { value: '', label: '' },
@@ -15,77 +16,19 @@ export const options = [
     { value: 'Sludge Production Modifier', label: 'Sludge Production Modifier' },
     { value: 'Sludge Throughput Modifier', label: 'Sludge Throughput Modifier' }
   ]
-  
+
 
 export const param_selector = (
 
-  <div class = "param-container">
+  <div className = "param-container">
 
-  <div class = "select-container">
-    <div class = "select-container-row">  
-      <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-  
-    <div class = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-  
-    <div class = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-  
-    <div class = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-  
-    <div class = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-  
-    <div class = "select-container-row">
-    <Select options={options}/>
-      <Form>
-      <Form.Group controlId="ParamForm">
-        <Form.Control type="param" placeholder="Value"/>
-      </Form.Group>
-      </Form>
-    </div>
-  
-      <Button variant="outline-primary" size="lg">
-            Submit
-          </Button>
-      </div>
 
-      <div class = "param-model-container">
 
-      {modelConstants.model_flow}
+      {/*<div className = "param-model-container">*/}
 
-      </div>
+      {/*{modelConstants.model_flow}*/}
+
+      {/*</div>*/}
 
     </div>
       )
