@@ -35,6 +35,12 @@ steps:
     pushd $(projectFolder) && yarn run build && popd
   displayName: 'yarn install and build'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/src/jestResults.trx'
+    failTaskOnFailedTests: true
+
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(buildOutputFolder)' 
