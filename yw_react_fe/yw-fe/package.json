@@ -118,7 +118,7 @@
       [
         "jest-trx-results-processor",
         {
-          "outputFile": "./src/jestTestresults.trx",
+          "outputFile": "output/jestTestresults.trx",
           "defaultUserName": "user name to use if automatic detection fails"
         }
       ]
