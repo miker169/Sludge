@@ -40,7 +40,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'VSTest'
-    testResultsFiles: ./src/jestTestresults.trx'
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/output/jestTestresults.trx'
     failTaskOnFailedTests: true
 
 
