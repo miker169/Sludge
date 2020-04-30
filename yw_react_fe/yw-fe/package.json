@@ -101,7 +101,8 @@
       "!src/**/*.d.ts"
     ],
     "coverageReporters": [
-      "lcov"
+      "text",
+      "cobertura"
     ],
     "coverageDirectory": "test-coverage",
     "coverageThreshold": {
@@ -112,6 +113,16 @@
         "statements": 0
       }
     },
+    "reporters": [
+      "default",
+      [
+        "jest-trx-results-processor",
+        {
+          "outputFile": "./src/jestTestresults.trx",
+          "defaultUserName": "user name to use if automatic detection fails"
+        }
+      ]
+    ],
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],

@@ -126,7 +126,7 @@ export const uploadFile = async (files) => {
     })
     return await Promise.all(promises);
   } catch (e) {
-    console.log(e.message)
+   return e;
   }
 }
 
