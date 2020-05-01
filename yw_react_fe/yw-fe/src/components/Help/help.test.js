@@ -38,4 +38,4 @@ describe('<Help/>', () => {
     expect(help.textContent).toBe(helpText);
   });
 
-})
+});

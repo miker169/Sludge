@@ -1,17 +1,21 @@
-import React, {createElement} from 'react';
+import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import FileUpload from "./fileInput";
-import {Provider as FlowProvider, setFile} from "../../context/FlowContext";
-
 
 describe('<FileUpload/>', () => {
   const wrapper = () => {
-    return  render(
-      <FlowProvider>
-        <FileUpload />
-      </FlowProvider>);
+    return  render(<FileUpload/>)
   }
+  beforeEach(() => {
+    jest.spyOn(React, 'useContext')
+    .mockImplementation((context) => {
+      return {
+        setFile: jest.fn(),
+        start: jest.fn()
+      }
+    });
+  })
   test('renders without error', () => {
     const {queryByTestId} = wrapper();
     const uploadElement = queryByTestId('component-file-upload')
@@ -78,75 +82,4 @@ describe('<FileUpload/>', () => {
       });
     })
   });
-
-  // describe('When file selected', () => {
-  //   let hiddenFileInputElement;
-  //   let mockEvent = jest.fn();
-  //   let startFlowMock = jest.fn();
-  //   let queryByTestId;
-  //   const fireFileUploadEvent = (fileName, fileType) => {
-  //     /*
-  //       I've decided to mock out the event , I could have just as
-  //       easily spied on React.useState and set the value of the
-  //       file name.
-  //      */
-  //     const testFile = new Blob(
-  //       [{fileContents: 'tesying'}], {type: fileType});
-  //     testFile.name = fileName
-  //     mockEvent = {target: {files: [testFile]}};
-  //     ({queryByTestId } = wrapper());
-  //     hiddenFileInputElement = queryByTestId('hidden-input');
-  //     fireEvent.change(hiddenFileInputElement, mockEvent);
-  //   }
-  //
-  //   beforeEach(() => {
-  //
-  //     jest.spyOn(React, 'useContext')
-  //     .mockImplementation((context) => {
-  //       return {
-  //         setFile: jest.fn(),
-  //         start: startFlowMock
-  //       }
-  //     })
-  //   })
-  //   test('it displays the filename selected', () => {
-  //     const testFileName = 'my-test-file.csv';
-  //     const testFileType = 'application/csv';
-  //     fireFileUploadEvent(testFileName, testFileType);
-  //
-  //     const labelText = queryByTestId('fileLabel');
-  //     expect(labelText.textContent).toContain(testFileName);
-  //   });
-  //
-  //   test('it can only accept csv', () => {
-  //     const defaultText = "Upload CSV";
-  //     const testFileName = 'my-test-file.js';
-  //     const testFileType = 'application/json';
-  //
-  //     const {queryByTestId} = wrapper();
-  //     const labelText = queryByTestId('fileLabel');
-  //     hiddenFileInputElement = queryByTestId('hidden-input');
-  //     fireFileUploadEvent(testFileName, testFileType);
-  //
-  //     expect(labelText.textContent).toContain(defaultText);
-  //   });
-  //
-  //
-  //   test('it starts the flow', () => {
-  //     let newStartMock = jest.fn();
-  //     jest.spyOn(React, 'useContext')
-  //     .mockImplementation((context) => {
-  //       return {
-  //         setFile: jest.fn(),
-  //         start: newStartMock
-  //       }
-  //     })
-  //     const {queryByTestId} = wrapper();
-  //     hiddenFileInputElement = queryByTestId('hidden-input');
-  //
-  //     fireFileUploadEvent('test', 'applicaton/csv');
-  //     expect(startFlowMock).toHaveBeenCalled();
-  //
-  //   });
-  // })
 })
