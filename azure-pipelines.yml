@@ -31,8 +31,7 @@ steps:
 
 - script: |
     pushd $(projectFolder) && yarn install && popd
-    pushd $(projectFolder) && yarn run jest && popd
-    pushd $(projectFolder) && yarn run jest --coverage --coverageDirectory=output/coverage/jest && popd
+    pushd $(projectFolder) && yarn run test-ci && popd
     pushd $(projectFolder) && yarn run build && popd
 
   displayName: 'yarn install and build'
@@ -42,9 +41,6 @@ steps:
     testResultsFormat: 'VSTest'
     testResultsFiles: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/jestTestresults.trx'
     failTaskOnFailedTests: true
-
-#  /home/vsts/work/1/s/$(projectFolder)/output/jestTestresults.trx
-#  /home/vsts/work/1/s/output/jestTestresults.trx
 
 - task: PublishTestResults@2
   inputs:
