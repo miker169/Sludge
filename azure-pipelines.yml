@@ -39,16 +39,16 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'VSTest'
-    testResultsFiles: '$(System.DefaultWorkingDirectory)/**/jestTestresults.trx'
+    testResultsFiles: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/jestTestresults.trx'
     failTaskOnFailedTests: true
 
 
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/output/*coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/output'
-    pathToSources: '$(System.DefaultWorkingDirectory)/output/src'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/*coverage.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output'
+    pathToSources: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/src'
 
 - task: CopyFiles@2
   inputs:
