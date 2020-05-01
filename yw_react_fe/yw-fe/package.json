@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "jest-junit": "^10.0.0",
+    "jest-junit-reporter": "^1.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -76,7 +78,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "test-ci": "jest --ci --coverage --coverageReporters=html --coverageReporters=cobertura --coverageDirectory=output"
   },
   "eslintConfig": {
     "extends": "react-app"
