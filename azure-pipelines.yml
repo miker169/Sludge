@@ -56,8 +56,9 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/output/jest/index.html'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/output/jest'
+    pathToSources: '$(System.DefaultWorkingDirectory)/**/output/jest/src'
 
 - task: CopyFiles@2
   inputs:
