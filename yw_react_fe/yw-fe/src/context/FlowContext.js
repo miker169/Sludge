@@ -44,7 +44,8 @@ const initialState = {
   enableFileUpload: false,
   fileDownloadUrl: 'https://wwmodelling.blob.core.windows.net/data-outputs/pp_test.csv',
   fileInputDisabled: false,
-  files: []
+  files: [],
+  warnings: false,
 };
 
 
@@ -100,7 +101,7 @@ export const flowReducer = (state, { type, payload }) => {
       }
     }
     case SAVE_MESSAGES:
-      return {...state, messages: payload}
+      return {...state, messages: payload, warnings: true}
     default:
       return state;
   }

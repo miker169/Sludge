@@ -1,0 +1,14 @@
+.flow-help {
+    color: var(--white);
+    font-weight: 400;
+    font-size: .9rem;
+    background-color: var(--darker-blue);
+    padding: 1em;
+    border-radius: .4em;
+    border: .1em solid var(--medium-blue--disabled);
+    display: flex;
+}
+
+.flow-help-icon {
+    margin-right: 1em;
+}
