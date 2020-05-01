@@ -102,7 +102,7 @@
       "!src/**/*.d.ts"
     ],
     "coverageReporters": [
-      "text",
+      "cobertura",
       "html"
     ],
     "coverageDirectory": "test-coverage",
