@@ -103,7 +103,7 @@
     ],
     "coverageReporters": [
       "text",
-      "cobertura"
+      "html"
     ],
     "coverageDirectory": "test-coverage",
     "coverageThreshold": {
