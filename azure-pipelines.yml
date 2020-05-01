@@ -39,12 +39,6 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'VSTest'
-    testResultsFiles: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/jestTestresults.trx'
-    failTaskOnFailedTests: true
-
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'VSTest'
     testResultsFiles: '$(System.DefaultWorkingDirectory)/**/jestTestresults.trx'
     failTaskOnFailedTests: true
 
