@@ -1,278 +1,286 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="024358c1-b679-4159-96a8-f6401787df66" name="mike@Helens-iMac.local 2020-04-30T16:29:31.867Z" runUser="mike" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <TestSettings name="Jest test run" id="155807e2-b5c1-4de2-84bb-ff5377a0510d"/>
-  <Times creation="2020-04-30T16:29:31.867Z" queuing="2020-04-30T16:29:31.867Z" start="2020-04-30T16:29:31.867Z" finish="2020-04-30T16:29:31.867Z"/>
+<TestRun id="19353ab0-a945-41ce-b462-ccb35c93a4fa" name="mike@Helens-iMac.local 2020-05-01T08:56:41.671Z" runUser="mike" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Jest test run" id="b25c3f5b-b85f-4d7e-87bb-6c8c9ae8d8a2"/>
+  <Times creation="2020-05-01T08:56:41.671Z" queuing="2020-05-01T08:56:41.671Z" start="2020-05-01T08:56:41.671Z" finish="2020-05-01T08:56:41.671Z"/>
   <ResultSummary outcome="Passed">
-    <Counters total="67" executed="67" passed="67" failed="0" error="0"/>
+    <Counters total="69" executed="69" passed="69" failed="0" error="0"/>
   </ResultSummary>
   <TestDefinitions>
-    <UnitTest name="&lt;FileUpload/> / renders without error" id="279f634f-6ebe-4192-913d-4cea2db679a3">
-      <Execution id="6ecb974e-5d9c-40a1-8db4-43aa5fc296f8"/>
+    <UnitTest name="&lt;FileUpload/> / renders without error" id="082b21a5-bb2e-4dd3-b3f0-756ed5b95e8c">
+      <Execution id="a8417a2f-86e9-4ab6-9c82-f59e5527caef"/>
       <TestMethod codeBase="Jest_&lt;FileUpload/> / renders without error" name="&lt;FileUpload/> / renders without error" className="&lt;FileUpload/>"/>
     </UnitTest>
-    <UnitTest name="&lt;FileUpload/> / Has a label with default text" id="50744b1d-3a1c-456f-8291-d139428e8afc">
-      <Execution id="7bdcdedb-fa0a-4564-81b4-bcb56e7a0942"/>
+    <UnitTest name="&lt;FileUpload/> / Has a label with default text" id="6a62312c-090a-408c-a87b-d1c46d8611cd">
+      <Execution id="5d703259-c662-4719-b7fe-cba4f7b5be2e"/>
       <TestMethod codeBase="Jest_&lt;FileUpload/> / Has a label with default text" name="&lt;FileUpload/> / Has a label with default text" className="&lt;FileUpload/>"/>
     </UnitTest>
-    <UnitTest name="&lt;FileUpload/> / When Clicked / opens a file dialog" id="bcd8aa23-0a33-475e-a4ee-609e957261b0">
-      <Execution id="8bfd3ac4-4d93-41f6-9f15-2eb67adf5b6c"/>
+    <UnitTest name="&lt;FileUpload/> / When Clicked / opens a file dialog" id="ddc72b86-80d6-4c44-870e-504bb5619d80">
+      <Execution id="1d79afc0-a0fd-4775-818a-cfec3cd16a3a"/>
       <TestMethod codeBase="Jest_&lt;FileUpload/> / When Clicked / opens a file dialog" name="&lt;FileUpload/> / When Clicked / opens a file dialog" className="&lt;FileUpload/>"/>
     </UnitTest>
-    <UnitTest name="renders The App without error" id="dc483d1d-7377-4ee7-b5c7-f881ceccd646">
-      <Execution id="10871a7d-46c7-45ae-82e9-b6713a5ff8f2"/>
-      <TestMethod codeBase="Jest_renders The App without error" name="renders The App without error" className="No suite"/>
+    <UnitTest name="&lt;FileUpload/> / When Clicked / When file selected / It calls set file " id="eddbeb28-f6c1-4437-967f-5240c269d2f8">
+      <Execution id="8ae5b988-d011-454e-a188-21e8d1cbf54f"/>
+      <TestMethod codeBase="Jest_&lt;FileUpload/> / When Clicked / When file selected / It calls set file " name="&lt;FileUpload/> / When Clicked / When file selected / It calls set file " className="&lt;FileUpload/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Main/> / it renders without error" id="54897b43-cc31-4e40-8d3e-8efef2250485">
-      <Execution id="c4525b79-2c8e-4f7c-8292-af3eab9d0fc1"/>
+    <UnitTest name="&lt;FileUpload/> / When Clicked / When file selected / It starts the workflow" id="85c47181-6622-46e6-850a-20cb1babd15d">
+      <Execution id="c3bc31dd-e385-455a-b376-d07d6579755c"/>
+      <TestMethod codeBase="Jest_&lt;FileUpload/> / When Clicked / When file selected / It starts the workflow" name="&lt;FileUpload/> / When Clicked / When file selected / It starts the workflow" className="&lt;FileUpload/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Main/> / it renders without error" id="80a7dada-68be-444d-9e8e-96fc264a7836">
+      <Execution id="3f4f142d-fd02-43fa-bd82-0c4fb06bafed"/>
       <TestMethod codeBase="Jest_&lt;Main/> / it renders without error" name="&lt;Main/> / it renders without error" className="&lt;Main/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Main/> / When disabled / Displays the input field" id="6b99fca8-96a1-4b17-bdc1-2cabb39c7ce7">
-      <Execution id="e92ac4ba-f0de-4059-b8f0-2b334264adb5"/>
+    <UnitTest name="&lt;Main/> / When disabled / Displays the input field" id="1535d5cc-043f-447f-ae77-d705ea9366d1">
+      <Execution id="a963bf99-1141-438b-bf8b-b0b355841085"/>
       <TestMethod codeBase="Jest_&lt;Main/> / When disabled / Displays the input field" name="&lt;Main/> / When disabled / Displays the input field" className="&lt;Main/>"/>
     </UnitTest>
-    <UnitTest name="&lt;RefreshButton/> / renders without error" id="ceb1dabc-1633-477e-9075-5a379bc4a0de">
-      <Execution id="b8df9616-397a-4797-b838-ced3980db461"/>
+    <UnitTest name="renders The App without error" id="bc5175c4-f01e-4ec3-af84-0fe694c4dd19">
+      <Execution id="dac33e97-b7f0-4607-8d8d-eca1de5625df"/>
+      <TestMethod codeBase="Jest_renders The App without error" name="renders The App without error" className="No suite"/>
+    </UnitTest>
+    <UnitTest name="&lt;RefreshButton/> / renders without error" id="652b71fa-15ae-41fd-92c8-1595cb392bcc">
+      <Execution id="df048a4a-e836-4c81-8a82-214239ca80c7"/>
       <TestMethod codeBase="Jest_&lt;RefreshButton/> / renders without error" name="&lt;RefreshButton/> / renders without error" className="&lt;RefreshButton/>"/>
     </UnitTest>
-    <UnitTest name="&lt;RefreshButton/> / on click / it calls refresh method in the context" id="44d4c6cf-9e91-4c85-bf39-1677a1276c08">
-      <Execution id="ebefb3be-9c23-42a5-96cc-24705c951716"/>
+    <UnitTest name="&lt;RefreshButton/> / on click / it calls refresh method in the context" id="554fdd25-7c51-464d-9d83-5696fb98d860">
+      <Execution id="4fdbd2d1-9ce0-4cbf-b6be-c5a8b15715a9"/>
       <TestMethod codeBase="Jest_&lt;RefreshButton/> / on click / it calls refresh method in the context" name="&lt;RefreshButton/> / on click / it calls refresh method in the context" className="&lt;RefreshButton/>"/>
     </UnitTest>
-    <UnitTest name="&lt;RunButton / it renders without error" id="bb122c1d-5330-446e-ad67-6078c6113b89">
-      <Execution id="c1b2b25b-c962-4d61-9260-47c3c0117e29"/>
+    <UnitTest name="&lt;RunButton / it renders without error" id="c20247a7-a665-4cc5-a6f9-c48b0b19843d">
+      <Execution id="69cc879c-d3d4-43a5-bfb6-5c5a586cabe2"/>
       <TestMethod codeBase="Jest_&lt;RunButton / it renders without error" name="&lt;RunButton / it renders without error" className="&lt;RunButton"/>
     </UnitTest>
-    <UnitTest name="&lt;RunButton / when disabled / Has the disabled class" id="b4601e25-5bd0-4fd5-8315-60aa80a65e25">
-      <Execution id="38669363-d5f3-4073-9ba2-0da51d95ded3"/>
+    <UnitTest name="&lt;RunButton / when disabled / Has the disabled class" id="a9ba7f2f-d46f-4bf6-a95f-a97a7dab5bab">
+      <Execution id="b8382b14-7868-40a7-a0bb-e3511fe9558d"/>
       <TestMethod codeBase="Jest_&lt;RunButton / when disabled / Has the disabled class" name="&lt;RunButton / when disabled / Has the disabled class" className="&lt;RunButton"/>
     </UnitTest>
-    <UnitTest name="&lt;RunButton / when disabled / Cannot call run data" id="3672e558-35c8-41d5-b8b9-625e955488a4">
-      <Execution id="cb329e1b-e53e-48f7-84cf-3fb0f73d7e6b"/>
+    <UnitTest name="&lt;RunButton / when disabled / Cannot call run data" id="7dd92ee5-e028-4477-b540-7565fbf5e732">
+      <Execution id="ea3e3f43-116c-4692-a57c-89009219606a"/>
       <TestMethod codeBase="Jest_&lt;RunButton / when disabled / Cannot call run data" name="&lt;RunButton / when disabled / Cannot call run data" className="&lt;RunButton"/>
     </UnitTest>
-    <UnitTest name="&lt;RunButton / when enabled / Does not have the disabled class" id="f93aec80-b733-4a69-a619-c3f3812c1eee">
-      <Execution id="ccde7be4-678c-428d-a6d0-3e41cf4e92cd"/>
+    <UnitTest name="&lt;RunButton / when enabled / Does not have the disabled class" id="55cbe6e2-254c-46d5-b028-258d24506b38">
+      <Execution id="fa3724d3-40e4-47b9-9377-80bc5154e7f4"/>
       <TestMethod codeBase="Jest_&lt;RunButton / when enabled / Does not have the disabled class" name="&lt;RunButton / when enabled / Does not have the disabled class" className="&lt;RunButton"/>
     </UnitTest>
-    <UnitTest name="&lt;RunButton / when enabled / Can call run data" id="9c03de32-de75-4e55-800c-f2bec2275274">
-      <Execution id="061852fc-aa97-4bb3-a537-a5eab92fd2a9"/>
+    <UnitTest name="&lt;RunButton / when enabled / Can call run data" id="bba85974-5e9e-4869-9bd1-a5d4833ed72f">
+      <Execution id="b215dabc-dcba-4d4c-a55e-ac42b225d004"/>
       <TestMethod codeBase="Jest_&lt;RunButton / when enabled / Can call run data" name="&lt;RunButton / when enabled / Can call run data" className="&lt;RunButton"/>
     </UnitTest>
-    <UnitTest name="&lt;FlowContainer/> / is disabled by default" id="97b963b0-7d8e-4c07-a63e-fd04e9cbee3a">
-      <Execution id="7b2ffe8b-14f3-4109-ad3c-b72ac24bc118"/>
-      <TestMethod codeBase="Jest_&lt;FlowContainer/> / is disabled by default" name="&lt;FlowContainer/> / is disabled by default" className="&lt;FlowContainer/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" id="96ccd05d-e06a-4a6f-818a-8d11ddfa69fa">
-      <Execution id="c4443e1f-fd12-403b-9ad4-5ef104b1b394"/>
-      <TestMethod codeBase="Jest_&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" name="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" className="&lt;FlowContainer/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;Help/> / renders without error" id="82130c44-7b45-40af-880e-bf0dd1df0f8f">
-      <Execution id="3e1870a5-6915-42b2-96c6-6be81c4bccb5"/>
+    <UnitTest name="&lt;Help/> / renders without error" id="99dc0634-ebbf-4577-a97b-d71930541f66">
+      <Execution id="8940a444-41ad-4a11-953f-4a9d03efac64"/>
       <TestMethod codeBase="Jest_&lt;Help/> / renders without error" name="&lt;Help/> / renders without error" className="&lt;Help/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Help/> / Shows help text returned from context" id="8e7b0718-62af-4894-9beb-c9abd976fa85">
-      <Execution id="8de408a0-6f8d-45a9-9c09-959ac75ff295"/>
+    <UnitTest name="&lt;Help/> / Shows help text returned from context" id="285a281d-b3c9-46e7-95f2-bb745b7a25c9">
+      <Execution id="6e94773a-bf9f-44ac-bc05-46332973a87e"/>
       <TestMethod codeBase="Jest_&lt;Help/> / Shows help text returned from context" name="&lt;Help/> / Shows help text returned from context" className="&lt;Help/>"/>
     </UnitTest>
-    <UnitTest name="&lt;ResultsButton/> / renders without error" id="ad62fbb9-54a6-4ecf-945c-5b46d3c53dcf">
-      <Execution id="55dbbedf-ac80-483a-82c0-452a294815b3"/>
-      <TestMethod codeBase="Jest_&lt;ResultsButton/> / renders without error" name="&lt;ResultsButton/> / renders without error" className="&lt;ResultsButton/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;ResultsButton/> / when disabled / should have class disabled" id="2a22a77a-e808-4616-8936-770401c387ed">
-      <Execution id="5de2ffb9-5f5c-483d-93c4-c1cc4ca8f8b4"/>
-      <TestMethod codeBase="Jest_&lt;ResultsButton/> / when disabled / should have class disabled" name="&lt;ResultsButton/> / when disabled / should have class disabled" className="&lt;ResultsButton/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;ResultsButton/> / when not disabled / should not have class disabled" id="94caed82-eae5-46dd-95d7-8d750dd59d9b">
-      <Execution id="6d927c48-bbe0-4024-8be4-2277b045f15d"/>
-      <TestMethod codeBase="Jest_&lt;ResultsButton/> / when not disabled / should not have class disabled" name="&lt;ResultsButton/> / when not disabled / should not have class disabled" className="&lt;ResultsButton/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;RunArrow/> / It renders without error" id="fda05a8f-a0ff-40bf-a28a-9fda9216f460">
-      <Execution id="f3db5682-d7a6-48f4-94c1-97d782167e42"/>
-      <TestMethod codeBase="Jest_&lt;RunArrow/> / It renders without error" name="&lt;RunArrow/> / It renders without error" className="&lt;RunArrow/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;RunArrow/> / when disabled / The disabled class is applied" id="2332efda-5e64-42be-b999-37de1178a0ed">
-      <Execution id="5a18e0d7-6f0f-446b-93f1-a902371ec13e"/>
-      <TestMethod codeBase="Jest_&lt;RunArrow/> / when disabled / The disabled class is applied" name="&lt;RunArrow/> / when disabled / The disabled class is applied" className="&lt;RunArrow/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;RunArrow/> / when ran / the ran class is applied" id="dd16ce6f-6ef0-44a1-8cc7-796ddff19053">
-      <Execution id="9306288d-cee5-4164-9ee6-79a49ba29642"/>
-      <TestMethod codeBase="Jest_&lt;RunArrow/> / when ran / the ran class is applied" name="&lt;RunArrow/> / when ran / the ran class is applied" className="&lt;RunArrow/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;Update/> / It renders without error" id="9bff3b73-456c-4035-bd92-6f3d2c539dea">
-      <Execution id="cb6f97ae-2667-413e-aaff-6a8ea4daf650"/>
-      <TestMethod codeBase="Jest_&lt;Update/> / It renders without error" name="&lt;Update/> / It renders without error" className="&lt;Update/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;Update/> / when disabled / The disabled class is applied" id="c636dbb3-d8e7-4255-8a03-8b4dd8e7139b">
-      <Execution id="b5ef722f-f4b8-4e9c-b94a-d1cedeffa6eb"/>
-      <TestMethod codeBase="Jest_&lt;Update/> / when disabled / The disabled class is applied" name="&lt;Update/> / when disabled / The disabled class is applied" className="&lt;Update/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;Update/> / when ran / the ran class is appled" id="6b2d7436-0c17-441e-9c82-4088f8e9bed4">
-      <Execution id="d32eec34-047e-4bf0-aa98-98fe40b6dbbc"/>
-      <TestMethod codeBase="Jest_&lt;Update/> / when ran / the ran class is appled" name="&lt;Update/> / when ran / the ran class is appled" className="&lt;Update/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;Input/> / it renders without error" id="5eaf0317-5088-40ea-a292-00512b5ac720">
-      <Execution id="872e0c5c-5c02-42c1-960e-6565622a71cc"/>
+    <UnitTest name="&lt;Input/> / it renders without error" id="f5628d4b-af2b-4882-bea1-ac0945cc759a">
+      <Execution id="72f481c3-773f-41f7-a653-34a883df5fa1"/>
       <TestMethod codeBase="Jest_&lt;Input/> / it renders without error" name="&lt;Input/> / it renders without error" className="&lt;Input/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Input/> / when disabled / has the disabled class" id="fa9ce4ef-ee89-46fa-959b-a1dd8856bd2b">
-      <Execution id="1afe512e-cadd-47ea-a710-95389d875bf5"/>
+    <UnitTest name="&lt;Input/> / when disabled / has the disabled class" id="8c3fe5ea-3e11-4c25-b423-30edc57adfa1">
+      <Execution id="5d98ba6c-0bd3-4fa4-bef0-d46848934a48"/>
       <TestMethod codeBase="Jest_&lt;Input/> / when disabled / has the disabled class" name="&lt;Input/> / when disabled / has the disabled class" className="&lt;Input/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Input/> / when disabled / Cannot call uploadData" id="b729f535-cef5-4c24-aa5d-7abc75b1c9f1">
-      <Execution id="fff14207-2f0d-4b91-a239-0af7aa4f36d8"/>
+    <UnitTest name="&lt;Input/> / when disabled / Cannot call uploadData" id="1414eaa8-238d-4b6d-b6f4-555edcd56389">
+      <Execution id="21bd3bd7-ed0d-4905-b3a8-7cfaa9372710"/>
       <TestMethod codeBase="Jest_&lt;Input/> / when disabled / Cannot call uploadData" name="&lt;Input/> / when disabled / Cannot call uploadData" className="&lt;Input/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Input/> / when enabled / does not have the disabled class" id="24dc331b-c1ae-4851-a444-f2114fdbb8e6">
-      <Execution id="9420a6a1-2a06-4aab-8335-c8f1a0e8aaf6"/>
+    <UnitTest name="&lt;Input/> / when enabled / does not have the disabled class" id="d6b72286-5026-43c6-b56a-dffff8117075">
+      <Execution id="bcec3931-c7ef-413f-beb0-c306619cefed"/>
       <TestMethod codeBase="Jest_&lt;Input/> / when enabled / does not have the disabled class" name="&lt;Input/> / when enabled / does not have the disabled class" className="&lt;Input/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" id="2dbb22c4-067e-4fc5-8f8c-877768601cac">
-      <Execution id="cc8601d9-fece-499f-8ba1-882781f43de6"/>
+    <UnitTest name="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" id="1524d018-3b6d-4328-b5a1-0c017be00ddd">
+      <Execution id="f3b7a83d-5282-4da5-ab12-a8a3fa4b5d7d"/>
       <TestMethod codeBase="Jest_&lt;Input/> / when enabled / when clicked / It calls the uploadData function" name="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" className="&lt;Input/>"/>
     </UnitTest>
-    <UnitTest name="&lt;ListItem/> / renders without error" id="77651de7-1a6a-435b-94c0-ea443240a53a">
-      <Execution id="920ca3b3-d910-403b-8c66-f3abdf976ac1"/>
-      <TestMethod codeBase="Jest_&lt;ListItem/> / renders without error" name="&lt;ListItem/> / renders without error" className="&lt;ListItem/>"/>
+    <UnitTest name="&lt;RunArrow/> / It renders without error" id="140c16f5-03f5-4483-abf4-f69a9d9b8c0f">
+      <Execution id="6ee8caa3-f168-4acd-973a-de87b3a3c860"/>
+      <TestMethod codeBase="Jest_&lt;RunArrow/> / It renders without error" name="&lt;RunArrow/> / It renders without error" className="&lt;RunArrow/>"/>
     </UnitTest>
-    <UnitTest name="&lt;ListItem/> / When clicked / calls showNext" id="3e13ed14-8980-414f-a9c6-9d7cd0b18f47">
-      <Execution id="7cb01809-db69-4adb-a02d-994f6e9ea6c0"/>
-      <TestMethod codeBase="Jest_&lt;ListItem/> / When clicked / calls showNext" name="&lt;ListItem/> / When clicked / calls showNext" className="&lt;ListItem/>"/>
+    <UnitTest name="&lt;RunArrow/> / when disabled / The disabled class is applied" id="ce891e8e-6efa-4ee5-a842-09970333873f">
+      <Execution id="1c71f56f-a6a7-419f-b652-d4ffd4ab79bf"/>
+      <TestMethod codeBase="Jest_&lt;RunArrow/> / when disabled / The disabled class is applied" name="&lt;RunArrow/> / when disabled / The disabled class is applied" className="&lt;RunArrow/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Form/> / renders without error" id="f9ca21a7-3033-4bdb-a3a1-315adad3f3a1">
-      <Execution id="88b6d33e-73d1-4010-8542-cf66c5f04cc5"/>
-      <TestMethod codeBase="Jest_&lt;Form/> / renders without error" name="&lt;Form/> / renders without error" className="&lt;Form/>"/>
+    <UnitTest name="&lt;RunArrow/> / when ran / the ran class is applied" id="d8f3f316-191c-45ef-b0b1-38738066ac41">
+      <Execution id="4d6dfe81-62e8-4cf7-97ed-8ce569469b65"/>
+      <TestMethod codeBase="Jest_&lt;RunArrow/> / when ran / the ran class is applied" name="&lt;RunArrow/> / when ran / the ran class is applied" className="&lt;RunArrow/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Form/> / renders a form field for every field item" id="ad0422d4-d5ee-4f38-81a5-8f8501549d84">
-      <Execution id="01af1bc4-fc2f-48b4-b73a-562ccc6f2caa"/>
-      <TestMethod codeBase="Jest_&lt;Form/> / renders a form field for every field item" name="&lt;Form/> / renders a form field for every field item" className="&lt;Form/>"/>
+    <UnitTest name="&lt;ResultsButton/> / renders without error" id="a609adec-6e3e-46ab-b8f3-aac736d273c6">
+      <Execution id="a7e8adec-a408-4ac8-a10f-cb776ac860cb"/>
+      <TestMethod codeBase="Jest_&lt;ResultsButton/> / renders without error" name="&lt;ResultsButton/> / renders without error" className="&lt;ResultsButton/>"/>
     </UnitTest>
-    <UnitTest name="&lt;List/> / It renders without error" id="d2d0c29d-8cd9-4fc1-8ad0-781c6069b1de">
-      <Execution id="178d7160-67cc-4968-933e-968244383ddf"/>
-      <TestMethod codeBase="Jest_&lt;List/> / It renders without error" name="&lt;List/> / It renders without error" className="&lt;List/>"/>
+    <UnitTest name="&lt;ResultsButton/> / when disabled / should have class disabled" id="4e8efac0-2fd1-46a1-8db1-2ce8313a7edc">
+      <Execution id="8ce22777-1ecf-492f-9622-1fec8d47b1a7"/>
+      <TestMethod codeBase="Jest_&lt;ResultsButton/> / when disabled / should have class disabled" name="&lt;ResultsButton/> / when disabled / should have class disabled" className="&lt;ResultsButton/>"/>
     </UnitTest>
-    <UnitTest name="&lt;List/> / Drop Down List / Displays a default selection" id="33bc7e06-7b12-4264-9994-3d6cb1eed598">
-      <Execution id="5824aa8c-cd89-4dcc-848a-b7e1deae1ec8"/>
-      <TestMethod codeBase="Jest_&lt;List/> / Drop Down List / Displays a default selection" name="&lt;List/> / Drop Down List / Displays a default selection" className="&lt;List/>"/>
+    <UnitTest name="&lt;ResultsButton/> / when not disabled / should not have class disabled" id="5ec49e39-7897-44d0-b55e-206c50f12d08">
+      <Execution id="e687dcc9-718e-41e4-8019-5eadfb182304"/>
+      <TestMethod codeBase="Jest_&lt;ResultsButton/> / when not disabled / should not have class disabled" name="&lt;ResultsButton/> / when not disabled / should not have class disabled" className="&lt;ResultsButton/>"/>
     </UnitTest>
-    <UnitTest name="&lt;List/> / Drop Down List / On Click / Displays a collection of items" id="49e02829-94d4-4df5-a660-28f5a8a90e21">
-      <Execution id="0c84127c-7abc-4194-8c62-ec44cef2c995"/>
-      <TestMethod codeBase="Jest_&lt;List/> / Drop Down List / On Click / Displays a collection of items" name="&lt;List/> / Drop Down List / On Click / Displays a collection of items" className="&lt;List/>"/>
+    <UnitTest name="&lt;Update/> / It renders without error" id="ff47aa47-94b7-4987-8e57-38494de4e7a5">
+      <Execution id="c5aec00c-dcfd-4347-8612-108231e1323f"/>
+      <TestMethod codeBase="Jest_&lt;Update/> / It renders without error" name="&lt;Update/> / It renders without error" className="&lt;Update/>"/>
     </UnitTest>
-    <UnitTest name="&lt;ScenarioModelling/> / it renders without error" id="015f1d0f-857a-461f-8cbb-2c0ab294a4df">
-      <Execution id="a83bc467-975a-4ba0-9e01-6d9ea0351d61"/>
+    <UnitTest name="&lt;Update/> / when disabled / The disabled class is applied" id="e9711bdc-44d5-4140-b5bc-97f0e665db5b">
+      <Execution id="30c1d4a4-a00f-4526-aa85-fb621bedbc65"/>
+      <TestMethod codeBase="Jest_&lt;Update/> / when disabled / The disabled class is applied" name="&lt;Update/> / when disabled / The disabled class is applied" className="&lt;Update/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Update/> / when ran / the ran class is appled" id="ad31c1ac-9269-4e87-87cf-e6ebb92159df">
+      <Execution id="028f136b-c5f6-4be8-b90d-26942d142101"/>
+      <TestMethod codeBase="Jest_&lt;Update/> / when ran / the ran class is appled" name="&lt;Update/> / when ran / the ran class is appled" className="&lt;Update/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ScenarioModelling/> / it renders without error" id="404a7516-3904-498a-b5c5-05bc52a4963a">
+      <Execution id="be5ffa65-b9b4-490d-804a-a0ee2562c126"/>
       <TestMethod codeBase="Jest_&lt;ScenarioModelling/> / it renders without error" name="&lt;ScenarioModelling/> / it renders without error" className="&lt;ScenarioModelling/>"/>
     </UnitTest>
-    <UnitTest name="&lt;ScenarioModelling/> / It has a header" id="4230a715-2d86-4e7d-aea1-dc10e57060d9">
-      <Execution id="4e516765-179f-43ae-9ba4-261a54eee3f8"/>
+    <UnitTest name="&lt;ScenarioModelling/> / It has a header" id="974dbb19-9516-4aa9-b0a9-98c5b2c40733">
+      <Execution id="bad5b21b-94b4-4980-bd8b-e99a152f142b"/>
       <TestMethod codeBase="Jest_&lt;ScenarioModelling/> / It has a header" name="&lt;ScenarioModelling/> / It has a header" className="&lt;ScenarioModelling/>"/>
     </UnitTest>
-    <UnitTest name="&lt;ScenarioModelling/> / It has a drop down select container" id="d87b0c29-3325-4943-b5be-1baab524914a">
-      <Execution id="20888705-4e4c-4093-abc1-8cd2dd9fd834"/>
+    <UnitTest name="&lt;ScenarioModelling/> / It has a drop down select container" id="e4924f1d-aaec-4785-b5e0-3050352d6d77">
+      <Execution id="acb1e546-17ec-4284-8338-1ea72bbb73f1"/>
       <TestMethod codeBase="Jest_&lt;ScenarioModelling/> / It has a drop down select container" name="&lt;ScenarioModelling/> / It has a drop down select container" className="&lt;ScenarioModelling/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Arrow /> / it renders without error" id="64ecdba7-bc45-4660-97cf-1f70bfcf2165">
-      <Execution id="cf0cc8a7-2b26-4154-9e3a-122427e34c7e"/>
-      <TestMethod codeBase="Jest_&lt;Arrow /> / it renders without error" name="&lt;Arrow /> / it renders without error" className="&lt;Arrow />"/>
+    <UnitTest name="&lt;FlowContainer/> / is disabled by default" id="4e121c84-8a28-4704-812b-37ccdd48e23a">
+      <Execution id="047b91fb-ec5a-44c9-b645-0982efd0eb1d"/>
+      <TestMethod codeBase="Jest_&lt;FlowContainer/> / is disabled by default" name="&lt;FlowContainer/> / is disabled by default" className="&lt;FlowContainer/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Arrow /> / renders without Error when passed a valid set of paths" id="229f6122-70f9-4e5d-bd27-df6faec76e2d">
-      <Execution id="4b0d4359-98ea-4a7a-9186-5d78c68f2fc9"/>
-      <TestMethod codeBase="Jest_&lt;Arrow /> / renders without Error when passed a valid set of paths" name="&lt;Arrow /> / renders without Error when passed a valid set of paths" className="&lt;Arrow />"/>
+    <UnitTest name="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" id="1d8207e4-7700-49c4-b4be-529a317256d2">
+      <Execution id="f50d8b12-aaf2-4429-aa1f-503f6d0eaf09"/>
+      <TestMethod codeBase="Jest_&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" name="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" className="&lt;FlowContainer/>"/>
     </UnitTest>
-    <UnitTest name="&lt;Arrow /> / takes a child path element and renders it" id="1d3d6253-2cea-40ff-9689-b73aaffdd501">
-      <Execution id="ede055bc-d2c5-45ad-b130-2d394d7066ef"/>
-      <TestMethod codeBase="Jest_&lt;Arrow /> / takes a child path element and renders it" name="&lt;Arrow /> / takes a child path element and renders it" className="&lt;Arrow />"/>
-    </UnitTest>
-    <UnitTest name="&lt;Button /> / renders without error" id="c96e88d7-d05e-4948-a2ff-a858aae312ca">
-      <Execution id="66d776ca-c5cb-4249-9782-76abbb86ded2"/>
-      <TestMethod codeBase="Jest_&lt;Button /> / renders without error" name="&lt;Button /> / renders without error" className="&lt;Button />"/>
-    </UnitTest>
-    <UnitTest name="&lt;Button /> / can be set to be active" id="391697e9-adf4-4a4b-be87-33ee6f2a4200">
-      <Execution id="8fca81f9-fbab-4f10-aa7b-dfd7c2c0bf45"/>
-      <TestMethod codeBase="Jest_&lt;Button /> / can be set to be active" name="&lt;Button /> / can be set to be active" className="&lt;Button />"/>
-    </UnitTest>
-    <UnitTest name="&lt;Button /> / can accept other classes" id="2b8747ab-4b9e-42a8-b79d-28881d88fe88">
-      <Execution id="5c4b644d-457e-419e-bce7-7332cdef5399"/>
-      <TestMethod codeBase="Jest_&lt;Button /> / can accept other classes" name="&lt;Button /> / can accept other classes" className="&lt;Button />"/>
-    </UnitTest>
-    <UnitTest name="&lt;Nav/> / renders without error" id="c831ea7c-58ce-450e-af6a-d65bf47d5d0d">
-      <Execution id="85ecda08-4053-4809-bbd9-1ad56952b402"/>
-      <TestMethod codeBase="Jest_&lt;Nav/> / renders without error" name="&lt;Nav/> / renders without error" className="&lt;Nav/>"/>
-    </UnitTest>
-    <UnitTest name="dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" id="e6dbb692-7544-4744-8a22-fe3870f8d103">
-      <Execution id="3b71e6da-271a-411a-a4d4-81d06b7e3be3"/>
-      <TestMethod codeBase="Jest_dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" name="dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" className="dataContextFactory"/>
-    </UnitTest>
-    <UnitTest name="&lt;Header/> / renders without error" id="29e727d3-15f1-4d6e-96d2-c34136a6ee34">
-      <Execution id="95c70d07-cf79-4eba-8db6-b53ef0c568cb"/>
-      <TestMethod codeBase="Jest_&lt;Header/> / renders without error" name="&lt;Header/> / renders without error" className="&lt;Header/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;Header/> / Displays a user name" id="64cdbe96-5884-47ee-ac11-2844edfd6d10">
-      <Execution id="86ba7cb3-1e1e-4ba6-a3eb-3ac6408416c1"/>
-      <TestMethod codeBase="Jest_&lt;Header/> / Displays a user name" name="&lt;Header/> / Displays a user name" className="&lt;Header/>"/>
-    </UnitTest>
-    <UnitTest name="&lt;FormField/> / it renders without error" id="3be47bd7-98d0-4861-b334-d9119bf5efae">
-      <Execution id="508e4c99-c909-4800-9249-bc00fff9d635"/>
-      <TestMethod codeBase="Jest_&lt;FormField/> / it renders without error" name="&lt;FormField/> / it renders without error" className="&lt;FormField/>"/>
-    </UnitTest>
-    <UnitTest name="getColumnItem / returns the correct columnItem for items on first tier" id="068bea52-d993-4ee3-916b-8bf5e4bcd335">
-      <Execution id="e74161f5-a684-4820-9282-4c5841b2e7b9"/>
-      <TestMethod codeBase="Jest_getColumnItem / returns the correct columnItem for items on first tier" name="getColumnItem / returns the correct columnItem for items on first tier" className="getColumnItem"/>
-    </UnitTest>
-    <UnitTest name="getColumnItem / return the correct column item for items on the 5th tier" id="805321d2-846f-4840-a741-ed9b38081221">
-      <Execution id="25131139-6652-4b31-95a6-ffe398e95e32"/>
-      <TestMethod codeBase="Jest_getColumnItem / return the correct column item for items on the 5th tier" name="getColumnItem / return the correct column item for items on the 5th tier" className="getColumnItem"/>
-    </UnitTest>
-    <UnitTest name="buildColumnItem / When input options is the same length as the column number / it appends a new column item" id="a8f2f418-555e-4998-9635-fdf323638cf8">
-      <Execution id="20902085-1a92-4eed-a8a1-f0d5dc5beccb"/>
-      <TestMethod codeBase="Jest_buildColumnItem / When input options is the same length as the column number / it appends a new column item" name="buildColumnItem / When input options is the same length as the column number / it appends a new column item" className="buildColumnItem"/>
-    </UnitTest>
-    <UnitTest name="buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" id="4a00ba8b-c256-418e-8fd9-c99399630eef">
-      <Execution id="2c6563f1-08a4-429d-9a7e-c11f666dbdc8"/>
-      <TestMethod codeBase="Jest_buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" name="buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" className="buildColumnItem"/>
-    </UnitTest>
-    <UnitTest name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" id="dd7e7a37-fe2c-4937-9eb1-e6541be100fe">
-      <Execution id="109ce400-79be-4c19-9659-d8659463aa37"/>
-      <TestMethod codeBase="Jest_buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" className="buildColumnItem"/>
-    </UnitTest>
-    <UnitTest name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" id="154a3865-ab96-48f8-88ea-bfbde3329717">
-      <Execution id="5690e06c-16f7-4a96-9fea-e466113a6c92"/>
-      <TestMethod codeBase="Jest_buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" className="buildColumnItem"/>
-    </UnitTest>
-    <UnitTest name="Scenario Context / ScenarioReducer / Returns a default state" id="adad1ef9-04b2-4ec2-9359-e357179dafa5">
-      <Execution id="954f23e7-b46a-4948-a1d3-5b2dcd4b3fea"/>
-      <TestMethod codeBase="Jest_Scenario Context / ScenarioReducer / Returns a default state" name="Scenario Context / ScenarioReducer / Returns a default state" className="Scenario Context"/>
-    </UnitTest>
-    <UnitTest name="Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" id="7e255d94-e6d7-4502-b843-489dc19ebc9d">
-      <Execution id="b14bba39-2237-4a31-95db-707a25f63177"/>
-      <TestMethod codeBase="Jest_Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" name="Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" className="Scenario Context"/>
-    </UnitTest>
-    <UnitTest name="Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" id="9484cc95-7cf5-45e8-b3e4-d0eee34eb5fa">
-      <Execution id="f51a42c9-49dd-42d9-84bb-bf0ea62a23c9"/>
-      <TestMethod codeBase="Jest_Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" name="Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" className="Scenario Context"/>
-    </UnitTest>
-    <UnitTest name="FlowContext / reducer / When type is START_FLOW / it returns some default state" id="6f3685f3-3df5-4a2e-ac75-9f2650db8515">
-      <Execution id="d0ebfd7e-ffd8-4881-a8e8-c414daf118d2"/>
+    <UnitTest name="FlowContext / reducer / When type is START_FLOW / it returns some default state" id="384b248b-a3e5-4702-8f82-dd37a3ac7f72">
+      <Execution id="9e7879e8-448e-4adb-8f12-74fb7ec67381"/>
       <TestMethod codeBase="Jest_FlowContext / reducer / When type is START_FLOW / it returns some default state" name="FlowContext / reducer / When type is START_FLOW / it returns some default state" className="FlowContext"/>
     </UnitTest>
-    <UnitTest name="FlowContext / reducer / action creators / Upload Data / uploadData dispatches UPLOADINGDATA action" id="ce3ef7e4-52be-416c-9fe1-5e77ec059bf2">
-      <Execution id="9230f2ef-c046-42ff-81ae-9c2f4678dd0e"/>
+    <UnitTest name="FlowContext / reducer / action creators / Upload Data / uploadData dispatches UPLOADINGDATA action" id="4828e404-f6dd-4cae-a134-1294b7e66487">
+      <Execution id="0e61a8f3-d9f0-451a-9405-92f3f691932b"/>
       <TestMethod codeBase="Jest_FlowContext / reducer / action creators / Upload Data / uploadData dispatches UPLOADINGDATA action" name="FlowContext / reducer / action creators / Upload Data / uploadData dispatches UPLOADINGDATA action" className="FlowContext"/>
     </UnitTest>
-    <UnitTest name="FlowContext / reducer / action creators / Upload Data / uploadData also fires INPUT_DATA action" id="bfa5adcf-59f4-4855-b0e8-289e94d29ad3">
-      <Execution id="00d97e10-eebe-46a8-82b7-294351546a3d"/>
+    <UnitTest name="FlowContext / reducer / action creators / Upload Data / uploadData also fires INPUT_DATA action" id="7a4b56f2-ebb9-47cd-b8c1-cc14c2cc3a19">
+      <Execution id="66678b8c-1ac9-4ea6-898a-de29b5d003ae"/>
       <TestMethod codeBase="Jest_FlowContext / reducer / action creators / Upload Data / uploadData also fires INPUT_DATA action" name="FlowContext / reducer / action creators / Upload Data / uploadData also fires INPUT_DATA action" className="FlowContext"/>
     </UnitTest>
-    <UnitTest name="FlowContext / reducer / action creators / run data / calls RUN_DATA reducer action" id="afd53b53-18b0-438e-92d8-7f0fb85f387d">
-      <Execution id="389e8879-04e2-4f00-9304-5da9f45ca90b"/>
+    <UnitTest name="FlowContext / reducer / action creators / run data / calls RUN_DATA reducer action" id="ef050411-8af4-4097-a50a-6050993211c5">
+      <Execution id="c948ace2-f956-46d6-902f-65cf25e63060"/>
       <TestMethod codeBase="Jest_FlowContext / reducer / action creators / run data / calls RUN_DATA reducer action" name="FlowContext / reducer / action creators / run data / calls RUN_DATA reducer action" className="FlowContext"/>
     </UnitTest>
-    <UnitTest name="FlowContext / reducer / action creators / inputData / It dispatches the INPUT_DATA action" id="a1e8c24d-8dca-4d32-82d8-1ca7d9e381a0">
-      <Execution id="b0bfd269-9aaf-4e41-82e0-c452d6c9ba98"/>
+    <UnitTest name="FlowContext / reducer / action creators / inputData / It dispatches the INPUT_DATA action" id="cdfc2ce0-be8f-4b1b-8655-bc1b6998c537">
+      <Execution id="34e5ed5f-3170-4484-87bd-ce16e776b280"/>
       <TestMethod codeBase="Jest_FlowContext / reducer / action creators / inputData / It dispatches the INPUT_DATA action" name="FlowContext / reducer / action creators / inputData / It dispatches the INPUT_DATA action" className="FlowContext"/>
     </UnitTest>
-    <UnitTest name="FlowContext / reducer / action creators / start / It dispatches the START action with a file payload" id="a93e994b-e11d-4d7b-a7c2-104e29727a2f">
-      <Execution id="8c0b78b3-d29f-4df2-950a-9bef03527f68"/>
+    <UnitTest name="FlowContext / reducer / action creators / start / It dispatches the START action with a file payload" id="bacbcb1f-0ba0-41fc-99d4-2748fa8ca5a3">
+      <Execution id="cae1540a-a580-4666-b988-ebe8fecdb159"/>
       <TestMethod codeBase="Jest_FlowContext / reducer / action creators / start / It dispatches the START action with a file payload" name="FlowContext / reducer / action creators / start / It dispatches the START action with a file payload" className="FlowContext"/>
+    </UnitTest>
+    <UnitTest name="&lt;Header/> / renders without error" id="bde3cba0-5ee7-40b5-be61-fea8618b2832">
+      <Execution id="4fbb85da-67ce-4c4a-9b51-25b4df511f03"/>
+      <TestMethod codeBase="Jest_&lt;Header/> / renders without error" name="&lt;Header/> / renders without error" className="&lt;Header/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Header/> / Displays a user name" id="78bd79da-ebfd-4cff-ac64-46df68e4f522">
+      <Execution id="74fc0eb6-e372-4e31-9c2b-5eb107cc75da"/>
+      <TestMethod codeBase="Jest_&lt;Header/> / Displays a user name" name="&lt;Header/> / Displays a user name" className="&lt;Header/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;List/> / It renders without error" id="bce1b439-ac8f-4a7b-a921-1ede813cdc78">
+      <Execution id="e7b8debb-1982-4caa-b4db-159211cdd5c5"/>
+      <TestMethod codeBase="Jest_&lt;List/> / It renders without error" name="&lt;List/> / It renders without error" className="&lt;List/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;List/> / Drop Down List / Displays a default selection" id="8aa1e0ea-6f26-4b95-afaa-e8d46b747786">
+      <Execution id="7441f67d-80d7-402f-b724-ad8f15571ef9"/>
+      <TestMethod codeBase="Jest_&lt;List/> / Drop Down List / Displays a default selection" name="&lt;List/> / Drop Down List / Displays a default selection" className="&lt;List/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;List/> / Drop Down List / On Click / Displays a collection of items" id="8ec4b1d9-eda6-4521-ad1d-5026311206be">
+      <Execution id="1792f977-6c02-4d84-a0ab-4c1f19ee6f4d"/>
+      <TestMethod codeBase="Jest_&lt;List/> / Drop Down List / On Click / Displays a collection of items" name="&lt;List/> / Drop Down List / On Click / Displays a collection of items" className="&lt;List/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Form/> / renders without error" id="1c0a3607-bd76-4135-9c3d-936ad6ed29f1">
+      <Execution id="15d57655-b1c4-4068-94fc-a3bcb3daabf5"/>
+      <TestMethod codeBase="Jest_&lt;Form/> / renders without error" name="&lt;Form/> / renders without error" className="&lt;Form/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Form/> / renders a form field for every field item" id="992229db-ba8a-48fb-be90-b3493d9b383d">
+      <Execution id="82ebc875-278c-4999-80c3-349f2a2b4c9b"/>
+      <TestMethod codeBase="Jest_&lt;Form/> / renders a form field for every field item" name="&lt;Form/> / renders a form field for every field item" className="&lt;Form/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ListItem/> / renders without error" id="8b22331e-9e94-4247-96c8-0cc2a0e1e0d2">
+      <Execution id="05e62ff0-2308-41c9-846b-9e860f3bef21"/>
+      <TestMethod codeBase="Jest_&lt;ListItem/> / renders without error" name="&lt;ListItem/> / renders without error" className="&lt;ListItem/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ListItem/> / When clicked / calls showNext" id="ab5c705a-0dae-47e6-8eb5-af4500a53f5f">
+      <Execution id="c2e15c2e-f10f-44b6-b1ef-0b79119342f5"/>
+      <TestMethod codeBase="Jest_&lt;ListItem/> / When clicked / calls showNext" name="&lt;ListItem/> / When clicked / calls showNext" className="&lt;ListItem/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Arrow /> / it renders without error" id="594a029c-62b2-456f-a5b5-b6bb0e744659">
+      <Execution id="a865d468-2b8f-478c-a189-2317ab680218"/>
+      <TestMethod codeBase="Jest_&lt;Arrow /> / it renders without error" name="&lt;Arrow /> / it renders without error" className="&lt;Arrow />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Arrow /> / renders without Error when passed a valid set of paths" id="d389be4d-a72a-462b-b3cf-e65bca9dd2d9">
+      <Execution id="f3ee279b-7528-4e1b-a74e-370cbf4e961f"/>
+      <TestMethod codeBase="Jest_&lt;Arrow /> / renders without Error when passed a valid set of paths" name="&lt;Arrow /> / renders without Error when passed a valid set of paths" className="&lt;Arrow />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Arrow /> / takes a child path element and renders it" id="cdf5c8ee-2744-4b12-9ef1-be8a6635079b">
+      <Execution id="bd142e39-be68-4da4-8710-a9de85ac9c1a"/>
+      <TestMethod codeBase="Jest_&lt;Arrow /> / takes a child path element and renders it" name="&lt;Arrow /> / takes a child path element and renders it" className="&lt;Arrow />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Nav/> / renders without error" id="941373ac-25ab-4345-ab19-4792f041c4c3">
+      <Execution id="4f77f7c6-f452-4a60-96aa-c65716b35326"/>
+      <TestMethod codeBase="Jest_&lt;Nav/> / renders without error" name="&lt;Nav/> / renders without error" className="&lt;Nav/>"/>
+    </UnitTest>
+    <UnitTest name="dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" id="9d0295da-d419-445c-b83e-0819527d72be">
+      <Execution id="88c26cad-2ff6-4d55-b0df-6a5f615bd7af"/>
+      <TestMethod codeBase="Jest_dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" name="dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" className="dataContextFactory"/>
+    </UnitTest>
+    <UnitTest name="&lt;Button /> / renders without error" id="61f20522-dd1e-447f-aa98-cb51d523d614">
+      <Execution id="63758b0e-65d4-402f-8720-eed69bdc142e"/>
+      <TestMethod codeBase="Jest_&lt;Button /> / renders without error" name="&lt;Button /> / renders without error" className="&lt;Button />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Button /> / can be set to be active" id="c02e2219-31e3-465e-a54d-061635957e8e">
+      <Execution id="f527d0ff-0a39-4dd0-8122-aa4a560c2694"/>
+      <TestMethod codeBase="Jest_&lt;Button /> / can be set to be active" name="&lt;Button /> / can be set to be active" className="&lt;Button />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Button /> / can accept other classes" id="0692db14-d3af-456f-807c-622ce0c8be3d">
+      <Execution id="e1261a5a-2022-42bb-ba2f-8d99b9d9b52f"/>
+      <TestMethod codeBase="Jest_&lt;Button /> / can accept other classes" name="&lt;Button /> / can accept other classes" className="&lt;Button />"/>
+    </UnitTest>
+    <UnitTest name="Scenario Context / ScenarioReducer / Returns a default state" id="9cd48f04-f801-4ec1-8ace-04670d4dbf2f">
+      <Execution id="97a22a59-68b1-4ddc-9ed2-a0fdf737cf39"/>
+      <TestMethod codeBase="Jest_Scenario Context / ScenarioReducer / Returns a default state" name="Scenario Context / ScenarioReducer / Returns a default state" className="Scenario Context"/>
+    </UnitTest>
+    <UnitTest name="Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" id="ee55a232-20b5-4a2f-a67c-52c65cf9d169">
+      <Execution id="b5a3c569-d0b9-4144-9b75-ca6af1e5a84f"/>
+      <TestMethod codeBase="Jest_Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" name="Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" className="Scenario Context"/>
+    </UnitTest>
+    <UnitTest name="Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" id="c7d6b4d7-9a95-4b50-840f-07a95a8bbdce">
+      <Execution id="b98ca2a9-a086-4026-ab52-8bb8aa2a36c1"/>
+      <TestMethod codeBase="Jest_Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" name="Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" className="Scenario Context"/>
+    </UnitTest>
+    <UnitTest name="getColumnItem / returns the correct columnItem for items on first tier" id="c72937d7-7b56-4c62-a90b-cd5c0e15dd22">
+      <Execution id="1f405143-a2ed-4921-8ba5-35398a1580bc"/>
+      <TestMethod codeBase="Jest_getColumnItem / returns the correct columnItem for items on first tier" name="getColumnItem / returns the correct columnItem for items on first tier" className="getColumnItem"/>
+    </UnitTest>
+    <UnitTest name="getColumnItem / return the correct column item for items on the 5th tier" id="c1087ff9-a5db-4321-a5d0-86221af9a327">
+      <Execution id="da604316-fefc-46ba-9572-a70cee752cf6"/>
+      <TestMethod codeBase="Jest_getColumnItem / return the correct column item for items on the 5th tier" name="getColumnItem / return the correct column item for items on the 5th tier" className="getColumnItem"/>
+    </UnitTest>
+    <UnitTest name="buildColumnItem / When input options is the same length as the column number / it appends a new column item" id="f117c8ce-2da0-4822-8055-67e66993687f">
+      <Execution id="b43c14f3-105a-4b7a-8c0f-ecb642bd55c4"/>
+      <TestMethod codeBase="Jest_buildColumnItem / When input options is the same length as the column number / it appends a new column item" name="buildColumnItem / When input options is the same length as the column number / it appends a new column item" className="buildColumnItem"/>
+    </UnitTest>
+    <UnitTest name="buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" id="ad250cc2-daad-4a73-b3bd-063ad31e5e09">
+      <Execution id="342168a0-3fb8-4f6e-89b8-72252f5e5288"/>
+      <TestMethod codeBase="Jest_buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" name="buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" className="buildColumnItem"/>
+    </UnitTest>
+    <UnitTest name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" id="534c9435-d592-4d02-a467-3967e1fd4ad3">
+      <Execution id="1492743e-2d06-47eb-8d53-c64e9f4d7227"/>
+      <TestMethod codeBase="Jest_buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" className="buildColumnItem"/>
+    </UnitTest>
+    <UnitTest name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" id="aaa67d5d-015d-422d-b1a8-cc1e8355b13e">
+      <Execution id="5a55d650-57d8-40d1-8455-37ce4ad0a6da"/>
+      <TestMethod codeBase="Jest_buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" name="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" className="buildColumnItem"/>
+    </UnitTest>
+    <UnitTest name="&lt;FormField/> / it renders without error" id="c2892064-2e2a-4591-a95e-1c47e76afa56">
+      <Execution id="04f5543a-dc58-4846-80ac-a96a990f0bbf"/>
+      <TestMethod codeBase="Jest_&lt;FormField/> / it renders without error" name="&lt;FormField/> / it renders without error" className="&lt;FormField/>"/>
     </UnitTest>
   </TestDefinitions>
   <TestLists>
@@ -280,141 +288,145 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda"/>
   </TestLists>
   <TestEntries>
-    <TestEntry testId="279f634f-6ebe-4192-913d-4cea2db679a3" executionId="6ecb974e-5d9c-40a1-8db4-43aa5fc296f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="50744b1d-3a1c-456f-8291-d139428e8afc" executionId="7bdcdedb-fa0a-4564-81b4-bcb56e7a0942" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="bcd8aa23-0a33-475e-a4ee-609e957261b0" executionId="8bfd3ac4-4d93-41f6-9f15-2eb67adf5b6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="dc483d1d-7377-4ee7-b5c7-f881ceccd646" executionId="10871a7d-46c7-45ae-82e9-b6713a5ff8f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="54897b43-cc31-4e40-8d3e-8efef2250485" executionId="c4525b79-2c8e-4f7c-8292-af3eab9d0fc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="6b99fca8-96a1-4b17-bdc1-2cabb39c7ce7" executionId="e92ac4ba-f0de-4059-b8f0-2b334264adb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="ceb1dabc-1633-477e-9075-5a379bc4a0de" executionId="b8df9616-397a-4797-b838-ced3980db461" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="44d4c6cf-9e91-4c85-bf39-1677a1276c08" executionId="ebefb3be-9c23-42a5-96cc-24705c951716" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="bb122c1d-5330-446e-ad67-6078c6113b89" executionId="c1b2b25b-c962-4d61-9260-47c3c0117e29" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="b4601e25-5bd0-4fd5-8315-60aa80a65e25" executionId="38669363-d5f3-4073-9ba2-0da51d95ded3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="3672e558-35c8-41d5-b8b9-625e955488a4" executionId="cb329e1b-e53e-48f7-84cf-3fb0f73d7e6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="f93aec80-b733-4a69-a619-c3f3812c1eee" executionId="ccde7be4-678c-428d-a6d0-3e41cf4e92cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="9c03de32-de75-4e55-800c-f2bec2275274" executionId="061852fc-aa97-4bb3-a537-a5eab92fd2a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="97b963b0-7d8e-4c07-a63e-fd04e9cbee3a" executionId="7b2ffe8b-14f3-4109-ad3c-b72ac24bc118" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="96ccd05d-e06a-4a6f-818a-8d11ddfa69fa" executionId="c4443e1f-fd12-403b-9ad4-5ef104b1b394" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="82130c44-7b45-40af-880e-bf0dd1df0f8f" executionId="3e1870a5-6915-42b2-96c6-6be81c4bccb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="8e7b0718-62af-4894-9beb-c9abd976fa85" executionId="8de408a0-6f8d-45a9-9c09-959ac75ff295" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="ad62fbb9-54a6-4ecf-945c-5b46d3c53dcf" executionId="55dbbedf-ac80-483a-82c0-452a294815b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="2a22a77a-e808-4616-8936-770401c387ed" executionId="5de2ffb9-5f5c-483d-93c4-c1cc4ca8f8b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="94caed82-eae5-46dd-95d7-8d750dd59d9b" executionId="6d927c48-bbe0-4024-8be4-2277b045f15d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="fda05a8f-a0ff-40bf-a28a-9fda9216f460" executionId="f3db5682-d7a6-48f4-94c1-97d782167e42" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="2332efda-5e64-42be-b999-37de1178a0ed" executionId="5a18e0d7-6f0f-446b-93f1-a902371ec13e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="dd16ce6f-6ef0-44a1-8cc7-796ddff19053" executionId="9306288d-cee5-4164-9ee6-79a49ba29642" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="9bff3b73-456c-4035-bd92-6f3d2c539dea" executionId="cb6f97ae-2667-413e-aaff-6a8ea4daf650" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="c636dbb3-d8e7-4255-8a03-8b4dd8e7139b" executionId="b5ef722f-f4b8-4e9c-b94a-d1cedeffa6eb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="6b2d7436-0c17-441e-9c82-4088f8e9bed4" executionId="d32eec34-047e-4bf0-aa98-98fe40b6dbbc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="5eaf0317-5088-40ea-a292-00512b5ac720" executionId="872e0c5c-5c02-42c1-960e-6565622a71cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="fa9ce4ef-ee89-46fa-959b-a1dd8856bd2b" executionId="1afe512e-cadd-47ea-a710-95389d875bf5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="b729f535-cef5-4c24-aa5d-7abc75b1c9f1" executionId="fff14207-2f0d-4b91-a239-0af7aa4f36d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="24dc331b-c1ae-4851-a444-f2114fdbb8e6" executionId="9420a6a1-2a06-4aab-8335-c8f1a0e8aaf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="2dbb22c4-067e-4fc5-8f8c-877768601cac" executionId="cc8601d9-fece-499f-8ba1-882781f43de6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="77651de7-1a6a-435b-94c0-ea443240a53a" executionId="920ca3b3-d910-403b-8c66-f3abdf976ac1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="3e13ed14-8980-414f-a9c6-9d7cd0b18f47" executionId="7cb01809-db69-4adb-a02d-994f6e9ea6c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="f9ca21a7-3033-4bdb-a3a1-315adad3f3a1" executionId="88b6d33e-73d1-4010-8542-cf66c5f04cc5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="ad0422d4-d5ee-4f38-81a5-8f8501549d84" executionId="01af1bc4-fc2f-48b4-b73a-562ccc6f2caa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="d2d0c29d-8cd9-4fc1-8ad0-781c6069b1de" executionId="178d7160-67cc-4968-933e-968244383ddf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="33bc7e06-7b12-4264-9994-3d6cb1eed598" executionId="5824aa8c-cd89-4dcc-848a-b7e1deae1ec8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="49e02829-94d4-4df5-a660-28f5a8a90e21" executionId="0c84127c-7abc-4194-8c62-ec44cef2c995" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="015f1d0f-857a-461f-8cbb-2c0ab294a4df" executionId="a83bc467-975a-4ba0-9e01-6d9ea0351d61" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="4230a715-2d86-4e7d-aea1-dc10e57060d9" executionId="4e516765-179f-43ae-9ba4-261a54eee3f8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="d87b0c29-3325-4943-b5be-1baab524914a" executionId="20888705-4e4c-4093-abc1-8cd2dd9fd834" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="64ecdba7-bc45-4660-97cf-1f70bfcf2165" executionId="cf0cc8a7-2b26-4154-9e3a-122427e34c7e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="229f6122-70f9-4e5d-bd27-df6faec76e2d" executionId="4b0d4359-98ea-4a7a-9186-5d78c68f2fc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="1d3d6253-2cea-40ff-9689-b73aaffdd501" executionId="ede055bc-d2c5-45ad-b130-2d394d7066ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="c96e88d7-d05e-4948-a2ff-a858aae312ca" executionId="66d776ca-c5cb-4249-9782-76abbb86ded2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="391697e9-adf4-4a4b-be87-33ee6f2a4200" executionId="8fca81f9-fbab-4f10-aa7b-dfd7c2c0bf45" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="2b8747ab-4b9e-42a8-b79d-28881d88fe88" executionId="5c4b644d-457e-419e-bce7-7332cdef5399" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="c831ea7c-58ce-450e-af6a-d65bf47d5d0d" executionId="85ecda08-4053-4809-bbd9-1ad56952b402" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="e6dbb692-7544-4744-8a22-fe3870f8d103" executionId="3b71e6da-271a-411a-a4d4-81d06b7e3be3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="29e727d3-15f1-4d6e-96d2-c34136a6ee34" executionId="95c70d07-cf79-4eba-8db6-b53ef0c568cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="64cdbe96-5884-47ee-ac11-2844edfd6d10" executionId="86ba7cb3-1e1e-4ba6-a3eb-3ac6408416c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="3be47bd7-98d0-4861-b334-d9119bf5efae" executionId="508e4c99-c909-4800-9249-bc00fff9d635" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="068bea52-d993-4ee3-916b-8bf5e4bcd335" executionId="e74161f5-a684-4820-9282-4c5841b2e7b9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="805321d2-846f-4840-a741-ed9b38081221" executionId="25131139-6652-4b31-95a6-ffe398e95e32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="a8f2f418-555e-4998-9635-fdf323638cf8" executionId="20902085-1a92-4eed-a8a1-f0d5dc5beccb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="4a00ba8b-c256-418e-8fd9-c99399630eef" executionId="2c6563f1-08a4-429d-9a7e-c11f666dbdc8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="dd7e7a37-fe2c-4937-9eb1-e6541be100fe" executionId="109ce400-79be-4c19-9659-d8659463aa37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="154a3865-ab96-48f8-88ea-bfbde3329717" executionId="5690e06c-16f7-4a96-9fea-e466113a6c92" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="adad1ef9-04b2-4ec2-9359-e357179dafa5" executionId="954f23e7-b46a-4948-a1d3-5b2dcd4b3fea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="7e255d94-e6d7-4502-b843-489dc19ebc9d" executionId="b14bba39-2237-4a31-95db-707a25f63177" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="9484cc95-7cf5-45e8-b3e4-d0eee34eb5fa" executionId="f51a42c9-49dd-42d9-84bb-bf0ea62a23c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="6f3685f3-3df5-4a2e-ac75-9f2650db8515" executionId="d0ebfd7e-ffd8-4881-a8e8-c414daf118d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="ce3ef7e4-52be-416c-9fe1-5e77ec059bf2" executionId="9230f2ef-c046-42ff-81ae-9c2f4678dd0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="bfa5adcf-59f4-4855-b0e8-289e94d29ad3" executionId="00d97e10-eebe-46a8-82b7-294351546a3d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="afd53b53-18b0-438e-92d8-7f0fb85f387d" executionId="389e8879-04e2-4f00-9304-5da9f45ca90b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="a1e8c24d-8dca-4d32-82d8-1ca7d9e381a0" executionId="b0bfd269-9aaf-4e41-82e0-c452d6c9ba98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <TestEntry testId="a93e994b-e11d-4d7b-a7c2-104e29727a2f" executionId="8c0b78b3-d29f-4df2-950a-9bef03527f68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="082b21a5-bb2e-4dd3-b3f0-756ed5b95e8c" executionId="a8417a2f-86e9-4ab6-9c82-f59e5527caef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="6a62312c-090a-408c-a87b-d1c46d8611cd" executionId="5d703259-c662-4719-b7fe-cba4f7b5be2e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ddc72b86-80d6-4c44-870e-504bb5619d80" executionId="1d79afc0-a0fd-4775-818a-cfec3cd16a3a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="eddbeb28-f6c1-4437-967f-5240c269d2f8" executionId="8ae5b988-d011-454e-a188-21e8d1cbf54f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="85c47181-6622-46e6-850a-20cb1babd15d" executionId="c3bc31dd-e385-455a-b376-d07d6579755c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="80a7dada-68be-444d-9e8e-96fc264a7836" executionId="3f4f142d-fd02-43fa-bd82-0c4fb06bafed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="1535d5cc-043f-447f-ae77-d705ea9366d1" executionId="a963bf99-1141-438b-bf8b-b0b355841085" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="bc5175c4-f01e-4ec3-af84-0fe694c4dd19" executionId="dac33e97-b7f0-4607-8d8d-eca1de5625df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="652b71fa-15ae-41fd-92c8-1595cb392bcc" executionId="df048a4a-e836-4c81-8a82-214239ca80c7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="554fdd25-7c51-464d-9d83-5696fb98d860" executionId="4fdbd2d1-9ce0-4cbf-b6be-c5a8b15715a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="c20247a7-a665-4cc5-a6f9-c48b0b19843d" executionId="69cc879c-d3d4-43a5-bfb6-5c5a586cabe2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a9ba7f2f-d46f-4bf6-a95f-a97a7dab5bab" executionId="b8382b14-7868-40a7-a0bb-e3511fe9558d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="7dd92ee5-e028-4477-b540-7565fbf5e732" executionId="ea3e3f43-116c-4692-a57c-89009219606a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="55cbe6e2-254c-46d5-b028-258d24506b38" executionId="fa3724d3-40e4-47b9-9377-80bc5154e7f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="bba85974-5e9e-4869-9bd1-a5d4833ed72f" executionId="b215dabc-dcba-4d4c-a55e-ac42b225d004" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="99dc0634-ebbf-4577-a97b-d71930541f66" executionId="8940a444-41ad-4a11-953f-4a9d03efac64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="285a281d-b3c9-46e7-95f2-bb745b7a25c9" executionId="6e94773a-bf9f-44ac-bc05-46332973a87e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="f5628d4b-af2b-4882-bea1-ac0945cc759a" executionId="72f481c3-773f-41f7-a653-34a883df5fa1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8c3fe5ea-3e11-4c25-b423-30edc57adfa1" executionId="5d98ba6c-0bd3-4fa4-bef0-d46848934a48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="1414eaa8-238d-4b6d-b6f4-555edcd56389" executionId="21bd3bd7-ed0d-4905-b3a8-7cfaa9372710" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="d6b72286-5026-43c6-b56a-dffff8117075" executionId="bcec3931-c7ef-413f-beb0-c306619cefed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="1524d018-3b6d-4328-b5a1-0c017be00ddd" executionId="f3b7a83d-5282-4da5-ab12-a8a3fa4b5d7d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="140c16f5-03f5-4483-abf4-f69a9d9b8c0f" executionId="6ee8caa3-f168-4acd-973a-de87b3a3c860" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ce891e8e-6efa-4ee5-a842-09970333873f" executionId="1c71f56f-a6a7-419f-b652-d4ffd4ab79bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="d8f3f316-191c-45ef-b0b1-38738066ac41" executionId="4d6dfe81-62e8-4cf7-97ed-8ce569469b65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a609adec-6e3e-46ab-b8f3-aac736d273c6" executionId="a7e8adec-a408-4ac8-a10f-cb776ac860cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="4e8efac0-2fd1-46a1-8db1-2ce8313a7edc" executionId="8ce22777-1ecf-492f-9622-1fec8d47b1a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="5ec49e39-7897-44d0-b55e-206c50f12d08" executionId="e687dcc9-718e-41e4-8019-5eadfb182304" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ff47aa47-94b7-4987-8e57-38494de4e7a5" executionId="c5aec00c-dcfd-4347-8612-108231e1323f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="e9711bdc-44d5-4140-b5bc-97f0e665db5b" executionId="30c1d4a4-a00f-4526-aa85-fb621bedbc65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ad31c1ac-9269-4e87-87cf-e6ebb92159df" executionId="028f136b-c5f6-4be8-b90d-26942d142101" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="404a7516-3904-498a-b5c5-05bc52a4963a" executionId="be5ffa65-b9b4-490d-804a-a0ee2562c126" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="974dbb19-9516-4aa9-b0a9-98c5b2c40733" executionId="bad5b21b-94b4-4980-bd8b-e99a152f142b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="e4924f1d-aaec-4785-b5e0-3050352d6d77" executionId="acb1e546-17ec-4284-8338-1ea72bbb73f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="4e121c84-8a28-4704-812b-37ccdd48e23a" executionId="047b91fb-ec5a-44c9-b645-0982efd0eb1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="1d8207e4-7700-49c4-b4be-529a317256d2" executionId="f50d8b12-aaf2-4429-aa1f-503f6d0eaf09" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="384b248b-a3e5-4702-8f82-dd37a3ac7f72" executionId="9e7879e8-448e-4adb-8f12-74fb7ec67381" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="4828e404-f6dd-4cae-a134-1294b7e66487" executionId="0e61a8f3-d9f0-451a-9405-92f3f691932b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="7a4b56f2-ebb9-47cd-b8c1-cc14c2cc3a19" executionId="66678b8c-1ac9-4ea6-898a-de29b5d003ae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ef050411-8af4-4097-a50a-6050993211c5" executionId="c948ace2-f956-46d6-902f-65cf25e63060" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="cdfc2ce0-be8f-4b1b-8655-bc1b6998c537" executionId="34e5ed5f-3170-4484-87bd-ce16e776b280" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="bacbcb1f-0ba0-41fc-99d4-2748fa8ca5a3" executionId="cae1540a-a580-4666-b988-ebe8fecdb159" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="bde3cba0-5ee7-40b5-be61-fea8618b2832" executionId="4fbb85da-67ce-4c4a-9b51-25b4df511f03" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="78bd79da-ebfd-4cff-ac64-46df68e4f522" executionId="74fc0eb6-e372-4e31-9c2b-5eb107cc75da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="bce1b439-ac8f-4a7b-a921-1ede813cdc78" executionId="e7b8debb-1982-4caa-b4db-159211cdd5c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8aa1e0ea-6f26-4b95-afaa-e8d46b747786" executionId="7441f67d-80d7-402f-b724-ad8f15571ef9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8ec4b1d9-eda6-4521-ad1d-5026311206be" executionId="1792f977-6c02-4d84-a0ab-4c1f19ee6f4d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="1c0a3607-bd76-4135-9c3d-936ad6ed29f1" executionId="15d57655-b1c4-4068-94fc-a3bcb3daabf5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="992229db-ba8a-48fb-be90-b3493d9b383d" executionId="82ebc875-278c-4999-80c3-349f2a2b4c9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8b22331e-9e94-4247-96c8-0cc2a0e1e0d2" executionId="05e62ff0-2308-41c9-846b-9e860f3bef21" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ab5c705a-0dae-47e6-8eb5-af4500a53f5f" executionId="c2e15c2e-f10f-44b6-b1ef-0b79119342f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="594a029c-62b2-456f-a5b5-b6bb0e744659" executionId="a865d468-2b8f-478c-a189-2317ab680218" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="d389be4d-a72a-462b-b3cf-e65bca9dd2d9" executionId="f3ee279b-7528-4e1b-a74e-370cbf4e961f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="cdf5c8ee-2744-4b12-9ef1-be8a6635079b" executionId="bd142e39-be68-4da4-8710-a9de85ac9c1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="941373ac-25ab-4345-ab19-4792f041c4c3" executionId="4f77f7c6-f452-4a60-96aa-c65716b35326" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="9d0295da-d419-445c-b83e-0819527d72be" executionId="88c26cad-2ff6-4d55-b0df-6a5f615bd7af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="61f20522-dd1e-447f-aa98-cb51d523d614" executionId="63758b0e-65d4-402f-8720-eed69bdc142e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="c02e2219-31e3-465e-a54d-061635957e8e" executionId="f527d0ff-0a39-4dd0-8122-aa4a560c2694" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="0692db14-d3af-456f-807c-622ce0c8be3d" executionId="e1261a5a-2022-42bb-ba2f-8d99b9d9b52f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="9cd48f04-f801-4ec1-8ace-04670d4dbf2f" executionId="97a22a59-68b1-4ddc-9ed2-a0fdf737cf39" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ee55a232-20b5-4a2f-a67c-52c65cf9d169" executionId="b5a3c569-d0b9-4144-9b75-ca6af1e5a84f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="c7d6b4d7-9a95-4b50-840f-07a95a8bbdce" executionId="b98ca2a9-a086-4026-ab52-8bb8aa2a36c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="c72937d7-7b56-4c62-a90b-cd5c0e15dd22" executionId="1f405143-a2ed-4921-8ba5-35398a1580bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="c1087ff9-a5db-4321-a5d0-86221af9a327" executionId="da604316-fefc-46ba-9572-a70cee752cf6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="f117c8ce-2da0-4822-8055-67e66993687f" executionId="b43c14f3-105a-4b7a-8c0f-ecb642bd55c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ad250cc2-daad-4a73-b3bd-063ad31e5e09" executionId="342168a0-3fb8-4f6e-89b8-72252f5e5288" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="534c9435-d592-4d02-a467-3967e1fd4ad3" executionId="1492743e-2d06-47eb-8d53-c64e9f4d7227" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="aaa67d5d-015d-422d-b1a8-cc1e8355b13e" executionId="5a55d650-57d8-40d1-8455-37ce4ad0a6da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="c2892064-2e2a-4591-a95e-1c47e76afa56" executionId="04f5543a-dc58-4846-80ac-a96a990f0bbf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
   </TestEntries>
   <Results>
-    <UnitTestResult testId="279f634f-6ebe-4192-913d-4cea2db679a3" executionId="6ecb974e-5d9c-40a1-8db4-43aa5fc296f8" testName="&lt;FileUpload/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.880" startTime="2020-04-30T16:29:34.054Z" endTime="2020-04-30T16:29:34.934Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="50744b1d-3a1c-456f-8291-d139428e8afc" executionId="7bdcdedb-fa0a-4564-81b4-bcb56e7a0942" testName="&lt;FileUpload/> / Has a label with default text" computerName="Helens-iMac.local" duration="00:00:00.880" startTime="2020-04-30T16:29:34.934Z" endTime="2020-04-30T16:29:35.814Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="bcd8aa23-0a33-475e-a4ee-609e957261b0" executionId="8bfd3ac4-4d93-41f6-9f15-2eb67adf5b6c" testName="&lt;FileUpload/> / When Clicked / opens a file dialog" computerName="Helens-iMac.local" duration="00:00:00.880" startTime="2020-04-30T16:29:35.814Z" endTime="2020-04-30T16:29:36.694Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="dc483d1d-7377-4ee7-b5c7-f881ceccd646" executionId="10871a7d-46c7-45ae-82e9-b6713a5ff8f2" testName="renders The App without error" computerName="Helens-iMac.local" duration="00:00:02.735" startTime="2020-04-30T16:29:34.054Z" endTime="2020-04-30T16:29:36.789Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="54897b43-cc31-4e40-8d3e-8efef2250485" executionId="c4525b79-2c8e-4f7c-8292-af3eab9d0fc1" testName="&lt;Main/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:01.375" startTime="2020-04-30T16:29:34.054Z" endTime="2020-04-30T16:29:35.429Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="6b99fca8-96a1-4b17-bdc1-2cabb39c7ce7" executionId="e92ac4ba-f0de-4059-b8f0-2b334264adb5" testName="&lt;Main/> / When disabled / Displays the input field" computerName="Helens-iMac.local" duration="00:00:01.375" startTime="2020-04-30T16:29:35.429Z" endTime="2020-04-30T16:29:36.804Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="ceb1dabc-1633-477e-9075-5a379bc4a0de" executionId="b8df9616-397a-4797-b838-ced3980db461" testName="&lt;RefreshButton/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.250" startTime="2020-04-30T16:29:36.716Z" endTime="2020-04-30T16:29:36.966Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="44d4c6cf-9e91-4c85-bf39-1677a1276c08" executionId="ebefb3be-9c23-42a5-96cc-24705c951716" testName="&lt;RefreshButton/> / on click / it calls refresh method in the context" computerName="Helens-iMac.local" duration="00:00:00.250" startTime="2020-04-30T16:29:36.966Z" endTime="2020-04-30T16:29:37.216Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="bb122c1d-5330-446e-ad67-6078c6113b89" executionId="c1b2b25b-c962-4d61-9260-47c3c0117e29" testName="&lt;RunButton / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.090" startTime="2020-04-30T16:29:36.805Z" endTime="2020-04-30T16:29:36.895Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="b4601e25-5bd0-4fd5-8315-60aa80a65e25" executionId="38669363-d5f3-4073-9ba2-0da51d95ded3" testName="&lt;RunButton / when disabled / Has the disabled class" computerName="Helens-iMac.local" duration="00:00:00.090" startTime="2020-04-30T16:29:36.895Z" endTime="2020-04-30T16:29:36.985Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="3672e558-35c8-41d5-b8b9-625e955488a4" executionId="cb329e1b-e53e-48f7-84cf-3fb0f73d7e6b" testName="&lt;RunButton / when disabled / Cannot call run data" computerName="Helens-iMac.local" duration="00:00:00.090" startTime="2020-04-30T16:29:36.985Z" endTime="2020-04-30T16:29:37.075Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="f93aec80-b733-4a69-a619-c3f3812c1eee" executionId="ccde7be4-678c-428d-a6d0-3e41cf4e92cd" testName="&lt;RunButton / when enabled / Does not have the disabled class" computerName="Helens-iMac.local" duration="00:00:00.090" startTime="2020-04-30T16:29:37.075Z" endTime="2020-04-30T16:29:37.165Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="9c03de32-de75-4e55-800c-f2bec2275274" executionId="061852fc-aa97-4bb3-a537-a5eab92fd2a9" testName="&lt;RunButton / when enabled / Can call run data" computerName="Helens-iMac.local" duration="00:00:00.090" startTime="2020-04-30T16:29:37.165Z" endTime="2020-04-30T16:29:37.255Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="97b963b0-7d8e-4c07-a63e-fd04e9cbee3a" executionId="7b2ffe8b-14f3-4109-ad3c-b72ac24bc118" testName="&lt;FlowContainer/> / is disabled by default" computerName="Helens-iMac.local" duration="00:00:00.249" startTime="2020-04-30T16:29:36.815Z" endTime="2020-04-30T16:29:37.064Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="96ccd05d-e06a-4a6f-818a-8d11ddfa69fa" executionId="c4443e1f-fd12-403b-9ad4-5ef104b1b394" testName="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" computerName="Helens-iMac.local" duration="00:00:00.249" startTime="2020-04-30T16:29:37.064Z" endTime="2020-04-30T16:29:37.313Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="82130c44-7b45-40af-880e-bf0dd1df0f8f" executionId="3e1870a5-6915-42b2-96c6-6be81c4bccb5" testName="&lt;Help/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.176" startTime="2020-04-30T16:29:37.226Z" endTime="2020-04-30T16:29:37.402Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="8e7b0718-62af-4894-9beb-c9abd976fa85" executionId="8de408a0-6f8d-45a9-9c09-959ac75ff295" testName="&lt;Help/> / Shows help text returned from context" computerName="Helens-iMac.local" duration="00:00:00.176" startTime="2020-04-30T16:29:37.402Z" endTime="2020-04-30T16:29:37.578Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="ad62fbb9-54a6-4ecf-945c-5b46d3c53dcf" executionId="55dbbedf-ac80-483a-82c0-452a294815b3" testName="&lt;ResultsButton/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.126" startTime="2020-04-30T16:29:37.264Z" endTime="2020-04-30T16:29:37.390Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="2a22a77a-e808-4616-8936-770401c387ed" executionId="5de2ffb9-5f5c-483d-93c4-c1cc4ca8f8b4" testName="&lt;ResultsButton/> / when disabled / should have class disabled" computerName="Helens-iMac.local" duration="00:00:00.126" startTime="2020-04-30T16:29:37.390Z" endTime="2020-04-30T16:29:37.516Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="94caed82-eae5-46dd-95d7-8d750dd59d9b" executionId="6d927c48-bbe0-4024-8be4-2277b045f15d" testName="&lt;ResultsButton/> / when not disabled / should not have class disabled" computerName="Helens-iMac.local" duration="00:00:00.126" startTime="2020-04-30T16:29:37.516Z" endTime="2020-04-30T16:29:37.642Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="fda05a8f-a0ff-40bf-a28a-9fda9216f460" executionId="f3db5682-d7a6-48f4-94c1-97d782167e42" testName="&lt;RunArrow/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.116" startTime="2020-04-30T16:29:37.327Z" endTime="2020-04-30T16:29:37.443Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="2332efda-5e64-42be-b999-37de1178a0ed" executionId="5a18e0d7-6f0f-446b-93f1-a902371ec13e" testName="&lt;RunArrow/> / when disabled / The disabled class is applied" computerName="Helens-iMac.local" duration="00:00:00.116" startTime="2020-04-30T16:29:37.443Z" endTime="2020-04-30T16:29:37.559Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="dd16ce6f-6ef0-44a1-8cc7-796ddff19053" executionId="9306288d-cee5-4164-9ee6-79a49ba29642" testName="&lt;RunArrow/> / when ran / the ran class is applied" computerName="Helens-iMac.local" duration="00:00:00.116" startTime="2020-04-30T16:29:37.559Z" endTime="2020-04-30T16:29:37.675Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="9bff3b73-456c-4035-bd92-6f3d2c539dea" executionId="cb6f97ae-2667-413e-aaff-6a8ea4daf650" testName="&lt;Update/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.118" startTime="2020-04-30T16:29:37.658Z" endTime="2020-04-30T16:29:37.776Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="c636dbb3-d8e7-4255-8a03-8b4dd8e7139b" executionId="b5ef722f-f4b8-4e9c-b94a-d1cedeffa6eb" testName="&lt;Update/> / when disabled / The disabled class is applied" computerName="Helens-iMac.local" duration="00:00:00.118" startTime="2020-04-30T16:29:37.776Z" endTime="2020-04-30T16:29:37.894Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="6b2d7436-0c17-441e-9c82-4088f8e9bed4" executionId="d32eec34-047e-4bf0-aa98-98fe40b6dbbc" testName="&lt;Update/> / when ran / the ran class is appled" computerName="Helens-iMac.local" duration="00:00:00.118" startTime="2020-04-30T16:29:37.894Z" endTime="2020-04-30T16:29:38.012Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="5eaf0317-5088-40ea-a292-00512b5ac720" executionId="872e0c5c-5c02-42c1-960e-6565622a71cc" testName="&lt;Input/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.082" startTime="2020-04-30T16:29:37.603Z" endTime="2020-04-30T16:29:37.685Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="fa9ce4ef-ee89-46fa-959b-a1dd8856bd2b" executionId="1afe512e-cadd-47ea-a710-95389d875bf5" testName="&lt;Input/> / when disabled / has the disabled class" computerName="Helens-iMac.local" duration="00:00:00.082" startTime="2020-04-30T16:29:37.685Z" endTime="2020-04-30T16:29:37.767Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="b729f535-cef5-4c24-aa5d-7abc75b1c9f1" executionId="fff14207-2f0d-4b91-a239-0af7aa4f36d8" testName="&lt;Input/> / when disabled / Cannot call uploadData" computerName="Helens-iMac.local" duration="00:00:00.082" startTime="2020-04-30T16:29:37.767Z" endTime="2020-04-30T16:29:37.849Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="24dc331b-c1ae-4851-a444-f2114fdbb8e6" executionId="9420a6a1-2a06-4aab-8335-c8f1a0e8aaf6" testName="&lt;Input/> / when enabled / does not have the disabled class" computerName="Helens-iMac.local" duration="00:00:00.082" startTime="2020-04-30T16:29:37.849Z" endTime="2020-04-30T16:29:37.931Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="2dbb22c4-067e-4fc5-8f8c-877768601cac" executionId="cc8601d9-fece-499f-8ba1-882781f43de6" testName="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" computerName="Helens-iMac.local" duration="00:00:00.082" startTime="2020-04-30T16:29:37.931Z" endTime="2020-04-30T16:29:38.013Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="77651de7-1a6a-435b-94c0-ea443240a53a" executionId="920ca3b3-d910-403b-8c66-f3abdf976ac1" testName="&lt;ListItem/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.172" startTime="2020-04-30T16:29:37.695Z" endTime="2020-04-30T16:29:37.867Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="3e13ed14-8980-414f-a9c6-9d7cd0b18f47" executionId="7cb01809-db69-4adb-a02d-994f6e9ea6c0" testName="&lt;ListItem/> / When clicked / calls showNext" computerName="Helens-iMac.local" duration="00:00:00.172" startTime="2020-04-30T16:29:37.867Z" endTime="2020-04-30T16:29:38.039Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="f9ca21a7-3033-4bdb-a3a1-315adad3f3a1" executionId="88b6d33e-73d1-4010-8542-cf66c5f04cc5" testName="&lt;Form/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.119" startTime="2020-04-30T16:29:38.052Z" endTime="2020-04-30T16:29:38.171Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="ad0422d4-d5ee-4f38-81a5-8f8501549d84" executionId="01af1bc4-fc2f-48b4-b73a-562ccc6f2caa" testName="&lt;Form/> / renders a form field for every field item" computerName="Helens-iMac.local" duration="00:00:00.119" startTime="2020-04-30T16:29:38.171Z" endTime="2020-04-30T16:29:38.290Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="d2d0c29d-8cd9-4fc1-8ad0-781c6069b1de" executionId="178d7160-67cc-4968-933e-968244383ddf" testName="&lt;List/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.097" startTime="2020-04-30T16:29:38.024Z" endTime="2020-04-30T16:29:38.121Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="33bc7e06-7b12-4264-9994-3d6cb1eed598" executionId="5824aa8c-cd89-4dcc-848a-b7e1deae1ec8" testName="&lt;List/> / Drop Down List / Displays a default selection" computerName="Helens-iMac.local" duration="00:00:00.097" startTime="2020-04-30T16:29:38.121Z" endTime="2020-04-30T16:29:38.218Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="49e02829-94d4-4df5-a660-28f5a8a90e21" executionId="0c84127c-7abc-4194-8c62-ec44cef2c995" testName="&lt;List/> / Drop Down List / On Click / Displays a collection of items" computerName="Helens-iMac.local" duration="00:00:00.097" startTime="2020-04-30T16:29:38.218Z" endTime="2020-04-30T16:29:38.315Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="015f1d0f-857a-461f-8cbb-2c0ab294a4df" executionId="a83bc467-975a-4ba0-9e01-6d9ea0351d61" testName="&lt;ScenarioModelling/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.117" startTime="2020-04-30T16:29:38.024Z" endTime="2020-04-30T16:29:38.141Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="4230a715-2d86-4e7d-aea1-dc10e57060d9" executionId="4e516765-179f-43ae-9ba4-261a54eee3f8" testName="&lt;ScenarioModelling/> / It has a header" computerName="Helens-iMac.local" duration="00:00:00.117" startTime="2020-04-30T16:29:38.141Z" endTime="2020-04-30T16:29:38.258Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="d87b0c29-3325-4943-b5be-1baab524914a" executionId="20888705-4e4c-4093-abc1-8cd2dd9fd834" testName="&lt;ScenarioModelling/> / It has a drop down select container" computerName="Helens-iMac.local" duration="00:00:00.117" startTime="2020-04-30T16:29:38.258Z" endTime="2020-04-30T16:29:38.375Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="64ecdba7-bc45-4660-97cf-1f70bfcf2165" executionId="cf0cc8a7-2b26-4154-9e3a-122427e34c7e" testName="&lt;Arrow /> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.091" startTime="2020-04-30T16:29:38.301Z" endTime="2020-04-30T16:29:38.392Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="229f6122-70f9-4e5d-bd27-df6faec76e2d" executionId="4b0d4359-98ea-4a7a-9186-5d78c68f2fc9" testName="&lt;Arrow /> / renders without Error when passed a valid set of paths" computerName="Helens-iMac.local" duration="00:00:00.091" startTime="2020-04-30T16:29:38.392Z" endTime="2020-04-30T16:29:38.483Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="1d3d6253-2cea-40ff-9689-b73aaffdd501" executionId="ede055bc-d2c5-45ad-b130-2d394d7066ef" testName="&lt;Arrow /> / takes a child path element and renders it" computerName="Helens-iMac.local" duration="00:00:00.091" startTime="2020-04-30T16:29:38.483Z" endTime="2020-04-30T16:29:38.574Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="c96e88d7-d05e-4948-a2ff-a858aae312ca" executionId="66d776ca-c5cb-4249-9782-76abbb86ded2" testName="&lt;Button /> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.093" startTime="2020-04-30T16:29:38.327Z" endTime="2020-04-30T16:29:38.420Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="391697e9-adf4-4a4b-be87-33ee6f2a4200" executionId="8fca81f9-fbab-4f10-aa7b-dfd7c2c0bf45" testName="&lt;Button /> / can be set to be active" computerName="Helens-iMac.local" duration="00:00:00.093" startTime="2020-04-30T16:29:38.420Z" endTime="2020-04-30T16:29:38.513Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="2b8747ab-4b9e-42a8-b79d-28881d88fe88" executionId="5c4b644d-457e-419e-bce7-7332cdef5399" testName="&lt;Button /> / can accept other classes" computerName="Helens-iMac.local" duration="00:00:00.093" startTime="2020-04-30T16:29:38.513Z" endTime="2020-04-30T16:29:38.606Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="c831ea7c-58ce-450e-af6a-d65bf47d5d0d" executionId="85ecda08-4053-4809-bbd9-1ad56952b402" testName="&lt;Nav/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.240" startTime="2020-04-30T16:29:38.398Z" endTime="2020-04-30T16:29:38.638Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="e6dbb692-7544-4744-8a22-fe3870f8d103" executionId="3b71e6da-271a-411a-a4d4-81d06b7e3be3" testName="dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" computerName="Helens-iMac.local" duration="00:00:00.226" startTime="2020-04-30T16:29:38.586Z" endTime="2020-04-30T16:29:38.812Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="29e727d3-15f1-4d6e-96d2-c34136a6ee34" executionId="95c70d07-cf79-4eba-8db6-b53ef0c568cb" testName="&lt;Header/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.099" startTime="2020-04-30T16:29:38.616Z" endTime="2020-04-30T16:29:38.715Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="64cdbe96-5884-47ee-ac11-2844edfd6d10" executionId="86ba7cb3-1e1e-4ba6-a3eb-3ac6408416c1" testName="&lt;Header/> / Displays a user name" computerName="Helens-iMac.local" duration="00:00:00.099" startTime="2020-04-30T16:29:38.715Z" endTime="2020-04-30T16:29:38.814Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="3be47bd7-98d0-4861-b334-d9119bf5efae" executionId="508e4c99-c909-4800-9249-bc00fff9d635" testName="&lt;FormField/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.184" startTime="2020-04-30T16:29:38.648Z" endTime="2020-04-30T16:29:38.832Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="068bea52-d993-4ee3-916b-8bf5e4bcd335" executionId="e74161f5-a684-4820-9282-4c5841b2e7b9" testName="getColumnItem / returns the correct columnItem for items on first tier" computerName="Helens-iMac.local" duration="00:00:00.020" startTime="2020-04-30T16:29:38.829Z" endTime="2020-04-30T16:29:38.849Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="805321d2-846f-4840-a741-ed9b38081221" executionId="25131139-6652-4b31-95a6-ffe398e95e32" testName="getColumnItem / return the correct column item for items on the 5th tier" computerName="Helens-iMac.local" duration="00:00:00.020" startTime="2020-04-30T16:29:38.849Z" endTime="2020-04-30T16:29:38.869Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="a8f2f418-555e-4998-9635-fdf323638cf8" executionId="20902085-1a92-4eed-a8a1-f0d5dc5beccb" testName="buildColumnItem / When input options is the same length as the column number / it appends a new column item" computerName="Helens-iMac.local" duration="00:00:00.020" startTime="2020-04-30T16:29:38.869Z" endTime="2020-04-30T16:29:38.889Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="4a00ba8b-c256-418e-8fd9-c99399630eef" executionId="2c6563f1-08a4-429d-9a7e-c11f666dbdc8" testName="buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" computerName="Helens-iMac.local" duration="00:00:00.020" startTime="2020-04-30T16:29:38.889Z" endTime="2020-04-30T16:29:38.909Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="dd7e7a37-fe2c-4937-9eb1-e6541be100fe" executionId="109ce400-79be-4c19-9659-d8659463aa37" testName="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" computerName="Helens-iMac.local" duration="00:00:00.020" startTime="2020-04-30T16:29:38.909Z" endTime="2020-04-30T16:29:38.929Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="154a3865-ab96-48f8-88ea-bfbde3329717" executionId="5690e06c-16f7-4a96-9fea-e466113a6c92" testName="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" computerName="Helens-iMac.local" duration="00:00:00.020" startTime="2020-04-30T16:29:38.929Z" endTime="2020-04-30T16:29:38.949Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="adad1ef9-04b2-4ec2-9359-e357179dafa5" executionId="954f23e7-b46a-4948-a1d3-5b2dcd4b3fea" testName="Scenario Context / ScenarioReducer / Returns a default state" computerName="Helens-iMac.local" duration="00:00:00.037" startTime="2020-04-30T16:29:38.841Z" endTime="2020-04-30T16:29:38.878Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="7e255d94-e6d7-4502-b843-489dc19ebc9d" executionId="b14bba39-2237-4a31-95db-707a25f63177" testName="Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" computerName="Helens-iMac.local" duration="00:00:00.037" startTime="2020-04-30T16:29:38.878Z" endTime="2020-04-30T16:29:38.915Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="9484cc95-7cf5-45e8-b3e4-d0eee34eb5fa" executionId="f51a42c9-49dd-42d9-84bb-bf0ea62a23c9" testName="Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" computerName="Helens-iMac.local" duration="00:00:00.037" startTime="2020-04-30T16:29:38.915Z" endTime="2020-04-30T16:29:38.952Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="6f3685f3-3df5-4a2e-ac75-9f2650db8515" executionId="d0ebfd7e-ffd8-4881-a8e8-c414daf118d2" testName="FlowContext / reducer / When type is START_FLOW / it returns some default state" computerName="Helens-iMac.local" duration="00:00:00.030" startTime="2020-04-30T16:29:38.836Z" endTime="2020-04-30T16:29:38.866Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="ce3ef7e4-52be-416c-9fe1-5e77ec059bf2" executionId="9230f2ef-c046-42ff-81ae-9c2f4678dd0e" testName="FlowContext / reducer / action creators / Upload Data / uploadData dispatches UPLOADINGDATA action" computerName="Helens-iMac.local" duration="00:00:00.030" startTime="2020-04-30T16:29:38.866Z" endTime="2020-04-30T16:29:38.896Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="bfa5adcf-59f4-4855-b0e8-289e94d29ad3" executionId="00d97e10-eebe-46a8-82b7-294351546a3d" testName="FlowContext / reducer / action creators / Upload Data / uploadData also fires INPUT_DATA action" computerName="Helens-iMac.local" duration="00:00:00.030" startTime="2020-04-30T16:29:38.896Z" endTime="2020-04-30T16:29:38.926Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="afd53b53-18b0-438e-92d8-7f0fb85f387d" executionId="389e8879-04e2-4f00-9304-5da9f45ca90b" testName="FlowContext / reducer / action creators / run data / calls RUN_DATA reducer action" computerName="Helens-iMac.local" duration="00:00:00.030" startTime="2020-04-30T16:29:38.926Z" endTime="2020-04-30T16:29:38.956Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="a1e8c24d-8dca-4d32-82d8-1ca7d9e381a0" executionId="b0bfd269-9aaf-4e41-82e0-c452d6c9ba98" testName="FlowContext / reducer / action creators / inputData / It dispatches the INPUT_DATA action" computerName="Helens-iMac.local" duration="00:00:00.030" startTime="2020-04-30T16:29:38.956Z" endTime="2020-04-30T16:29:38.986Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
-    <UnitTestResult testId="a93e994b-e11d-4d7b-a7c2-104e29727a2f" executionId="8c0b78b3-d29f-4df2-950a-9bef03527f68" testName="FlowContext / reducer / action creators / start / It dispatches the START action with a file payload" computerName="Helens-iMac.local" duration="00:00:00.030" startTime="2020-04-30T16:29:38.986Z" endTime="2020-04-30T16:29:39.016Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="082b21a5-bb2e-4dd3-b3f0-756ed5b95e8c" executionId="a8417a2f-86e9-4ab6-9c82-f59e5527caef" testName="&lt;FileUpload/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.595" startTime="2020-05-01T08:56:42.599Z" endTime="2020-05-01T08:56:43.194Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="6a62312c-090a-408c-a87b-d1c46d8611cd" executionId="5d703259-c662-4719-b7fe-cba4f7b5be2e" testName="&lt;FileUpload/> / Has a label with default text" computerName="Helens-iMac.local" duration="00:00:00.595" startTime="2020-05-01T08:56:43.194Z" endTime="2020-05-01T08:56:43.789Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ddc72b86-80d6-4c44-870e-504bb5619d80" executionId="1d79afc0-a0fd-4775-818a-cfec3cd16a3a" testName="&lt;FileUpload/> / When Clicked / opens a file dialog" computerName="Helens-iMac.local" duration="00:00:00.595" startTime="2020-05-01T08:56:43.789Z" endTime="2020-05-01T08:56:44.384Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="eddbeb28-f6c1-4437-967f-5240c269d2f8" executionId="8ae5b988-d011-454e-a188-21e8d1cbf54f" testName="&lt;FileUpload/> / When Clicked / When file selected / It calls set file " computerName="Helens-iMac.local" duration="00:00:00.595" startTime="2020-05-01T08:56:44.384Z" endTime="2020-05-01T08:56:44.979Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="85c47181-6622-46e6-850a-20cb1babd15d" executionId="c3bc31dd-e385-455a-b376-d07d6579755c" testName="&lt;FileUpload/> / When Clicked / When file selected / It starts the workflow" computerName="Helens-iMac.local" duration="00:00:00.595" startTime="2020-05-01T08:56:44.979Z" endTime="2020-05-01T08:56:45.574Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="80a7dada-68be-444d-9e8e-96fc264a7836" executionId="3f4f142d-fd02-43fa-bd82-0c4fb06bafed" testName="&lt;Main/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:01.530" startTime="2020-05-01T08:56:42.583Z" endTime="2020-05-01T08:56:44.113Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="1535d5cc-043f-447f-ae77-d705ea9366d1" executionId="a963bf99-1141-438b-bf8b-b0b355841085" testName="&lt;Main/> / When disabled / Displays the input field" computerName="Helens-iMac.local" duration="00:00:01.530" startTime="2020-05-01T08:56:44.113Z" endTime="2020-05-01T08:56:45.643Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="bc5175c4-f01e-4ec3-af84-0fe694c4dd19" executionId="dac33e97-b7f0-4607-8d8d-eca1de5625df" testName="renders The App without error" computerName="Helens-iMac.local" duration="00:00:03.062" startTime="2020-05-01T08:56:42.583Z" endTime="2020-05-01T08:56:45.645Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="652b71fa-15ae-41fd-92c8-1595cb392bcc" executionId="df048a4a-e836-4c81-8a82-214239ca80c7" testName="&lt;RefreshButton/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.244" startTime="2020-05-01T08:56:45.594Z" endTime="2020-05-01T08:56:45.838Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="554fdd25-7c51-464d-9d83-5696fb98d860" executionId="4fdbd2d1-9ce0-4cbf-b6be-c5a8b15715a9" testName="&lt;RefreshButton/> / on click / it calls refresh method in the context" computerName="Helens-iMac.local" duration="00:00:00.244" startTime="2020-05-01T08:56:45.838Z" endTime="2020-05-01T08:56:46.082Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="c20247a7-a665-4cc5-a6f9-c48b0b19843d" executionId="69cc879c-d3d4-43a5-bfb6-5c5a586cabe2" testName="&lt;RunButton / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.086" startTime="2020-05-01T08:56:45.680Z" endTime="2020-05-01T08:56:45.766Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a9ba7f2f-d46f-4bf6-a95f-a97a7dab5bab" executionId="b8382b14-7868-40a7-a0bb-e3511fe9558d" testName="&lt;RunButton / when disabled / Has the disabled class" computerName="Helens-iMac.local" duration="00:00:00.086" startTime="2020-05-01T08:56:45.766Z" endTime="2020-05-01T08:56:45.852Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="7dd92ee5-e028-4477-b540-7565fbf5e732" executionId="ea3e3f43-116c-4692-a57c-89009219606a" testName="&lt;RunButton / when disabled / Cannot call run data" computerName="Helens-iMac.local" duration="00:00:00.086" startTime="2020-05-01T08:56:45.852Z" endTime="2020-05-01T08:56:45.938Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="55cbe6e2-254c-46d5-b028-258d24506b38" executionId="fa3724d3-40e4-47b9-9377-80bc5154e7f4" testName="&lt;RunButton / when enabled / Does not have the disabled class" computerName="Helens-iMac.local" duration="00:00:00.086" startTime="2020-05-01T08:56:45.938Z" endTime="2020-05-01T08:56:46.024Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="bba85974-5e9e-4869-9bd1-a5d4833ed72f" executionId="b215dabc-dcba-4d4c-a55e-ac42b225d004" testName="&lt;RunButton / when enabled / Can call run data" computerName="Helens-iMac.local" duration="00:00:00.086" startTime="2020-05-01T08:56:46.024Z" endTime="2020-05-01T08:56:46.110Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="99dc0634-ebbf-4577-a97b-d71930541f66" executionId="8940a444-41ad-4a11-953f-4a9d03efac64" testName="&lt;Help/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.238" startTime="2020-05-01T08:56:45.677Z" endTime="2020-05-01T08:56:45.915Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="285a281d-b3c9-46e7-95f2-bb745b7a25c9" executionId="6e94773a-bf9f-44ac-bc05-46332973a87e" testName="&lt;Help/> / Shows help text returned from context" computerName="Helens-iMac.local" duration="00:00:00.238" startTime="2020-05-01T08:56:45.915Z" endTime="2020-05-01T08:56:46.153Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="f5628d4b-af2b-4882-bea1-ac0945cc759a" executionId="72f481c3-773f-41f7-a653-34a883df5fa1" testName="&lt;Input/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.099" startTime="2020-05-01T08:56:46.096Z" endTime="2020-05-01T08:56:46.195Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8c3fe5ea-3e11-4c25-b423-30edc57adfa1" executionId="5d98ba6c-0bd3-4fa4-bef0-d46848934a48" testName="&lt;Input/> / when disabled / has the disabled class" computerName="Helens-iMac.local" duration="00:00:00.099" startTime="2020-05-01T08:56:46.195Z" endTime="2020-05-01T08:56:46.294Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="1414eaa8-238d-4b6d-b6f4-555edcd56389" executionId="21bd3bd7-ed0d-4905-b3a8-7cfaa9372710" testName="&lt;Input/> / when disabled / Cannot call uploadData" computerName="Helens-iMac.local" duration="00:00:00.099" startTime="2020-05-01T08:56:46.294Z" endTime="2020-05-01T08:56:46.393Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="d6b72286-5026-43c6-b56a-dffff8117075" executionId="bcec3931-c7ef-413f-beb0-c306619cefed" testName="&lt;Input/> / when enabled / does not have the disabled class" computerName="Helens-iMac.local" duration="00:00:00.099" startTime="2020-05-01T08:56:46.393Z" endTime="2020-05-01T08:56:46.492Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="1524d018-3b6d-4328-b5a1-0c017be00ddd" executionId="f3b7a83d-5282-4da5-ab12-a8a3fa4b5d7d" testName="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" computerName="Helens-iMac.local" duration="00:00:00.099" startTime="2020-05-01T08:56:46.492Z" endTime="2020-05-01T08:56:46.591Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="140c16f5-03f5-4483-abf4-f69a9d9b8c0f" executionId="6ee8caa3-f168-4acd-973a-de87b3a3c860" testName="&lt;RunArrow/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.165" startTime="2020-05-01T08:56:46.123Z" endTime="2020-05-01T08:56:46.288Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ce891e8e-6efa-4ee5-a842-09970333873f" executionId="1c71f56f-a6a7-419f-b652-d4ffd4ab79bf" testName="&lt;RunArrow/> / when disabled / The disabled class is applied" computerName="Helens-iMac.local" duration="00:00:00.165" startTime="2020-05-01T08:56:46.288Z" endTime="2020-05-01T08:56:46.453Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="d8f3f316-191c-45ef-b0b1-38738066ac41" executionId="4d6dfe81-62e8-4cf7-97ed-8ce569469b65" testName="&lt;RunArrow/> / when ran / the ran class is applied" computerName="Helens-iMac.local" duration="00:00:00.165" startTime="2020-05-01T08:56:46.453Z" endTime="2020-05-01T08:56:46.618Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a609adec-6e3e-46ab-b8f3-aac736d273c6" executionId="a7e8adec-a408-4ac8-a10f-cb776ac860cb" testName="&lt;ResultsButton/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.156" startTime="2020-05-01T08:56:46.170Z" endTime="2020-05-01T08:56:46.326Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="4e8efac0-2fd1-46a1-8db1-2ce8313a7edc" executionId="8ce22777-1ecf-492f-9622-1fec8d47b1a7" testName="&lt;ResultsButton/> / when disabled / should have class disabled" computerName="Helens-iMac.local" duration="00:00:00.156" startTime="2020-05-01T08:56:46.326Z" endTime="2020-05-01T08:56:46.482Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="5ec49e39-7897-44d0-b55e-206c50f12d08" executionId="e687dcc9-718e-41e4-8019-5eadfb182304" testName="&lt;ResultsButton/> / when not disabled / should not have class disabled" computerName="Helens-iMac.local" duration="00:00:00.156" startTime="2020-05-01T08:56:46.482Z" endTime="2020-05-01T08:56:46.638Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ff47aa47-94b7-4987-8e57-38494de4e7a5" executionId="c5aec00c-dcfd-4347-8612-108231e1323f" testName="&lt;Update/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.105" startTime="2020-05-01T08:56:46.640Z" endTime="2020-05-01T08:56:46.745Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="e9711bdc-44d5-4140-b5bc-97f0e665db5b" executionId="30c1d4a4-a00f-4526-aa85-fb621bedbc65" testName="&lt;Update/> / when disabled / The disabled class is applied" computerName="Helens-iMac.local" duration="00:00:00.105" startTime="2020-05-01T08:56:46.745Z" endTime="2020-05-01T08:56:46.850Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ad31c1ac-9269-4e87-87cf-e6ebb92159df" executionId="028f136b-c5f6-4be8-b90d-26942d142101" testName="&lt;Update/> / when ran / the ran class is appled" computerName="Helens-iMac.local" duration="00:00:00.105" startTime="2020-05-01T08:56:46.850Z" endTime="2020-05-01T08:56:46.955Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="404a7516-3904-498a-b5c5-05bc52a4963a" executionId="be5ffa65-b9b4-490d-804a-a0ee2562c126" testName="&lt;ScenarioModelling/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.107" startTime="2020-05-01T08:56:46.652Z" endTime="2020-05-01T08:56:46.759Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="974dbb19-9516-4aa9-b0a9-98c5b2c40733" executionId="bad5b21b-94b4-4980-bd8b-e99a152f142b" testName="&lt;ScenarioModelling/> / It has a header" computerName="Helens-iMac.local" duration="00:00:00.107" startTime="2020-05-01T08:56:46.759Z" endTime="2020-05-01T08:56:46.866Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="e4924f1d-aaec-4785-b5e0-3050352d6d77" executionId="acb1e546-17ec-4284-8338-1ea72bbb73f1" testName="&lt;ScenarioModelling/> / It has a drop down select container" computerName="Helens-iMac.local" duration="00:00:00.107" startTime="2020-05-01T08:56:46.866Z" endTime="2020-05-01T08:56:46.973Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="4e121c84-8a28-4704-812b-37ccdd48e23a" executionId="047b91fb-ec5a-44c9-b645-0982efd0eb1d" testName="&lt;FlowContainer/> / is disabled by default" computerName="Helens-iMac.local" duration="00:00:00.193" startTime="2020-05-01T08:56:46.607Z" endTime="2020-05-01T08:56:46.800Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="1d8207e4-7700-49c4-b4be-529a317256d2" executionId="f50d8b12-aaf2-4429-aa1f-503f6d0eaf09" testName="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" computerName="Helens-iMac.local" duration="00:00:00.193" startTime="2020-05-01T08:56:46.800Z" endTime="2020-05-01T08:56:46.993Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="384b248b-a3e5-4702-8f82-dd37a3ac7f72" executionId="9e7879e8-448e-4adb-8f12-74fb7ec67381" testName="FlowContext / reducer / When type is START_FLOW / it returns some default state" computerName="Helens-iMac.local" duration="00:00:00.048" startTime="2020-05-01T08:56:47.009Z" endTime="2020-05-01T08:56:47.057Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="4828e404-f6dd-4cae-a134-1294b7e66487" executionId="0e61a8f3-d9f0-451a-9405-92f3f691932b" testName="FlowContext / reducer / action creators / Upload Data / uploadData dispatches UPLOADINGDATA action" computerName="Helens-iMac.local" duration="00:00:00.048" startTime="2020-05-01T08:56:47.057Z" endTime="2020-05-01T08:56:47.105Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="7a4b56f2-ebb9-47cd-b8c1-cc14c2cc3a19" executionId="66678b8c-1ac9-4ea6-898a-de29b5d003ae" testName="FlowContext / reducer / action creators / Upload Data / uploadData also fires INPUT_DATA action" computerName="Helens-iMac.local" duration="00:00:00.048" startTime="2020-05-01T08:56:47.105Z" endTime="2020-05-01T08:56:47.153Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ef050411-8af4-4097-a50a-6050993211c5" executionId="c948ace2-f956-46d6-902f-65cf25e63060" testName="FlowContext / reducer / action creators / run data / calls RUN_DATA reducer action" computerName="Helens-iMac.local" duration="00:00:00.048" startTime="2020-05-01T08:56:47.153Z" endTime="2020-05-01T08:56:47.201Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="cdfc2ce0-be8f-4b1b-8655-bc1b6998c537" executionId="34e5ed5f-3170-4484-87bd-ce16e776b280" testName="FlowContext / reducer / action creators / inputData / It dispatches the INPUT_DATA action" computerName="Helens-iMac.local" duration="00:00:00.048" startTime="2020-05-01T08:56:47.201Z" endTime="2020-05-01T08:56:47.249Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="bacbcb1f-0ba0-41fc-99d4-2748fa8ca5a3" executionId="cae1540a-a580-4666-b988-ebe8fecdb159" testName="FlowContext / reducer / action creators / start / It dispatches the START action with a file payload" computerName="Helens-iMac.local" duration="00:00:00.048" startTime="2020-05-01T08:56:47.249Z" endTime="2020-05-01T08:56:47.297Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="bde3cba0-5ee7-40b5-be61-fea8618b2832" executionId="4fbb85da-67ce-4c4a-9b51-25b4df511f03" testName="&lt;Header/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.168" startTime="2020-05-01T08:56:46.987Z" endTime="2020-05-01T08:56:47.155Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="78bd79da-ebfd-4cff-ac64-46df68e4f522" executionId="74fc0eb6-e372-4e31-9c2b-5eb107cc75da" testName="&lt;Header/> / Displays a user name" computerName="Helens-iMac.local" duration="00:00:00.168" startTime="2020-05-01T08:56:47.155Z" endTime="2020-05-01T08:56:47.323Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="bce1b439-ac8f-4a7b-a921-1ede813cdc78" executionId="e7b8debb-1982-4caa-b4db-159211cdd5c5" testName="&lt;List/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.126" startTime="2020-05-01T08:56:46.972Z" endTime="2020-05-01T08:56:47.098Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8aa1e0ea-6f26-4b95-afaa-e8d46b747786" executionId="7441f67d-80d7-402f-b724-ad8f15571ef9" testName="&lt;List/> / Drop Down List / Displays a default selection" computerName="Helens-iMac.local" duration="00:00:00.126" startTime="2020-05-01T08:56:47.098Z" endTime="2020-05-01T08:56:47.224Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8ec4b1d9-eda6-4521-ad1d-5026311206be" executionId="1792f977-6c02-4d84-a0ab-4c1f19ee6f4d" testName="&lt;List/> / Drop Down List / On Click / Displays a collection of items" computerName="Helens-iMac.local" duration="00:00:00.126" startTime="2020-05-01T08:56:47.224Z" endTime="2020-05-01T08:56:47.350Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="1c0a3607-bd76-4135-9c3d-936ad6ed29f1" executionId="15d57655-b1c4-4068-94fc-a3bcb3daabf5" testName="&lt;Form/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.105" startTime="2020-05-01T08:56:47.332Z" endTime="2020-05-01T08:56:47.437Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="992229db-ba8a-48fb-be90-b3493d9b383d" executionId="82ebc875-278c-4999-80c3-349f2a2b4c9b" testName="&lt;Form/> / renders a form field for every field item" computerName="Helens-iMac.local" duration="00:00:00.105" startTime="2020-05-01T08:56:47.437Z" endTime="2020-05-01T08:56:47.542Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8b22331e-9e94-4247-96c8-0cc2a0e1e0d2" executionId="05e62ff0-2308-41c9-846b-9e860f3bef21" testName="&lt;ListItem/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.112" startTime="2020-05-01T08:56:47.321Z" endTime="2020-05-01T08:56:47.433Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ab5c705a-0dae-47e6-8eb5-af4500a53f5f" executionId="c2e15c2e-f10f-44b6-b1ef-0b79119342f5" testName="&lt;ListItem/> / When clicked / calls showNext" computerName="Helens-iMac.local" duration="00:00:00.112" startTime="2020-05-01T08:56:47.433Z" endTime="2020-05-01T08:56:47.545Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="594a029c-62b2-456f-a5b5-b6bb0e744659" executionId="a865d468-2b8f-478c-a189-2317ab680218" testName="&lt;Arrow /> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.071" startTime="2020-05-01T08:56:47.364Z" endTime="2020-05-01T08:56:47.435Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="d389be4d-a72a-462b-b3cf-e65bca9dd2d9" executionId="f3ee279b-7528-4e1b-a74e-370cbf4e961f" testName="&lt;Arrow /> / renders without Error when passed a valid set of paths" computerName="Helens-iMac.local" duration="00:00:00.071" startTime="2020-05-01T08:56:47.435Z" endTime="2020-05-01T08:56:47.506Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="cdf5c8ee-2744-4b12-9ef1-be8a6635079b" executionId="bd142e39-be68-4da4-8710-a9de85ac9c1a" testName="&lt;Arrow /> / takes a child path element and renders it" computerName="Helens-iMac.local" duration="00:00:00.071" startTime="2020-05-01T08:56:47.506Z" endTime="2020-05-01T08:56:47.577Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="941373ac-25ab-4345-ab19-4792f041c4c3" executionId="4f77f7c6-f452-4a60-96aa-c65716b35326" testName="&lt;Nav/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.221" startTime="2020-05-01T08:56:47.559Z" endTime="2020-05-01T08:56:47.780Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="9d0295da-d419-445c-b83e-0819527d72be" executionId="88c26cad-2ff6-4d55-b0df-6a5f615bd7af" testName="dataContextFactory / Returns a Context Object and a provider / That does not throw an error when wrapping another element" computerName="Helens-iMac.local" duration="00:00:00.203" startTime="2020-05-01T08:56:47.588Z" endTime="2020-05-01T08:56:47.791Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="61f20522-dd1e-447f-aa98-cb51d523d614" executionId="63758b0e-65d4-402f-8720-eed69bdc142e" testName="&lt;Button /> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.077" startTime="2020-05-01T08:56:47.559Z" endTime="2020-05-01T08:56:47.636Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="c02e2219-31e3-465e-a54d-061635957e8e" executionId="f527d0ff-0a39-4dd0-8122-aa4a560c2694" testName="&lt;Button /> / can be set to be active" computerName="Helens-iMac.local" duration="00:00:00.077" startTime="2020-05-01T08:56:47.636Z" endTime="2020-05-01T08:56:47.713Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="0692db14-d3af-456f-807c-622ce0c8be3d" executionId="e1261a5a-2022-42bb-ba2f-8d99b9d9b52f" testName="&lt;Button /> / can accept other classes" computerName="Helens-iMac.local" duration="00:00:00.077" startTime="2020-05-01T08:56:47.713Z" endTime="2020-05-01T08:56:47.790Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="9cd48f04-f801-4ec1-8ace-04670d4dbf2f" executionId="97a22a59-68b1-4ddc-9ed2-a0fdf737cf39" testName="Scenario Context / ScenarioReducer / Returns a default state" computerName="Helens-iMac.local" duration="00:00:00.039" startTime="2020-05-01T08:56:47.799Z" endTime="2020-05-01T08:56:47.838Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ee55a232-20b5-4a2f-a67c-52c65cf9d169" executionId="b5a3c569-d0b9-4144-9b75-ca6af1e5a84f" testName="Scenario Context / ScenarioReducer / When Type is SHOW_SCENARIOS / Adds scenarioOptions to the state" computerName="Helens-iMac.local" duration="00:00:00.039" startTime="2020-05-01T08:56:47.838Z" endTime="2020-05-01T08:56:47.877Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="c7d6b4d7-9a95-4b50-840f-07a95a8bbdce" executionId="b98ca2a9-a086-4026-ab52-8bb8aa2a36c1" testName="Scenario Context / Action Creators / showScenarios / It dispatches the showScenarios action" computerName="Helens-iMac.local" duration="00:00:00.039" startTime="2020-05-01T08:56:47.877Z" endTime="2020-05-01T08:56:47.916Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="c72937d7-7b56-4c62-a90b-cd5c0e15dd22" executionId="1f405143-a2ed-4921-8ba5-35398a1580bc" testName="getColumnItem / returns the correct columnItem for items on first tier" computerName="Helens-iMac.local" duration="00:00:00.025" startTime="2020-05-01T08:56:47.801Z" endTime="2020-05-01T08:56:47.826Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="c1087ff9-a5db-4321-a5d0-86221af9a327" executionId="da604316-fefc-46ba-9572-a70cee752cf6" testName="getColumnItem / return the correct column item for items on the 5th tier" computerName="Helens-iMac.local" duration="00:00:00.025" startTime="2020-05-01T08:56:47.826Z" endTime="2020-05-01T08:56:47.851Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="f117c8ce-2da0-4822-8055-67e66993687f" executionId="b43c14f3-105a-4b7a-8c0f-ecb642bd55c4" testName="buildColumnItem / When input options is the same length as the column number / it appends a new column item" computerName="Helens-iMac.local" duration="00:00:00.025" startTime="2020-05-01T08:56:47.851Z" endTime="2020-05-01T08:56:47.876Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ad250cc2-daad-4a73-b3bd-063ad31e5e09" executionId="342168a0-3fb8-4f6e-89b8-72252f5e5288" testName="buildColumnItem / When input options is the same length as the column number / The new item has column index of 2" computerName="Helens-iMac.local" duration="00:00:00.025" startTime="2020-05-01T08:56:47.876Z" endTime="2020-05-01T08:56:47.901Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="534c9435-d592-4d02-a467-3967e1fd4ad3" executionId="1492743e-2d06-47eb-8d53-c64e9f4d7227" testName="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / it returns a list with 2 elements" computerName="Helens-iMac.local" duration="00:00:00.025" startTime="2020-05-01T08:56:47.901Z" endTime="2020-05-01T08:56:47.926Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="aaa67d5d-015d-422d-b1a8-cc1e8355b13e" executionId="5a55d650-57d8-40d1-8455-37ce4ad0a6da" testName="buildColumnItem / When input options length is greater than selected option / When an item is selected from the first column / The 2nd element has a idx of 2" computerName="Helens-iMac.local" duration="00:00:00.025" startTime="2020-05-01T08:56:47.926Z" endTime="2020-05-01T08:56:47.951Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="c2892064-2e2a-4591-a95e-1c47e76afa56" executionId="04f5543a-dc58-4846-80ac-a96a990f0bbf" testName="&lt;FormField/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.194" startTime="2020-05-01T08:56:47.790Z" endTime="2020-05-01T08:56:47.984Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
   </Results>
 </TestRun>

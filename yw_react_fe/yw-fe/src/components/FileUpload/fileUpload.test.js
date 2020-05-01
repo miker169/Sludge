@@ -2,7 +2,7 @@ import React, {createElement} from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import FileUpload from "./fileInput";
-import { Provider as FlowProvider } from "../../context/FlowContext";
+import {Provider as FlowProvider, setFile} from "../../context/FlowContext";
 
 
 describe('<FileUpload/>', () => {
@@ -38,6 +38,45 @@ describe('<FileUpload/>', () => {
       expect(mockRef).toHaveBeenCalled();
 
     });
+
+    describe('When file selected', () => {
+      let hiddenFileInputElement;
+      let mockEvent = jest.fn();
+      let startFlowMock = jest.fn();
+      let queryByTestId;
+      let setFileMock = jest.fn();
+
+      const fileUploadEvent = (fileName, fileType) => {
+        const testFile =
+          new Blob([{fileContents: 'tesying'}], {type: fileType});
+        testFile.name = fileName
+        mockEvent = {target: {files: [testFile]}};
+        ({queryByTestId } = wrapper());
+        hiddenFileInputElement = queryByTestId('hidden-input');
+        fireEvent.change(hiddenFileInputElement, mockEvent);
+      }
+
+      beforeEach(() => {
+        jest.clearAllMocks();
+        jest.spyOn(React, 'useContext')
+        .mockImplementation((context) => {
+          return {
+            setFile: setFileMock,
+            start: startFlowMock
+          }
+        });
+    });
+
+      test('It calls set file ', () => {
+        fileUploadEvent('myFile.csv', 'text/csv');
+        expect(setFileMock).toHaveBeenCalled();
+      });
+
+      test('It starts the workflow', () => {
+        fileUploadEvent('myFile.csv', 'text/csv');
+        expect(startFlowMock).toHaveBeenCalled();
+      });
+    })
   });
 
   // describe('When file selected', () => {
