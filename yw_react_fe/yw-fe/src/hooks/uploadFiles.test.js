@@ -10,7 +10,7 @@ describe('UploadFiles', () => {
   let getContainerClientMock = jest.fn();
   let getBlockBlobClientMock = jest.fn();
   let uploadBrowserDataMock =jest.fn();
-  const inputContainer = "data-inputs";
+  const inputContainer = "inputs";
 
   beforeEach(() => {
     jest.clearAllMocks();
