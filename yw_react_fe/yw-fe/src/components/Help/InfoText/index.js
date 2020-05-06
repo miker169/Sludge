@@ -11,14 +11,14 @@ const InfoText = ({messages = {Load_message: '',Distance_message: '' }}) => {
         {messages.Load_message ? <div className="info-message">
           <span className="info-help-title">Load Messages:</span>
           <div className="infoErrors">
-            {messages.Load_message.split('\n').map(s => <span data-testid="load-message">{s}</span>)}
+            {messages.Load_message.split('\n').map((s, idx) => <span key={idx} data-testid="load-message">{s}</span>)}
           </div>
         </div> : null
         }
         {!!messages.Distance_message ? <div className="info-message">
           <span className="help-title">Distance Messages:</span>
           <div className="info-Errors">
-            {messages.Distance_message.split('\n').map(s => <span data-testid="distance-message">{s}</span>)}
+            {messages.Distance_message.split('\n').map((s, idx) => <span key={idx} data-testid="distance-message">{s}</span>)}
           </div>
         </div> : null
         }

@@ -19,3 +19,8 @@ export const buildInputOption = (setInputOptions, inputOptions) => (option) => {
     setInputOptions([...inputOptions, {...option, idx: idx +1}])
   }
 }
+
+export default {
+  buildInputOption,
+  getColumn
+}

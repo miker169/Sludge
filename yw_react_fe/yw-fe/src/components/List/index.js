@@ -1,22 +1,10 @@
 import React from 'react';
 import './List.css'
 import ListItem from "../ListItem";
+import useSelectListItem from "../../hooks/useSelectListItem";
 
-const List = ({options, next }) => {
-
-  const [labelText, setLabelText] = React.useState('Please Select...')
-  const [selected, setSelected] = React.useState(false);
-  const [listOptions, setSelectedListOptions] = React.useState(options);
-
-  const handleSelected = (option) => {
-    setSelected(!selected);
-    setLabelText(option.label);
-    const newSelectedOptions = listOptions.map(o => ({
-      ...o,
-      selected: option.id === o.id
-    }));
-    setSelectedListOptions(newSelectedOptions);
-  }
+const List = ({options, handleScenarioSelection }) => {
+  const [labelText, listItemSelectHandler ] = useSelectListItem(options, handleScenarioSelection);
 
   return (
     <div className="dropdown">
@@ -25,9 +13,7 @@ const List = ({options, next }) => {
           <ul className="submenu" data-testid="scenario-dropdown-component" name="modelling">
             {options.map((option) =>
                 <ListItem
-                  next={next}
-                  selected={option.selected}
-                  setLabelText={handleSelected}
+                  handleSelected={listItemSelectHandler}
                   key={option.id}
                   option={option} />)
             }

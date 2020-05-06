@@ -2,15 +2,17 @@ import React, {useEffect} from 'react';
 import {
   flowReducer,
   START_FLOW,
-  UPLOADING_DATA,
   RUN_DATA,
   RAN_DATA_MODEL,
   INPUT_DATA,
+  UPLOADING_DATA,
   uploadData,
   runData,
   inputData,
-  start
+  start, initialState, REFRESH, SET_FILE
 } from './FlowContext';
+import uploadFiles from "../hooks/uploadFiles";
+jest.mock('../hooks/uploadFiles');
 
 
 describe('FlowContext', () => {
@@ -28,38 +30,65 @@ describe('FlowContext', () => {
 
    });
 
+   describe('When type is SET_FILE', () => {
+     test('Adds a file to the files state', () => {
+       state.files = [];
+       let newState = flowReducer(state, {type: SET_FILE, payload: {file: 'test'}});
+       expect(newState.files.length).toBe(1);
+     })
+   })
+
+   describe('When type is REFRESH', () => {
+
+     test('it sets the state to a default state', () => {
+       state = {...initialState, testing: 123};
+       let newState = flowReducer(state, {type: REFRESH});
+       expect(newState).toBe(initialState);
+     })
+   });
+
     describe('When type is INPUT_DATA', () => {
-      let newState = flowReducer(state, {type: INPUT_DATA});
-      expect(newState.inputArrowRan).toBeTruthy();
+      test('it sets the input arrow to the ran status', () => {
+        let newState = flowReducer(state, {type: INPUT_DATA});
+        expect(newState.inputArrowRan).toBeTruthy();
+      });
     });
 
     describe('When type is UPLOADING_DATA', () => {
+      test('Sets the inputArrow to be enabled', () => {
       let newState = flowReducer(state, {type: UPLOADING_DATA});
       expect(newState.inputArrowDisabled).toBeFalsy();
+      });
     });
 
     describe('When type is RUN_DATA', () => {
-      let newState = flowReducer(state, {type: RUN_DATA});
-      expect(newState.nextArrowDisabled).toBeFalsy();
+      test('The next arrow is enabled', () => {
+        let newState = flowReducer(state, {type: RUN_DATA});
+        expect(newState.nextArrowDisabled).toBeFalsy();
+      })
     });
 
     describe('When type is RUN_DATA_MODEL', () => {
-      let newState = flowReducer(state, {type: RAN_DATA_MODEL});
-      expect(newState.getResultsDisabled).toBeFalsy();
+      test('Get results is enabled', () => {
+        let newState = flowReducer(state, {type: RAN_DATA_MODEL});
+        expect(newState.getResultsDisabled).toBeFalsy();
+      })
     });
 
-    describe('When type is unknown it returns default state', () => {
-      let newState = flowReducer({test: true}, {type: 'UNKNOWN'});
-      expect(newState.test).toBeTruthy();
+    describe('When type is unknown', () => {
+      test('it returns default state', () => {
+        let newState = flowReducer({test: true}, {type: 'UNKNOWN'});
+        expect(newState.test).toBeTruthy();
+      })
     });
 
     describe('action creators', () => {
       describe('Upload Data', () => {
         let mockDispatch = jest.fn();
         // replaces setTimeout with a mock.
-        jest.useFakeTimers();
         beforeEach(() => {
           mockDispatch.mockClear();
+          uploadFiles.mockImplementation( () => Promise.resolve());
           uploadData(mockDispatch)();
         })
         test('uploadData dispatches UPLOADINGDATA action', () => {
@@ -84,12 +113,6 @@ describe('FlowContext', () => {
         test('calls RUN_DATA reducer action', () => {
           expect(mockRunDispatch).toHaveBeenCalledWith({type: RUN_DATA});
         });
-
-        // test('calls RAN_DATA_MODEL reducer action', () => {
-        //   jest.runAllTimers();
-        //   expect(mockRunDispatch).toHaveBeenCalledWith({type: RAN_DATA_MODEL});
-        // });
-
 
       });
       describe('inputData', () => {

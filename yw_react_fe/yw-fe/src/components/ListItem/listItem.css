@@ -7,7 +7,6 @@ li {
 
 .option {
     padding: 1em;
-    /*margin-top: .em;*/
 }
 
 .option:hover {
@@ -21,11 +20,4 @@ li {
     vertical-align: -0.25em;
 
 }
-
-.option.selected {
-    background-color: var(--darkest-blue);
-    border-radius: .4em;
-    border: 2px solid var(--medium-blue--disabled);
-}
-/*option.selected*/
 

@@ -1,6 +1,6 @@
 import useDataContext from "./useDataContext";
-import { BlobServiceClient }  from "@azure/storage-blob";
-import axios from 'axios';
+import uploadFiles from "../hooks/uploadFiles";
+import useRunModel from "../hooks/useRunModel";
 
 export const START_FLOW = "START_FLOW";
 export const INPUT_DATA = "INPUT_DATA"
@@ -16,17 +16,8 @@ const CHOOSE_RUN_MODEL_TEXT = `Select Run Model to run the model for:`;
 const RUNNING_MODEL_TEXT = "Running the Model...";
 const GET_RESULTS_TEXT = "Model has ran click Get Results to get the results in a .csv format";
 export const SET_FILE = "SET_FILE";
-const inputContainer = "data-inputs";
-const outputContainer = "data-outputs";
 
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
-
-const REACT_APP_BLOB_SAS=process.env.REACT_APP_BLOB_SAS;
-const REACT_APP_RUN_MODEL_URL=process.env.REACT_APP_RUN_MODEL_URL;
-
-const initialState = {
+export const initialState = {
   enabled: false,
   helpText: UPLOAD_CSV_TEXT,
   inputDisabled: true,
@@ -115,48 +106,23 @@ export const inputData = (dispatch) => () =>{
   dispatch({type: INPUT_DATA});
 }
 
-export const uploadFile = async (files) => {
-  const blobServiceClient = new BlobServiceClient(REACT_APP_BLOB_SAS);
-  const containerClient = blobServiceClient.getContainerClient(inputContainer);
-
-  try {
-    const promises = [];
-    [...files].forEach(file => {
-      const blockBlobClient = containerClient.getBlockBlobClient(file.name);
-      promises.push(blockBlobClient.uploadBrowserData(file));
-    })
-    return await Promise.all(promises);
-  } catch (e) {
-   return e;
-  }
-}
-
 export const refresh = (dispatch) => () => {
   dispatch({type: REFRESH})
 }
 
 export const uploadData = (dispatch) => (file) =>{
   dispatch({type: UPLOADING_DATA});
-  uploadFile(file).then((data) => {
+  uploadFiles(file).then((data) => {
     dispatch({type: INPUT_DATA});
   });
 }
 export const runData = (dispatch) => async () => {
   dispatch({type: RUN_DATA});
 
-  axios.get(REACT_APP_RUN_MODEL_URL, {
-    headers: {'Access-Control-Allow-Origin': '*'}
-  }).then(data => {
-    dispatch({type: SAVE_MESSAGES, payload: data.data})
-    const blobServiceClient = new BlobServiceClient(REACT_APP_BLOB_SAS);
-    const containerClient = blobServiceClient.getContainerClient(outputContainer);
-    const blockBlobClient = containerClient.getBlobClient("pp_test.csv");
-    return blockBlobClient.download()})
-    .then((blob) => blob.blobBody)
-    .then(body => body.text()).then(data => {
-      let blob = new Blob([data], {type: "text/csv"});
-      let item = window.URL.createObjectURL(blob);
-      dispatch({type: RAN_DATA_MODEL, payload: item});
+  useRunModel(dispatch).then(data => {
+    let blob = new Blob([data], {type: "text/csv"});
+    let item = window.URL.createObjectURL(blob);
+    dispatch({type: RAN_DATA_MODEL, payload: item});
   });
 }
 

@@ -37,6 +37,25 @@ describe('<Main/>',  () => {
 
   });
 
+  describe('When fileinput disabled', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+      jest.spyOn(React, 'useContext')
+      .mockImplementation((context) => {
+        return {
+          state: {enabled: false, fileInputDisabled: true, scenarioOptions: scenario, files: []},
+          start: jest.fn()
+        }
+      })
+    });
+
+    test('Hides the input field', () => {
+      const {queryByTestId } = wrapper();
+      const inputComponent = queryByTestId('component-file-upload');
+      expect(inputComponent).not.toBeInTheDocument();
+    });
+  });
+
   describe('When enabled', () => {
 
     beforeEach(() => {
@@ -49,11 +68,6 @@ describe('<Main/>',  () => {
         }
       })
     });
-    // test('Hides the input field', () => {
-    //   const {queryByTestId } = wrapper();
-    //   const inputComponent = queryByTestId('component-file-upload');
-    //   expect(inputComponent).not.toBeInTheDocument();
-    // });
   });
 
 

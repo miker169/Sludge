@@ -14,13 +14,6 @@ export const showScenarios = (dispatch) => () => {
   dispatch({type: SHOW_SCENARIOS, payload: scenarios})
 }
 
-export const next =(dispatch) => (option) => {
-  if(option.items.length > 0) {
-
-  }
-}
-
-
 export const { Provider, Context } =
   useDataContext(scenarioReducer, { showScenarios  }, {
     scenarioOptions: scenarios,

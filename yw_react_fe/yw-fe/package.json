@@ -51,7 +51,9 @@
     "jest-resolve": "24.9.0",
     "jest-trx-results-processor": "^2.0.0",
     "jest-watch-typeahead": "0.4.2",
+    "lite-server": "^2.5.4",
     "mini-css-extract-plugin": "0.9.0",
+    "moxios": "^0.4.0",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -117,6 +119,9 @@
         "lines": 0,
         "statements": 0
       }
+    },
+    "globals": {
+      "REACT_APP_RUN_MODEL_URL": "http://web.testurl"
     },
     "reporters": [
       "default",

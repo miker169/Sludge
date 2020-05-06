@@ -4,9 +4,9 @@ import ListItem from "./index";
 import userEvent from "@testing-library/user-event";
 
 describe('<ListItem/>', () => {
-  let showNextMock = jest.fn();
+  let handleSelected = jest.fn();
   const wrapper = () => {
-    return render(<ListItem setLabelText={jest.fn()} next={showNextMock} option={{id:1, label: 'test'}}/>);
+    return render(<ListItem setLabelText={jest.fn()} handleSelected={handleSelected} option={{id:1, label: 'test'}}/>);
   }
   test('renders without error', () => {
     const { queryByTestId } = wrapper();
@@ -23,7 +23,7 @@ describe('<ListItem/>', () => {
     });
 
    test('calls showNext', () => {
-     expect(showNextMock).toHaveBeenCalled();
+     expect(handleSelected).toHaveBeenCalled();
    });
   });
 })
