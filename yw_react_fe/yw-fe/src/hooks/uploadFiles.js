@@ -1,7 +1,7 @@
 import {BlobServiceClient} from "@azure/storage-blob";
 
 const REACT_APP_BLOB_SAS=process.env.REACT_APP_BLOB_SAS;
-const inputContainer = "data-inputs";
+const inputContainer = "inputs";
 
 export default async (files) => {
 
