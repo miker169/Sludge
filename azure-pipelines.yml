@@ -13,8 +13,12 @@ variables:
   deploymentFolder: "yw_react_fe/yw-fe/deployment"
   fontsFolder: "yw_react_fe/yw-fe/src/fonts"
   storageAccount: "wwmodelling"
+  react_app_azure_store_account_name: 'ywwwdatastoredev'
+  react_app_run_model_url: 'doesnotexist'
+  react_app_blob_sas: 'needssetting'
 pool:
   vmImage: 'ubuntu-latest'
+
 
 steps:
 
