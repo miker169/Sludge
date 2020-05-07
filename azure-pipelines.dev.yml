@@ -14,22 +14,14 @@ variables:
   buildOutputFolder: "yw_react_fe/yw-fe/build"
   deploymentFolder: "yw_react_fe/yw-fe/deployment"
   fontsFolder: "yw_react_fe/yw-fe/src/fonts"
-  storageAccount: "dev.wwmodelling"
-  react_app_azure_store_account_name: 'dev.ywwwdatastoredev'
-  react_app_run_model_url: 'dev.doesnotexist'
-  react_app_blob_sas: 'dev.needssetting'
+  react_app_run_model_url: 'https://ywwwbackenddev.azurewebsites.net/api/standard-model-trigger?code=N1NwgKdG9NlmR69v6steAJ9doQmPjSOaX1yGMneuaxT1qAQWRyaX3g=='
+  react_app_blob_sas: 'https://ywwwdatastoredev.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-05-07T18:34:26Z&st=2020-05-07T10:34:26Z&spr=https&sig=3lTNBijVZJTqp55F%2FiVwWhjInPHCUhrXYMYMKPPM4H8%3D'
 pool:
   vmImage: 'ubuntu-latest'
 
 
 steps:
 
-
-- powershell: |
-  env:
-    REACT_APP_AZURE_STORAGE_ACCOUNT_NAME: $(storageAccountName)
-    REACT_APP_BLOB_SAS: $(sas_url)
-    REACT_APP_RUN_MODEL_URL: $(runModelUrl)
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
