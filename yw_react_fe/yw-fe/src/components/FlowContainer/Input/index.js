@@ -12,7 +12,7 @@ const Input = () => {
       disabled={state.inputDisabled}
       name="input"
       classes={['flow']}
-      title="Input Static Data"
+      title="Input Static Datas"
     />
   </div>
   )

@@ -5,20 +5,20 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 pr:
-  master
+  develop
 
 trigger:
-- master
+- develop
 
 variables:
   projectFolder: 'yw_react_fe/yw-fe'
   buildOutputFolder: "yw_react_fe/yw-fe/build"
   deploymentFolder: "yw_react_fe/yw-fe/deployment"
   fontsFolder: "yw_react_fe/yw-fe/src/fonts"
-  storageAccount: "wwmodelling"
-  react_app_azure_store_account_name: 'ywwwdatastoredev'
-  react_app_run_model_url: 'doesnotexist'
-  react_app_blob_sas: 'needssetting'
+  storageAccount: "dev.wwmodelling"
+  react_app_azure_store_account_name: 'dev.ywwwdatastoredev'
+  react_app_run_model_url: 'dev.doesnotexist'
+  react_app_blob_sas: 'dev.needssetting'
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -83,7 +83,7 @@ steps:
   displayName: 'Publish Artifacts'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: 'Drop'
+    artifactName: 'devDrop'
 
 
 
