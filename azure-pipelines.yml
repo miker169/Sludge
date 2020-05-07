@@ -15,7 +15,7 @@ variables:
   deploymentFolder: "yw_react_fe/yw-fe/deployment"
   fontsFolder: "yw_react_fe/yw-fe/src/fonts"
   react_app_run_model_url: 'https://ywwwbackendprod.azurewebsites.net/api/standard-model-trigger?code=Amnr7umtGhFvKBMiL3ITfXZt0XPs5g6S4hgJ6sKfGHRlBmhLi4KxvQ=='
-  react_app_blob_sas: 'https://ywwwbackendprod.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-05-07T18:38:35Z&st=2020-05-07T10:38:35Z&spr=https&sig=jSQzKTbBt450JbtT1PBj3PBZV6JgkH%2FvBLpM0kHGlig%3D'
+  react_app_blob_sas: 'https://ywwwdatastoreprod.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-05-07T20:59:39Z&st=2020-05-07T12:59:39Z&spr=https&sig=XwFUSoTCpnpFLbXOUi%2BrL0rPt8uhJejOAUTvQwn%2F2Qg%3D'
 pool:
   vmImage: 'ubuntu-latest'
 
