@@ -92,7 +92,7 @@ export const flowReducer = (state, { type, payload }) => {
       }
     }
     case SAVE_MESSAGES:
-      return {...state, messages: payload, warnings: true}
+      return {...state, messages: payload}
     default:
       return state;
   }

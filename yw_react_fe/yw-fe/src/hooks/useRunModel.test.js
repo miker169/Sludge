@@ -3,7 +3,7 @@ import useRunModel from "./useRunModel";
 import {SAVE_MESSAGES} from "../context/FlowContext";
 import {BlobServiceClient} from "@azure/storage-blob";
 jest.mock("@azure/storage-blob")
-const outputContainer = "data-outputs";
+const outputContainer = "outputs";
 
 describe('runData', () => {
   let getContainerClientMock = jest.fn();
@@ -43,7 +43,7 @@ describe('runData', () => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
         status: 200,
-        response: {data: {warnings: 'test'}}
+        response: {warnings: 'test'}
       })
     });
   });

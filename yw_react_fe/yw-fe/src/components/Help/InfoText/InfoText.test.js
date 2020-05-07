@@ -3,7 +3,8 @@ import { render } from "@testing-library/react";
 import InfoText from "./index";
 
 describe('<InfoText/>', () => {
-  const wrapper = (props) => {
+  const wrapper = (props={messages: ["testMessage"], type: 'test'}) => {
+
     return render(<InfoText {...props} />)
   }
   test('it renders without error', () => {
@@ -16,9 +17,10 @@ describe('<InfoText/>', () => {
     let queryByTestId;
     let container;
     beforeEach(() => {
-      ({queryByTestId, container} = wrapper({messages: {
-          Load_message: "test load message"
-        }}));
+      ({queryByTestId, container} = wrapper({
+        messages: ["test load message"],
+        type: "load"
+      }));
     });
 
     test('Displays load message info', () => {
@@ -31,9 +33,10 @@ describe('<InfoText/>', () => {
     let queryByTestId;
     let container;
     beforeEach(() => {
-      ({queryByTestId, container} = wrapper({messages: {
-          Distance_message: "test distance message"
-        }}));
+      ({queryByTestId, container} = wrapper({
+          messages: ["test distance message"],
+          type: "distance"
+        }));
     });
 
     test('Displays distance message info', () => {

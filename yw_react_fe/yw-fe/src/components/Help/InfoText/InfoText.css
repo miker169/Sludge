@@ -30,7 +30,7 @@
     padding-bottom: .2em;
 }
 
-.info-Errors{
+.infoErrors{
     display: flex;
     flex-direction: column;
 }

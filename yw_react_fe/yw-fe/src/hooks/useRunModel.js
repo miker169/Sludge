@@ -2,7 +2,7 @@ import axios from "axios";
 import {BlobServiceClient} from "@azure/storage-blob";
 import {SAVE_MESSAGES} from "../context/FlowContext";
 const REACT_APP_BLOB_SAS=process.env.REACT_APP_BLOB_SAS;
-const outputContainer = "data-outputs";
+const outputContainer = "outputs";
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
@@ -14,7 +14,7 @@ export default async (dispatch) => {
     headers: {'Access-Control-Allow-Origin': '*'}
   });
 
-  dispatch({type: SAVE_MESSAGES, payload: response.data.data})
+  dispatch({type: SAVE_MESSAGES, payload: response.data});
   const blobServiceClient = new BlobServiceClient(REACT_APP_BLOB_SAS);
   const containerClient = blobServiceClient.getContainerClient(outputContainer);
   const blockBlobClient = containerClient.getBlobClient("pp_test.csv");

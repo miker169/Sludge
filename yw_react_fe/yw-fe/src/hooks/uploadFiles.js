@@ -3,15 +3,7 @@ import {BlobServiceClient} from "@azure/storage-blob";
 const REACT_APP_BLOB_SAS=process.env.REACT_APP_BLOB_SAS;
 const inputContainer = "inputs";
 
-console.log('Outside function call')
-console.log(process.env.REACT_APP_RUN_MODEL_URL);
-console.log(REACT_APP_BLOB_SAS);
-
 export default async (files) => {
-
-  console.log('inside function');
-  console.log(process.env.REACT_APP_RUN_MODEL_URL);
-  console.log(REACT_APP_BLOB_SAS);
 
     const blobServiceClient = new BlobServiceClient(REACT_APP_BLOB_SAS);
     const containerClient = blobServiceClient.getContainerClient(inputContainer);
