@@ -80,6 +80,7 @@ steps:
   displayName: 'Publish Artifacts'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'devDrop'
 
 
 
