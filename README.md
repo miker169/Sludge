@@ -2,7 +2,7 @@
 
 ### Contains all code for local development, testing and deployment of static frontend with azure function based backend
 
-###Branching strategy
+### Branching strategy
 
 * Pull master
 * Checkout onto new development branch, including feature name, ie rl-yw-development-blob-json-file-upload
