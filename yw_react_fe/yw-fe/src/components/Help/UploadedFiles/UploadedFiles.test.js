@@ -2,7 +2,7 @@ import React from 'react';
 import {render } from "@testing-library/react";
 import UploadedFiles from "./index";
 
-describe('<UploadedFiles/>', () => {
+describe.skip('<UploadedFiles/>', () => {
   const wrapper = (props) => {
     return render(<UploadedFiles {...props} />);
   }

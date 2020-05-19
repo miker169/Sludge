@@ -5,7 +5,7 @@ import {BlobServiceClient} from "@azure/storage-blob";
 jest.mock("@azure/storage-blob")
 const outputContainer = "outputs";
 
-describe('runData', () => {
+describe.skip('runData', () => {
   let getContainerClientMock = jest.fn();
   let getBlobClientMock = jest.fn();
   let downloadMock =jest.fn();
@@ -51,27 +51,27 @@ describe('runData', () => {
     moxios.uninstall();
   });
 
-  test('It returns some data from api', async () => {
+  test.skip('It returns some data from api', async () => {
     await useRunModel(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith({type: SAVE_MESSAGES, payload: {warnings: 'test'}});
   });
 
-  test('it calls Blob Service Client', async () => {
+  test.skip('it calls Blob Service Client', async () => {
     await useRunModel(mockDispatch);
     expect(getContainerClientMock).toHaveBeenCalledWith(outputContainer);
   });
 
-  test('it calls getBlobClientMock with the blob file we want', async () => {
+  test.skip('it calls getBlobClientMock with the blob file we want', async () => {
     await useRunModel(mockDispatch);
     expect(getBlobClientMock).toHaveBeenCalledWith("pp_test.csv");
   });
 
-  test('it calls download mock which returns a Blob Respnse', async () => {
+  test.skip('it calls download mock which returns a Blob Respnse', async () => {
     await useRunModel(mockDispatch);
     expect(downloadMock).toHaveBeenCalled();
   });
 
-  test('it returns a blob', async () => {
+  test.skip('it returns a blob', async () => {
     let blob = await useRunModel(mockDispatch);
     expect(blob.type).toBe(testBlob.type);
   })

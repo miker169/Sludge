@@ -2,19 +2,20 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from  '@fortawesome/free-solid-svg-icons'
 import './fileUpload.css'
-import { Context as FlowContext } from "../../context/FlowContext";
+import {Context as FileContext} from "../../context/FileContext";
+import useStartFlow from "../../hooks/useStartFlow";
 
 const FileInput = () => {
 
   const ref = React.useRef(null);
-  const {start, setFile} = React.useContext(FlowContext);
+  const {convertFileToJson}  = React.useContext(FileContext);
 
+  useStartFlow();
 
   const HiddenInput = () => (
     <input accept=".csv, text/csv, application/csv. xsl, .xlsx"
            onChange={(e) => {
-             setFile(e.target.files);
-             start(e.target.files[0].name)
+             convertFileToJson(e.target.files);
           } }
            data-testid="hidden-input"
            ref={ref}

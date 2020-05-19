@@ -13,7 +13,7 @@ const UploadedFiles = ({helpText, files}) =>  {
             <FontAwesomeIcon className="file-help-icon" icon={faInfoCircle}/>
             {helpText}
             <div className="help-fileList">
-              {files.map((x, idx) => <span key={idx}>{x.name}</span>)}
+              {files.map((x, idx) => <span key={idx}>{x}</span>)}
             </div>
         </span>
       </div>

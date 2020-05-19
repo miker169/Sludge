@@ -9,7 +9,9 @@ const RefreshButton = () => {
 
   return(
     <div className="refresh" data-testid="refresh-btn">
-      <a data-testid="refreshClickHandler" onClick={() =>  refresh()}>
+      <a data-testid="refreshClickHandler"
+         href="/#"
+         onClick={() =>  refresh()}>
         <FontAwesomeIcon size={"2x"} icon={faRedo} />
       </a>
     </div>

@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "convert-excel-to-json": "^1.6.1",
+    "csvtojson": "^2.0.10",
     "jest-junit": "^10.0.0",
     "jest-junit-reporter": "^1.1.0",
+    "papaparse": "^5.2.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "read-excel-file": "^4.0.6",
+    "xlsx": "^0.16.1"
   },
   "devDependencies": {
     "@azure/storage-blob": "^12.1.1",

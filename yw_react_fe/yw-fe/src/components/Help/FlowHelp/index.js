@@ -3,7 +3,7 @@ import './FlowHelp.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 
-const FlowHelp = ({helpText} ) => {
+const FlowHelp = ({helpText, fileNames, files} ) => {
 
   return (
     <div data-testid="flow-help">

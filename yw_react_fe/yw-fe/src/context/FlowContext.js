@@ -1,6 +1,6 @@
 import useDataContext from "./useDataContext";
-import uploadFiles from "../hooks/uploadFiles";
 import useRunModel from "../hooks/useRunModel";
+import useGetResults from "../hooks/useGetResults";
 
 export const START_FLOW = "START_FLOW";
 export const INPUT_DATA = "INPUT_DATA"
@@ -56,7 +56,7 @@ export const flowReducer = (state, { type, payload }) => {
         inputDisabled: false,
         helpText: STATIC_DATA_TEXT,
         enableFileUpload: false,
-        csvFileName: payload
+        // csvFileName: payload
       }
     case UPLOADING_DATA:
       return {
@@ -99,8 +99,8 @@ export const flowReducer = (state, { type, payload }) => {
 }
 
 
-export const start = (dispatch) => (fileName) => {
-  dispatch({type: START_FLOW, payload: fileName});
+export const start = (dispatch) => () => {
+  dispatch({type: START_FLOW});
 }
 export const inputData = (dispatch) => () =>{
   dispatch({type: INPUT_DATA});
@@ -110,20 +110,16 @@ export const refresh = (dispatch) => () => {
   dispatch({type: REFRESH})
 }
 
-export const uploadData = (dispatch) => (file) =>{
+export const uploadData = (dispatch) => () =>{
   dispatch({type: UPLOADING_DATA});
-  uploadFiles(file).then((data) => {
-    dispatch({type: INPUT_DATA});
-  });
+}
+
+export const finishUploadingData = (dispatch) => () => {
+  dispatch({type: INPUT_DATA})
 }
 export const runData = (dispatch) => async () => {
   dispatch({type: RUN_DATA});
-
-  useRunModel(dispatch).then(data => {
-    let blob = new Blob([data], {type: "text/csv"});
-    let item = window.URL.createObjectURL(blob);
-    dispatch({type: RAN_DATA_MODEL, payload: item});
-  });
+  await useRunModel(dispatch);
 }
 
 export const setFile = (dispatch) => (file) => {
@@ -131,5 +127,5 @@ export const setFile = (dispatch) => (file) => {
 }
 
 export const { Provider, Context } =
-  useDataContext(flowReducer, { start, inputData, uploadData, runData, setFile, refresh }, initialState);
+  useDataContext(flowReducer, { start, inputData, uploadData, runData, setFile, refresh, finishUploadingData }, initialState);
 
