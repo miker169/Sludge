@@ -1,16 +1,12 @@
 import React  from 'react';
 import { render } from '@testing-library/react';
 import FlowContainer from "./index";
-import { Provider as FlowProvider } from "../../context/FlowContext";
+import { HelpContextProvider} from "../../context/HelpContext";
 
 describe('<FlowContainer/>', () => {
-  const wrapper = () => {
+  const wrapper = (props) => {
 
-    return render(
-      <FlowProvider >
-        <FlowContainer />
-      </FlowProvider>
-      );
+    return render(<HelpContextProvider><FlowContainer {...props} /></HelpContextProvider>);
   }
 
   test('is disabled by default', () => {
@@ -20,18 +16,9 @@ describe('<FlowContainer/>', () => {
   });
 
   describe('When First Enabled', () => {
-    beforeEach(() => {
-      jest.clearAllMocks();
-      jest.spyOn(React, 'useContext')
-      .mockImplementation((context) => {
-        return {
-          state:  { enabled: true },
-          start: jest.fn()
-        }
-      })
-    });
+
     test('Shows the Flow Component', () => {
-      const {queryByTestId} = wrapper();
+      const {queryByTestId} = wrapper({ enabled: true });
       const flowElement = queryByTestId('component-flow');
       expect(flowElement).toBeTruthy();
     });

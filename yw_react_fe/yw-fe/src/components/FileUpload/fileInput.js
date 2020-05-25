@@ -2,15 +2,13 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from  '@fortawesome/free-solid-svg-icons'
 import './fileUpload.css'
-import {Context as FileContext} from "../../context/FileContext";
-import useStartFlow from "../../hooks/useStartFlow";
 
-const FileInput = () => {
+import useConvertFilesToJson from "../../hooks/useConvertFilesToJson";
+
+const FileInput = ({setFiles, setPayload, payload}) => {
 
   const ref = React.useRef(null);
-  const {convertFileToJson}  = React.useContext(FileContext);
-
-  useStartFlow();
+  const { convertFileToJson } = useConvertFilesToJson(setFiles, setPayload, payload)
 
   const HiddenInput = () => (
     <input accept=".csv, text/csv, application/csv. xsl, .xlsx"

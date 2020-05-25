@@ -6,12 +6,17 @@
 }
 
 .nav li{
-    width: 18%
+    width: 20%;
+    padding-left: 0;
 }
 
 .nav li + li {
-    margin-left: .525em;
+    padding-left: 0.25em;
 }
+
+/*.nav li + li {*/
+/*    margin-left: .525em;*/
+/*}*/
 
 .nav li > a {
     text-align: center;

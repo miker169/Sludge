@@ -1,28 +1,18 @@
 import React from 'react';
 import { render } from "@testing-library/react";
 import Update from "./index";
-import {Provider as FlowProvider } from "../../../context/FlowContext";
 
 describe('<Update/>',  () => {
-  const wrapper = () => {
-    return render(<FlowProvider><Update/></FlowProvider>);
+  const wrapper = (props) => {
+    return render(<Update {...props}/>);
   }
 
-  let state = {inputArrowDisabled: true, inputArrowRan: false}
+  // let state = {inputArrowDisabled: true, inputArrowRan: false}
+  //
+  // const setState = (newState) => {
+  //   state = newState;
+  // }
 
-  const setState = (newState) => {
-    state = newState;
-  }
-
-  beforeEach(()=> {
-    jest.clearAllMocks();
-    jest.spyOn(React, 'useContext')
-    .mockImplementation((context) => {
-      return {
-        state: state,
-      }
-    })
-  });
 
   test('It renders without error', () => {
     const {queryByTestId} = wrapper();
@@ -32,24 +22,18 @@ describe('<Update/>',  () => {
 
   describe('when disabled', () => {
 
-    beforeEach(()=> {
-      setState({inputArrowDisabled: true, inputArrowRan: false})
-    });
 
     test('The disabled class is applied', () => {
-      const {queryByTestId} = wrapper();
+      const {queryByTestId} = wrapper({inputArrowDisabled: true, inputArrowRan: false});
       const updateComponent = queryByTestId('input-component-arrow');
       expect(updateComponent).toHaveClass('disabled');
     });
   })
 
   describe('when ran', () => {
-    beforeEach(()=> {
-      setState({inputArrowDisabled: false, inputArrowRan: true})
-    });
 
     it('the ran class is appled', () => {
-      const {queryByTestId} = wrapper();
+      const {queryByTestId} = wrapper({inputArrowDisabled: false, inputArrowRan: true});
       const updateComponent = queryByTestId('input-component-arrow');
       expect(updateComponent).toHaveClass('ran');
     });

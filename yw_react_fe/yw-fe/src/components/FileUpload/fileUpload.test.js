@@ -2,20 +2,17 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import FileUpload from "./fileInput";
+import useConvertFilesToJson  from '../../hooks/useConvertFilesToJson'
+jest.mock('../../hooks/useConvertFilesToJson');
 
-describe.skip('<FileUpload/>', () => {
+describe('<FileUpload/>', () => {
+  let convertFilesToJsonMock = jest.fn();
   const wrapper = () => {
+    useConvertFilesToJson.mockImplementation(() => ({
+      convertFileToJson: convertFilesToJsonMock
+    }));
     return  render(<FileUpload/>)
   }
-  beforeEach(() => {
-    jest.spyOn(React, 'useContext')
-    .mockImplementation((context) => {
-      return {
-        setFile: jest.fn(),
-        start: jest.fn()
-      }
-    });
-  })
   test('renders without error', () => {
     const {queryByTestId} = wrapper();
     const uploadElement = queryByTestId('component-file-upload')
@@ -43,12 +40,10 @@ describe.skip('<FileUpload/>', () => {
 
     });
 
-    describe.skip('When file selected', () => {
+    describe('When file selected', () => {
       let hiddenFileInputElement;
       let mockEvent = jest.fn();
-      let startFlowMock = jest.fn();
       let queryByTestId;
-      let setFileMock = jest.fn();
 
       const fileUploadEvent = (fileName, fileType) => {
         const testFile =
@@ -60,26 +55,11 @@ describe.skip('<FileUpload/>', () => {
         fireEvent.change(hiddenFileInputElement, mockEvent);
       }
 
-      beforeEach(() => {
-        jest.clearAllMocks();
-        jest.spyOn(React, 'useContext')
-        .mockImplementation((context) => {
-          return {
-            setFile: setFileMock,
-            start: startFlowMock
-          }
-        });
-    });
-
       test('It calls set file ', () => {
         fileUploadEvent('myFile.csv', 'text/csv');
-        expect(setFileMock).toHaveBeenCalled();
+        expect(convertFilesToJsonMock).toHaveBeenCalled();
       });
 
-      test('It starts the workflow', () => {
-        fileUploadEvent('myFile.csv', 'text/csv');
-        expect(startFlowMock).toHaveBeenCalled();
-      });
     })
   });
 })

@@ -11,6 +11,7 @@
     margin-right: auto;
     border-radius: .4em;
     border: .1em solid var(--medium-blue--disabled);
+    max-height: 3rem;
 }
 
 .file:hover {

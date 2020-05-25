@@ -1,16 +1,17 @@
 import React from 'react';
 import {render } from "@testing-library/react";
 import UploadedFiles from "./index";
+import { HelpContextProvider} from "../../../context/HelpContext";
 
-describe.skip('<UploadedFiles/>', () => {
+describe('<UploadedFiles/>', () => {
   const wrapper = (props) => {
-    return render(<UploadedFiles {...props} />);
+    return render(<HelpContextProvider><UploadedFiles {...props} /></HelpContextProvider>);
   }
 
   it('renders without error', () => {
     let props = {
       files: [
-        {name:'test'}
+        'test.csv'
       ],
       helpText: 'test help text'
     }

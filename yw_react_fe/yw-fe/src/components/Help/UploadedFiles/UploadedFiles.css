@@ -7,6 +7,8 @@
     border-radius: .4em;
     border: .1em solid var(--medium-blue--disabled);
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .file-help-icon {
@@ -24,3 +26,53 @@
     text-decoration: underline;
     border: 2px solid var(--medium-blue--disabled);
 }
+
+.help-checkbox {
+    height: 2em;
+    width: 2em;
+    border: 2px solid var(--medium-blue--disabled);
+    border-radius: .4em;
+    margin-left: auto
+}
+
+
+.help-checkbox::after {
+    content: "\2713 ";
+    font-size: 1.6em;
+    color: #228B22;
+    margin-left: 0.15em;
+}
+
+
+.help-checkbox-none {
+    height: 1.8em;
+    width: 2em;
+    border: 2px solid var(--medium-blue--disabled);
+    border-radius: .4em;
+    margin-left: auto;
+}
+
+
+.help-checkbox-none::after {
+    font-size: 1.6em;
+    color: #228B22;
+    margin-left: 0.15em;
+}
+
+.file-item {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+
+.file-list {
+    margin-left: 1em;
+}
+
+.helper-text {
+    padding-top: 0.2rem;
+    margin-right: 0.5em;
+}
+
+

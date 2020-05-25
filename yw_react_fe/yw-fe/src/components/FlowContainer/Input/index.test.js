@@ -1,42 +1,43 @@
 import React from 'react';
 import {render} from "@testing-library/react";
 import Input from "./index";
-import { Provider as FlowProvider } from "../../../context/FlowContext";
 import userEvent from "@testing-library/user-event";
+import { HelpContextProvider} from "../../../context/HelpContext";
+import useUploadData from "../../../hooks/useUploadFiles";
+jest.mock('../../../hooks/useUploadFiles');
 
 describe('<Input/>', () => {
-  const wrapper = () => {
-    return render(<FlowProvider><Input/></FlowProvider>)
+
+  const wrapper = (props) => {
+    return render(<HelpContextProvider><Input {...props}/></HelpContextProvider>)
   }
 
-  test.skip('it renders without error', () => {
+  test('it renders without error', () => {
+    useUploadData.mockImplementation(() => ({
+      uploadData: jest.fn()
+    }));
     const { queryByTestId } = wrapper();
     const Input = queryByTestId('input-static');
     expect(Input).toBeInTheDocument();
   });
 
   describe('when disabled', () => {
-    let uploadDataMock = jest.fn();
 
-    beforeEach(()=> {
-      jest.clearAllMocks();
-      jest.spyOn(React, 'useContext')
-      .mockImplementation((context) => {
-        return {
-          state: {inputDisabled: true},
-          start: jest.fn(),
-          uploadData: uploadDataMock
-        }
-      })
-    });
     test('has the disabled class', () => {
-      const {queryByTestId} = wrapper();
+      useUploadData.mockImplementation(() => ({
+        uploadData: jest.fn()
+      }));
+      const {queryByTestId} = wrapper({disabled: true});
       const inputBtn = queryByTestId('input-component-btn');
       expect(inputBtn).toHaveClass('disabled');
     });
 
     test('Cannot call uploadData', () => {
-      const {queryByTestId} = wrapper();
+      let uploadDataMock = jest.fn();
+      useUploadData.mockImplementation(() => ({
+        uploadData: uploadDataMock
+      }));
+      const {queryByTestId} = wrapper({disabled: true});
       const inputBtn = queryByTestId('input-component-btn');
       userEvent.click(inputBtn);
       expect(uploadDataMock).not.toHaveBeenCalled();
@@ -58,7 +59,10 @@ describe('<Input/>', () => {
       })
     });
     test('does not have the disabled class', () => {
-      const {queryByTestId} = wrapper();
+      useUploadData.mockImplementation(() => ({
+        uploadData: jest.fn
+      }));
+      const {queryByTestId} = wrapper({disabled: false});
       const inputBtn = queryByTestId('input-component-btn');
       expect(inputBtn).not.toHaveClass('disabled');
     });
@@ -78,10 +82,14 @@ describe('<Input/>', () => {
         })
       });
       test('It calls the uploadData function', () => {
+        const uploadDataMock = jest.fn();
+        useUploadData.mockImplementation(() => ({
+          uploadData: uploadDataMock
+        }));
         const {queryByTestId} = wrapper();
         const inputBtn = queryByTestId('input-component-btn');
         userEvent.click(inputBtn);
-        expect(toggleUpload).toHaveBeenCalled();
+        expect(useUploadData).toHaveBeenCalled();
       });
     });
   });

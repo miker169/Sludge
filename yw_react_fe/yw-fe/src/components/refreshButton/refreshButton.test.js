@@ -1,18 +1,15 @@
 import React from 'react';
 import { render } from "@testing-library/react";
 import RefreshButton from "./index";
-import { Provider as FlowProvider } from '../../context/FlowContext';
 import userEvent from "@testing-library/user-event";
 
 describe('<RefreshButton/>', () => {
-  const wrapper = () => {
+  const wrapper = (props) => {
     return render(
-      <FlowProvider>
-        <RefreshButton/>
-      </FlowProvider>
+        <RefreshButton {...props}/>
     );
   }
-  it('renders without error', () => {
+  test('renders without error', () => {
     const { queryByTestId } = wrapper();
     const refreshButton = queryByTestId('refresh-btn');
     expect(refreshButton).toBeInTheDocument();
@@ -20,19 +17,12 @@ describe('<RefreshButton/>', () => {
 
   describe('on click', () => {
     let refreshMock = jest.fn()
-    beforeEach(() => {
-      jest.spyOn(React, 'useContext')
-      .mockImplementation((context) => {
-        return {
-          refresh: refreshMock
-        }
-      });
-      const {queryByTestId} = wrapper();
-      const refreshClickComponent = queryByTestId('refreshClickHandler');
-      userEvent.click(refreshClickComponent);
-    });
 
     test('it calls refresh method in the context', () => {
+      const {queryByTestId} = wrapper({onClickHandler:refreshMock});
+
+      const refreshClickComponent = queryByTestId('refreshClickHandler');
+      userEvent.click(refreshClickComponent);
       expect(refreshMock).toHaveBeenCalled();
     });
   })

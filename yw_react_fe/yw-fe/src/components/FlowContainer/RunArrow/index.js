@@ -1,15 +1,13 @@
 import React from 'react';
-import {Context as FlowContext } from "../../../context/FlowContext";
 import Arrow from "../../arrow";
 import './arrow.css';
 
 
-const RunArrow = () => {
-  const {state} = React.useContext(FlowContext);
+const RunArrow = ({disabled, nextArrowRan}) => {
 
   return (
     <div className="next" data-testid="next-arrow-component">
-      <Arrow name="run" disabled={state.nextArrowDisabled} ran={state.nextArrowRan} />
+      <Arrow name="run" disabled={disabled} ran={nextArrowRan} />
     </div>
   )
 }

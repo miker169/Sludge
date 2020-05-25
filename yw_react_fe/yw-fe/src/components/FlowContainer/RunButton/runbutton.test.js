@@ -1,12 +1,14 @@
 import React from 'react';
 import { render } from "@testing-library/react";
-import { Provider as FlowProvider } from "../../../context/FlowContext";
+import { HelpContextProvider } from "../../../context/HelpContext";
 import RunButton from "./index";
 import userEvent from "@testing-library/user-event";
+import { runModel } from "../../../helpers/runModel";
+jest.mock('../../../helpers/runModel');
 
 describe('<RunButton', () => {
-  const wrapper = () => {
-    return render(<FlowProvider><RunButton/></FlowProvider>);
+  const wrapper = (props) => {
+    return render(<HelpContextProvider><RunButton {...props} /></HelpContextProvider>);
   }
 
   test('it renders without error', () => {
@@ -16,54 +18,47 @@ describe('<RunButton', () => {
   });
 
   describe('when disabled', () => {
-    let runDataMock = jest.fn();
+    let setHelpTextMock = jest.fn();
+    let queryByTestId;
     beforeEach(()=> {
       jest.clearAllMocks();
       jest.spyOn(React, 'useContext')
       .mockImplementation((context) => {
         return {
-          state: {runDisabled: true},
-          uploadData: runDataMock
+          setHelpText: setHelpTextMock,
         }
-      })
+      });
+      ({queryByTestId} = wrapper({runDisabled: true, beginRunData: jest.fn(), runModel}));
     });
     test('Has the disabled class', () => {
-      const {queryByTestId} = wrapper();
       const inputBtn = queryByTestId('run-component-btn');
       expect(inputBtn).toHaveClass('disabled');
     });
 
     test('Cannot call run data', () => {
-      const {queryByTestId} = wrapper();
       const inputBtn = queryByTestId('run-component-btn');
       userEvent.click(inputBtn);
-      expect(runDataMock).not.toHaveBeenCalled();
+      expect(setHelpTextMock).not.toHaveBeenCalled();
     });
   })
 
   describe('when enabled', () => {
-    let runDataMock = jest.fn();
-    beforeEach(()=> {
+    let queryByTestId;
+
+    beforeEach(() => {
       jest.clearAllMocks();
-      jest.spyOn(React, 'useContext')
-      .mockImplementation((context) => {
-        return {
-          state: {runDisabled: false},
-          runData: runDataMock
-        }
-      })
-    });
+      runModel.mockImplementation(() => {});
+      ({ queryByTestId} = wrapper({runDisabled: false, beginRunData: jest.fn(), runModel}));
+    })
     test('Does not have the disabled class', () => {
-      const {queryByTestId} = wrapper();
       const inputBtn = queryByTestId('run-component-btn');
       expect(inputBtn).not.toHaveClass('disabled');
     });
 
     test('Can call run data', () => {
-      const {queryByTestId} = wrapper();
       const inputBtn = queryByTestId('run-component-btn');
       userEvent.click(inputBtn);
-      expect(runDataMock).toHaveBeenCalled();
+      expect(runModel).toHaveBeenCalled();
     });
   })
 

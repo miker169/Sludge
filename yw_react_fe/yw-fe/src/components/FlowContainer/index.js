@@ -1,32 +1,30 @@
 import React from 'react';
 import './flowContainer.css';
-import { Context as FlowContext } from "../../context/FlowContext";
 import Input from "./Input";
 import Update from "./Update";
 import RunArrow from "./RunArrow";
 import RunButton from "./RunButton";
 import ResultsButton from "./ResultsButton";
+import useFlow from "../../hooks/useFlow";
 
+const FlowContainer = ({enabled, payload, saveMessages}) => {
 
-
-const FlowContainer = () => {
-  const {state } = React.useContext(FlowContext);
-  const Flow = () => (
+const {state, beginUpload, finishUpload,beginRunData, modelRan} = useFlow();
+  const Flow = (state) => (
     <div data-testid="component-flow" className="flowContainer">
-      <Input/>
-      <Update/>
-      <RunButton/>
-      <RunArrow/>
-      <ResultsButton/>
+      <Input disabled={state.inputDisabled} payload={payload} beginUpload={beginUpload} finishUpload={finishUpload}/>
+      <Update inputArrowRan={state.inputArrowRan} inputArrowDisabled={state.inputArrowDisabled}/>
+      <RunButton beginRunData={beginRunData} modelRan={modelRan} saveMessages={saveMessages} runDisabled={state.runDisabled}/>
+      <RunArrow nextArrowRan={state.nextArrowRan} disabled={state.nextArrowDisabled}/>
+      <ResultsButton disabled={state.getResultsDisabled} fileDownloadUrl={state.fileDownloadUrl}/>
     </div>
   )
 
   return (
-    <>
-      {state.enabled ? Flow() : null}
-    </>
+    <React.Fragment>
+      {enabled ? Flow(state) : null}
+    </React.Fragment>
   )
 }
-
 
 export default FlowContainer;
