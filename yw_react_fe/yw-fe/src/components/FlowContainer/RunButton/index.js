@@ -4,7 +4,7 @@ import './runbutton.css';
 import { runModel } from "../../../helpers/runModel";
 import { HelpContext} from "../../../context/HelpContext";
 
-const RunButton = ({ runDisabled, saveMessages, modelRan, beginRunData}) => {
+const RunButton = ({ runDisabled, saveMessages, modelRan, beginRunData, params}) => {
 
   const { setHelpText } = React.useContext(HelpContext);
 
@@ -13,7 +13,7 @@ const RunButton = ({ runDisabled, saveMessages, modelRan, beginRunData}) => {
       <Button
         clickHandler={() => {
           beginRunData();
-          runModel(saveMessages, modelRan, setHelpText)
+          runModel(saveMessages, modelRan, setHelpText, params)
         }}
         disabled={runDisabled}
         name="run"

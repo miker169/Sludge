@@ -25,9 +25,7 @@ export default (setFiles, setPayload, payload) => {
       let items = sheets.map(async obj => {
         i++;
         const schema = getSchema(obj.name);
-        let item;
-        const retVal = {}
-        item = await readXlsxFile(file, { sheet: i, schema });
+        let item = await readXlsxFile(file, { sheet: i, schema });
 
         if (item.errors.length > 0) {
           setErrors(currentErrors => {
@@ -46,11 +44,11 @@ export default (setFiles, setPayload, payload) => {
       });
 
       Promise.all(items).then(data => {
-       let refData = data.reduce((acc, item) => {
-         let key = Object.keys(item)[0];
-         acc[key] = item[key];
-         return acc;
-       }, {})
+        let refData = data.reduce((acc, item) => {
+          let key = Object.keys(item)[0];
+          acc[key] = item[key];
+          return acc;
+        }, {})
         if (!errors.referenceError) {
           setPayload({ ...payload, referenceInput: refData });
         }

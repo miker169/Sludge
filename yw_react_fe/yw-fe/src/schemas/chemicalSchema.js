@@ -19,11 +19,6 @@ const chemicalSchema = {
     type: Number,
     required: true
   },
-  "cake": {
-    prop: 'cake',
-    type: Number,
-    required: true
-  },
   "chemical": {
     prop: 'chemical',
     type: String,
@@ -35,7 +30,7 @@ const chemicalSchema = {
     required: true
   },
   "dose": {
-    prop: 'does',
+    prop: 'dose',
     type: Number,
     required: true
   },
@@ -53,7 +48,12 @@ const chemicalSchema = {
     prop: 'thickened',
     type: Number,
     required: true
-  }
+  },
+  "cake": {
+    prop: 'cake',
+    type: Number,
+    required: true
+  },
 
 
 }

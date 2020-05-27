@@ -7,12 +7,13 @@ if (process.env.NODE_ENV !== "production") {
 
 const runModelUrl = process.env.REACT_APP_RUN_MODEL_URL;
 const getResultsUrl = process.env.REACT_APP_GET_RESULTS;
+const sendData = process.env.REACT_APP_SEND_JSON;
 
 
-export const runModel = (saveMessages, modelRan, setHelpText) => {
+export const runModel = async (saveMessages, modelRan, setHelpText, params) => {
 
   setHelpText('Running data model...')
-  axios.get(runModelUrl, {
+  axios.post(runModelUrl, {'params': params}, {
     headers: {'Access-Control-Allow-Origin': '*'}
   }).then(({data}) => {
     saveMessages(data);
@@ -34,6 +35,7 @@ const buildCsvFile = (csv, modelRan) =>{
 }
 
 const ParseJsonToCsV = ({data}) => {
+  debugger;
   /*
         Probably best to ignore whats happening here
         basically we get returned a json object of objects, the csv
@@ -51,7 +53,7 @@ const ParseJsonToCsV = ({data}) => {
     back we don't know how many rows will be returned
     so I have used the length of the name values row.
    */
-  let length = Object.keys(data["Name"]).length;
+  let length = Object.keys(data["from"]).length;
 
   /*
    This awful bit of code is O(n^2) as well..
@@ -62,7 +64,7 @@ const ParseJsonToCsV = ({data}) => {
    We need to use i + 1 when setting an item
    as the first row should always be the headers.
    */
-  for(let i = 0; i < length; i ++){
+  for(let i = 0; i < length; i++){
     objToParse[i+1] = [];
     for(let item  in data){
       objToParse[i +1].push(data[item][i]);

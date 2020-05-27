@@ -34,11 +34,6 @@ const electricityUseSchema = {
     type: Number,
     required: true
   },
-  "cake": {
-    prop: 'cake',
-    type: Number,
-    required: true
-  },
   "indigenous":{
     prop: 'indigenous',
     type: Number,
@@ -51,6 +46,11 @@ const electricityUseSchema = {
   },
   "thickened": {
     prop: 'thickened',
+    type: Number,
+    required: true
+  },
+  "cake": {
+    prop: 'cake',
     type: Number,
     required: true
   }

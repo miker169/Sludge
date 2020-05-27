@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default () => {
   const initialState = {
@@ -15,34 +15,40 @@ export default () => {
     nextArrowRan: false,
     getResultsDisabled: true,
     enableFileUpload: false,
-
+    params: {
+      distanceCalibration: 2,
+      driversLiquid: 4,
+      driversCake: 1,
+      kmperdriverliquid: 250,
+      kmperdrivecake: 225,
+    },
   };
 
-  const reducer = (state, {type, payload}) => {
+  const reducer = (state, { type, payload }) => {
     switch (type) {
-      case "UPLOADING_DATA":
+      case 'UPLOADING_DATA':
         return {
-        ...state,
-        inputArrowDisabled: false,
-        inputUpdateArrowDisabled: false,
-        inputDisabled: true,
-      }
-      case "FINISH_UPLOAD":
+          ...state,
+          inputArrowDisabled: false,
+          inputUpdateArrowDisabled: false,
+          inputDisabled: true,
+        };
+      case 'FINISH_UPLOAD':
         return {
           ...state,
           inputArrowRan: true,
           runDisabled: false,
           updateDisabled: false,
           inputUpdateArrowRan: true,
-        }
-      case "RUNNING_DATA":
+        };
+      case 'RUNNING_DATA':
         return {
           ...state,
           nextArrowDisabled: false,
           inputUpdateArrowDisabled: true,
           updateDisabled: true,
-        }
-      case "RAN_DATA":{
+        };
+      case 'RAN_DATA': {
         return {
           ...state,
           fileDownloadUrl: payload,
@@ -50,23 +56,51 @@ export default () => {
           runDisabled: true,
           getResultsDisabled: false,
           // helpText: GET_RESULTS_TEXT
-        }
+        };
+      }
+      case 'SET_PARAM': {
+        return {
+          ...state,
+          params: {
+            ...state.params,
+            ...payload,
+          },
+        };
       }
 
       default:
         return state;
     }
-  }
+  };
+
+  const setParams = React.useCallback((evt, value) =>
+    dispatch({
+      type: 'SET_PARAM',
+      payload: { [value]: evt.currentTarget.value },
+    }),[]
+  );
 
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
-  const beginUpload = React.useCallback(() => dispatch({type: "UPLOADING_DATA"}),[])
+  const beginUpload = React.useCallback(
+    () => dispatch({ type: 'UPLOADING_DATA' }),
+    [],
+  );
 
-  const finishUpload =  React.useCallback(() => dispatch({type: "FINISH_UPLOAD" }), []);
+  const finishUpload = React.useCallback(
+    () => dispatch({ type: 'FINISH_UPLOAD' }),
+    [],
+  );
 
-  const beginRunData = React.useCallback(() => dispatch({type: "RUNNING_DATA"}), []);
+  const beginRunData = React.useCallback(
+    () => dispatch({ type: 'RUNNING_DATA' }),
+    [],
+  );
 
-  const modelRan = React.useCallback((payload) => dispatch({type: "RAN_DATA" ,payload}), []);
+  const modelRan = React.useCallback(
+    payload => dispatch({ type: 'RAN_DATA', payload }),
+    [],
+  );
 
-  return {state, beginUpload, finishUpload, beginRunData, modelRan }
-}
+  return { state, beginUpload, finishUpload, beginRunData, modelRan, setParams };
+};

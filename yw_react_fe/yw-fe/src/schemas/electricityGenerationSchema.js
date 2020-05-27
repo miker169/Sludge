@@ -30,8 +30,8 @@ const electricityGenerationSchema = {
     type: Number,
     required: true
   },
-  "active_Hours": {
-    prop: 'active_Hours',
+  "active_hours": {
+    prop: 'active_hours',
     type: Number,
     required: true
   },

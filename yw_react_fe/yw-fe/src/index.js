@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './fonts/swiss-webfont.woff';
+import './fonts/swiss-webfont.woff2';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,0 +1,25 @@
+.params-field {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.field-label {
+  width: 15%;
+  padding-top: 0.6em;
+  margin-right: 1em;
+  vertical-align: center;
+}
+
+form > div.params-field + div.params-field {
+  margin-top: .5em;
+  padding-top: 0.5em;
+}
+
+.header {
+    margin-top: 2em;
+    color: var(--white);
+}
+/*divm.params-field:not(:first-child) {*/
+/*    color: red;*/
+/*}*/
