@@ -6,7 +6,7 @@ import UploadedFiles from "./UploadedFiles";
 import { HelpContext } from "../../context/HelpContext";
 
 const Help = ({messages, files }) => {
- const {helpText} = React.useContext(HelpContext);
+ const { helpText } = React.useContext(HelpContext);
   return (
     <div data-testid="component-help">
       {(!messages)

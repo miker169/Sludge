@@ -4,12 +4,13 @@ import ResultsButton from "./index";
 
 
 describe('<ResultsButton/>', () => {
+
   const wrapper= (props) => {
     return render(<ResultsButton {...props}/>)
   }
 
   it('renders without error', () => {
-    const {queryByTestId } = wrapper();
+    const { queryByTestId } = wrapper();
     const resultsBtn = queryByTestId('results-component');
     expect(resultsBtn).toBeInTheDocument();
   });

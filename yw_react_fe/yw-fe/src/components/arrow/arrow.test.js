@@ -23,3 +23,4 @@ describe('<Arrow />', () => {
     expect(childPathElement).toBeInTheDocument();
   })
 });
+

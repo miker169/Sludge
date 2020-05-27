@@ -15,7 +15,6 @@ export default () => {
       case "SET_FILES":
         return {...state, files: [...state.files, payload]}
       case "SET_PAYLOAD":
-        debugger;
         return {...state, payload }
       case "SET_ENABLED":
         return {...state, enabled: payload}
@@ -31,7 +30,6 @@ export default () => {
   }, [])
 
   const setPayload = React.useCallback((payload) => {
-    debugger;
     dispatch({type: "SET_PAYLOAD", payload})
   }, []);
 
