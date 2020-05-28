@@ -20,7 +20,7 @@ const tempSchema = {
     required: true
   },
   "temp": {
-    prop: 'rank',
+    prop: 'temp',
     type: Number,
     required: true
   },
