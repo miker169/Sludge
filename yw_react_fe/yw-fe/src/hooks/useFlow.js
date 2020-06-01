@@ -20,7 +20,7 @@ export default () => {
       driversLiquid: 4,
       driversCake: 1,
       kmperdriverliquid: 250,
-      kmperdrivecake: 225,
+      kmperdrivercake: 225,
     },
   };
 

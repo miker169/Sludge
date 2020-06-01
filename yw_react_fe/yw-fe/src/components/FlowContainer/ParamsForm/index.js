@@ -32,13 +32,13 @@ const ParamsForm = ({disabled, params, setParams}) => {
           />
         </div>
         <div className="params-field">
-          <label htmlFor="kmperdrivecake" placeholder="Input km/hour cake" className="field-label">KM per Driver: Cake</label>
+          <label htmlFor="kmperdrivercake" placeholder="Input km/hour cake" className="field-label">KM per Driver: Cake</label>
           <input
-            id="kmperdrivecake"
+            id="kmperdrivercake"
             className="field-input"
             type="text"
             value={params.kmperdrivecake}
-            onChange={(evt) => setParams(evt, 'kmperdrivecake') }
+            onChange={(evt) => setParams(evt, 'kmperdrivercake') }
           />
         </div>
         <div className="params-field">
