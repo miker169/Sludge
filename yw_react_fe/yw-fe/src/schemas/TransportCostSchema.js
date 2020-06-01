@@ -39,11 +39,6 @@ const transportCostSchema = {
     type: Number,
     required: true
   },
-  "distance": {
-    prop: 'distance',
-    type: Number,
-    required: true
-  },
   "cost": {
     prop: 'cost',
     type: Number,

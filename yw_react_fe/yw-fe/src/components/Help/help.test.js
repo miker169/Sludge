@@ -14,6 +14,7 @@ describe('<Help/>', () => {
     jest.spyOn(React, 'useContext')
     .mockImplementation((context) => {
       return {
+        errorText: [],
         state: {helpText, files: [
             {name:'test'}
           ],
@@ -47,6 +48,7 @@ describe('<Help/>', () => {
               {name:'test'}
             ]
           },
+          errorText: []
         }
       })
     });

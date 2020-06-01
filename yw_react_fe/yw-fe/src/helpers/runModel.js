@@ -7,7 +7,6 @@ if (process.env.NODE_ENV !== "production") {
 
 const runModelUrl = process.env.REACT_APP_RUN_MODEL_URL;
 const getResultsUrl = process.env.REACT_APP_GET_RESULTS;
-const sendData = process.env.REACT_APP_SEND_JSON;
 
 
 export const runModel = async (saveMessages, modelRan, setHelpText, params) => {
@@ -35,7 +34,6 @@ const buildCsvFile = (csv, modelRan) =>{
 }
 
 const ParseJsonToCsV = ({data}) => {
-  debugger;
   /*
         Probably best to ignore whats happening here
         basically we get returned a json object of objects, the csv

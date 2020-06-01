@@ -1,7 +1,9 @@
 import React from 'react';
 import './InfoText.css';
 
-const InfoText = ({messages, type}) => {
+const InfoText = ({messages = [], type}) => {
+
+
 
   return (
       <div data-testid="info-text-component" className="info-message">

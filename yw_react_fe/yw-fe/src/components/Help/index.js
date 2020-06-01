@@ -6,13 +6,13 @@ import UploadedFiles from "./UploadedFiles";
 import { HelpContext } from "../../context/HelpContext";
 
 const Help = ({messages, files }) => {
- const { helpText } = React.useContext(HelpContext);
+ const { helpText, errorText } = React.useContext(HelpContext);
   return (
     <div data-testid="component-help">
-      {(!messages)
+      {(!messages && errorText.length === 0 )
         ? <UploadedFiles helpText={helpText} files={files} />
-        : (messages )
-          ? <Info messages={messages}/>
+        : (messages || errorText.length > 0 )
+          ? <Info messages={messages} errorText={errorText}/>
           : <FlowHelp helpText={helpText} files={files} />
       }
     </div>

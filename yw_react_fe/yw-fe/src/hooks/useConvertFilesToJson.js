@@ -1,6 +1,7 @@
 import Papa from 'papaparse';
 import React from 'react';
-import { validate } from 'jsonschema';
+import Ajv from 'ajv';
+import ajvErrors from 'ajv-errors';
 
 import productionSchema from '../schemas/productionFileSchema';
 
@@ -15,60 +16,59 @@ import tempShema from '../schemas/tempSchema';
 import liquorsSchema from '../schemas/liquorsSchema';
 import thirdPartySchema from '../schemas/ThirdPartySchema';
 import volumeSchema from "../schemas/volumeSchema";
+import {HelpContext} from "../context/HelpContext";
 
 export default (setFiles, setPayload, payload) => {
-  const [errors, setErrors] = React.useState({});
+  const { setErrorText, errorText } = React.useContext(HelpContext);
 
   const parseExcelFile = file => {
+    setErrorText([]);
     readXlsxFile(file, { getSheets: true }).then(sheets => {
       let i = 0;
       let items = sheets.map(async obj => {
         i++;
         const schema = getSchema(obj.name);
         let item = await readXlsxFile(file, { sheet: i, schema });
-
         if (item.errors.length > 0) {
-          setErrors(currentErrors => {
-            return {
-              ...currentErrors,
-              referenceError: {
-                ...currentErrors.referenceError,
-                [obj.name]: item.errors,
-              },
-            };
-          });
+            setErrorText(prevState => [...prevState, buildHumanExcelErrors(item.errors, obj.name)]);
+        }else {
+          return {
+            [obj.name]: item.rows,
+          };
         }
-        return {
-          [obj.name]: item.rows,
-        };
       });
 
       Promise.all(items).then(data => {
         let refData = data.reduce((acc, item) => {
+          if(item === undefined) return acc;
+
           let key = Object.keys(item)[0];
           acc[key] = item[key];
           return acc;
-        }, {})
-        if (!errors.referenceError) {
-          setPayload({ ...payload, referenceInput: refData });
+        }, {});
+        if (errorText.length === 0) {
+          setPayload({...payload, referenceInput: refData});
         }
       });
     });
   };
 
   const parseCsvFile = file => {
+    setErrorText([]);
     Papa.parse(file, {
       complete: ({ data, errors }) => {
-        let valid;
         if (!errors.length) {
-          valid = validate(data, productionSchema);
-          if (valid.errors.length) {
-            setErrors(valid.errors);
+          let ajv = new Ajv({allErrors: true, jsonPointers: true});
+          ajvErrors(ajv);
+          let validate = ajv.compile(productionSchema);
+          validate(data);
+          if (validate?.errors?.length) {
+            setErrorText(prevErrorText =>  buildHumanErrors(validate.errors));
           } else {
             setPayload({ ...payload, productionInput: data });
           }
         } else {
-          setErrors(errors);
+          setErrorText(errors);
         }
       },
       delimiter: ',',
@@ -97,6 +97,35 @@ export default (setFiles, setPayload, payload) => {
     return header;
   };
 
+  const  buildHumanErrors = (errors) => {
+    let readableErrors = [];
+      errors.forEach(function(error) {
+
+      if (error.params.missingProperty && !readableErrors.includes(`${error.params.missingProperty} is a required field`)) {
+        let errorString = `${error.params.missingProperty} is a required field`;
+        readableErrors.push(errorString);
+      } else if(readableErrors.includes(`${error.params.missingProperty} is a required field`)){
+        return
+      }
+      readableErrors.push(error.message);
+    });
+
+   return readableErrors;
+  }
+
+  const buildHumanExcelErrors = (errors, worksheet) =>{
+    let readableErrors = []
+    errors.forEach((error) => {
+      if(readableErrors.includes(`${error.column} is ${error.error} in worksheet ${worksheet}`)){
+        return;
+      }else{
+        readableErrors.push (`${error.column} is ${error.error} in worksheet ${worksheet}`);
+        return;
+      }
+    });
+    return readableErrors;
+  }
+
   const getSchema = name => {
     switch (name) {
       case 'Volumes':
@@ -124,5 +153,5 @@ export default (setFiles, setPayload, payload) => {
     }
   };
 
-  return { convertFileToJson, errors };
+  return { convertFileToJson };
 };

@@ -6,12 +6,14 @@ import Help from "../Help";
 import ScenarioModelling from "../scenarioModelling";
 import RefreshButton from "../refreshButton";
 import useAppState from "../../hooks/useAppState";
+import {HelpContext} from "../../context/HelpContext";
 
 const Main = () => {
 
   const { setEnabled, setPayload, setFiles, setMessages, state, reset  } = useAppState();
+  const { errorText } = React.useContext(HelpContext);
 
-  if(state.payload?.productionInput && state.payload?.referenceInput && !state.enabled){
+  if(state.payload?.productionInput && state.payload?.referenceInput && !state.enabled && !errorText.length > 0 ){
      setEnabled(true);
   }
 
