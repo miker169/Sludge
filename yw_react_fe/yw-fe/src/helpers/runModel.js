@@ -1,39 +1,55 @@
-import axios from "axios";
+import axios from 'axios';
 import Papaparse from 'papaparse';
 
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
 }
 
 const runModelUrl = process.env.REACT_APP_RUN_MODEL_URL;
 const getResultsUrl = process.env.REACT_APP_GET_RESULTS;
 
-
 export const runModel = async (saveMessages, modelRan, setHelpText, params) => {
+  setHelpText('Running data model...');
+  axios
+    .post(
+      runModelUrl,
+      { params: params },
+      {
+        headers: { 'Access-Control-Allow-Origin': '*' },
+      },
+    )
+    .then(({ data, errors }) => {
+      if (errors) {
+        saveMessages(errors);
+      } else {
+        saveMessages(data);
 
-  setHelpText('Running data model...')
-  axios.post(runModelUrl, {'params': params}, {
-    headers: {'Access-Control-Allow-Origin': '*'}
-  }).then(({data}) => {
-    saveMessages(data);
-    axios.get(getResultsUrl, {
-      headers: {'Access-Control-Allow-Origin': '*'}
-    }).then((data) => {
-      const csv = ParseJsonToCsV(data);
-      buildCsvFile(csv, modelRan);
-      setHelpText('Model Ran select Get Results to download the csv results')
-    });
+        axios
+          .get(getResultsUrl, {
+            headers: { 'Access-Control-Allow-Origin': '*' },
+          })
+          .then(data => {
+            const csv = ParseJsonToCsV(data);
+            buildCsvFile(csv, modelRan);
+            setHelpText(
+              'Model Ran select Get Results to download the csv results',
+            );
+          });
+      }
+    }).catch(err => {
+      saveMessages(err.response.data);
+      modelRan();
   });
-}
+};
 
-const buildCsvFile = (csv, modelRan) =>{
-  let blob = new Blob([csv], {type: "text/csv"});
+const buildCsvFile = (csv, modelRan) => {
+  let blob = new Blob([csv], { type: 'text/csv' });
   let item = window.URL.createObjectURL(blob);
 
   modelRan(item);
-}
+};
 
-const ParseJsonToCsV = ({data}) => {
+const ParseJsonToCsV = ({ data }) => {
   /*
         Probably best to ignore whats happening here
         basically we get returned a json object of objects, the csv
@@ -51,7 +67,7 @@ const ParseJsonToCsV = ({data}) => {
     back we don't know how many rows will be returned
     so I have used the length of the name values row.
    */
-  let length = Object.keys(data["from"]).length;
+  let length = Object.keys(data['from']).length;
 
   /*
    This awful bit of code is O(n^2) as well..
@@ -62,13 +78,12 @@ const ParseJsonToCsV = ({data}) => {
    We need to use i + 1 when setting an item
    as the first row should always be the headers.
    */
-  for(let i = 0; i < length; i++){
-    objToParse[i+1] = [];
-    for(let item  in data){
-      objToParse[i +1].push(data[item][i]);
+  for (let i = 0; i < length; i++) {
+    objToParse[i + 1] = [];
+    for (let item in data) {
+      objToParse[i + 1].push(data[item][i]);
     }
   }
 
-  return  Papaparse.unparse(objToParse);
-}
-
+  return Papaparse.unparse(objToParse);
+};

@@ -3,8 +3,8 @@ import Button from "../../Button/Button";
 import './input.css'
 import useUploadData from "../../../hooks/useUploadFiles";
 
-const Input = ({disabled, payload, beginUpload, finishUpload}) => {
-  const { uploadData } = useUploadData(payload, beginUpload, finishUpload);
+const Input = ({disabled, payload, beginUpload, finishUpload, saveMessages}) => {
+  const { uploadData } = useUploadData(payload, beginUpload, finishUpload, saveMessages);
 
   return (
   <div className="inputFlow" data-testid="input-static">

@@ -4,7 +4,7 @@ import {HelpContext} from "../context/HelpContext";
 
 const sendData = process.env.REACT_APP_SEND_JSON;
 
-export default (payload, beginUpload, finishUpload) => {
+export default (payload, beginUpload, finishUpload, saveMessages) => {
 
   const { setHelpText } = React.useContext(HelpContext)
   const uploadData = () => {
@@ -19,11 +19,12 @@ export default (payload, beginUpload, finishUpload) => {
     }
 
     axios(ops).then((res) => {
+      debugger;
       finishUpload();
       setHelpText('Finished uploading files, select run model to the data model.')
     }).catch((err) => {
-      //ToDo: log this ??
-      console.log(err);
+      saveMessages(err.response.data);
+      finishUpload();
     });
   }
 

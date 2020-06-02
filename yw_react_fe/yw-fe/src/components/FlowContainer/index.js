@@ -25,6 +25,7 @@ const FlowContainer = ({ enabled, payload, saveMessages }) => {
           payload={payload}
           beginUpload={beginUpload}
           finishUpload={finishUpload}
+          saveMessages={saveMessages}
         />
         <Update
           inputArrowRan={state.inputArrowRan}
