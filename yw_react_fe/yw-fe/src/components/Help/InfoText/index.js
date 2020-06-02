@@ -3,8 +3,6 @@ import './InfoText.css';
 
 const InfoText = ({messages = [], type}) => {
 
-debugger;
-
   return (
       <div data-testid="info-text-component" className="info-message">
         <span className="info-help-title">{`${type} Messages`}</span>

@@ -37,7 +37,7 @@ const ParamsForm = ({disabled, params, setParams}) => {
             id="kmperdrivercake"
             className="field-input"
             type="text"
-            value={params.kmperdrivecake}
+            value={params.kmperdrivercake}
             onChange={(evt) => setParams(evt, 'kmperdrivercake') }
           />
         </div>

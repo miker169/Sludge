@@ -19,7 +19,6 @@ export default (payload, beginUpload, finishUpload, saveMessages) => {
     }
 
     axios(ops).then((res) => {
-      debugger;
       finishUpload();
       setHelpText('Finished uploading files, select run model to the data model.')
     }).catch((err) => {
