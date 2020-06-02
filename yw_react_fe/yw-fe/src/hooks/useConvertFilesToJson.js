@@ -19,10 +19,11 @@ import volumeSchema from "../schemas/volumeSchema";
 import {HelpContext} from "../context/HelpContext";
 
 export default (setFiles, setPayload, payload) => {
-  const { setErrorText, errorText } = React.useContext(HelpContext);
+  const { setErrorText } = React.useContext(HelpContext);
 
   const parseExcelFile = file => {
     setErrorText([]);
+    let xlErrs = [];
     readXlsxFile(file, { getSheets: true }).then(sheets => {
       let i = 0;
       let items = sheets.map(async obj => {
@@ -30,7 +31,8 @@ export default (setFiles, setPayload, payload) => {
         const schema = getSchema(obj.name);
         let item = await readXlsxFile(file, { sheet: i, schema });
         if (item.errors.length > 0) {
-            setErrorText(prevState => [...prevState, buildHumanExcelErrors(item.errors, obj.name)]);
+            xlErrs = [...xlErrs, ...buildHumanExcelErrors(item.errors, obj.name, item.rows)]
+            //setErrorText(prevState => [...prevState, buildHumanExcelErrors(item.errors, obj.name)]);
         }else {
           return {
             [obj.name]: item.rows,
@@ -46,8 +48,10 @@ export default (setFiles, setPayload, payload) => {
           acc[key] = item[key];
           return acc;
         }, {});
-        if (errorText.length === 0) {
+        if (xlErrs.length === 0) {
           setPayload({...payload, referenceInput: refData});
+        }else{
+          setErrorText(prevErrors => [...prevErrors, ...xlErrs])
         }
       });
     });
@@ -100,29 +104,48 @@ export default (setFiles, setPayload, payload) => {
   const  buildHumanErrors = (errors) => {
     let readableErrors = [];
       errors.forEach(function(error) {
-
       if (error.params.missingProperty && !readableErrors.includes(`${error.params.missingProperty} is a required field`)) {
         let errorString = `${error.params.missingProperty} is a required field`;
         readableErrors.push(errorString);
       } else if(readableErrors.includes(`${error.params.missingProperty} is a required field`)){
         return
+      }else{
+        // eslint-disable-next-line
+        let [_, row, type] = error.dataPath.split('/');
+        readableErrors.push(`${type} ${error.message} on row  ${parseInt(row) + 1}`);
       }
-      readableErrors.push(error.message);
+
     });
 
    return readableErrors;
   }
 
-  const buildHumanExcelErrors = (errors, worksheet) =>{
+  const buildHumanExcelErrors = (errors, worksheet, rows) =>{
+
+    let sortedByColumn = {}
     let readableErrors = []
-    errors.forEach((error) => {
-      if(readableErrors.includes(`${error.column} is ${error.error} in worksheet ${worksheet}`)){
-        return;
-      }else{
-        readableErrors.push (`${error.column} is ${error.error} in worksheet ${worksheet}`);
-        return;
+
+    for(let i = 0; i < errors.length; i ++){
+      // if the object exists
+      if(!!sortedByColumn[errors[i]?.column]){
+        sortedByColumn[errors[i]?.column].push(errors[i]);
+      }else {
+        sortedByColumn[errors[i]?.column] = [errors[i]]
       }
-    });
+    }
+
+    for(let columnError in sortedByColumn){
+      //loop through each column
+      if(sortedByColumn[columnError].length >= rows.length){
+        // get the first
+        readableErrors.push(`Header is missing for ${sortedByColumn[columnError][0].column} in worksheet ${worksheet}`)
+      }else{
+        let errorList = sortedByColumn[columnError]
+        for(let err of errorList){
+          readableErrors.push (`${err.column} is ${err.error} in worksheet ${worksheet} on row ${err.row + 1}`);
+        }
+      }
+    }
     return readableErrors;
   }
 

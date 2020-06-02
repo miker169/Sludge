@@ -9,23 +9,29 @@ const volumeSchema =  {
       type: Number,
       required: true
   },
-  "st": {
-    prop: 'st',
+  "type": {
+    prop: 'type',
       type: String,
       required: true
   },
   "rank": {
     prop: 'rank',
       type: Number,
-      required: true
+      required: true,
+      parse(value) {
+        if(value < 1 || value > 5){
+          throw new Error('required to be a number between 1 and 5')
+        }
+        return value;
+      }
   },
   "perc_ds": {
     prop: 'perc_ds',
     type: Number,
     required: true
   },
-  "max_vol": {
-    prop: 'max_vol',
+  "max_vehicle_vol": {
+    prop: 'max_vehicle_vol',
     type: Number,
     required: true
   }

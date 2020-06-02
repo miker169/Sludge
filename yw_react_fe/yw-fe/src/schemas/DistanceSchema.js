@@ -9,15 +9,21 @@ const distanceSchema = {
     type: Number,
     required: true
   },
-  "st_from": {
-    prop: 'st_from',
+  "type_from": {
+    prop: 'type_from',
     type: String,
     required: true
   },
   "rank_from":{
     prop: 'rank_from',
     type: Number,
-    required: true
+    required: true,
+    parse(value) {
+      if(value < 1 || value > 5){
+        throw new Error('required to be a number between 1 and 5')
+      }
+      return value;
+    }
   },
   "to":{
     prop: 'to',
@@ -29,18 +35,24 @@ const distanceSchema = {
     type: Number,
     required: true
   },
-  "st_to": {
-    prop: 'st_to',
+  "type_to": {
+    prop: 'type_to',
     type: String,
     required: true
   },
   "rank_to":{
     prop: 'rank_to',
     type: Number,
-    required: true
+    required: true,
+    parse(value) {
+      if(value < 1 || value > 5){
+        throw new Error('required to be a number between 1 and 5')
+      }
+      return value;
+    }
   },
-  "distance": {
-    prop: 'distance',
+  "distance_km": {
+    prop: 'distance_km',
     type: Number,
     required: true
   }

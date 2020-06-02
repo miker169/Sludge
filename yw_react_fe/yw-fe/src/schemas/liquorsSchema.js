@@ -9,18 +9,24 @@ const liquorsSchema = {
     type: Number,
     required: true
   },
-  "st": {
-    prop: 'st',
+  "type": {
+    prop: 'type',
     type: String,
     required: true
   },
   "rank": {
     prop: 'rank',
     type: Number,
-    required: true
+    required: true,
+    parse(value) {
+      if(value < 1 || value > 5){
+        throw new Error('required to be a number between 1 and 5')
+      }
+      return value;
+    }
   },
-  "liquor": {
-    prop: 'liquor',
+  "liquor_type": {
+    prop: 'liquor_type',
     type: Number,
     required: true
   },
@@ -29,8 +35,8 @@ const liquorsSchema = {
     type: Number,
     required: true
   },
-  "cost": {
-    prop: 'cost',
+  "cost_per_tds": {
+    prop: 'cost_per_tds',
     type: Number,
     required: true
   },

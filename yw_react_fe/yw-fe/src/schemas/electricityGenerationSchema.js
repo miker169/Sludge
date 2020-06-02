@@ -10,23 +10,29 @@ const electricityGenerationSchema = {
     type: Number,
     required: true
   },
-  "st": {
-    prop: 'st',
+  "type": {
+    prop: 'type',
     type: String,
     required: true
   },
   "rank": {
     prop: 'rank',
     type: Number,
-    required: true
+    required: true,
+    parse(value) {
+      if(value < 1 || value > 5){
+        throw new Error('required to be a number between 1 and 5')
+      }
+      return value;
+    }
   },
-  "availability": {
-    prop: 'availability',
+  "perc_availability": {
+    prop: 'perc_availability',
     type: Number,
     required: true
   },
-  "capacity": {
-    prop: 'capacity',
+  "installed_capacity_kw": {
+    prop: 'installed_capacity_kw',
     type: Number,
     required: true
   },
@@ -35,18 +41,18 @@ const electricityGenerationSchema = {
     type: Number,
     required: true
   },
-  "rr": {
-    prop: 'rr',
+  "roc_rate": {
+    prop: 'roc_rate',
     type: Number,
     required: true
   },
-  "rv": {
-    prop: 'rv',
+  "roc_value": {
+    prop: 'roc_value',
     type: Number,
     required: true
   },
-  "ev": {
-    prop: 'ev',
+  "electricity_value": {
+    prop: 'electricity_value',
     type: Number,
     required: true
   },
