@@ -15,7 +15,8 @@ const FlowContainer = ({ enabled, payload, saveMessages }) => {
     finishUpload,
     beginRunData,
     modelRan,
-    setParams
+    setParams,
+    setDownloadFileName
   } = useFlow();
   const Flow = state =>
     <div>
@@ -37,6 +38,7 @@ const FlowContainer = ({ enabled, payload, saveMessages }) => {
           saveMessages={saveMessages}
           runDisabled={state.runDisabled}
           params={state.params}
+          setDownloadFileName={setDownloadFileName}
         />
         <RunArrow
           nextArrowRan={state.nextArrowRan}
@@ -45,6 +47,7 @@ const FlowContainer = ({ enabled, payload, saveMessages }) => {
         <ResultsButton
           disabled={state.getResultsDisabled}
           fileDownloadUrl={state.fileDownloadUrl}
+          downloadFileName={state.downloadFileName}
         />
       </div>
       <ParamsForm disabled={state.runDisabled} setParams={setParams} params={state.params} />

@@ -15,6 +15,7 @@ export default () => {
     nextArrowRan: false,
     getResultsDisabled: true,
     enableFileUpload: false,
+    downloadFileName: '',
     params: {
       distanceCalibration: 2,
       driversLiquid: 4,
@@ -26,6 +27,11 @@ export default () => {
 
   const reducer = (state, { type, payload }) => {
     switch (type) {
+      case 'SET_DOWNLOAD_FILE_NAME':
+        return {
+          ...state,
+          downloadFileName: payload
+        }
       case 'UPLOADING_DATA':
         return {
           ...state,
@@ -102,5 +108,10 @@ export default () => {
     [],
   );
 
-  return { state, beginUpload, finishUpload, beginRunData, modelRan, setParams };
+  const setDownloadFileName = React.useCallback(
+    payload => dispatch({type: 'SET_DOWNLOAD_FILE_NAME', payload}),
+    []
+  )
+
+  return { state, beginUpload, finishUpload, beginRunData, modelRan, setParams, setDownloadFileName };
 };

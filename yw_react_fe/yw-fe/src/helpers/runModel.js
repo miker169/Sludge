@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
 const runModelUrl = process.env.REACT_APP_RUN_MODEL_URL;
 const getResultsUrl = process.env.REACT_APP_GET_RESULTS;
 
-export const runModel = async (saveMessages, modelRan, setHelpText, params) => {
+export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName) => {
   setHelpText('Running data model...');
   axios
     .post(
@@ -18,7 +18,8 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params) => {
         headers: { 'Access-Control-Allow-Origin': '*' },
       },
     )
-    .then(({ data, errors }) => {
+    .then((payload) => {
+      const { errors, data} = payload;
       if (errors) {
         saveMessages(errors);
       } else {
@@ -28,7 +29,10 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params) => {
           .get(getResultsUrl, {
             headers: { 'Access-Control-Allow-Origin': '*' },
           })
-          .then(data => {
+          .then(({data }) => {
+           if(data?.filename) {
+             setDownloadFileName(data?.filename)
+           }
             const csv = ParseJsonToCsV(data);
             buildCsvFile(csv, modelRan);
             setHelpText(
