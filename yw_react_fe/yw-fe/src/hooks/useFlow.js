@@ -82,7 +82,7 @@ export default () => {
   const setParams = React.useCallback((evt, value) =>
     dispatch({
       type: 'SET_PARAM',
-      payload: { [value]: parseInt(evt.currentTarget.value) },
+      payload: { [value]: evt.currentTarget.value.length ? parseInt(evt.currentTarget.value) : "" },
     }),[]
   );
 
