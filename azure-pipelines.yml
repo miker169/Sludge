@@ -15,7 +15,8 @@ variables:
   deploymentFolder: "yw_react_fe/yw-fe/deployment"
   fontsFolder: "yw_react_fe/yw-fe/src/fonts"
   react_app_run_model_url: 'https://ywwwbackendprod.azurewebsites.net/api/standard-model-trigger?code=Amnr7umtGhFvKBMiL3ITfXZt0XPs5g6S4hgJ6sKfGHRlBmhLi4KxvQ=='
-  react_app_blob_sas: 'https://ywwwdatastoreprod.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-08-11T17:34:30Z&st=2020-05-11T09:34:30Z&spr=https&sig=HcRZhcSkfUtDGwVt2UMNanQ9TzuM56iChxYH35W7xZE%3D'
+  react_app_send_json: 'https://ywwwbackendprod.azurewebsites.net/api/file-upload?code=fIFK8XcN6IadXaYwzdcxTY2r8j4t8btg/arJQkMS/n5KeMjKDvRmpA=='
+  react_app_get_results: 'https://ywwwbackendprod:azurewebsites:net/api/file-download?code=m/pyM4jrfuRprB5mIoNwvNK6JrdHJRAHv/UEFEOatv/mv1xnY0LKcQ=='∏
 pool:
   vmImage: 'ubuntu-latest'
 
@@ -50,22 +51,22 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(buildOutputFolder)' 
-    contents: '**/*' 
+    sourceFolder: '$(buildOutputFolder)'
+    contents: '**/*'
     targetFolder: '$(Build.ArtifactStagingDirectory)/output'
     cleanTargetFolder: true
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(fontsFolder)' 
-    contents: '**/*' 
+    sourceFolder: '$(fontsFolder)'
+    contents: '**/*'
     targetFolder: '$(Build.ArtifactStagingDirectory)/output/fonts'
     cleanTargetFolder: true
 
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(deploymentFolder)'
-    contents: '**/*' 
+    contents: '**/*'
     targetFolder: '$(Build.ArtifactStagingDirectory)/deployment'
     cleanTargetFolder: true
 
