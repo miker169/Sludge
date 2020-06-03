@@ -29,7 +29,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
           .get(getResultsUrl, {
             headers: { 'Access-Control-Allow-Origin': '*' },
           })
-          .then(({data }) => {
+          .then(({data}) => {
            if(data?.filename) {
              setDownloadFileName(data?.filename)
            }
@@ -38,11 +38,14 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
             setHelpText(
               'Model Ran select Get Results to download the csv results',
             );
-          });
+          }).catch(err => {
+            console.log(err)
+        });
       }
     }).catch(err => {
       saveMessages(err.response.data);
       modelRan();
+      console.log(err);
   });
 };
 

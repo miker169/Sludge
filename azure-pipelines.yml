@@ -16,7 +16,7 @@ variables:
   fontsFolder: "yw_react_fe/yw-fe/src/fonts"
   react_app_run_model_url: 'https://ywwwbackendprod.azurewebsites.net/api/standard-model-trigger?code=Amnr7umtGhFvKBMiL3ITfXZt0XPs5g6S4hgJ6sKfGHRlBmhLi4KxvQ=='
   react_app_send_json: 'https://ywwwbackendprod.azurewebsites.net/api/file-upload?code=fIFK8XcN6IadXaYwzdcxTY2r8j4t8btg/arJQkMS/n5KeMjKDvRmpA=='
-  react_app_get_results: 'https://ywwwbackendprod:azurewebsites:net/api/file-download?code=m/pyM4jrfuRprB5mIoNwvNK6JrdHJRAHv/UEFEOatv/mv1xnY0LKcQ=='
+  react_app_get_results: 'https://ywwwbackendprod:azurewebsites.net/api/file-download?code=m/pyM4jrfuRprB5mIoNwvNK6JrdHJRAHv/UEFEOatv/mv1xnY0LKcQ=='
 pool:
   vmImage: 'ubuntu-latest'
 
