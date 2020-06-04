@@ -8,7 +8,7 @@ import ResultsButton from './ResultsButton';
 import useFlow from '../../hooks/useFlow';
 import ParamsForm from "./ParamsForm";
 
-const FlowContainer = ({ enabled, payload, saveMessages }) => {
+const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref) => {
   const {
     state,
     beginUpload,
@@ -16,8 +16,14 @@ const FlowContainer = ({ enabled, payload, saveMessages }) => {
     beginRunData,
     modelRan,
     setParams,
-    setDownloadFileName
+    setDownloadFileName,
+    resetFlow
   } = useFlow();
+
+  React.useImperativeHandle(ref, () => ({
+    reset: () => resetFlow()
+  }));
+
   const Flow = state =>
     <div>
       <div data-testid="component-flow" className="flowContainer">
@@ -58,6 +64,6 @@ const FlowContainer = ({ enabled, payload, saveMessages }) => {
       {enabled ? Flow(state) : null}
     </React.Fragment>
   );
-};
+});
 
 export default FlowContainer;

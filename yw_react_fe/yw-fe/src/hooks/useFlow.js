@@ -27,6 +27,10 @@ export default () => {
 
   const reducer = (state, { type, payload }) => {
     switch (type) {
+      case 'RESET':{
+        return initialState
+      }
+
       case 'SET_DOWNLOAD_FILE_NAME':
         return {
           ...state,
@@ -113,5 +117,12 @@ export default () => {
     []
   )
 
-  return { state, beginUpload, finishUpload, beginRunData, modelRan, setParams, setDownloadFileName };
+  const resetFlow = React.useCallback(
+    () => {
+      return dispatch({type: 'RESET'})
+    },
+    []
+  )
+
+  return { state, beginUpload, finishUpload, beginRunData, modelRan, setParams, setDownloadFileName, resetFlow };
 };

@@ -3,13 +3,18 @@ import './refreshButton.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRedo } from  '@fortawesome/free-solid-svg-icons'
 
-const RefreshButton = ({ onClickHandler}) => {
+const RefreshButton = ({ onClickHandler, flowReset}) => {
+
+  const handleReset = () => {
+    onClickHandler();
+    flowReset.current.reset();
+  }
 
   return(
     <div className="refresh" data-testid="refresh-btn">
       <a data-testid="refreshClickHandler"
          href="/#"
-         onClick={() => onClickHandler()}>
+         onClick={handleReset}>
         <FontAwesomeIcon size={"2x"} icon={faRedo} />
       </a>
     </div>

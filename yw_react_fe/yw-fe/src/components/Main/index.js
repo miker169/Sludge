@@ -12,6 +12,7 @@ const Main = () => {
 
   const { setEnabled, setPayload, setFiles, setMessages, state, reset  } = useAppState();
   const { errorText } = React.useContext(HelpContext);
+  const flowStateRef = React.createRef();
 
   if(state.payload?.productionInput && state.payload?.referenceInput && !state.enabled && !errorText.length > 0 ){
      setEnabled(true);
@@ -22,9 +23,9 @@ const Main = () => {
       <div className="csv-choose">
         {state.enabled ? null : <FileInput setFiles={setFiles} setPayload={setPayload} payload={state.payload} /> }
         <Help enabled={state.enabled} files={state.files} messages={state.messages} />
-        <RefreshButton onClickHandler={reset}/>
+        <RefreshButton onClickHandler={reset} flowReset={flowStateRef}/>
       </div>
-      <FlowContainer enabled={state.enabled} payload={state.payload} saveMessages={setMessages}/>
+      <FlowContainer enabled={state.enabled} payload={state.payload} saveMessages={setMessages} ref={flowStateRef}/>
       <hr className="spacer"/>
       <ScenarioModelling />
     </div>
