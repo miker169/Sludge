@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import RefreshButton from "./index";
 import userEvent from "@testing-library/user-event";
 
-describe('<RefreshButton/>', () => {
+describe.skip('<RefreshButton/>', () => {
   const wrapper = (props) => {
     return render(
         <RefreshButton {...props}/>
