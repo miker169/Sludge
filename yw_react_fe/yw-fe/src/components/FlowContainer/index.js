@@ -17,7 +17,8 @@ const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref)
     modelRan,
     setParams,
     setDownloadFileName,
-    resetFlow
+    resetFlow,
+    paramErrors
   } = useFlow();
 
   React.useImperativeHandle(ref, () => ({
@@ -45,6 +46,7 @@ const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref)
           runDisabled={state.runDisabled}
           params={state.params}
           setDownloadFileName={setDownloadFileName}
+          paramErrors={paramErrors}
         />
         <RunArrow
           nextArrowRan={state.nextArrowRan}

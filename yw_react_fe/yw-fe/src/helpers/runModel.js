@@ -8,55 +8,83 @@ if (process.env.NODE_ENV !== 'production') {
 const runModelUrl = process.env.REACT_APP_RUN_MODEL_URL;
 const getResultsUrl = process.env.REACT_APP_GET_RESULTS;
 
-export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName) => {
+export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors) => {
   setHelpText('Running data model...');
-  axios
+  if (!validParams(params)) {
+    paramErrors();
+    return saveMessages({errors: [{type: 'Params',
+        messages:['Before model can be ran, you must fix all errors with the model params.']
+    }]}
+    )
+  }else {
+    axios
     .post(
       runModelUrl,
-      { params: params },
+      {params: params},
       {
-        headers: { 'Access-Control-Allow-Origin': '*' },
+        headers: {'Access-Control-Allow-Origin': '*'},
       },
     )
     .then((payload) => {
-      const { errors, data} = payload;
+      const {errors, data} = payload;
       if (errors) {
         saveMessages(errors);
       } else {
         saveMessages(data);
 
         axios
-          .get(getResultsUrl, {
-            headers: { 'Access-Control-Allow-Origin': '*' },
-          })
-          .then(({data}) => {
-           if(data?.filename) {
-             setDownloadFileName(data?.filename)
-           }
-            const csv = ParseJsonToCsV(data);
-            buildCsvFile(csv, modelRan);
-            setHelpText(
-              'Model Ran select Get Results to download the csv results',
-            );
-          }).catch(err => {
-            console.log(err)
+        .get(getResultsUrl, {
+          headers: {'Access-Control-Allow-Origin': '*'},
+        })
+        .then(({data}) => {
+          if (data?.filename) {
+            setDownloadFileName(data?.filename)
+          }
+          const csv = ParseJsonToCsV(data);
+          buildCsvFile(csv, modelRan);
+          setHelpText(
+            'Model Ran select Get Results to download the csv results',
+          );
+        }).catch(err => {
+          console.log(err)
         });
       }
     }).catch(err => {
       saveMessages(err.response.data);
       modelRan();
       console.log(err);
-  });
+    });
+  }
+
 };
 
+const validParams = (params) => {
+  let newParams = new Map();
+  let hasError = false;
+  for(let param in params){
+    if (typeof params[param] !== "number") {
+      if (isNaN(parseFloat(params[param]))) {
+        hasError = true;
+      } else if (parseFloat(params[param]) <= 0) {
+        hasError = true;
+      } else {
+        newParams.set(param, parseFloat(params[param]))
+      }
+    } else {
+      newParams.set(param, params[param])
+    }
+  }
+  return hasError ?  false :  newParams
+}
+
 const buildCsvFile = (csv, modelRan) => {
-  let blob = new Blob([csv], { type: 'text/csv' });
+  let blob = new Blob([csv], {type: 'text/csv'});
   let item = window.URL.createObjectURL(blob);
 
   modelRan(item);
 };
 
-const ParseJsonToCsV = ({ data }) => {
+const ParseJsonToCsV = ({data}) => {
   /*
         Probably best to ignore whats happening here
         basically we get returned a json object of objects, the csv

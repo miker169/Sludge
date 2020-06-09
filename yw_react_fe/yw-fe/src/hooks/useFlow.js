@@ -1,5 +1,7 @@
 import React from 'react';
 
+const PARAMS_ERRORS = 'PARAMS_ERRORS';
+const RESET = 'RESET';
 export default () => {
   const initialState = {
     inputDisabled: false,
@@ -27,15 +29,22 @@ export default () => {
 
   const reducer = (state, { type, payload }) => {
     switch (type) {
-      case 'RESET':{
-        return initialState
+      case RESET: {
+        return initialState;
       }
+      case PARAMS_ERRORS:
+        return {
+          ...state,
+          nextArrowDisabled: true,
+          inputUpdateArrowDisabled: false,
+          updateDisabled: false,
+        };
 
       case 'SET_DOWNLOAD_FILE_NAME':
         return {
           ...state,
-          downloadFileName: payload
-        }
+          downloadFileName: payload,
+        };
       case 'UPLOADING_DATA':
         return {
           ...state,
@@ -83,11 +92,13 @@ export default () => {
     }
   };
 
-  const setParams = React.useCallback((evt, value) =>
-    dispatch({
-      type: 'SET_PARAM',
-      payload: { [value]: evt.currentTarget.value.length ? parseInt(evt.currentTarget.value) : "" },
-    }),[]
+  const setParams = React.useCallback(
+    (evt, value) =>
+      dispatch({
+        type: 'SET_PARAM',
+        payload: { [value]: evt.currentTarget.value },
+      }),
+    [],
   );
 
   const [state, dispatch] = React.useReducer(reducer, initialState);
@@ -113,16 +124,27 @@ export default () => {
   );
 
   const setDownloadFileName = React.useCallback(
-    payload => dispatch({type: 'SET_DOWNLOAD_FILE_NAME', payload}),
-    []
-  )
+    payload => dispatch({ type: 'SET_DOWNLOAD_FILE_NAME', payload }),
+    [],
+  );
 
-  const resetFlow = React.useCallback(
-    () => {
-      return dispatch({type: 'RESET'})
-    },
-    []
-  )
+  const resetFlow = React.useCallback(() => {
+    return dispatch({ type: RESET });
+  }, []);
 
-  return { state, beginUpload, finishUpload, beginRunData, modelRan, setParams, setDownloadFileName, resetFlow };
+  const paramErrors = React.useCallback(() => {
+    return dispatch({ type: PARAMS_ERRORS });
+  }, []);
+
+  return {
+    state,
+    beginUpload,
+    finishUpload,
+    beginRunData,
+    modelRan,
+    setParams,
+    setDownloadFileName,
+    paramErrors,
+    resetFlow,
+  };
 };
