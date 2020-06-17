@@ -25,7 +25,6 @@ steps:
   displayName: Build an image
   inputs:
     command: build
-    Dockerfile: $(dockerfilePath)
     arguments: --build-arg client_secret=$(client-secret)
     repository: $(imageRepository)
     tags: latest
