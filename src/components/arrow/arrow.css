@@ -1,0 +1,31 @@
+.arrow {
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 3px;
+    stroke-dasharray: 36,5;
+    stroke-dashoffset: 82;;
+    animation: lineMove 2s infinite linear;
+}
+
+.arrow.disabled {
+    display: none;
+}
+
+.arrow.ran {
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 3px;
+    animation: none;
+    stroke-dasharray: none;
+    stroke-dashoffset: 0;
+}
+
+@keyframes lineMove {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.pull-down {
+    margin-top: .6em;
+}
