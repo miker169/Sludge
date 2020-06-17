@@ -1,81 +1,46 @@
-# Node.js with React
+# Docker
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-# Build a Node.js project that uses React.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
-pr: ['master']
-
-trigger:
-- master
+pr: ['develop']
+trigger: ['develop']
 
 variables:
-  projectFolder: 'yw_react_fe/yw-fe'
-  buildOutputFolder: "yw_react_fe/yw-fe/build"
-  deploymentFolder: "yw_react_fe/yw-fe/deployment"
-  fontsFolder: "yw_react_fe/yw-fe/src/fonts"
-  react_app_run_model_url: 'https://ywwwbackendprod.azurewebsites.net/api/standard-model-trigger?code=Amnr7umtGhFvKBMiL3ITfXZt0XPs5g6S4hgJ6sKfGHRlBmhLi4KxvQ=='
-  react_app_send_json: 'https://ywwwbackendprod.azurewebsites.net/api/file-upload?code=fIFK8XcN6IadXaYwzdcxTY2r8j4t8btg/arJQkMS/n5KeMjKDvRmpA=='
-  react_app_get_results: 'https://ywwwbackendprod.azurewebsites.net/api/file-download?code=m/pyM4jrfuRprB5mIoNwvNK6JrdHJRAHv/UEFEOatv/mv1xnY0LKcQ=='
-pool:
-  vmImage: 'ubuntu-latest'
-
+  imageRepository: 'YW-FE'
+  dockerfilePath: 'Dockerfile'
+  dockerRegistryServiceConnection: 'ywwwdevacr'
+  subscriptionID: 'yw-ww-dev-kv-access'
 
 steps:
-
-- task: NodeTool@0
+- task: AzureKeyVault@1
   inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    pushd $(projectFolder) && yarn install && popd
-    pushd $(projectFolder) && yarn run test-ci && popd
-    pushd $(projectFolder) && yarn run build && popd
-
-  displayName: 'yarn install and build'
-
-- task: PublishTestResults@2
+    azureSubscription: $(subscriptionID)
+    KeyVaultName: 'ywwwksdev'
+    SecretsFilter: '*'
+- task: Docker@2
+  displayName: Login to ACR
   inputs:
-    testResultsFormat: 'VSTest'
-    testResultsFiles: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/jestTestresults.trx'
-    failTaskOnFailedTests: true
-
-
-- task: PublishCodeCoverageResults@1
+    command: login
+    containerRegistry: $(dockerRegistryServiceConnection)
+- task: Docker@2
+  displayName: Build an image
   inputs:
-    codeCoverageTool: 'Cobertura'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/*coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output'
-    pathToSources: '$(System.DefaultWorkingDirectory)/$(projectFolder)/output/src'
-
-- task: CopyFiles@2
+    command: build
+    Dockerfile: $(dockerfilePath)
+    arguments: --build-arg client_secret=$(client-secret)
+    repository: $(imageRepository)
+    tags: latest
+- task: Docker@2
+  displayName: Push image
   inputs:
-    sourceFolder: '$(buildOutputFolder)'
-    contents: '**/*'
-    targetFolder: '$(Build.ArtifactStagingDirectory)/output'
-    cleanTargetFolder: true
-
-- task: CopyFiles@2
+    command: push
+    containerRegistry: $(dockerRegistryServiceConnection)
+    repository: $(imageRepository)
+    tags: latest
+- task: Docker@2
+  displayName: Logout of ACR
   inputs:
-    sourceFolder: '$(fontsFolder)'
-    contents: '**/*'
-    targetFolder: '$(Build.ArtifactStagingDirectory)/output/fonts'
-    cleanTargetFolder: true
-
-- task: CopyFiles@2
-  inputs:
-    sourceFolder: '$(deploymentFolder)'
-    contents: '**/*'
-    targetFolder: '$(Build.ArtifactStagingDirectory)/deployment'
-    cleanTargetFolder: true
-
-# Archive the files into a zip file for publishing
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifacts'
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: 'Drop'
+    command: logout
+    containerRegistry: $(dockerRegistryServiceConnection)
 
 
 
