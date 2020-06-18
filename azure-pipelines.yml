@@ -5,6 +5,7 @@ pr: ['develop']
 trigger: ['develop']
 
 variables:
+  imageName: 'yw-fe'
   imageRepository: 'YW-frontend'
   dockerfilePath: 'Dockerfile'
   dockerRegistryServiceConnection: 'ywwwdevacr'
