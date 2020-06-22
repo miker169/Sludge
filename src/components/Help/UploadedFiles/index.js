@@ -10,8 +10,9 @@ const UploadedFiles = ({ files = [] }) => {
 
   const renderHelp = () => {
 
-    const hasReferenceFile =  files.find(x => x.split('.').pop() === 'xlsx');
-    const hasProductionFile =  files.find(x => x.split('.').pop() === 'csv')
+    debugger;
+    const hasReferenceFile =  files.find(x => x.name.split('.').pop() === 'xlsx');
+    const hasProductionFile =  files.find(x => x.name.split('.').pop() === 'csv')
 
     return(
       <div className="file-list">

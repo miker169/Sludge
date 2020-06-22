@@ -3,17 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from  '@fortawesome/free-solid-svg-icons'
 import './fileUpload.css'
 
-import useConvertFilesToJson from "../../hooks/useConvertFilesToJson";
-
-const FileInput = ({setFiles, setPayload, payload}) => {
+const FileInput = ({setFiles,files}) => {
 
   const ref = React.useRef(null);
-  const { convertFileToJson } = useConvertFilesToJson(setFiles, setPayload, payload)
 
   const HiddenInput = () => (
     <input accept=".csv, text/csv, application/csv. xsl, .xlsx"
            onChange={(e) => {
-             convertFileToJson(e.target.files);
+             setFiles(e.target.files[0])
           } }
            data-testid="hidden-input"
            ref={ref}

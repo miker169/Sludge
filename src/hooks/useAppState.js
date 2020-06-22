@@ -12,8 +12,9 @@ export default () => {
     switch (type) {
       case "RESET":
         return {...initialState}
-      case "SET_FILES":
+      case "SET_FILES": {
         return {...state, files: [...state.files, payload]}
+      }
       case "SET_PAYLOAD":
         return {...state, payload }
       case "SET_ENABLED":

@@ -19,7 +19,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
   }else {
     axios
     .post(
-      runModelUrl,
+      'http://localhost:5000/run_model',
       {params: params},
       {
         headers: {'Access-Control-Allow-Origin': '*'},
