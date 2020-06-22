@@ -25,28 +25,30 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
     .then((payload) => {
       const {errors, data} = payload;
       if (errors) {
+        debugger;
         saveMessages(errors);
       } else {
+        debugger;
         saveMessages(data);
-
-        axios
-        .get(getResultsUrl, {
-          headers: {'Access-Control-Allow-Origin': '*'},
-        })
-        .then(({data}) => {
-          if (data?.filename) {
-            setDownloadFileName(data?.filename)
-          }
-          const csv = ParseJsonToCsV(data);
-          buildCsvFile(csv, modelRan);
-          setHelpText(
-            'Model Ran select Get Results to download the csv results',
-          );
-        }).catch(err => {
-          console.log(err)
-        });
+        // axios
+        // .get(getResultsUrl, {
+        //   headers: {'Access-Control-Allow-Origin': '*'},
+        // })
+        // .then(({data}) => {
+        //   if (data?.filename) {
+        //     setDownloadFileName(data?.filename)
+        //   }
+        //   const csv = ParseJsonToCsV(data);
+        //   buildCsvFile(csv, modelRan);
+        //   setHelpText(
+        //     'Model Ran select Get Results to download the csv results',
+        //   );
+        // }).catch(err => {
+        //   console.log(err)
+        // });
       }
     }).catch(err => {
+      debugger;
       saveMessages(err.response.data);
       modelRan();
       console.log(err);
