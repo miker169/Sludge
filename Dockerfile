@@ -16,8 +16,6 @@ RUN yarn
 # Copies everything over to Docker environment
 COPY . ./
 
-RUN yarn run build
-
 # Uses port which is used by the actual application
 EXPOSE 3000
 
