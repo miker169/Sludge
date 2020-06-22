@@ -24,12 +24,12 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
     )
     .then((payload) => {
       const {errors, data} = payload;
-      if (errors) {
+      if (data.errors) {
         debugger;
-        saveMessages(errors);
+        saveMessages(data.errors);
       } else {
         debugger;
-        saveMessages(data);
+        saveMessages(data.data);
         // axios
         // .get(getResultsUrl, {
         //   headers: {'Access-Control-Allow-Origin': '*'},
