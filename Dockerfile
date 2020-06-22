@@ -19,7 +19,7 @@ COPY . ./
 RUN yarn run build
 
 # Uses port which is used by the actual application
-EXPOSE 8080
+EXPOSE 3000
 
 # Finally runs the application
-CMD [ "yarn", "start" ]
+CMD [ "yarn", "dev" ]

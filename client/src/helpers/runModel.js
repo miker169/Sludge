@@ -21,9 +21,6 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
     .post(
       'http://localhost:5000/run_model',
       {params: params},
-      {
-        headers: {'Access-Control-Allow-Origin': '*'},
-      },
     )
     .then((payload) => {
       const {errors, data} = payload;
