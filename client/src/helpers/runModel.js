@@ -25,10 +25,8 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
     .then((payload) => {
       const {errors, data} = payload;
       if (data.errors) {
-        debugger;
         saveMessages(data.errors);
       } else {
-        debugger;
         saveMessages(data.data);
         // axios
         // .get(getResultsUrl, {
