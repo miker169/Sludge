@@ -13,7 +13,7 @@ COPY yarn.lock ./
 # Installs all node packages
 RUN yarn
 
-RUN yarn build
+RUN yarn run build
 #
 #RUN cd ..
 
