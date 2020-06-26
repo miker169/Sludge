@@ -31,9 +31,9 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
         setDownloadFileName(data.filename)
 
           const sasToken = await axios.get('/get-token');
-          const token = 'https://ywwwdatastoredev.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-06-25T22:20:37Z&st=2020-06-25T14:20:37Z&spr=https&sig=2tIjEBSUEQe%2FNHFEfQm3WXBnb4sf9x1rYRc8jrVHXJw%3D'
+          const token = 'https://ywwwdatastoredev.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-06-26T21:08:41Z&st=2020-06-26T13:08:41Z&spr=https&sig=Nn6cbfL39ys9fST6ZLdgZcP7SRWiufD7UCwepPkuhv4%3D'
           const decodedToken = decodeURIComponent(token);
-        const blobServiceClient = new BlobServiceClient(decodedToken);
+        const blobServiceClient = new BlobServiceClient(token);
           const containerClient = blobServiceClient.getContainerClient('outputs');
           const blockBlobClient = containerClient.getBlobClient(data.filename);
           debugger;
