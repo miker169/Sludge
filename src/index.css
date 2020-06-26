@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: "Swiss";
-    src: url("/client/src/fonts/swiss-webfont.woff2") format("woff2"), url("fonts/swiss-webfont.woff") format("woff");
+    src: url("/srcswiss-webfont.woff2") format("woff2"), url("fonts/swiss-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }

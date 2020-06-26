@@ -21,7 +21,7 @@ RUN yarn
 COPY . ./
 
 # Uses port which is used by the actual application
-EXPOSE 3000
+EXPOSE 8080
 
 # Finally runs the application
-CMD [ "yarn", "dev" ]
+CMD [ "node", "index.js" ]

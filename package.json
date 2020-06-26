@@ -2,6 +2,7 @@
   "name": "yw-fe",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
   "dependencies": {
     "ajv-errors": "^1.0.1",
     "body-parser": "^1.19.0",
@@ -102,7 +103,8 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "npm run build --prefix client && node index.js",
+    "build": "node scripts/build.js",
+    "start": "npm run build  && node index.js",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
