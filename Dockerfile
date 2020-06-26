@@ -13,13 +13,13 @@ COPY yarn.lock ./
 # Installs all node packages
 RUN yarn
 
-RUN yarn run build
+
 #
 #RUN cd ..
 
 # Copies everything over to Docker environment
 COPY . ./
-
+RUN yarn run build
 # Uses port which is used by the actual application
 EXPOSE 8080
 
