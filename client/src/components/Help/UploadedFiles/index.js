@@ -10,7 +10,6 @@ const UploadedFiles = ({ files = [] }) => {
 
   const renderHelp = () => {
 
-    debugger;
     const hasReferenceFile =  files.find(x => x.name.split('.').pop() === 'xlsx');
     const hasProductionFile =  files.find(x => x.name.split('.').pop() === 'csv')
 

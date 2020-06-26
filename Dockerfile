@@ -13,6 +13,10 @@ COPY yarn.lock ./
 # Installs all node packages
 RUN yarn
 
+#RUN cd /client && yarn
+#
+#RUN cd ..
+
 # Copies everything over to Docker environment
 COPY . ./
 

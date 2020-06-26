@@ -47,6 +47,7 @@ const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref)
           params={state.params}
           setDownloadFileName={setDownloadFileName}
           paramErrors={paramErrors}
+          downloadFileName={state.downloadFileName}
         />
         <RunArrow
           nextArrowRan={state.nextArrowRan}

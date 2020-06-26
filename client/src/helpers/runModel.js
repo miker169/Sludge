@@ -1,5 +1,6 @@
 import axios from 'axios';
 import Papaparse from 'papaparse';
+import {BlobServiceClient} from "@azure/storage-blob";
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
@@ -8,7 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
 const runModelUrl = process.env.REACT_APP_RUN_MODEL_URL;
 const getResultsUrl = process.env.REACT_APP_GET_RESULTS;
 
-export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors) => {
+export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName,  paramErrors, downloadFileName) => {
   setHelpText('Running data model...');
   if (!validParams(params)) {
     paramErrors();
@@ -22,36 +23,56 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
       'http://localhost:5000/run_model',
       {params: params},
     )
-    .then((payload) => {
+    .then(async (payload) => {
       const {errors, data} = payload;
-      if (data.errors) {
-        saveMessages(data.errors);
+      if (errors) {
+        saveMessages(errors);
       } else {
-        saveMessages(data.data);
-        // axios
-        // .get(getResultsUrl, {
-        //   headers: {'Access-Control-Allow-Origin': '*'},
+        setDownloadFileName(data.filename)
+
+          const sasToken = await axios.get('/get-token');
+          const token = 'https://ywwwdatastoredev.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-06-25T22:20:37Z&st=2020-06-25T14:20:37Z&spr=https&sig=2tIjEBSUEQe%2FNHFEfQm3WXBnb4sf9x1rYRc8jrVHXJw%3D'
+          const decodedToken = decodeURIComponent(token);
+        const blobServiceClient = new BlobServiceClient(decodedToken);
+          const containerClient = blobServiceClient.getContainerClient('outputs');
+          const blockBlobClient = containerClient.getBlobClient(data.filename);
+          debugger;
+          const blobResponse = await blockBlobClient.download()
+          const body = await blobResponse.blobBody;
+          const blobData =  await body.text();
+          let blob = new Blob([blobData], {type: 'application/vnd.ms-excel'});
+          let item = window.URL.createObjectURL(body);
+          modelRan(item)
+
+        }}
+        ).catch(err => {
+            debugger
+            modelRan();
+          })
+
+        // fetch('/latest-output', {
+        //   method: 'post',
+        //   body: JSON.stringify(data),
+        //   headers: {'Content-Type': 'application/json'}
+        // }).then(async (payload) => {
+        //   debugger;
+        //   const blob  = await payload.blob();
+        //   const body = await payload.blobBody()
+        //   let item = window.URL.createObjectURL(body);
+        //   modelRan(item)
         // })
-        // .then(({data}) => {
-        //   if (data?.filename) {
-        //     setDownloadFileName(data?.filename)
-        //   }
-        //   const csv = ParseJsonToCsV(data);
-        //   buildCsvFile(csv, modelRan);
-        //   setHelpText(
-        //     'Model Ran select Get Results to download the csv results',
-        //   );
-        // }).catch(err => {
-        //   console.log(err)
-        // });
-      }
-    }).catch(err => {
-      debugger;
-      saveMessages(err.response.data);
-      modelRan();
-      console.log(err);
-    });
+    //   }
+    //
+    // })
   }
+
+    // }).catch(err => {
+    //   debugger;
+    //   saveMessages(err.response.data);
+    //
+    //   console.log(err);
+    // });
+ // }
 
 };
 
