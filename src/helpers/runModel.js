@@ -23,7 +23,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
   } else {
     axios
     .post(
-      'http://localhost:5000/run_model',
+      'http://127.0.0.1:5000/run_model',
       {params: params},
     )
     .then(async (payload) => {
