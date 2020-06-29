@@ -16,21 +16,9 @@ app.use(fileUpload({
 
 app.use(express.json());
 
-app.get('/ping', function (req, res) {
-  return res.send('pong');
-});
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'build')));
-  app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
-}
-
-app.use(function(err, req, res, next) {
-  // 'SyntaxError: Unexpected token n in JSON at position 0'
-  err.message;
-  next(err);
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 app.post('/file-upload',async function(req, res) {
