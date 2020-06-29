@@ -5,15 +5,11 @@ import './fileUpload.css'
 
 const FileInput = ({setFiles,files}) => {
 
-  debugger;
   const ref = React.useRef(null);
-
-  debugger;
 
   const HiddenInput = () => (
     <input accept=".csv, text/csv, application/csv. xsl, .xlsx"
            onChange={(e) => {
-             debugger;
              setFiles(e.target.files[0])
           } }
            data-testid="hidden-input"
@@ -25,7 +21,6 @@ const FileInput = ({setFiles,files}) => {
   )
   return (
     <div data-testid="component-file-upload" className="file" onClick={() => {
-      debugger;
       ref.current.click()
     }}>
      <HiddenInput />

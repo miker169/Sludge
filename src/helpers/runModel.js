@@ -9,77 +9,74 @@ if (process.env.NODE_ENV !== 'production') {
 const runModelUrl = process.env.REACT_APP_RUN_MODEL_URL;
 const getResultsUrl = process.env.REACT_APP_GET_RESULTS;
 
-export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName,  paramErrors, downloadFileName) => {
+export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName) => {
   setHelpText('Running data model...');
   if (!validParams(params)) {
     paramErrors();
-    return saveMessages({errors: [{type: 'Params',
-        messages:['Before model can be ran, you must fix all errors with the model params.']
-    }]}
+    return saveMessages({
+        errors: [{
+          type: 'Params',
+          messages: ['Before model can be ran, you must fix all errors with the model params.']
+        }]
+      }
     )
-  }else {
+  } else {
     axios
     .post(
       'http://localhost:5000/run_model',
       {params: params},
     )
     .then(async (payload) => {
-      const {errors, data} = payload;
-      if (errors) {
-        saveMessages(errors);
-      } else {
-        setDownloadFileName(data.filename)
+        const {errors, data} = payload;
+        if (errors) {
+          saveMessages(errors);
+        } else {
+          setDownloadFileName(data.filename)
 
-          const sasToken = await axios.get('/get-token');
-          const token = 'https://ywwwdatastoredev.blob.core.windows.net/?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-06-26T21:08:41Z&st=2020-06-26T13:08:41Z&spr=https&sig=Nn6cbfL39ys9fST6ZLdgZcP7SRWiufD7UCwepPkuhv4%3D'
-          const decodedToken = decodeURIComponent(token);
-        const blobServiceClient = new BlobServiceClient(token);
-          const containerClient = blobServiceClient.getContainerClient('outputs');
-          const blockBlobClient = containerClient.getBlobClient(data.filename);
-          debugger;
-          const blobResponse = await blockBlobClient.download()
-          const body = await blobResponse.blobBody;
-          const blobData =  await body.text();
-          let blob = new Blob([blobData], {type: 'application/vnd.ms-excel'});
+          const blobResponse = await fetch('/latest-output', {
+            method: 'post',
+            body: JSON.stringify(data),
+            headers: {'Content-Type': 'application/json'}
+          })
+          const body = await blobResponse.blob();
           let item = window.URL.createObjectURL(body);
           modelRan(item)
 
-        }}
-        ).catch(err => {
-            debugger
-            modelRan();
-          })
+        }
+      }
+    ).catch(err => {
+      modelRan();
+    })
 
-        // fetch('/latest-output', {
-        //   method: 'post',
-        //   body: JSON.stringify(data),
-        //   headers: {'Content-Type': 'application/json'}
-        // }).then(async (payload) => {
-        //   debugger;
-        //   const blob  = await payload.blob();
-        //   const body = await payload.blobBody()
-        //   let item = window.URL.createObjectURL(body);
-        //   modelRan(item)
-        // })
+    // fetch('/latest-output', {
+    //   method: 'post',
+    //   body: JSON.stringify(data),
+    //   headers: {'Content-Type': 'application/json'}
+    // }).then(async (payload) => {
+    //   const blob  = await payload.blob();
+    //   const body = await payload.blobBody()
+    //   let item = window.URL.createObjectURL(body);
+    //   modelRan(item)
+    // })
     //   }
     //
     // })
   }
 
-    // }).catch(err => {
-    //   debugger;
-    //   saveMessages(err.response.data);
-    //
-    //   console.log(err);
-    // });
- // }
+  // }).catch(err => {
+  //   debugger;
+  //   saveMessages(err.response.data);
+  //
+  //   console.log(err);
+  // });
+  // }
 
 };
 
 const validParams = (params) => {
   let newParams = new Map();
   let hasError = false;
-  for(let param in params){
+  for (let param in params) {
     if (typeof params[param] !== "number") {
       if (isNaN(parseFloat(params[param]))) {
         hasError = true;
@@ -92,7 +89,7 @@ const validParams = (params) => {
       newParams.set(param, params[param])
     }
   }
-  return hasError ?  false :  newParams
+  return hasError ? false : newParams
 }
 
 const buildCsvFile = (csv, modelRan) => {
