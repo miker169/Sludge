@@ -21,32 +21,25 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
       }
     )
   } else {
-    axios
-    .post(
-      'http://ywbmdev.uksouth.cloudapp.azure.com:5000/run_model',
-      {params: params},
-    )
-    .then(async (payload) => {
-        const {errors, data} = payload;
-        if (errors) {
-          saveMessages(errors);
-        } else {
-          setDownloadFileName(data.filename)
+    const payload = await axios.post('/run-model', {params: params})
+    const {errors, data} = payload;
+    if (errors) {
+      saveMessages(errors);
+    } else {
+      setDownloadFileName(data.filename)
 
-          const blobResponse = await fetch('/latest-output', {
-            method: 'post',
-            body: JSON.stringify(data),
-            headers: {'Content-Type': 'application/json'}
-          })
-          const body = await blobResponse.blob();
-          let item = window.URL.createObjectURL(body);
-          modelRan(item)
+      const blobResponse = await fetch('/latest-output', {
+        method: 'post',
+        body: JSON.stringify(data),
+        headers: {'Content-Type': 'application/json'}
+      })
+      const body = await blobResponse.blob();
+      let item = window.URL.createObjectURL(body);
+      modelRan(item)
 
-        }
-      }
-    ).catch(err => {
-      modelRan();
-    })
+    }
+  }
+
 
     // fetch('/latest-output', {
     //   method: 'post',
@@ -61,7 +54,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
     //   }
     //
     // })
-  }
+  // }
 
   // }).catch(err => {
   //   debugger;
