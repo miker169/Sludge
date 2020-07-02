@@ -33,7 +33,6 @@ app.post('/file-upload',async function(req, res) {
 });
 
 app.post('/latest-output', async function(req, res){
-  const connectionString = process.env.DEV_DATASTORE_KEY;
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('outputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.body.filename);
@@ -48,16 +47,14 @@ app.post('/latest-output', async function(req, res){
 
 
 app.post('/run-model', async function(req, res) {
-  const params = req.body.paramsList;
+  const params = req.body;
 
   try {
-    axios.post('http://127.0.0.1:5000/run_model', req.body.paramsList)
+    axios.post('http://127.0.0.1:5000/run_model', req.body)
     .then((response) => {
-      debugger;
-      res.send(response.data.filename)
+      res.send(response.data)
     })
     .catch(err => {
-      debugger
     })
   }catch(err)  {
     console.log(err)
