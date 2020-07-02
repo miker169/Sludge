@@ -48,8 +48,11 @@ app.post('/latest-output', async function(req, res){
 
 app.post('/run-model', async function(req, res) {
   const params = req.body;
+  console.log('Called by app')
 
   try {
+    console.log('About to call run_model')
+    console.log('Calling with' , JSON.stringify(req.body))
     axios.post('http://127.0.0.1:5000/run_model', req.body)
     .then((response) => {
       res.send(response.data)
