@@ -48,40 +48,20 @@ app.post('/latest-output', async function(req, res){
 
 
 app.post('/run-model', async function(req, res) {
-  const params = req.body.params;
-  let modelRes;
-  const enumerateDaysBetweenDates = (startDate, endDate) => {
-    let dates = [];
-    dates.push(startDate.clone().format('DD/MM/YYYY'));
-
-    let currDate = moment(startDate).startOf('day');
-    let lastDate = moment(endDate).startOf('day');
-
-    while (currDate.add(1, 'days').diff(lastDate) < 0) {
-      console.log(currDate.toDate());
-      dates.push(currDate.clone().format('DD/MM/YYYY'));
-    }
-
-    dates.push(endDate.clone().format('DD/MM/YYYY'));
-
-    return dates;
-  };
-
-  let startDate = moment(new Date());
-  let endDate = startDate.clone().add(13, 'days');
-  let dates = enumerateDaysBetweenDates(startDate, endDate);
-
-  const paramsList = {}
-  dates.forEach((date) => {
-    paramsList[date] = params
-  })
+  const params = req.body.paramsList;
 
   try {
-    modelRes = await axios.post('http://0.0.0.0:5000/run_model');
+    axios.post('http://0.0.0.0:5000/run_model', req.body.paramsList)
+    .then((response) => {
+      debugger;
+      res.send(response.data.filename)
+    })
+    .catch(err => {
+      debugger
+    })
   }catch(err)  {
     console.log(err)
   }
-  res.send(modelRes);
 })
 const PORT = process.env.PORT || 8080;
 app.listen(PORT);
