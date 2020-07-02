@@ -51,7 +51,7 @@ app.post('/run-model', async function(req, res) {
   const params = req.body.paramsList;
 
   try {
-    axios.post('http://0.0.0.0:5000/run_model', req.body.paramsList)
+    axios.post('http://127.0.0.1:5000/run_model', req.body.paramsList)
     .then((response) => {
       debugger;
       res.send(response.data.filename)
