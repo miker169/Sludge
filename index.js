@@ -53,7 +53,7 @@ app.post('/run-model', async function(req, res) {
   try {
     console.log('About to call run_model')
     console.log('Calling with' , JSON.stringify(req.body))
-    axios.post('http://127.0.0.1:5000/run_model', req.body)
+    axios.post('http://0.0.0.0:5000/run_model', req.body)
     .then((response) => {
       console.log('Returning back to caller')
       console.log(response.data)
