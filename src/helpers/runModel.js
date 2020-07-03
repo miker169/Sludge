@@ -46,6 +46,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
     if (errors) {
       saveMessages(errors);
     } else {
+      console.log('We have had a response ', data )
       setDownloadFileName(data.filename)
 
       const blobResponse = await fetch('/latest-output', {
