@@ -33,6 +33,7 @@ app.post('/file-upload',async function(req, res) {
 });
 
 app.post('/latest-output', async function(req, res){
+  const connectionString = process.env.DEV_DATASTORE_KEY;
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('outputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.body.filename);
