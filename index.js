@@ -60,6 +60,7 @@ app.post('/run-model', async function(req, res) {
       res.send(response.data)
     })
     .catch(err => {
+      console.log('We have an error', err)
     })
   }catch(err)  {
     console.log(err)
