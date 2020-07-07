@@ -10,7 +10,7 @@ const Button = ({active, title, classes, name, disabled, clickHandler,url, downl
   }, classes)
 
   return(
-    <a download={download} onClick={clickHandler} href={url} data-testid={`${name}-component-btn`} className={btnClass}>{title}</a>
+    <a download={download} name={name} onClick={clickHandler} href={url} data-testid={`${name}-component-btn`} className={btnClass}>{title}</a>
   )
 }
 

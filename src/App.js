@@ -4,18 +4,29 @@ import './App.css';
 import Nav from './components/nav/Nav';
 import Header from './components/Header/header';
 import Main from './components/Main';
+import Params from './components/Params';
 import { Provider as ScenarioProvider } from './context/ScenarioContext';
 import { HelpContextProvider } from './context/HelpContext';
+import { ParamsContextProvider } from './context/ParamsContext'
 
 function App() {
+  const [activeTab, setActiveTab] = React.useState('params')
+  const clickHandler = (e) => {
+    setActiveTab(e.target.name);
+  }
+
   return (
     <div data-testid="app">
       <ScenarioProvider>
+        <ParamsContextProvider>
         <HelpContextProvider>
           <Header />
-          <Nav />
-          <Main />
+          <Nav clickHandler={clickHandler} activeTab={activeTab} />
+          {
+            activeTab === 'params' ? <Params/> : <Main/>
+          }
         </HelpContextProvider>
+        </ParamsContextProvider>
       </ScenarioProvider>
     </div>
   );

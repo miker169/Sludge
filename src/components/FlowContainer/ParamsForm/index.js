@@ -5,13 +5,16 @@ import TextField from './Fields/TextField';
 const ParamsForm = React.memo(({ disabled, params, setParams }) => {
 
   const setFieldHandler = e => {
-    setParams(e, e.target.name)
+
+    if(!isNaN(e.target.value)){
+      setParams(e.target.value, e.target.name)
+    }
   };
 
   if (disabled) return null;
   return (
     <div data-testid="params-component">
-      <h2 className="header">Sludge Modelling Parameters</h2>
+      <p>If you change these, this will change the default for all values.</p>
       <form className="params-form" data-testid="params-form">
         <TextField
           name="driversLiquid"

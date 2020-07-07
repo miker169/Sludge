@@ -15,7 +15,6 @@ const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref)
     finishUpload,
     beginRunData,
     modelRan,
-    setParams,
     setDownloadFileName,
     resetFlow,
     paramErrors
@@ -59,7 +58,6 @@ const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref)
           downloadFileName={state.downloadFileName}
         />
       </div>
-      <ParamsForm disabled={state.runDisabled} setParams={setParams} params={state.params} />
     </div>;
 
   return (

@@ -1,0 +1,64 @@
+.param-accordion {
+    margin-bottom: 3em;
+}
+
+.param-accordion-item {
+    border: 1px solid var(--darkest-blue);
+    /*border-left: 1px solid var(--darkest-blue);*/
+    /*border-right: 1px solid var(--darkest-blue);*/
+    /*border-top: 1px solid var(--darkest-blue);*/
+}
+
+.param-accordion-item + .param-accordion-item {
+    /*border-bottom: 1px solid var(--darkest-blue);*/
+    border-left: 1px solid var(--darkest-blue);
+    border-right: 1px solid var(--darkest-blue);
+}
+
+.param-accordion-heading {
+    /*background-color: var(--darker-blue);*/
+}
+
+.param-accordion-button {
+    color: var(--white);
+    padding: 1em 2em 1em;
+    /*border-bottom: 1px solid var(--darkest-blue);*/
+    cursor: pointer;
+    outline:none;
+    background-color: var(--darker-blue);
+}
+
+.param-accordion-button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.param-accordion-button[aria-expanded='true']::before,
+.param-accordion-button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+.param-accordion-panel {
+    padding: 1em;
+    animation: fadein 0.35s ease-in;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

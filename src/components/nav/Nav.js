@@ -2,11 +2,11 @@ import React from "react";
 import Button from "../Button/Button";
 import "./Nav.css";
 
-const Nav = () => {
+const Nav = ({clickHandler, activeTab}) => {
   return (
     <ul data-testid="nav-container" className="nav">
-      <li><Button active title="Run Model WorkFlow"/></li>
-      <li><Button title="Manage"/></li>
+      <li><Button name="workflow" active={activeTab == "workflow"} title="Run Model WorkFlow" clickHandler={clickHandler}/></li>
+      <li><Button name="params" active={activeTab === "params"} title="Manage Params" clickHandler={clickHandler}/></li>
     </ul>
   )
 }

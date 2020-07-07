@@ -15,6 +15,7 @@
 
 .params-form {
     display: flex;
+    margin-left: 1em;
 }
 
 .errorSpan {
@@ -37,6 +38,6 @@
 }
 
 .header {
-    margin-top: 2em;
     color: var(--white);
+    margin-left: 1em;
 }

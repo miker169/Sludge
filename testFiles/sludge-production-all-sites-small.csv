@@ -1,5 +1,5 @@
-﻿catchment,site,id,type,rank,total_capacity,production,liquid_capacity,cake_capacity,total_imports
-YORK NABURN/STW,ACKLAM/STW,2,STW,1,0.004,0.002,0,0,0
+﻿catchment,site,id,type,rank,total_capacity,production,liquid_capacity,cake_capacity,total_imports, startDate
+YORK NABURN/STW,ACKLAM/STW,2,STW,1,0.004,0.002,0,0,0,02-06-2020
 YORK NABURN/STW,AMPLEFORTH VILLAGE/STW,14,STW,1,0.1,0.05,0,0,0
 YORK NABURN/STW,APPLETON LE MOOR/STW,16,STW,1,0.022,0.011,0,0,0
 YORK NABURN/STW,ASKHAM BRYAN/STW,21,STW,1,0.23,0.115,0,0,0
