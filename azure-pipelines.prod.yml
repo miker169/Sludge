@@ -2,28 +2,25 @@
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-trigger:
-- master
-
-resources:
-- repo: self
+pr: ['master']
+trigger: ['master']
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '17d33531-889c-4023-ae27-dd048fa9b179'
   imageRepository: 'YW-frontend-prod'
+  dockerfilePath: 'Dockerfile'
+  dockerRegistryServiceConnection: 'ywbmprodacr'
+  subscriptionID: 'yw-bm-prod-kv-access'
+  keyVault: 'ywbmksprod'
   imageName: 'yw-fe'
-  containerRegistry: 'ywwwdev.azurecr.io'
-  dockerfilePath: '**/Dockerfile.prod'
-  tag: '$(Build.BuildId)'
-  
+
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: Build
   displayName: Build and push stage
-  jobs:  
+  jobs:
   - job: Build
     displayName: Build
     pool:
@@ -33,7 +30,7 @@ stages:
     - task: AzureKeyVault@1
       inputs:
         azureSubscription: $(subscriptionID)
-        KeyVaultName: 'ywwwksdev'
+        KeyVaultName: $(keyVault)
         SecretsFilter: '*'
     - task: Docker@2
       displayName: Login to ACR
