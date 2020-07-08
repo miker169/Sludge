@@ -56,7 +56,7 @@ app.post('/run-model', async function(req, res) {
     console.log('Calling with' , JSON.stringify(req.body))
     debugger;
     const runModelUrl = process.env.RUN_MODEL
-    axios.post(`${runModelUrl}`, req.body)
+    axios.post(runModelUrl, req.body)
     .then((response) => {
       console.log('Returning back to caller')
       console.log(response.data)
