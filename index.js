@@ -24,7 +24,6 @@ app.get('/', function (req, res) {
 });
 
 app.post('/file-upload',async function(req, res) {
-  debugger;
   const connectionString = process.env.DEV_DATASTORE_KEY;
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('inputs');
@@ -55,8 +54,9 @@ app.post('/run-model', async function(req, res) {
   try {
     console.log('About to call run_model')
     console.log('Calling with' , JSON.stringify(req.body))
+    debugger;
     const runModelUrl = process.env.RUN_MODEL
-    axios.post(runModelUrl, req.body)
+    axios.post(`${runModelUrl}`, req.body)
     .then((response) => {
       console.log('Returning back to caller')
       console.log(response.data)
