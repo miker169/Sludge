@@ -16,14 +16,13 @@ export default () => {
     if(loadedFile.name.includes('.csv')){
       Papa.parse(loadedFile, {
         complete: (csv) => {
-          let date = csv.data[1][10]
+          let date = csv.data[1][5]
           let startDate = moment(new Date(date))
           setParamsStartDate(startDate)
         }
       });
     }
 
-    debugger;
     const data = new FormData();
     data.append('file', loadedFile)
     axios.post('/file-upload', data)
