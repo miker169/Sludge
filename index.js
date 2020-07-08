@@ -24,6 +24,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/file-upload',async function(req, res) {
+  debugger;
   const connectionString = process.env.DEV_DATASTORE_KEY;
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('inputs');

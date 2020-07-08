@@ -26,10 +26,10 @@ export default () => {
     debugger;
     const data = new FormData();
     data.append('file', loadedFile)
-    // axios.post('/file-upload', data)
-    //   .then(res => {
-    //     console.log(res.statusText)
-    //   })
+    axios.post('/file-upload', data)
+      .then(res => {
+        console.log(res.statusText)
+      })
   };
 
   return {sendFileToBlob};
