@@ -14,7 +14,7 @@ const ParamsAccordion = ({children}) =>
         <AccordionItem className="param-accordion-item">
           <AccordionItemHeading className="param-accordion-heading">
             <AccordionItemButton className="param-accordion-button">
-              All Params
+              <span className="param-title-text">All Params</span>
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="param-accordion-panel">

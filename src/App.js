@@ -10,7 +10,7 @@ import { HelpContextProvider } from './context/HelpContext';
 import { ParamsContextProvider } from './context/ParamsContext'
 
 function App() {
-  const [activeTab, setActiveTab] = React.useState('params')
+  const [activeTab, setActiveTab] = React.useState('workflow')
   const clickHandler = (e) => {
     setActiveTab(e.target.name);
   }

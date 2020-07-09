@@ -23,7 +23,7 @@ const GranualarParamsAccordiong = ({ paramsList, setParamItem }) => {
         <AccordionItem className="param-accordion-item">
           <AccordionItemHeading className="param-accordion-heading">
             <AccordionItemButton className="param-accordion-button">
-              {date}
+              <span className="param-title-text">{date}</span>
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="param-accordion-panel">

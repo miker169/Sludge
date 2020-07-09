@@ -14,7 +14,6 @@ const ParamsForm = React.memo(({ disabled, params, setParams }) => {
   if (disabled) return null;
   return (
     <div data-testid="params-component">
-      <p>If you change these, this will change the default for all values.</p>
       <form className="params-form" data-testid="params-form">
         <TextField
           name="driversLiquid"

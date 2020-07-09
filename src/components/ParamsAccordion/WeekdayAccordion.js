@@ -15,7 +15,7 @@ const WeekdayAccordion = ({ children }) => {
         <AccordionItem className="param-accordion-item">
           <AccordionItemHeading className="param-accordion-heading">
             <AccordionItemButton className="param-accordion-button">
-              Weekday
+              <span className="param-title-text"> Weekday</span>
             </AccordionItemButton>
           </AccordionItemHeading>
           <AccordionItemPanel className="param-accordion-panel">

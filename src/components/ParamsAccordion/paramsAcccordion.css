@@ -2,6 +2,10 @@
     margin-bottom: 3em;
 }
 
+.param-title-text{
+    color: var(--white)
+}
+
 .param-accordion-item {
     border: 1px solid var(--darkest-blue);
     /*border-left: 1px solid var(--darkest-blue);*/
