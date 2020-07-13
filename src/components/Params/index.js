@@ -29,7 +29,7 @@ const Params = () => {
   };
 
   let startDate = moment(new Date());
-  if(paramsStartDate > moment(new Date())){
+  if(!!paramsStartDate){
     startDate = paramsStartDate
   }
 
@@ -128,7 +128,6 @@ const Params = () => {
 
     const newParams = {...params, [name]:value}
     const weekDays = buildWeekDays(startDate, endDate);
-    debugger;
     weekDays.forEach((date) => {
       paramsList[date] = newParams
     })

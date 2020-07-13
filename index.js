@@ -18,10 +18,10 @@ app.use(fileUpload({
 
 app.use(express.json());
 
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+// app.use(express.static(path.join(__dirname, 'build')));
+// app.get('/', function (req, res) {
+//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
 
 app.post('/file-upload',async function(req, res) {
   const connectionString = process.env.DEV_DATASTORE_KEY;
@@ -59,7 +59,6 @@ app.post('/run-model', async function(req, res) {
     .then((response) => {
       console.log('Returning back to caller')
       console.log(response.data)
-      res.send(response.data)
     })
     .catch(err => {
       console.log('We have an error', err)

@@ -1,12 +1,14 @@
 import axios from 'axios';
+import React from 'react';
 import moment from 'moment';
+import {ParamsContext} from "../context/ParamsContext";
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName) => {
-  setHelpText('Running data model...');
+export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName, startDate, paramsList) => {
+ setHelpText('Running data model...');
     const enumerateDaysBetweenDates = (startDate, endDate) => {
       let dates = [];
       dates.push(startDate.clone().format('DD/MM/YYYY'));
@@ -24,14 +26,16 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
       return dates;
     };
 
-    let startDate = moment(new Date());
+
+
     let endDate = startDate.clone().add(13, 'days');
     let dates = enumerateDaysBetweenDates(startDate, endDate);
 
-    const paramsList = {};
-    dates.forEach((date) => {
-      paramsList[date] = params
-    })
+    if(!paramsList.keys){
+      dates.forEach((date) => {
+        paramsList[date] = params
+      })
+    }
 
     const res = await axios({
       method: 'post',
