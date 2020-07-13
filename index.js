@@ -54,7 +54,6 @@ app.post('/run-model', async function(req, res) {
   try {
     console.log('About to call run_model')
     console.log('Calling with' , JSON.stringify(req.body))
-    debugger;
     const runModelUrl = process.env.RUN_MODEL
     axios.post(runModelUrl, req.body)
     .then((response) => {

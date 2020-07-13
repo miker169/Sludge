@@ -5,9 +5,10 @@ import Nav from './components/nav/Nav';
 import Header from './components/Header/header';
 import Main from './components/Main';
 import Params from './components/Params';
-import { Provider as ScenarioProvider } from './context/ScenarioContext';
-import { HelpContextProvider } from './context/HelpContext';
-import { ParamsContextProvider } from './context/ParamsContext'
+import {Provider as ScenarioProvider} from './context/ScenarioContext';
+import {HelpContextProvider} from './context/HelpContext';
+import {ParamsContextProvider} from './context/ParamsContext'
+import {FileContextProvider} from "./context/FileContext";
 
 function App() {
   const [activeTab, setActiveTab] = React.useState('workflow')
@@ -18,15 +19,17 @@ function App() {
   return (
     <div data-testid="app">
       <ScenarioProvider>
-        <ParamsContextProvider>
-        <HelpContextProvider>
-          <Header />
-          <Nav clickHandler={clickHandler} activeTab={activeTab} />
-          {
-            activeTab === 'params' ? <Params/> : <Main/>
-          }
-        </HelpContextProvider>
-        </ParamsContextProvider>
+        <FileContextProvider>
+          <ParamsContextProvider>
+            <HelpContextProvider>
+              <Header/>
+              <Nav clickHandler={clickHandler} activeTab={activeTab}/>
+              {
+                activeTab === 'params' ? <Params/> : <Main/>
+              }
+            </HelpContextProvider>
+          </ParamsContextProvider>
+        </FileContextProvider>
       </ScenarioProvider>
     </div>
   );

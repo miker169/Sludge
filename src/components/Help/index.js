@@ -4,8 +4,10 @@ import FlowHelp from "./FlowHelp";
 import Info from "./Info";
 import UploadedFiles from "./UploadedFiles";
 import { HelpContext } from "../../context/HelpContext";
+import {FileContext} from "../../context/FileContext";
 
-const Help = ({messages, files }) => {
+const Help = ({messages }) => {
+  const {files} = React.useContext(FileContext)
  const { helpText, errorText } = React.useContext(HelpContext);
   return (
     <div data-testid="component-help">

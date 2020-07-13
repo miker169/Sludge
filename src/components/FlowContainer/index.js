@@ -7,8 +7,10 @@ import RunButton from './RunButton';
 import ResultsButton from './ResultsButton';
 import useFlow from '../../hooks/useFlow';
 import ParamsForm from "./ParamsForm";
+import {FileContext} from "../../context/FileContext";
 
-const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref) => {
+const FlowContainer = React.forwardRef(({ enabled, saveMessages }, ref) => {
+  const { files } = React.useContext(FileContext)
   const {
     state,
     beginUpload,
@@ -29,7 +31,7 @@ const FlowContainer = React.forwardRef(({ enabled, payload, saveMessages }, ref)
       <div data-testid="component-flow" className="flowContainer">
         <Input
           disabled={state.inputDisabled}
-          payload={payload}
+          payload={files}
           beginUpload={beginUpload}
           finishUpload={finishUpload}
           saveMessages={saveMessages}

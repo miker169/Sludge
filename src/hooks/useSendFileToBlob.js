@@ -12,7 +12,6 @@ export default () => {
   const { setParamsStartDate } = React.useContext(ParamsContext)
 
   const sendFileToBlob = loadedFile => {
-    debugger;
     if(loadedFile.name.includes('.csv')){
       Papa.parse(loadedFile, {
         complete: (csv) => {

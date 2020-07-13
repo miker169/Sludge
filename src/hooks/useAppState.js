@@ -1,6 +1,7 @@
-import React from 'react';
+import React  from 'react';
 
 export default () => {
+
   const initialState = {
     files: [],
     payload: null,
@@ -12,9 +13,6 @@ export default () => {
     switch (type) {
       case "RESET":
         return {...initialState}
-      case "SET_FILES": {
-        return {...state, files: [...state.files, payload]}
-      }
       case "SET_PAYLOAD":
         return {...state, payload }
       case "SET_ENABLED":

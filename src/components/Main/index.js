@@ -7,25 +7,27 @@ import ScenarioModelling from "../scenarioModelling";
 import RefreshButton from "../refreshButton";
 import useAppState from "../../hooks/useAppState";
 import {HelpContext} from "../../context/HelpContext";
+import {FileContext} from "../../context/FileContext";
 
 const Main = () => {
 
-  const { setEnabled, setPayload, setFiles, setMessages, state, reset  } = useAppState();
+  const { setEnabled, setPayload, setMessages, state, reset  } = useAppState();
   const { errorText } = React.useContext(HelpContext);
+  const { files } = React.useContext(FileContext)
   const flowStateRef = React.createRef();
 
-  if( state.files.length === 2 && state.enabled === false){
+  if( files.length === 2 && state.enabled === false){
     setEnabled(true);
   }
 
   return (
     <div data-testid="component-main" className="mainContainer">
       <div className="csv-choose">
-        {state.enabled ? null : <FileInput setFiles={setFiles} files={state.files} setPayload={setPayload} payload={state.payload} /> }
-        <Help enabled={state.enabled} files={state.files} messages={state.messages} />
+        {state.enabled ? null : <FileInput  setPayload={setPayload} payload={state.payload} /> }
+        <Help enabled={state.enabled}  messages={state.messages} />
         <RefreshButton onClickHandler={reset} flowReset={flowStateRef}/>
       </div>
-      <FlowContainer enabled={state.enabled} payload={state.files} saveMessages={setMessages} ref={flowStateRef}/>
+      <FlowContainer enabled={state.enabled} saveMessages={setMessages} ref={flowStateRef}/>
       <hr className="spacer"/>
       <ScenarioModelling />
     </div>

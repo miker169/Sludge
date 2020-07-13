@@ -11,7 +11,6 @@ import {
 import ParamsForm from "../FlowContainer/ParamsForm";
 
 const GranualarParamsAccordiong = ({ paramsList, setParamItem }) => {
-  debugger;
   // get the next 14 dates
 
  const dates = Object.keys(paramsList)

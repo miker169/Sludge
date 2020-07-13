@@ -2,15 +2,17 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCaretDown } from  '@fortawesome/free-solid-svg-icons'
 import './fileUpload.css'
+import {FileContext} from "../../context/FileContext";
 
-const FileInput = ({setFiles,files}) => {
+const FileInput = () => {
 
   const ref = React.useRef(null);
+  const { setFileHandler} = React.useContext(FileContext)
 
   const HiddenInput = () => (
     <input accept=".csv, text/csv, application/csv. xsl, .xlsx"
            onChange={(e) => {
-             setFiles(e.target.files[0])
+             setFileHandler(e.target.files[0])
           } }
            data-testid="hidden-input"
            ref={ref}
