@@ -63,10 +63,10 @@ app.post('/run-model', async function(req, res) {
       res.send(response.data);
     })
     .catch(err => {
-      res.status(500).send(err)
+      res.send(err)
     })
   }catch(err)  {
-    res.status(500).send(err)
+    res.send(err)
   }
 })
 const PORT = process.env.PORT || 8080;
