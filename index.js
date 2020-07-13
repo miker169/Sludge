@@ -44,6 +44,7 @@ app.post('/latest-output', async function(req, res){
   });
   let buffer = await blockBlobClient.downloadToBuffer()
   res.end(buffer)
+
 })
 
 
