@@ -15,9 +15,10 @@ export default () => {
     if(loadedFile.name.includes('.csv')){
       Papa.parse(loadedFile, {
         complete: (csv) => {
-          let date = csv.data[1][5]
-          let startDate = moment(new Date(date))
-          setParamsStartDate(startDate)
+          debugger;
+          const date = csv.data[1][5]
+          const startDate = new Date(date.split('/')[2], date.split('/')[1] - 1, date.split('/')[0]);
+          setParamsStartDate(moment(startDate))
         }
       });
     }

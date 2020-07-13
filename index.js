@@ -59,6 +59,7 @@ app.post('/run-model', async function(req, res) {
     .then((response) => {
       console.log('Returning back to caller')
       console.log(response.data)
+      res.send(response.data);
     })
     .catch(err => {
       console.log('We have an error', err)

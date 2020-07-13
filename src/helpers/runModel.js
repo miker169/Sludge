@@ -28,6 +28,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
 
 
 
+    debugger
     let endDate = startDate.clone().add(13, 'days');
     let dates = enumerateDaysBetweenDates(startDate, endDate);
 
@@ -46,18 +47,20 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
         'Content-Type': 'application/json'
       }
     })
-    const {errors, data} = res;
+    const {errors, filename} = res.data;
+    debugger;
     if (errors) {
       saveMessages(errors);
     } else {
-      console.log('We have had a response ', data )
-      setDownloadFileName(data.filename)
+      console.log('We have had a response ', filename )
+      setDownloadFileName(filename)
 
       const blobResponse = await fetch('/latest-output', {
         method: 'post',
-        body: JSON.stringify(data),
+        body: JSON.stringify({'filename': filename}),
         headers: {'Content-Type': 'application/json'}
       })
+      debugger;
       const body = await blobResponse.blob();
       let item = window.URL.createObjectURL(body);
       modelRan(item)
