@@ -6,17 +6,17 @@ export const ParamsContext = React.createContext();
 export const ParamsContextProvider = ({children}) => {
   const enumerateDaysBetweenDates = (startDate, endDate) => {
     let dates = [];
-    dates.push(startDate.clone().format('dddd Do of MMM YYYY'));
+    dates.push(startDate.clone().format('DD/MM/YYYY'));
 
     let currDate = moment(startDate).startOf('day');
     let lastDate = moment(endDate).startOf('day');
 
     while (currDate.add(1, 'days').diff(lastDate) < 0) {
       console.log(currDate.toDate());
-      dates.push(currDate.clone().format('dddd Do of MMM YYYY'));
+      dates.push(currDate.clone().format('DD/MM/YYYY'));
     }
 
-    dates.push(endDate.clone().format('dddd Do of MMM YYYY'));
+    dates.push(endDate.clone().format('DD/MM/YYYY'));
 
     return dates;
   };
