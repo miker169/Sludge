@@ -9,39 +9,10 @@ import {ParamsContext} from "../../context/ParamsContext";
 
 
 const Params = () => {
-  const { paramsStartDate, setParams, params,setWeekdayParams, weekdayParams, setWeekEndParams, weekendParams  } = React.useContext(ParamsContext);
+  const { paramsStartDate, setParams, params,setWeekdayParams, weekdayParams, setWeekEndParams, weekendParams, paramsList, setParamsList, paramsDates } = React.useContext(ParamsContext);
 
-  const enumerateDaysBetweenDates = (startDate, endDate) => {
-    let dates = [];
-    dates.push(startDate.clone().format('dddd Do of MMM YYYY'));
+  let endDate = paramsStartDate.clone().add(13, 'days');
 
-    let currDate = moment(startDate).startOf('day');
-    let lastDate = moment(endDate).startOf('day');
-
-    while (currDate.add(1, 'days').diff(lastDate) < 0) {
-      console.log(currDate.toDate());
-      dates.push(currDate.clone().format('dddd Do of MMM YYYY'));
-    }
-
-    dates.push(endDate.clone().format('dddd Do of MMM YYYY'));
-
-    return dates;
-  };
-
-  let startDate = moment(new Date());
-  if(!!paramsStartDate){
-    startDate = paramsStartDate
-  }
-
-  let endDate = startDate.clone().add(13, 'days');
-  let dates = enumerateDaysBetweenDates(startDate, endDate);
-
-  const initialParamsList = {};
-  dates.forEach((date) => {
-    initialParamsList[date] = params
-  })
-
-  const [paramsList, setParamsListItem] = React.useState(initialParamsList);
 
   const buildWeekendDates = (startDate, endDate) => {
     let dates = [];
@@ -63,7 +34,7 @@ const Params = () => {
     return dates;
   }
 
-  const weekEndDates = buildWeekendDates(startDate, endDate);
+  const weekEndDates = buildWeekendDates(paramsStartDate, endDate);
 
   const buildWeekDays = (startDate, endDate) => {
     let dates = [];
@@ -98,11 +69,11 @@ const Params = () => {
 
     const newParamsList = {};
     const newParams = {...params, [name]:value}
-    dates.forEach((date) => {
+    paramsDates.forEach((date) => {
       newParamsList[date] = newParams
     })
 
-    setParamsListItem(newParamsList)
+    setParamsList(newParamsList)
 
   }
 
@@ -112,12 +83,12 @@ const Params = () => {
     });
 
     const newParams = {...params, [name]:value}
-    const weekendDays = buildWeekendDates(startDate, endDate);
+    const weekendDays = buildWeekendDates(paramsStartDate, endDate);
     weekendDays.forEach((date) => {
       paramsList[date] = newParams
     })
 
-    setParamsListItem(paramsList)
+    setParamsList(paramsList)
   }
 
 
@@ -127,12 +98,11 @@ const Params = () => {
     });
 
     const newParams = {...params, [name]:value}
-    const weekDays = buildWeekDays(startDate, endDate);
+    const weekDays = buildWeekDays(paramsStartDate, endDate);
     weekDays.forEach((date) => {
       paramsList[date] = newParams
     })
-
-    setParamsListItem(paramsList)
+    setParamsList(paramsList)
   }
 
 
@@ -142,7 +112,7 @@ const Params = () => {
 
     paramsList[date] = newParams;
     const newParamsList = {...paramsList}
-    setParamsListItem(newParamsList)
+    setParamsList(newParamsList)
   }
 
 

@@ -9,16 +9,15 @@ export default () => {
 
   // get date from file
   // save it for params to use
-  const { setParamsStartDate } = React.useContext(ParamsContext)
+  const { setParamsStartDateHook } = React.useContext(ParamsContext)
 
   const sendFileToBlob = loadedFile => {
     if(loadedFile.name.includes('.csv')){
       Papa.parse(loadedFile, {
         complete: (csv) => {
-          debugger;
           const date = csv.data[1][5]
           const startDate = new Date(date.split('/')[2], date.split('/')[1] - 1, date.split('/')[0]);
-          setParamsStartDate(moment(startDate))
+          setParamsStartDateHook(moment(startDate))
         }
       });
     }

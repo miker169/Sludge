@@ -26,44 +26,44 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
       return dates;
     };
 
-
-
-    debugger
     let endDate = startDate.clone().add(13, 'days');
     let dates = enumerateDaysBetweenDates(startDate, endDate);
 
-    if(!paramsList.keys){
+    if(Object.keys(paramsList).length == 0){
       dates.forEach((date) => {
         paramsList[date] = params
       })
     }
 
-    const res = await axios({
-      method: 'post',
-      url: '/run-model',
-      data: JSON.stringify(paramsList),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-    })
-    const {errors, filename} = res.data;
-    debugger;
-    if (errors) {
-      saveMessages(errors);
-    } else {
-      console.log('We have had a response ', filename )
-      setDownloadFileName(filename)
 
-      const blobResponse = await fetch('/latest-output', {
+    try {
+      const res = await axios({
         method: 'post',
-        body: JSON.stringify({'filename': filename}),
-        headers: {'Content-Type': 'application/json'}
+        url: '/run-model',
+        data: JSON.stringify(paramsList),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
       })
-      debugger;
-      const body = await blobResponse.blob();
-      let item = window.URL.createObjectURL(body);
-      modelRan(item)
+      const {errors, filename} = res.data;
+      if (errors) {
+        saveMessages(errors);
+      } else {
+        console.log('We have had a response ', filename)
+        setDownloadFileName(filename)
 
+        const blobResponse = await fetch('/latest-output', {
+          method: 'post',
+          body: JSON.stringify({'filename': filename}),
+          headers: {'Content-Type': 'application/json'}
+        })
+        const body = await blobResponse.blob();
+        let item = window.URL.createObjectURL(body);
+        modelRan(item)
+
+      }
+    }catch(ex){
+      console.log(JSON.stringify(ex,null,2))
     }
 };

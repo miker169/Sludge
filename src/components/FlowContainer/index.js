@@ -8,19 +8,12 @@ import ResultsButton from './ResultsButton';
 import useFlow from '../../hooks/useFlow';
 import ParamsForm from "./ParamsForm";
 import {FileContext} from "../../context/FileContext";
+import {FlowContext} from "../../context/FlowContext";
 
 const FlowContainer = React.forwardRef(({ enabled, saveMessages }, ref) => {
   const { files } = React.useContext(FileContext)
-  const {
-    state,
-    beginUpload,
-    finishUpload,
-    beginRunData,
-    modelRan,
-    setDownloadFileName,
-    resetFlow,
-    paramErrors
-  } = useFlow();
+  const { paramErrors, resetFlow, state, beginRunData, modelRan, setDownloadFileName} = React.useContext(FlowContext)
+
 
   React.useImperativeHandle(ref, () => ({
     reset: () => resetFlow()
@@ -32,8 +25,6 @@ const FlowContainer = React.forwardRef(({ enabled, saveMessages }, ref) => {
         <Input
           disabled={state.inputDisabled}
           payload={files}
-          beginUpload={beginUpload}
-          finishUpload={finishUpload}
           saveMessages={saveMessages}
         />
         <Update

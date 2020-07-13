@@ -2,17 +2,19 @@ import React from 'react';
 import Button from "../../Button/Button";
 import './input.css'
 import useUploadData from "../../../hooks/useUploadFiles";
+import {FlowContext} from "../../../context/FlowContext";
 
-const Input = ({disabled, payload, beginUpload, finishUpload, saveMessages}) => {
+const Input = ({payload, saveMessages}) => {
+  const {finishUpload, beginUpload, state} = React.useContext(FlowContext)
   const { uploadData } = useUploadData(payload, beginUpload, finishUpload, saveMessages);
 
   return (
   <div className="inputFlow" data-testid="input-static">
     <Button
-      clickHandler={disabled ? (evt) => evt.preventDefault() : () => {
+      clickHandler={state.inputDisabled ? (evt) => evt.preventDefault() : () => {
         uploadData()
       }}
-      disabled={disabled}
+      disabled={state.inputDisabled}
       name="input"
       classes={['flow']}
       title="Input Static Data"
