@@ -52,19 +52,25 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
       throw error;
     }
   )
-  axios({
+
+  fetch('/run-model', {
     method: 'post',
-    url: '/run-model',
-    data: JSON.stringify(paramsList),
+    body: JSON.stringify(paramsList),
+    mode: 'cors',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*'
     }
-  }).then(res => {
+  }).then((res)  => {
+    return res.json();
+  })
+  .then(res => {
+    console.log(JSON.stringify(res, null, 2));
     const {errors, filename} = res.data;
     debugger;
     if (errors) {
+      console.log('We have errrors');
       saveMessages(errors);
     } else {
       console.log('We have had a response ', filename)
@@ -82,6 +88,7 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
     }
     debugger;
   }).catch(ex => {
+    console.log('IN Catch')
     console.log(JSON.stringify(ex, null, 2))
     debugger;
   });
