@@ -63,9 +63,11 @@ app.post('/run-model', async function(req, res) {
       res.send(response.data);
     })
     .catch(err => {
+      debugger;
       res.send(err)
     })
   }catch(err)  {
+    debugger;
     res.send(err)
   }
 })

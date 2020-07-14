@@ -6,12 +6,11 @@ export default (payload, beginUpload, finishUpload, saveMessages) => {
 
   const { setHelpText } = React.useContext(HelpContext)
   const {sendFileToBlob } = useSendFileToBlob()
-  const uploadData = () => {
+  const uploadData = async () => {
     setHelpText('Uploading files...');
     beginUpload();
-    payload.forEach(file => {
-      sendFileToBlob(file)
-    })
+    await sendFileToBlob(payload[0])
+    await sendFileToBlob(payload[1])
     finishUpload();
   }
 

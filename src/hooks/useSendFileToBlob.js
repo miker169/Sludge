@@ -11,7 +11,7 @@ export default () => {
   // save it for params to use
   const { setParamsStartDateHook } = React.useContext(ParamsContext)
 
-  const sendFileToBlob = loadedFile => {
+  const sendFileToBlob = async (loadedFile) => {
     if(loadedFile.name.includes('.csv')){
       Papa.parse(loadedFile, {
         complete: (csv) => {
@@ -24,10 +24,9 @@ export default () => {
 
     const data = new FormData();
     data.append('file', loadedFile)
-    axios.post('/file-upload', data)
-      .then(res => {
-        console.log(res.statusText)
-      })
+    const res = await axios.post('/file-upload', data);
+    console.log(res.statusText)
+    return true;
   };
 
   return {sendFileToBlob};

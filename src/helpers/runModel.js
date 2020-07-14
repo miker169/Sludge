@@ -46,6 +46,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
           'Content-Type': 'application/json'
         }
       })
+      debugger;
       const {errors, filename} = res.data;
       if (errors) {
         saveMessages(errors);
@@ -64,6 +65,7 @@ export const runModel = async (saveMessages, modelRan, setHelpText, params, setD
 
       }
     }catch(ex){
+      debugger;
       console.log(JSON.stringify(ex,null,2))
     }
 };
