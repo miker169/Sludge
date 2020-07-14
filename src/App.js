@@ -8,7 +8,7 @@ import Params from './components/Params';
 import {Provider as ScenarioProvider} from './context/ScenarioContext';
 import {HelpContextProvider} from './context/HelpContext';
 import {ParamsContextProvider} from './context/ParamsContext'
-import {FileContextProvider} from\ "./context/FileContext";
+import {FileContextProvider} from "./context/FileContext";
 import {FlowContextProvider} from "./context/FlowContext";
 
 function App() {

@@ -8,6 +8,7 @@ const cors = require('cors')
 const { BlobServiceClient } = require("@azure/storage-blob");
 require('dotenv').config()
 const app = express();
+const fetch = require('node-fetch');
 
 app.use(fileUpload({
   useTempFiles : true,
@@ -63,17 +64,23 @@ app.post('/run-model', function(req, res) {
     console.log('About to call run_model')
     console.log('Calling with' , JSON.stringify(req.body))
     const runModelUrl = process.env.RUN_MODEL
-    axios.post(runModelUrl, req.body)
-    .then((response) => {
-      console.log('Returning back to caller')
-      console.log(JSON.stringify(response.data, null, 2))
-      res.send(response.data);
+    fetch(runModelUrl, {
+      method: 'post',
+      body: JSON.stringify(req.body),
+      headers: { 'Content-Type': 'application/json' },
+    }).then(res => {
+      console.log(JSON.stringify(res, null, 2))
+      return res.json()
     })
-    .catch(err => {
-      debugger;
-      console.log(JSON.stringify(err, null, 2))
-      res.send(err)
-    })
+      .then(json => {
+        console.log('Returning back to caller')
+        console.log(JSON.stringify(json, null, 2))
+        res.send(json);
+      })
+      .catch(err => {
+        console.log(JSON.stringify(err, null, 2))
+        res.send(err)
+      })
 })
 const PORT = process.env.PORT || 8080;
 const server = app.listen(PORT);

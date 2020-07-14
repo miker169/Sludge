@@ -48,7 +48,6 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
   axios.interceptors.response.use(
     response => response,
     error => {
-      debugger;
       throw error;
     }
   )
@@ -67,11 +66,23 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
   })
   .then(res => {
     console.log(JSON.stringify(res, null, 2));
-    const {errors, filename} = res.data;
-    debugger;
+    const {errors, filename} = res;
     if (errors) {
       console.log('We have errrors');
       saveMessages(errors);
+      if(!!filename){
+        setDownloadFileName(filename)
+        fetch('/latest-output', {
+          method: 'post',
+          body: JSON.stringify({'filename': filename}),
+          headers: {'Content-Type': 'application/json'}
+        }).then((blobResponse) => {
+          return blobResponse.blob()
+        }).then(body => {
+          let item = window.URL.createObjectURL(body);
+          modelRan(item)
+        })
+      }
     } else {
       console.log('We have had a response ', filename)
       setDownloadFileName(filename)
@@ -86,11 +97,9 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
         modelRan(item)
       })
     }
-    debugger;
   }).catch(ex => {
     console.log('IN Catch')
     console.log(JSON.stringify(ex, null, 2))
-    debugger;
   });
 
 
