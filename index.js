@@ -14,14 +14,22 @@ app.use(fileUpload({
   tempFileDir : "/tmp/"
 }));
 
-// app.use(cors());
+app.use(cors());
 
 app.use(express.json());
 
-// app.use(express.static(path.join(__dirname, 'build')));
-// app.get('/', function (req, res) {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+app.use(function(req, res, next){
+  res.setTimeout(900000, function(){
+    console.log('Request has timed out.');
+    res.send(408);
+  });
+  next();
+});
+
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.post('/file-upload',async function(req, res) {
   const connectionString = process.env.DEV_DATASTORE_KEY;
@@ -47,29 +55,26 @@ app.post('/latest-output', async function(req, res){
 
 })
 
-
-app.post('/run-model', async function(req, res) {
+app.post('/run-model', function(req, res) {
+  req.setTimeout(900000)
   const params = req.body;
   console.log('Called by app')
 
-  try {
     console.log('About to call run_model')
     console.log('Calling with' , JSON.stringify(req.body))
     const runModelUrl = process.env.RUN_MODEL
     axios.post(runModelUrl, req.body)
     .then((response) => {
       console.log('Returning back to caller')
-      console.log(response.data)
+      console.log(JSON.stringify(response.data, null, 2))
       res.send(response.data);
     })
     .catch(err => {
       debugger;
+      console.log(JSON.stringify(err, null, 2))
       res.send(err)
     })
-  }catch(err)  {
-    debugger;
-    res.send(err)
-  }
 })
 const PORT = process.env.PORT || 8080;
-app.listen(PORT);
+const server = app.listen(PORT);
+server.setTimeout(900000)

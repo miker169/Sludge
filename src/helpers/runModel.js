@@ -7,65 +7,90 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-export const runModel = async (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName, startDate, paramsList) => {
- setHelpText('Running data model...');
-    const enumerateDaysBetweenDates = (startDate, endDate) => {
-      let dates = [];
-      dates.push(startDate.clone().format('DD/MM/YYYY'));
+export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName, startDate, paramsList) => {
+  setHelpText('Running data model...');
+  const enumerateDaysBetweenDates = (startDate, endDate) => {
+    let dates = [];
+    dates.push(startDate.clone().format('DD/MM/YYYY'));
 
-      let currDate = moment(startDate).startOf('day');
-      let lastDate = moment(endDate).startOf('day');
+    let currDate = moment(startDate).startOf('day');
+    let lastDate = moment(endDate).startOf('day');
 
-      while (currDate.add(1, 'days').diff(lastDate) < 0) {
-        console.log(currDate.toDate());
-        dates.push(currDate.clone().format('DD/MM/YYYY'));
-      }
-
-      dates.push(endDate.clone().format('DD/MM/YYYY'));
-
-      return dates;
-    };
-
-    let endDate = startDate.clone().add(13, 'days');
-    let dates = enumerateDaysBetweenDates(startDate, endDate);
-
-    if(Object.keys(paramsList).length == 0){
-      dates.forEach((date) => {
-        paramsList[date] = params
-      })
+    while (currDate.add(1, 'days').diff(lastDate) < 0) {
+      console.log(currDate.toDate());
+      dates.push(currDate.clone().format('DD/MM/YYYY'));
     }
 
+    dates.push(endDate.clone().format('DD/MM/YYYY'));
 
-    try {
-      const res = await axios({
-        method: 'post',
-        url: '/run-model',
-        data: JSON.stringify(paramsList),
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      })
+    return dates;
+  };
+
+  let endDate = startDate.clone().add(13, 'days');
+  let dates = enumerateDaysBetweenDates(startDate, endDate);
+
+  if (Object.keys(paramsList).length == 0) {
+    dates.forEach((date) => {
+      paramsList[date] = params
+    })
+  }
+  // const response = await fetch('/run-model', {
+  //   method: 'post',
+  //   mode: 'cors',
+  //   body: JSON.stringify(paramsList),
+  //   headers: {
+  //     'Accept': 'application/json',
+  //     'Content-Type': 'application/json'
+  //   }
+  // });
+  //
+  // const res = await response.json();
+  axios.interceptors.response.use(
+    response => response,
+    error => {
       debugger;
-      const {errors, filename} = res.data;
-      if (errors) {
-        saveMessages(errors);
-      } else {
-        console.log('We have had a response ', filename)
-        setDownloadFileName(filename)
-
-        const blobResponse = await fetch('/latest-output', {
-          method: 'post',
-          body: JSON.stringify({'filename': filename}),
-          headers: {'Content-Type': 'application/json'}
-        })
-        const body = await blobResponse.blob();
+      throw error;
+    }
+  )
+  axios({
+    method: 'post',
+    url: '/run-model',
+    data: JSON.stringify(paramsList),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    }
+  }).then(res => {
+    const {errors, filename} = res.data;
+    debugger;
+    if (errors) {
+      saveMessages(errors);
+    } else {
+      console.log('We have had a response ', filename)
+      setDownloadFileName(filename)
+      fetch('/latest-output', {
+        method: 'post',
+        body: JSON.stringify({'filename': filename}),
+        headers: {'Content-Type': 'application/json'}
+      }).then((blobResponse) => {
+        return blobResponse.blob()
+      }).then(body => {
         let item = window.URL.createObjectURL(body);
         modelRan(item)
-
-      }
-    }catch(ex){
-      debugger;
-      console.log(JSON.stringify(ex,null,2))
+      })
     }
+    debugger;
+  }).catch(ex => {
+    console.log(JSON.stringify(ex, null, 2))
+    debugger;
+  });
+
+
+
+// .catch(ex => {
+//   debugger;
+//   console.log(JSON.stringify(ex,null,2))
+// })
+
 };
