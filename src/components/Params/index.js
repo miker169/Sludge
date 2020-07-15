@@ -87,7 +87,6 @@ const Params = () => {
     for(let date of weekendDays){
       paramsList[date][name] = value
     }
-
     setParamsList(paramsList)
   }
 
@@ -96,7 +95,6 @@ const Params = () => {
     setWeekdayParams(prevState => {
       return {...prevState, [name]: value}
     });
-
     const newParams = {...params, [name]:value}
     const weekDays = buildWeekDays(paramsStartDate, endDate);
 
