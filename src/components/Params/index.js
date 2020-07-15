@@ -11,13 +11,14 @@ import {ParamsContext} from "../../context/ParamsContext";
 const Params = () => {
   const { paramsStartDate, setParams, params,setWeekdayParams, weekdayParams, setWeekEndParams, weekendParams, paramsList, setParamsList, paramsDates } = React.useContext(ParamsContext);
 
+  debugger;
   let endDate = paramsStartDate.clone().add(13, 'days');
 
 
   const buildWeekendDates = (startDate, endDate) => {
     let dates = [];
     if(startDate.isoWeekday() === 6 || startDate.isoWeekday() === 7) {
-      dates.push(startDate.clone().format('dddd Do of MMM YYYY'));
+      dates.push(startDate.clone().format('DD/MM/YYYY'));
     }
 
     let currDate = moment(startDate).startOf('day');
@@ -25,11 +26,11 @@ const Params = () => {
 
     while (currDate.add(1, 'days').diff(lastDate) < 0) {
       if(currDate.isoWeekday() === 6 || currDate.isoWeekday() === 7) {
-        dates.push(currDate.clone().format('dddd Do of MMM YYYY'));
+        dates.push(currDate.clone().format('DD/MM/YYYY'));
       }
     }
     if(endDate.isoWeekday() === 6 || endDate.isoWeekday() === 7){
-      dates.push(endDate.clone().format('dddd Do of MMM YYYY'));
+      dates.push(endDate.clone().format('DD/MM/YYYY'));
     }
     return dates;
   }
@@ -39,7 +40,7 @@ const Params = () => {
   const buildWeekDays = (startDate, endDate) => {
     let dates = [];
     if(startDate.isoWeekday() !== 6 && startDate.isoWeekday() !== 7) {
-      dates.push(startDate.clone().format('dddd Do of MMM YYYY'));
+      dates.push(startDate.clone().format('DD/MM/YYYY'));
     }
 
     let currDate = moment(startDate).startOf('day');
@@ -47,11 +48,11 @@ const Params = () => {
 
     while (currDate.add(1, 'days').diff(lastDate) < 0) {
       if(currDate.isoWeekday() !== 6 && currDate.isoWeekday() !== 7) {
-        dates.push(currDate.clone().format('dddd Do of MMM YYYY'));
+        dates.push(currDate.clone().format('DD/MM/YYYY'));
       }
     }
     if(endDate.isoWeekday() !== 6 && endDate.isoWeekday() !== 7){
-      dates.push(endDate.clone().format('dddd Do of MMM YYYY'));
+      dates.push(endDate.clone().format('DD/MM/YYYY'));
     }
     return dates;
   }
