@@ -9,6 +9,7 @@ const Info = ({messages, errorText = []}) => {
     errors: null,
     information: null
   };
+
   return (
     <div data-testid="info-text-component">
       <span data-testid="component-warnings" className="info-help">

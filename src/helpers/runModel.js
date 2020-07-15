@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config();
 }
 
-export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName, startDate, paramsList) => {
+export const runModel = (setErrorText, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName, startDate, paramsList, stopModel) => {
   setHelpText('Running data model...');
   const enumerateDaysBetweenDates = (startDate, endDate) => {
     let dates = [];
@@ -34,23 +34,16 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
       paramsList[date] = params
     })
   }
-  // const response = await fetch('/run-model', {
-  //   method: 'post',
-  //   mode: 'cors',
-  //   body: JSON.stringify(paramsList),
-  //   headers: {
-  //     'Accept': 'application/json',
-  //     'Content-Type': 'application/json'
-  //   }
-  // });
-  //
-  // const res = await response.json();
-  axios.interceptors.response.use(
-    response => response,
-    error => {
-      throw error;
+
+  for (let key in paramsList) {
+    const params = paramsList[key];
+    for (let p in params) {
+      if (typeof params[p] === 'string' || params[p] instanceof String) {
+        //convert to float
+        params[p] = parseFloat(params[p])
+      }
     }
-  )
+  }
 
   fetch('/run-model', {
     method: 'post',
@@ -61,16 +54,17 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*'
     }
-  }).then((res)  => {
+  }).then((res) => {
     return res.json();
   })
   .then(res => {
     console.log(JSON.stringify(res, null, 2));
     const {errors, filename} = res;
     if (errors) {
-      console.log('We have errrors');
-      saveMessages(errors);
-      if(!!filename){
+
+      console.log('We have errors');
+      setErrorText(errors);
+      if (!!filename) {
         setDownloadFileName(filename)
         fetch('/latest-output', {
           method: 'post',
@@ -82,6 +76,8 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
           let item = window.URL.createObjectURL(body);
           modelRan(item)
         })
+      } else {
+        stopModel();
       }
     } else {
       console.log('We have had a response ', filename)
@@ -98,15 +94,9 @@ export const runModel = (saveMessages, modelRan, setHelpText, params, setDownloa
       })
     }
   }).catch(ex => {
+    stopModel();
     console.log('IN Catch')
     console.log(JSON.stringify(ex, null, 2))
   });
-
-
-
-// .catch(ex => {
-//   debugger;
-//   console.log(JSON.stringify(ex,null,2))
-// })
 
 };

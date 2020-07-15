@@ -1,8 +1,4 @@
 const express = require('express')
-const bodyParser = require('body-parser')
-const path = require('path');
-const axios = require('axios');
-const moment = require('moment')
 const fileUpload = require('express-fileupload')
 const cors = require('cors')
 const { BlobServiceClient } = require("@azure/storage-blob");

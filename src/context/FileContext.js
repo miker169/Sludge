@@ -9,8 +9,12 @@ export const FileContextProvider = ({children}) => {
     const newFiles = [...files, newFile ]
     setFiles(newFiles)
   }
+
+  const resetFiles = () => {
+    setFiles([])
+  }
   return (
-    <FileContext.Provider value={{files, setFileHandler}}>
+    <FileContext.Provider value={{files, setFileHandler, resetFiles}}>
       {children}
     </FileContext.Provider>
   )

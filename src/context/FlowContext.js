@@ -64,6 +64,14 @@ export const FlowContextProvider = ({children}) => {
           updateDisabled: false,
           inputUpdateArrowRan: true,
         };
+      case "STOP_MODEL":
+        return {
+          ...state,
+          nextArrowDisabled: true,
+          inputUpdateArrowDisabled: false,
+          updateDisabled: false
+
+        }
       case 'RUNNING_DATA':
         return {
           ...state,
@@ -127,6 +135,11 @@ export const FlowContextProvider = ({children}) => {
     [],
   );
 
+  const stopModel = React.useCallback(
+    () => dispatch({type: 'STOP_MODEL'}),
+    []
+  )
+
   const setDownloadFileName = React.useCallback(
     payload => dispatch({ type: 'SET_DOWNLOAD_FILE_NAME', payload }),
     [],
@@ -141,7 +154,7 @@ export const FlowContextProvider = ({children}) => {
   }, []);
 
   return (
-    <FlowContext.Provider value={{state, paramErrors, resetFlow, setDownloadFileName, modelRan, beginRunData, beginUpload, finishUpload, setParams}}>
+    <FlowContext.Provider value={{state, paramErrors, resetFlow, setDownloadFileName, modelRan, beginRunData, beginUpload, finishUpload, setParams, stopModel}}>
       {children}
     </FlowContext.Provider>
   )

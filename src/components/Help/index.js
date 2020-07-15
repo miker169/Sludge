@@ -9,6 +9,7 @@ import {FileContext} from "../../context/FileContext";
 const Help = ({messages }) => {
   const {files} = React.useContext(FileContext)
  const { helpText, errorText } = React.useContext(HelpContext);
+
   return (
     <div data-testid="component-help">
       {(!messages && errorText.length === 0 )
