@@ -11,7 +11,6 @@ import {ParamsContext} from "../../context/ParamsContext";
 const Params = () => {
   const { paramsStartDate, setParams, params,setWeekdayParams, weekdayParams, setWeekEndParams, weekendParams, paramsList, setParamsList, paramsDates } = React.useContext(ParamsContext);
 
-  debugger;
   let endDate = paramsStartDate.clone().add(13, 'days');
 
 
@@ -68,13 +67,11 @@ const Params = () => {
       return {...prevState, [name]: value}
     })
 
-    const newParamsList = {};
-    const newParams = {...params, [name]:value}
-    paramsDates.forEach((date) => {
-      newParamsList[date] = newParams
-    })
+    for(let date in paramsList){
+      paramsList[date][name] = value;
+    }
 
-    setParamsList(newParamsList)
+    setParamsList(paramsList)
 
   }
 
@@ -85,9 +82,11 @@ const Params = () => {
 
     const newParams = {...params, [name]:value}
     const weekendDays = buildWeekendDates(paramsStartDate, endDate);
-    weekendDays.forEach((date) => {
-      paramsList[date] = newParams
-    })
+
+    // in params list iterate
+    for(let date of weekendDays){
+      paramsList[date][name] = value
+    }
 
     setParamsList(paramsList)
   }
@@ -100,9 +99,10 @@ const Params = () => {
 
     const newParams = {...params, [name]:value}
     const weekDays = buildWeekDays(paramsStartDate, endDate);
-    weekDays.forEach((date) => {
-      paramsList[date] = newParams
-    })
+
+    for(let date of weekDays){
+      paramsList[date][name] = value;
+    }
     setParamsList(paramsList)
   }
 
