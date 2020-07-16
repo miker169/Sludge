@@ -33,12 +33,13 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
   .then(res => {
     const {errors, filename, message} = res;
     console.log(JSON.stringify(res), null, 2)
-    if (errors || message) {
+    if(message){
+      setErrorText([{error: 'There was a network problem', type:'server'}])
+      stopModel();
+    }
+    if (errors) {
       setErrorText(errors);
-      if(message && !filename){
-        setErrorText(['There was a network problem'])
-        stopModel();
-      }
+
       if (!!filename) {
         setDownloadFileName(filename)
         fetch('/latest-output', {
@@ -69,7 +70,7 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
     }
   }).catch(ex => {
 
-    setErrorText(['There was a network problem'])
+    setErrorText([{error: 'There was a network problem', type:'server'}])
     stopModel();
   });
 
