@@ -3,7 +3,6 @@ import FileInput from "../FileUpload/fileInput";
 import FlowContainer from "../FlowContainer";
 import './main.css';
 import Help from "../Help";
-import ScenarioModelling from "../scenarioModelling";
 import RefreshButton from "../refreshButton";
 import useAppState from "../../hooks/useAppState";
 import {HelpContext} from "../../context/HelpContext";
@@ -29,7 +28,6 @@ const Main = () => {
       </div>
       <FlowContainer enabled={state.enabled} saveMessages={setMessages} ref={flowStateRef}/>
       <hr className="spacer"/>
-      <ScenarioModelling />
     </div>
   )
 }

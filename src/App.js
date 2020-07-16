@@ -5,7 +5,6 @@ import Nav from './components/nav/Nav';
 import Header from './components/Header/header';
 import Main from './components/Main';
 import Params from './components/Params';
-import {Provider as ScenarioProvider} from './context/ScenarioContext';
 import {HelpContextProvider} from './context/HelpContext';
 import {ParamsContextProvider} from './context/ParamsContext'
 import {FileContextProvider} from "./context/FileContext";
@@ -19,7 +18,6 @@ function App() {
 
   return (
     <div data-testid="app">
-      <ScenarioProvider>
         <FileContextProvider>
           <ParamsContextProvider>
             <FlowContextProvider>
@@ -33,7 +31,6 @@ function App() {
             </FlowContextProvider>
           </ParamsContextProvider>
         </FileContextProvider>
-      </ScenarioProvider>
     </div>
   );
 }

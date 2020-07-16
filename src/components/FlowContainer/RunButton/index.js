@@ -6,20 +6,20 @@ import { HelpContext} from "../../../context/HelpContext";
 import {ParamsContext} from "../../../context/ParamsContext";
 import {FlowContext} from "../../../context/FlowContext";
 
-const RunButton = ({downloadFileName, runDisabled, saveMessages, modelRan, beginRunData, params, setDownloadFileName, paramErrors}) => {
+const RunButton = () => {
 
   const { setHelpText, setErrorText } = React.useContext(HelpContext);
-  const {paramsStartDate, paramsList} = React.useContext(ParamsContext)
-  const { stopModel} = React.useContext(FlowContext)
+  const {paramsList} = React.useContext(ParamsContext)
+  const { stopModel, beginRunData, modelRan, state, setDownloadFileName} = React.useContext(FlowContext)
 
   return (
     <div className="runFlow" data-testid="run-component">
       <Button
         clickHandler={() => {
           beginRunData();
-          runModel(setErrorText, modelRan, setHelpText, params, setDownloadFileName, paramErrors, downloadFileName, paramsStartDate, paramsList, stopModel)
+          runModel(setErrorText, modelRan, setHelpText,setDownloadFileName, paramsList, stopModel)
         }}
-        disabled={runDisabled}
+        disabled={state.runDisabled}
         name="run"
         classes={['flow']}
         title="Run Model"

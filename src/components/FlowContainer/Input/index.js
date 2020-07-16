@@ -3,10 +3,12 @@ import Button from "../../Button/Button";
 import './input.css'
 import useUploadData from "../../../hooks/useUploadFiles";
 import {FlowContext} from "../../../context/FlowContext";
+import {FileContext} from "../../../context/FileContext";
 
-const Input = ({payload, saveMessages}) => {
-  const {finishUpload, beginUpload, state} = React.useContext(FlowContext)
-  const { uploadData } = useUploadData(payload, beginUpload, finishUpload, saveMessages);
+const Input = ({saveMessages}) => {
+  const { files } = React.useContext(FileContext)
+  const { finishUpload, beginUpload, state} = React.useContext(FlowContext)
+  const { uploadData } = useUploadData(files, beginUpload, finishUpload, saveMessages);
 
   return (
   <div className="inputFlow" data-testid="input-static">

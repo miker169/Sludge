@@ -7,6 +7,7 @@ if(!!messages[0]["run_errors"]){
   messages = messages[0]["run_errors"]
 }
 
+
   return (
       <div data-testid="info-text-component" className="info-message">
         <span className="info-help-title">{`${type} Messages`}</span>
