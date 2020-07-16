@@ -1,3 +1,25 @@
+.field-input {
+    background-color: var(--darker-blue);
+    border: 2px solid var(--medium-blue--disabled);
+    padding: 1em;
+    color: var(--white);
+    border-radius: .4em;
+}
+
+.field-label {
+    color: white;
+    margin-right: 2em;
+    padding-left: .3em;
+}
+
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: .5em;
+}
+
 .params-field {
     display: flex;
     flex-direction: column;
@@ -41,3 +63,27 @@
     color: var(--white);
     margin-left: 1em;
 }
+
+.field-input {
+    background-color: var(--darker-blue);
+    border: 2px solid var(--medium-blue--disabled);
+    padding: 1em;
+    color: var(--white);
+    border-radius: .4em;
+}
+
+
+.field-label {
+    color: white;
+    margin-right: 2em;
+    padding-left: .3em;
+}
+
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: .5em;
+}
+

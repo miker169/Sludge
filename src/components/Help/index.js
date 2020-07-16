@@ -4,7 +4,7 @@ import FlowHelp from "./FlowHelp";
 import Info from "./Info";
 import UploadedFiles from "./UploadedFiles";
 import { HelpContext } from "../../context/HelpContext";
-import {FileContext} from "../../context/FileContext";
+import { FileContext } from "../../context/FileContext";
 
 const Help = ({messages }) => {
   const {files} = React.useContext(FileContext)
