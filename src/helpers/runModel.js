@@ -73,20 +73,26 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
         let item = window.URL.createObjectURL(body);
         modelRan(item)
       }).catch(ex => {
+
         const error = 'Error getting latest output when there is no filename';
         fetch('/logging', {
           method: 'post',
           body: error + JSON.stringify(ex, null, 2),
+        }).then(() => {
+          stopModel();
         })
       })
     }
   }).catch(ex => {
-    setErrorText([{error: 'There was a network problem', type:'server'}])
-    stopModel();
+
     const error = 'Error in final catch block';
     fetch('/logging', {
       method: 'post',
       body: error + JSON.stringify(ex, null, 2),
+    }).then(() => {
+
+      setErrorText([{error: 'There was a network problem', type:'server'}])
+      stopModel();
     })
 
   });
