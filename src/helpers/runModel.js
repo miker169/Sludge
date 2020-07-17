@@ -51,6 +51,12 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
         }).then(body => {
           let item = window.URL.createObjectURL(body);
           modelRan(item)
+        }).catch(ex => {
+          const error = 'Error getting latest output when there is a filename';
+          fetch('/logging', {
+            method: 'post',
+            body: error + JSON.stringify(ex, null, 2),
+          })
         })
       } else {
         stopModel();
@@ -66,12 +72,22 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
       }).then(body => {
         let item = window.URL.createObjectURL(body);
         modelRan(item)
+      }).catch(ex => {
+        const error = 'Error getting latest output when there is no filename';
+        fetch('/logging', {
+          method: 'post',
+          body: error + JSON.stringify(ex, null, 2),
+        })
       })
     }
   }).catch(ex => {
-
     setErrorText([{error: 'There was a network problem', type:'server'}])
     stopModel();
+    fetch('/logging', {
+      method: 'post',
+      body: error + JSON.stringify(ex, null, 2),
+    })
+
   });
 
 };

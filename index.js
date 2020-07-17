@@ -38,6 +38,11 @@ app.post('/file-upload',async function(req, res) {
   res.status(200).send(`${req.files.file.name} uploaded`)
 });
 
+app.post('/logging', (req, res) => {
+  console.log('A front end error occured: ' , JSON.stringify(req.body))
+  res.status.send('ok')
+});
+
 app.post('/latest-output', async function(req, res){
   const connectionString = process.env.DEV_DATASTORE_KEY;
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
