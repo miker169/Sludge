@@ -83,6 +83,7 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
   }).catch(ex => {
     setErrorText([{error: 'There was a network problem', type:'server'}])
     stopModel();
+    const error = 'Error in final catch block';
     fetch('/logging', {
       method: 'post',
       body: error + JSON.stringify(ex, null, 2),
