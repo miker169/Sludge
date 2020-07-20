@@ -40,7 +40,7 @@ app.post('/file-upload',async function(req, res) {
 
 app.post('/logging', (req, res) => {
   console.log('A front end error occured: ' , JSON.stringify(req.body))
-  res.status.send('ok')
+  res.status(200).send('ok')
 });
 
 app.post('/latest-output', async function(req, res){

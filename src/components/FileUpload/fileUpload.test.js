@@ -2,16 +2,17 @@ import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event'
 import FileUpload from "./fileInput";
-import useConvertFilesToJson  from '../../hooks/useConvertFilesToJson'
-jest.mock('../../hooks/useConvertFilesToJson');
+import { FileContext} from '../../context/FileContext'
 
 describe('<FileUpload/>', () => {
-  let convertFilesToJsonMock = jest.fn();
+  // let convertFilesToJsonMock = jest.fn();
+  const useRefSpy = jest.spyOn(React, 'useRef').mockReturnValueOnce({ current: null });
+  const files = []
+  const fileHandler =  jest.fn();
+  const reset = jest.fn();
+  const value = {files: files, setFileHandler: fileHandler, reset: reset}
   const wrapper = () => {
-    useConvertFilesToJson.mockImplementation(() => ({
-      convertFileToJson: convertFilesToJsonMock
-    }));
-    return  render(<FileUpload/>)
+    return  render(<FileContext.Provider value={value}><FileUpload/></FileContext.Provider>)
   }
   test('renders without error', () => {
     const {queryByTestId} = wrapper();
@@ -57,7 +58,7 @@ describe('<FileUpload/>', () => {
 
       test('It calls set file ', () => {
         fileUploadEvent('myFile.csv', 'text/csv');
-        expect(convertFilesToJsonMock).toHaveBeenCalled();
+        expect(fileHandler).toHaveBeenCalled();
       });
 
     })

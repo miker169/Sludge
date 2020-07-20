@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Button from "./Button";
 
-describe.skip('<Button />', () => {
+describe('<Button />', () => {
   let queryByTestId;
   const wrapper = (props) => {
     ({queryByTestId} = render(<Button {...props} name="test" />));

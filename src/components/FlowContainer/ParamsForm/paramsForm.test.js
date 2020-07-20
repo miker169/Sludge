@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen} from "@testing-library/react";
 import ParamsForm from "./index";
 
-describe.skip('paramsForm', () => {
+describe('paramsForm', () => {
   const params =  {
     distanceCalibration: 2,
     driversLiquid: 4,

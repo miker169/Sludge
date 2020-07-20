@@ -1,0 +1,1813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7962f02f-8251-4ccb-8e29-23a90cfd6238" name="mike@Helens-iMac.local 2020-07-20T13:56:44.242Z" runUser="mike" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Jest test run" id="16629589-ee0a-4f95-8078-d4a5ac881b05"/>
+  <Times creation="2020-07-20T13:56:44.242Z" queuing="2020-07-20T13:56:44.242Z" start="2020-07-20T13:56:44.242Z" finish="2020-07-20T13:56:44.242Z"/>
+  <ResultSummary outcome="Failed">
+    <Counters total="65" executed="62" passed="36" failed="26" error="1"/>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="&lt;Update/> / It renders without error" id="43bfb04c-e5d4-45f1-9a8f-8e0f3c8aaecd">
+      <Execution id="55ca1540-ec38-4b3f-9b10-f013f83d31dc"/>
+      <TestMethod codeBase="Jest_&lt;Update/> / It renders without error" name="&lt;Update/> / It renders without error" className="&lt;Update/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Update/> / when disabled / The disabled class is applied" id="feed599c-7d08-4699-b6fd-08d9e1a3b3a1">
+      <Execution id="a9f55f13-b153-4fbd-b0c9-2e8c49d5bd5f"/>
+      <TestMethod codeBase="Jest_&lt;Update/> / when disabled / The disabled class is applied" name="&lt;Update/> / when disabled / The disabled class is applied" className="&lt;Update/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Update/> / when ran / the ran class is appled" id="21bbed93-84ba-4612-ab2d-2cf3faf7f3d5">
+      <Execution id="57c809ac-c0ce-40b7-9456-9f13ac624b5d"/>
+      <TestMethod codeBase="Jest_&lt;Update/> / when ran / the ran class is appled" name="&lt;Update/> / when ran / the ran class is appled" className="&lt;Update/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Main/> / it renders without error" id="820befb0-3e35-49b2-b705-5744fb10e0ed">
+      <Execution id="62f47a55-c4b2-49b5-961f-f61af243acb6"/>
+      <TestMethod codeBase="Jest_&lt;Main/> / it renders without error" name="&lt;Main/> / it renders without error" className="&lt;Main/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Main/> / When disabled / Displays the input field" id="577f2a8b-503e-4de5-a2f4-1c3012f89d29">
+      <Execution id="059ee6fd-e1a0-4d4a-a2fb-f6f62e39a319"/>
+      <TestMethod codeBase="Jest_&lt;Main/> / When disabled / Displays the input field" name="&lt;Main/> / When disabled / Displays the input field" className="&lt;Main/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Main/> / When enabled / Hides the input field" id="0c9459dc-422e-4495-b034-073aab37bddf">
+      <Execution id="3abceaff-b81a-4a91-a4f7-e738ba902afe"/>
+      <TestMethod codeBase="Jest_&lt;Main/> / When enabled / Hides the input field" name="&lt;Main/> / When enabled / Hides the input field" className="&lt;Main/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunArrow/> / It renders without error" id="ab6823fb-ea7b-4cc8-864d-0bf53d51546e">
+      <Execution id="dfeedab2-de43-42c4-bece-ec205aca28a7"/>
+      <TestMethod codeBase="Jest_&lt;RunArrow/> / It renders without error" name="&lt;RunArrow/> / It renders without error" className="&lt;RunArrow/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunArrow/> / when disabled / The disabled class is applied" id="85af7145-05aa-42e2-8385-d957f59f5d27">
+      <Execution id="4221fc3e-3e31-4e3d-9021-6d32dcb8cf6f"/>
+      <TestMethod codeBase="Jest_&lt;RunArrow/> / when disabled / The disabled class is applied" name="&lt;RunArrow/> / when disabled / The disabled class is applied" className="&lt;RunArrow/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunArrow/> / when ran / the ran class is applied" id="f48ef7aa-909c-4cdb-ae2f-f76b274e9dad">
+      <Execution id="8eeef9a1-5bfe-41f1-a354-5f127c9a47ba"/>
+      <TestMethod codeBase="Jest_&lt;RunArrow/> / when ran / the ran class is applied" name="&lt;RunArrow/> / when ran / the ran class is applied" className="&lt;RunArrow/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunButton / it renders without error" id="bf1b61b7-4317-49ca-b302-13a521188198">
+      <Execution id="20afb391-2b0c-4553-8e40-6ce2deb72410"/>
+      <TestMethod codeBase="Jest_&lt;RunButton / it renders without error" name="&lt;RunButton / it renders without error" className="&lt;RunButton"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunButton / when disabled / Has the disabled class" id="3d3d921e-4897-471e-8d20-1772f44735a4">
+      <Execution id="bb06173b-94c4-40b8-a7ea-25ede2b5973f"/>
+      <TestMethod codeBase="Jest_&lt;RunButton / when disabled / Has the disabled class" name="&lt;RunButton / when disabled / Has the disabled class" className="&lt;RunButton"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunButton / when disabled / Cannot call run data" id="c323048d-8888-457b-b745-d0a3ef806657">
+      <Execution id="b29f3cec-d8da-426d-80c3-f22927329633"/>
+      <TestMethod codeBase="Jest_&lt;RunButton / when disabled / Cannot call run data" name="&lt;RunButton / when disabled / Cannot call run data" className="&lt;RunButton"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunButton / when enabled / Does not have the disabled class" id="ef808048-d4f1-4b66-8a5b-d3d73b4c15cc">
+      <Execution id="01123654-7249-4652-89d4-7e4d9744dfec"/>
+      <TestMethod codeBase="Jest_&lt;RunButton / when enabled / Does not have the disabled class" name="&lt;RunButton / when enabled / Does not have the disabled class" className="&lt;RunButton"/>
+    </UnitTest>
+    <UnitTest name="&lt;RunButton / when enabled / Can call run data" id="8d7196b3-1db0-4b6e-b5d1-5a6618ba2072">
+      <Execution id="9b21ebbd-664c-4300-a0da-fd406f69c24b"/>
+      <TestMethod codeBase="Jest_&lt;RunButton / when enabled / Can call run data" name="&lt;RunButton / when enabled / Can call run data" className="&lt;RunButton"/>
+    </UnitTest>
+    <UnitTest name="&lt;UploadedFiles/> / renders without error" id="5c75c8e3-4303-416c-8176-6037b7a369d6">
+      <Execution id="f3f73e7c-71d7-4551-8ee1-e8bf553046f9"/>
+      <TestMethod codeBase="Jest_&lt;UploadedFiles/> / renders without error" name="&lt;UploadedFiles/> / renders without error" className="&lt;UploadedFiles/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ResultsButton/> / renders without error" id="adf997af-62ab-466b-86ca-4fdc9c086672">
+      <Execution id="3e78b72e-3029-4fb1-81d2-71d6309616a1"/>
+      <TestMethod codeBase="Jest_&lt;ResultsButton/> / renders without error" name="&lt;ResultsButton/> / renders without error" className="&lt;ResultsButton/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ResultsButton/> / when disabled / should have class disabled" id="81b98517-66eb-4bb0-ae28-e1307f09ce95">
+      <Execution id="5d2a30a0-d212-4816-b69f-37a3633ba091"/>
+      <TestMethod codeBase="Jest_&lt;ResultsButton/> / when disabled / should have class disabled" name="&lt;ResultsButton/> / when disabled / should have class disabled" className="&lt;ResultsButton/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ResultsButton/> / when not disabled / should not have class disabled" id="3d054e66-ea2c-4199-84ea-51d97695d5ef">
+      <Execution id="5dcdf521-0fa0-4351-8ee1-c69d417ce24a"/>
+      <TestMethod codeBase="Jest_&lt;ResultsButton/> / when not disabled / should not have class disabled" name="&lt;ResultsButton/> / when not disabled / should not have class disabled" className="&lt;ResultsButton/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;FlowContainer/> / is disabled by default" id="4117f443-2a29-4960-b03d-7cc677960e6d">
+      <Execution id="976e4d9a-314a-4f9b-b594-f5e42795959b"/>
+      <TestMethod codeBase="Jest_&lt;FlowContainer/> / is disabled by default" name="&lt;FlowContainer/> / is disabled by default" className="&lt;FlowContainer/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" id="2c7be85e-68d2-461a-b587-17bbf22c2c4d">
+      <Execution id="c5cd2ccf-b4cd-4eaa-9d0e-e40b07a2aab3"/>
+      <TestMethod codeBase="Jest_&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" name="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" className="&lt;FlowContainer/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;InfoText/> / it renders without error" id="7ff175db-0534-4f0e-9ff7-9b6d97336090">
+      <Execution id="3c3ca61d-52c9-4205-9c96-1d91d5f409a3"/>
+      <TestMethod codeBase="Jest_&lt;InfoText/> / it renders without error" name="&lt;InfoText/> / it renders without error" className="&lt;InfoText/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;InfoText/> / When it has a load message / Displays load message info" id="e7c0e945-3276-429a-810f-226615eb6cea">
+      <Execution id="c9432018-6c89-4616-be1f-126471d8728c"/>
+      <TestMethod codeBase="Jest_&lt;InfoText/> / When it has a load message / Displays load message info" name="&lt;InfoText/> / When it has a load message / Displays load message info" className="&lt;InfoText/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;InfoText/> / When it has a distance message / Displays distance message info" id="b9309a5a-742f-4015-bde0-d03280fb09b5">
+      <Execution id="f533fd8f-8d15-4258-9e96-801e3301ab4f"/>
+      <TestMethod codeBase="Jest_&lt;InfoText/> / When it has a distance message / Displays distance message info" name="&lt;InfoText/> / When it has a distance message / Displays distance message info" className="&lt;InfoText/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Input/> / it renders without error" id="7ce1f81a-fb20-41a1-a26b-c2815f956c70">
+      <Execution id="9bbffc9b-9f6c-4f1c-b573-94a19243ec3e"/>
+      <TestMethod codeBase="Jest_&lt;Input/> / it renders without error" name="&lt;Input/> / it renders without error" className="&lt;Input/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Input/> / when disabled / has the disabled class" id="81becd02-58f7-415e-9aa8-bf0e6efe302f">
+      <Execution id="ad7bdc36-5883-438d-a0dc-47499185db3d"/>
+      <TestMethod codeBase="Jest_&lt;Input/> / when disabled / has the disabled class" name="&lt;Input/> / when disabled / has the disabled class" className="&lt;Input/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Input/> / when disabled / Cannot call uploadData" id="ee6fcb42-7e3f-4309-94de-5a3eb40cd03b">
+      <Execution id="a19c9eea-abaa-4ab2-b6e2-f0fd6da0369c"/>
+      <TestMethod codeBase="Jest_&lt;Input/> / when disabled / Cannot call uploadData" name="&lt;Input/> / when disabled / Cannot call uploadData" className="&lt;Input/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Input/> / when enabled / does not have the disabled class" id="9f79b105-add5-4856-8ed2-db97aa072c9d">
+      <Execution id="3acb4679-a69a-4ddf-a491-a8cb6c456938"/>
+      <TestMethod codeBase="Jest_&lt;Input/> / when enabled / does not have the disabled class" name="&lt;Input/> / when enabled / does not have the disabled class" className="&lt;Input/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" id="9dbb7ce7-0908-408b-9ff8-b794fed40edf">
+      <Execution id="e625da70-230e-48c2-91dc-6a0a1087ceea"/>
+      <TestMethod codeBase="Jest_&lt;Input/> / when enabled / when clicked / It calls the uploadData function" name="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" className="&lt;Input/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Help/> / renders without error" id="e9a85bc7-ba6a-4f5e-a077-72a5abe8df23">
+      <Execution id="7b0bfa5a-4b96-4f4f-ab4e-afb684288db1"/>
+      <TestMethod codeBase="Jest_&lt;Help/> / renders without error" name="&lt;Help/> / renders without error" className="&lt;Help/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Help/> / When there are warnings / Does not display help text" id="405082c5-fec7-495b-b80a-cc1e31a4f6d9">
+      <Execution id="e0b2504d-3d7c-4321-8a28-7839c69a7bd5"/>
+      <TestMethod codeBase="Jest_&lt;Help/> / When there are warnings / Does not display help text" name="&lt;Help/> / When there are warnings / Does not display help text" className="&lt;Help/>"/>
+    </UnitTest>
+    <UnitTest name="renders The App without error" id="2fe1b81b-b17c-4000-8088-3cc02388ef0c">
+      <Execution id="8364625c-fe0b-4731-b60d-0c45eb38439d"/>
+      <TestMethod codeBase="Jest_renders The App without error" name="renders The App without error" className="No suite"/>
+    </UnitTest>
+    <UnitTest name="&lt;FileUpload/> / renders without error" id="8e2bfa2e-8404-40ec-8358-b6a04856a143">
+      <Execution id="bb7df2d8-b87e-4395-bd74-e34bf1f14b8b"/>
+      <TestMethod codeBase="Jest_&lt;FileUpload/> / renders without error" name="&lt;FileUpload/> / renders without error" className="&lt;FileUpload/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;FileUpload/> / Has a label with default text" id="44551923-c95b-4171-a55e-48daaac278b0">
+      <Execution id="5750d684-1093-4875-8d9d-e5cca5ec114c"/>
+      <TestMethod codeBase="Jest_&lt;FileUpload/> / Has a label with default text" name="&lt;FileUpload/> / Has a label with default text" className="&lt;FileUpload/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;FileUpload/> / When Clicked / opens a file dialog" id="730b2de1-88ed-4f4d-916d-ab190ddda46b">
+      <Execution id="bb1c8699-e1d8-48f7-8e86-4d3073b7055e"/>
+      <TestMethod codeBase="Jest_&lt;FileUpload/> / When Clicked / opens a file dialog" name="&lt;FileUpload/> / When Clicked / opens a file dialog" className="&lt;FileUpload/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;FileUpload/> / When Clicked / When file selected / It calls set file " id="a7ead0b2-079d-4c1b-8e07-899ea080dd48">
+      <Execution id="2b611b11-167a-421b-8b56-7315cb6906b6"/>
+      <TestMethod codeBase="Jest_&lt;FileUpload/> / When Clicked / When file selected / It calls set file " name="&lt;FileUpload/> / When Clicked / When file selected / It calls set file " className="&lt;FileUpload/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;FlowHelp/> / renders without error" id="6d401ebe-17dc-45f9-9c8a-bcfdfcb15982">
+      <Execution id="6e9f1558-b986-4586-be78-a1bb7e92580f"/>
+      <TestMethod codeBase="Jest_&lt;FlowHelp/> / renders without error" name="&lt;FlowHelp/> / renders without error" className="&lt;FlowHelp/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;FlowHelp/> / renders the help text passed to it" id="90bf7906-cd4c-4594-ada4-ad8009a40609">
+      <Execution id="1256a7f3-524f-4a65-9773-b453d17823fd"/>
+      <TestMethod codeBase="Jest_&lt;FlowHelp/> / renders the help text passed to it" name="&lt;FlowHelp/> / renders the help text passed to it" className="&lt;FlowHelp/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Arrow /> / it renders without error" id="bc947166-3e85-4214-918b-c6d43cbb8f18">
+      <Execution id="0277d685-55f2-445d-9bff-6ec8cb58a77e"/>
+      <TestMethod codeBase="Jest_&lt;Arrow /> / it renders without error" name="&lt;Arrow /> / it renders without error" className="&lt;Arrow />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Arrow /> / renders without Error when passed a valid set of paths" id="a9f7d907-0146-4933-93f8-36d177847aa4">
+      <Execution id="842a4cc2-978f-44ce-a3b3-bc2c8133df18"/>
+      <TestMethod codeBase="Jest_&lt;Arrow /> / renders without Error when passed a valid set of paths" name="&lt;Arrow /> / renders without Error when passed a valid set of paths" className="&lt;Arrow />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Arrow /> / takes a child path element and renders it" id="6b00ce0e-ba30-4066-be16-b506d16fb8a5">
+      <Execution id="c4e20aff-166f-4725-b540-516fb1f6dddc"/>
+      <TestMethod codeBase="Jest_&lt;Arrow /> / takes a child path element and renders it" name="&lt;Arrow /> / takes a child path element and renders it" className="&lt;Arrow />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Form/> / renders without error" id="f7d41e4d-4b13-4c30-a811-ac0295c7bc48">
+      <Execution id="788f7b24-4d7f-4996-b0c0-4ff5defd3d2d"/>
+      <TestMethod codeBase="Jest_&lt;Form/> / renders without error" name="&lt;Form/> / renders without error" className="&lt;Form/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Form/> / renders a form field for every field item" id="a226c251-54a0-4b16-a8ab-cc60d8b2f457">
+      <Execution id="7b80646d-2253-4c37-9dfc-32946f6c0e51"/>
+      <TestMethod codeBase="Jest_&lt;Form/> / renders a form field for every field item" name="&lt;Form/> / renders a form field for every field item" className="&lt;Form/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ListItem/> / renders without error" id="249885ae-0ab9-4f77-a989-90499cbd7138">
+      <Execution id="9c8d3eea-7b0e-4246-acd5-8a3f74f5dcf9"/>
+      <TestMethod codeBase="Jest_&lt;ListItem/> / renders without error" name="&lt;ListItem/> / renders without error" className="&lt;ListItem/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;ListItem/> / When clicked / calls showNext" id="24d9c3e3-5820-46b1-94ac-bb843bf35b9c">
+      <Execution id="bcff7664-bdbb-46fb-a711-509a95c5aafe"/>
+      <TestMethod codeBase="Jest_&lt;ListItem/> / When clicked / calls showNext" name="&lt;ListItem/> / When clicked / calls showNext" className="&lt;ListItem/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Header/> / renders without error" id="a6598d6a-9521-4064-ba80-92d48cae560a">
+      <Execution id="c3995b53-2625-46ca-b124-6b082c1eda84"/>
+      <TestMethod codeBase="Jest_&lt;Header/> / renders without error" name="&lt;Header/> / renders without error" className="&lt;Header/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Header/> / Displays a user name" id="197d796b-dbc5-49e7-9cdc-056863353d0c">
+      <Execution id="16af3e76-6e7f-47fd-80d3-d41253bc86c4"/>
+      <TestMethod codeBase="Jest_&lt;Header/> / Displays a user name" name="&lt;Header/> / Displays a user name" className="&lt;Header/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Button /> / renders without error" id="321daa39-ff66-41a5-9279-9eb100c12435">
+      <Execution id="863004af-0c26-41a6-aef7-1b0b603dfa4e"/>
+      <TestMethod codeBase="Jest_&lt;Button /> / renders without error" name="&lt;Button /> / renders without error" className="&lt;Button />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Button /> / can be set to be active" id="a067738d-4e24-4838-b6ee-ad49cf5c4e2c">
+      <Execution id="77bb908c-fde4-429e-a35f-431edf84e00e"/>
+      <TestMethod codeBase="Jest_&lt;Button /> / can be set to be active" name="&lt;Button /> / can be set to be active" className="&lt;Button />"/>
+    </UnitTest>
+    <UnitTest name="&lt;Button /> / can accept other classes" id="51e2d718-2ca5-4bd3-b3ce-84d9e8ecf488">
+      <Execution id="2f73bf34-8267-4601-b1ad-7602f2cd2cf2"/>
+      <TestMethod codeBase="Jest_&lt;Button /> / can accept other classes" name="&lt;Button /> / can accept other classes" className="&lt;Button />"/>
+    </UnitTest>
+    <UnitTest name="&lt;FormField/> / it renders without error" id="85350878-a5ca-4dc7-b788-dd9dde6ec76e">
+      <Execution id="c91bf6d8-a4d2-4ea4-9de9-954e63f85232"/>
+      <TestMethod codeBase="Jest_&lt;FormField/> / it renders without error" name="&lt;FormField/> / it renders without error" className="&lt;FormField/>"/>
+    </UnitTest>
+    <UnitTest name="List.test.js" id="9b31ca2f-84b1-4bbe-97a6-fb99d7a970c7">
+      <Execution id="295a572f-7ce4-48ae-ad75-482adc64b936"/>
+      <TestMethod codeBase="Jest_List.test.js" name="List.test.js" className="List.test.js"/>
+    </UnitTest>
+    <UnitTest name="&lt;RefreshButton/> / renders without error" id="e537b0a9-01ed-4045-a34a-75add4e19824">
+      <Execution id="f22c43a5-dc53-40cc-ad50-0150d4dd5cc3"/>
+      <TestMethod codeBase="Jest_&lt;RefreshButton/> / renders without error" name="&lt;RefreshButton/> / renders without error" className="&lt;RefreshButton/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;RefreshButton/> / on click / it calls refresh method in the context" id="19fc5dab-5f28-443b-ae7e-e2262392cf6b">
+      <Execution id="2a920440-cf11-46b2-85b1-b3b5b559254a"/>
+      <TestMethod codeBase="Jest_&lt;RefreshButton/> / on click / it calls refresh method in the context" name="&lt;RefreshButton/> / on click / it calls refresh method in the context" className="&lt;RefreshButton/>"/>
+    </UnitTest>
+    <UnitTest name="&lt;Nav/> / renders without error" id="b7a0d134-4cbb-494e-bd2f-eb4c7ebc1f55">
+      <Execution id="32f81305-cb37-44e6-b633-c16866d04121"/>
+      <TestMethod codeBase="Jest_&lt;Nav/> / renders without error" name="&lt;Nav/> / renders without error" className="&lt;Nav/>"/>
+    </UnitTest>
+    <UnitTest name="useSelectListItem / returns a label text item" id="1468040c-95fe-480a-936e-665b603d71af">
+      <Execution id="88c0f68b-6b1b-45b8-bbcc-1594527ec703"/>
+      <TestMethod codeBase="Jest_useSelectListItem / returns a label text item" name="useSelectListItem / returns a label text item" className="useSelectListItem"/>
+    </UnitTest>
+    <UnitTest name="useSelectListItem / listItemSelectHandler / sets the new label text" id="4281c4dd-87f9-4c5d-9629-01a1f1aca068">
+      <Execution id="48d54b21-7a08-453a-9783-650cbd0acc6e"/>
+      <TestMethod codeBase="Jest_useSelectListItem / listItemSelectHandler / sets the new label text" name="useSelectListItem / listItemSelectHandler / sets the new label text" className="useSelectListItem"/>
+    </UnitTest>
+    <UnitTest name="useSelectListItem / listItemSelectHandler / calls build scenario on the new list item" id="07fe0e71-bd39-4013-9d47-5f99acda1e2e">
+      <Execution id="156f4f0e-36db-477a-88f0-140db6f667ff"/>
+      <TestMethod codeBase="Jest_useSelectListItem / listItemSelectHandler / calls build scenario on the new list item" name="useSelectListItem / listItemSelectHandler / calls build scenario on the new list item" className="useSelectListItem"/>
+    </UnitTest>
+    <UnitTest name="useSelectListItem / listItemSelectHandler / calls set selected list item to set which item is selected in the options list" id="fc5f31d0-92ef-4662-bcd8-8fa2bddba766">
+      <Execution id="f20f7930-6ddf-4398-9923-818f467a5c76"/>
+      <TestMethod codeBase="Jest_useSelectListItem / listItemSelectHandler / calls set selected list item to set which item is selected in the options list" name="useSelectListItem / listItemSelectHandler / calls set selected list item to set which item is selected in the options list" className="useSelectListItem"/>
+    </UnitTest>
+    <UnitTest name="paramsForm / it renders without error" id="e242dfc9-76a0-46e6-bd6a-3c927d4cc3a0">
+      <Execution id="b26f6613-93e4-4c29-a30e-dd8edc3d3c9b"/>
+      <TestMethod codeBase="Jest_paramsForm / it renders without error" name="paramsForm / it renders without error" className="paramsForm"/>
+    </UnitTest>
+    <UnitTest name="paramsForm / When disabled / params form is hidden" id="4256a729-c569-4721-a01d-cbf0c59ba8ab">
+      <Execution id="2cfcd345-c8ce-4fa7-8c6a-0d3dc1b1cf30"/>
+      <TestMethod codeBase="Jest_paramsForm / When disabled / params form is hidden" name="paramsForm / When disabled / params form is hidden" className="paramsForm"/>
+    </UnitTest>
+    <UnitTest name="paramsForm / When enabled / params form is shown" id="a9c81c2b-1bfc-415e-9925-1dfb7a12b40b">
+      <Execution id="d831a8ea-9a88-4aca-904a-9952743bac52"/>
+      <TestMethod codeBase="Jest_paramsForm / When enabled / params form is shown" name="paramsForm / When enabled / params form is shown" className="paramsForm"/>
+    </UnitTest>
+    <UnitTest name="paramsForm / When enabled / params form / It has a form" id="dfdc410b-00bb-41ad-8149-92838f45146b">
+      <Execution id="61970c69-0b5f-49dc-8f54-aecb178a86a1"/>
+      <TestMethod codeBase="Jest_paramsForm / When enabled / params form / It has a form" name="paramsForm / When enabled / params form / It has a form" className="paramsForm"/>
+    </UnitTest>
+    <UnitTest name="paramsForm / When enabled / params form / It has a form title" id="f471ed1e-2beb-4a75-98de-eb2b572878df">
+      <Execution id="df7ab791-c839-4a4b-b392-54eac2cbb447"/>
+      <TestMethod codeBase="Jest_paramsForm / When enabled / params form / It has a form title" name="paramsForm / When enabled / params form / It has a form title" className="paramsForm"/>
+    </UnitTest>
+    <UnitTest name="paramsForm / When enabled / params form / It has a field for drivers liquid" id="8e557e97-b1fe-4998-9a75-da889eaf3f2c">
+      <Execution id="4a3906a3-58e6-472e-98ad-9b5fea2d940f"/>
+      <TestMethod codeBase="Jest_paramsForm / When enabled / params form / It has a field for drivers liquid" name="paramsForm / When enabled / params form / It has a field for drivers liquid" className="paramsForm"/>
+    </UnitTest>
+    <UnitTest name="paramsForm / When enabled / params form / It has a field for drivers cake" id="126f7cce-23cd-482b-abdc-e0887c10abdc">
+      <Execution id="0010b207-b8fc-4262-a06f-10e434f7dbb4"/>
+      <TestMethod codeBase="Jest_paramsForm / When enabled / params form / It has a field for drivers cake" name="paramsForm / When enabled / params form / It has a field for drivers cake" className="paramsForm"/>
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda"/>
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="43bfb04c-e5d4-45f1-9a8f-8e0f3c8aaecd" executionId="55ca1540-ec38-4b3f-9b10-f013f83d31dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="feed599c-7d08-4699-b6fd-08d9e1a3b3a1" executionId="a9f55f13-b153-4fbd-b0c9-2e8c49d5bd5f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="21bbed93-84ba-4612-ab2d-2cf3faf7f3d5" executionId="57c809ac-c0ce-40b7-9456-9f13ac624b5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="820befb0-3e35-49b2-b705-5744fb10e0ed" executionId="62f47a55-c4b2-49b5-961f-f61af243acb6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="577f2a8b-503e-4de5-a2f4-1c3012f89d29" executionId="059ee6fd-e1a0-4d4a-a2fb-f6f62e39a319" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="0c9459dc-422e-4495-b034-073aab37bddf" executionId="3abceaff-b81a-4a91-a4f7-e738ba902afe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ab6823fb-ea7b-4cc8-864d-0bf53d51546e" executionId="dfeedab2-de43-42c4-bece-ec205aca28a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="85af7145-05aa-42e2-8385-d957f59f5d27" executionId="4221fc3e-3e31-4e3d-9021-6d32dcb8cf6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="f48ef7aa-909c-4cdb-ae2f-f76b274e9dad" executionId="8eeef9a1-5bfe-41f1-a354-5f127c9a47ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="bf1b61b7-4317-49ca-b302-13a521188198" executionId="20afb391-2b0c-4553-8e40-6ce2deb72410" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="3d3d921e-4897-471e-8d20-1772f44735a4" executionId="bb06173b-94c4-40b8-a7ea-25ede2b5973f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="c323048d-8888-457b-b745-d0a3ef806657" executionId="b29f3cec-d8da-426d-80c3-f22927329633" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ef808048-d4f1-4b66-8a5b-d3d73b4c15cc" executionId="01123654-7249-4652-89d4-7e4d9744dfec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8d7196b3-1db0-4b6e-b5d1-5a6618ba2072" executionId="9b21ebbd-664c-4300-a0da-fd406f69c24b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="5c75c8e3-4303-416c-8176-6037b7a369d6" executionId="f3f73e7c-71d7-4551-8ee1-e8bf553046f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="adf997af-62ab-466b-86ca-4fdc9c086672" executionId="3e78b72e-3029-4fb1-81d2-71d6309616a1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="81b98517-66eb-4bb0-ae28-e1307f09ce95" executionId="5d2a30a0-d212-4816-b69f-37a3633ba091" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="3d054e66-ea2c-4199-84ea-51d97695d5ef" executionId="5dcdf521-0fa0-4351-8ee1-c69d417ce24a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="4117f443-2a29-4960-b03d-7cc677960e6d" executionId="976e4d9a-314a-4f9b-b594-f5e42795959b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="2c7be85e-68d2-461a-b587-17bbf22c2c4d" executionId="c5cd2ccf-b4cd-4eaa-9d0e-e40b07a2aab3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="7ff175db-0534-4f0e-9ff7-9b6d97336090" executionId="3c3ca61d-52c9-4205-9c96-1d91d5f409a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="e7c0e945-3276-429a-810f-226615eb6cea" executionId="c9432018-6c89-4616-be1f-126471d8728c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="b9309a5a-742f-4015-bde0-d03280fb09b5" executionId="f533fd8f-8d15-4258-9e96-801e3301ab4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="7ce1f81a-fb20-41a1-a26b-c2815f956c70" executionId="9bbffc9b-9f6c-4f1c-b573-94a19243ec3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="81becd02-58f7-415e-9aa8-bf0e6efe302f" executionId="ad7bdc36-5883-438d-a0dc-47499185db3d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="ee6fcb42-7e3f-4309-94de-5a3eb40cd03b" executionId="a19c9eea-abaa-4ab2-b6e2-f0fd6da0369c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="9f79b105-add5-4856-8ed2-db97aa072c9d" executionId="3acb4679-a69a-4ddf-a491-a8cb6c456938" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="9dbb7ce7-0908-408b-9ff8-b794fed40edf" executionId="e625da70-230e-48c2-91dc-6a0a1087ceea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="e9a85bc7-ba6a-4f5e-a077-72a5abe8df23" executionId="7b0bfa5a-4b96-4f4f-ab4e-afb684288db1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="405082c5-fec7-495b-b80a-cc1e31a4f6d9" executionId="e0b2504d-3d7c-4321-8a28-7839c69a7bd5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="2fe1b81b-b17c-4000-8088-3cc02388ef0c" executionId="8364625c-fe0b-4731-b60d-0c45eb38439d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8e2bfa2e-8404-40ec-8358-b6a04856a143" executionId="bb7df2d8-b87e-4395-bd74-e34bf1f14b8b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="44551923-c95b-4171-a55e-48daaac278b0" executionId="5750d684-1093-4875-8d9d-e5cca5ec114c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="730b2de1-88ed-4f4d-916d-ab190ddda46b" executionId="bb1c8699-e1d8-48f7-8e86-4d3073b7055e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a7ead0b2-079d-4c1b-8e07-899ea080dd48" executionId="2b611b11-167a-421b-8b56-7315cb6906b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="6d401ebe-17dc-45f9-9c8a-bcfdfcb15982" executionId="6e9f1558-b986-4586-be78-a1bb7e92580f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="90bf7906-cd4c-4594-ada4-ad8009a40609" executionId="1256a7f3-524f-4a65-9773-b453d17823fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="bc947166-3e85-4214-918b-c6d43cbb8f18" executionId="0277d685-55f2-445d-9bff-6ec8cb58a77e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a9f7d907-0146-4933-93f8-36d177847aa4" executionId="842a4cc2-978f-44ce-a3b3-bc2c8133df18" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="6b00ce0e-ba30-4066-be16-b506d16fb8a5" executionId="c4e20aff-166f-4725-b540-516fb1f6dddc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="f7d41e4d-4b13-4c30-a811-ac0295c7bc48" executionId="788f7b24-4d7f-4996-b0c0-4ff5defd3d2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a226c251-54a0-4b16-a8ab-cc60d8b2f457" executionId="7b80646d-2253-4c37-9dfc-32946f6c0e51" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="249885ae-0ab9-4f77-a989-90499cbd7138" executionId="9c8d3eea-7b0e-4246-acd5-8a3f74f5dcf9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="24d9c3e3-5820-46b1-94ac-bb843bf35b9c" executionId="bcff7664-bdbb-46fb-a711-509a95c5aafe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a6598d6a-9521-4064-ba80-92d48cae560a" executionId="c3995b53-2625-46ca-b124-6b082c1eda84" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="197d796b-dbc5-49e7-9cdc-056863353d0c" executionId="16af3e76-6e7f-47fd-80d3-d41253bc86c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="321daa39-ff66-41a5-9279-9eb100c12435" executionId="863004af-0c26-41a6-aef7-1b0b603dfa4e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a067738d-4e24-4838-b6ee-ad49cf5c4e2c" executionId="77bb908c-fde4-429e-a35f-431edf84e00e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="51e2d718-2ca5-4bd3-b3ce-84d9e8ecf488" executionId="2f73bf34-8267-4601-b1ad-7602f2cd2cf2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="85350878-a5ca-4dc7-b788-dd9dde6ec76e" executionId="c91bf6d8-a4d2-4ea4-9de9-954e63f85232" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="9b31ca2f-84b1-4bbe-97a6-fb99d7a970c7" executionId="295a572f-7ce4-48ae-ad75-482adc64b936" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="e537b0a9-01ed-4045-a34a-75add4e19824" executionId="f22c43a5-dc53-40cc-ad50-0150d4dd5cc3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="19fc5dab-5f28-443b-ae7e-e2262392cf6b" executionId="2a920440-cf11-46b2-85b1-b3b5b559254a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="b7a0d134-4cbb-494e-bd2f-eb4c7ebc1f55" executionId="32f81305-cb37-44e6-b633-c16866d04121" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="1468040c-95fe-480a-936e-665b603d71af" executionId="88c0f68b-6b1b-45b8-bbcc-1594527ec703" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="4281c4dd-87f9-4c5d-9629-01a1f1aca068" executionId="48d54b21-7a08-453a-9783-650cbd0acc6e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="07fe0e71-bd39-4013-9d47-5f99acda1e2e" executionId="156f4f0e-36db-477a-88f0-140db6f667ff" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="fc5f31d0-92ef-4662-bcd8-8fa2bddba766" executionId="f20f7930-6ddf-4398-9923-818f467a5c76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="e242dfc9-76a0-46e6-bd6a-3c927d4cc3a0" executionId="b26f6613-93e4-4c29-a30e-dd8edc3d3c9b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="4256a729-c569-4721-a01d-cbf0c59ba8ab" executionId="2cfcd345-c8ce-4fa7-8c6a-0d3dc1b1cf30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="a9c81c2b-1bfc-415e-9925-1dfb7a12b40b" executionId="d831a8ea-9a88-4aca-904a-9952743bac52" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="dfdc410b-00bb-41ad-8149-92838f45146b" executionId="61970c69-0b5f-49dc-8f54-aecb178a86a1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="f471ed1e-2beb-4a75-98de-eb2b572878df" executionId="df7ab791-c839-4a4b-b392-54eac2cbb447" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="8e557e97-b1fe-4998-9a75-da889eaf3f2c" executionId="4a3906a3-58e6-472e-98ad-9b5fea2d940f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <TestEntry testId="126f7cce-23cd-482b-abdc-e0887c10abdc" executionId="0010b207-b8fc-4262-a06f-10e434f7dbb4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+  </TestEntries>
+  <Results>
+    <UnitTestResult testId="43bfb04c-e5d4-45f1-9a8f-8e0f3c8aaecd" executionId="55ca1540-ec38-4b3f-9b10-f013f83d31dc" testName="&lt;Update/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.395" startTime="2020-07-20T13:56:45.094Z" endTime="2020-07-20T13:56:45.489Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at Update (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/index.js:7:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/update.test.js:7:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/update.test.js:18:29)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="feed599c-7d08-4699-b6fd-08d9e1a3b3a1" executionId="a9f55f13-b153-4fbd-b0c9-2e8c49d5bd5f" testName="&lt;Update/> / when disabled / The disabled class is applied" computerName="Helens-iMac.local" duration="00:00:00.395" startTime="2020-07-20T13:56:45.489Z" endTime="2020-07-20T13:56:45.884Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at Update (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/index.js:7:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/update.test.js:7:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/update.test.js:27:31)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="21bbed93-84ba-4612-ab2d-2cf3faf7f3d5" executionId="57c809ac-c0ce-40b7-9456-9f13ac624b5d" testName="&lt;Update/> / when ran / the ran class is appled" computerName="Helens-iMac.local" duration="00:00:00.395" startTime="2020-07-20T13:56:45.884Z" endTime="2020-07-20T13:56:46.279Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at Update (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/index.js:7:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/update.test.js:7:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/Update/update.test.js:36:31)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="820befb0-3e35-49b2-b705-5744fb10e0ed" executionId="62f47a55-c4b2-49b5-961f-f61af243acb6" testName="&lt;Main/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.450" startTime="2020-07-20T13:56:45.156Z" endTime="2020-07-20T13:56:45.606Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'files' of '_react.default.useContext(...)' as it is undefined.
+    at Main (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/index.js:15:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/main.test.js:10:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/main.test.js:19:30)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="577f2a8b-503e-4de5-a2f4-1c3012f89d29" executionId="059ee6fd-e1a0-4d4a-a2fb-f6f62e39a319" testName="&lt;Main/> / When disabled / Displays the input field" computerName="Helens-iMac.local" duration="00:00:00.450" startTime="2020-07-20T13:56:45.606Z" endTime="2020-07-20T13:56:46.056Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'files' of '_react.default.useContext(...)' as it is undefined.
+    at Main (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/index.js:15:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/main.test.js:10:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/main.test.js:34:32)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="0c9459dc-422e-4495-b034-073aab37bddf" executionId="3abceaff-b81a-4a91-a4f7-e738ba902afe" testName="&lt;Main/> / When enabled / Hides the input field" computerName="Helens-iMac.local" duration="00:00:00.450" startTime="2020-07-20T13:56:46.056Z" endTime="2020-07-20T13:56:46.506Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'files' of '_react.default.useContext(...)' as it is undefined.
+    at Main (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/index.js:15:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/main.test.js:10:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Main/main.test.js:50:32)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="ab6823fb-ea7b-4cc8-864d-0bf53d51546e" executionId="dfeedab2-de43-42c4-bece-ec205aca28a7" testName="&lt;RunArrow/> / It renders without error" computerName="Helens-iMac.local" duration="00:00:00.087" startTime="2020-07-20T13:56:46.307Z" endTime="2020-07-20T13:56:46.394Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at RunArrow (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/index.js:8:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/arrow.test.js:7:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/arrow.test.js:12:29)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="85af7145-05aa-42e2-8385-d957f59f5d27" executionId="4221fc3e-3e31-4e3d-9021-6d32dcb8cf6f" testName="&lt;RunArrow/> / when disabled / The disabled class is applied" computerName="Helens-iMac.local" duration="00:00:00.087" startTime="2020-07-20T13:56:46.394Z" endTime="2020-07-20T13:56:46.481Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at RunArrow (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/index.js:8:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/arrow.test.js:7:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/arrow.test.js:20:31)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="f48ef7aa-909c-4cdb-ae2f-f76b274e9dad" executionId="8eeef9a1-5bfe-41f1-a354-5f127c9a47ba" testName="&lt;RunArrow/> / when ran / the ran class is applied" computerName="Helens-iMac.local" duration="00:00:00.087" startTime="2020-07-20T13:56:46.481Z" endTime="2020-07-20T13:56:46.568Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at RunArrow (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/index.js:8:11)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/arrow.test.js:7:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunArrow/arrow.test.js:29:31)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="bf1b61b7-4317-49ca-b302-13a521188198" executionId="20afb391-2b0c-4553-8e40-6ce2deb72410" testName="&lt;RunButton / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.063" startTime="2020-07-20T13:56:46.537Z" endTime="2020-07-20T13:56:46.600Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'paramsList' of '_react.default.useContext(...)' as it is undefined.
+    at RunButton (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/index.js:12:10)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:11:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:15:27)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="3d3d921e-4897-471e-8d20-1772f44735a4" executionId="bb06173b-94c4-40b8-a7ea-25ede2b5973f" testName="&lt;RunButton / when disabled / Has the disabled class" computerName="Helens-iMac.local" duration="00:00:00.063" startTime="2020-07-20T13:56:46.600Z" endTime="2020-07-20T13:56:46.663Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot read property 'runDisabled' of undefined
+    at RunButton (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/index.js:22:25)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:11:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:31:26)
+    at Object.asyncJestLifecycle (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:53:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+TypeError: queryByTestId is not a function
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:34:24)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="c323048d-8888-457b-b745-d0a3ef806657" executionId="b29f3cec-d8da-426d-80c3-f22927329633" testName="&lt;RunButton / when disabled / Cannot call run data" computerName="Helens-iMac.local" duration="00:00:00.063" startTime="2020-07-20T13:56:46.663Z" endTime="2020-07-20T13:56:46.726Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot read property 'runDisabled' of undefined
+    at RunButton (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/index.js:22:25)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:11:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:31:26)
+    at Object.asyncJestLifecycle (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:53:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+TypeError: queryByTestId is not a function
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:39:24)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="ef808048-d4f1-4b66-8a5b-d3d73b4c15cc" executionId="01123654-7249-4652-89d4-7e4d9744dfec" testName="&lt;RunButton / when enabled / Does not have the disabled class" computerName="Helens-iMac.local" duration="00:00:00.063" startTime="2020-07-20T13:56:46.726Z" endTime="2020-07-20T13:56:46.789Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot read property 'runDisabled' of undefined
+    at RunButton (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/index.js:22:25)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:11:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:51:27)
+    at Object.asyncJestLifecycle (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:53:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+TypeError: queryByTestId is not a function
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:54:24)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="8d7196b3-1db0-4b6e-b5d1-5a6618ba2072" executionId="9b21ebbd-664c-4300-a0da-fd406f69c24b" testName="&lt;RunButton / when enabled / Can call run data" computerName="Helens-iMac.local" duration="00:00:00.063" startTime="2020-07-20T13:56:46.789Z" endTime="2020-07-20T13:56:46.852Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot read property 'runDisabled' of undefined
+    at RunButton (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/index.js:22:25)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:11:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:51:27)
+    at Object.asyncJestLifecycle (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:53:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+TypeError: queryByTestId is not a function
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/RunButton/runbutton.test.js:59:24)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="5c75c8e3-4303-416c-8176-6037b7a369d6" executionId="f3f73e7c-71d7-4551-8ee1-e8bf553046f9" testName="&lt;UploadedFiles/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.272" startTime="2020-07-20T13:56:46.594Z" endTime="2020-07-20T13:56:46.866Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot read property 'split' of undefined
+    at find (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/UploadedFiles/index.js:13:54)
+    at Array.find (&lt;anonymous&gt;)
+    at renderHelp (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/UploadedFiles/index.js:13:37)
+    at UploadedFiles (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/UploadedFiles/index.js:35:14)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/UploadedFiles/UploadedFiles.test.js:8:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/UploadedFiles/UploadedFiles.test.js:18:29)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="adf997af-62ab-466b-86ca-4fdc9c086672" executionId="3e78b72e-3029-4fb1-81d2-71d6309616a1" testName="&lt;ResultsButton/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.076" startTime="2020-07-20T13:56:46.895Z" endTime="2020-07-20T13:56:46.971Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at /Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/index.js:7:11
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at updateFunctionComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17034:20)
+    at updateSimpleMemoComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16972:10)
+    at updateMemoComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16861:14)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18682:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/ResultsButton.test.js:9:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/ResultsButton.test.js:13:31)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="81b98517-66eb-4bb0-ae28-e1307f09ce95" executionId="5d2a30a0-d212-4816-b69f-37a3633ba091" testName="&lt;ResultsButton/> / when disabled / should have class disabled" computerName="Helens-iMac.local" duration="00:00:00.076" startTime="2020-07-20T13:56:46.971Z" endTime="2020-07-20T13:56:47.047Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at /Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/index.js:7:11
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at updateFunctionComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17034:20)
+    at updateSimpleMemoComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16972:10)
+    at updateMemoComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16861:14)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18682:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/ResultsButton.test.js:9:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/ResultsButton.test.js:22:32)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="3d054e66-ea2c-4199-84ea-51d97695d5ef" executionId="5dcdf521-0fa0-4351-8ee1-c69d417ce24a" testName="&lt;ResultsButton/> / when not disabled / should not have class disabled" computerName="Helens-iMac.local" duration="00:00:00.076" startTime="2020-07-20T13:56:47.047Z" endTime="2020-07-20T13:56:47.123Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'state' of '_react.default.useContext(...)' as it is undefined.
+    at /Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/index.js:7:11
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at updateFunctionComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17034:20)
+    at updateSimpleMemoComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16972:10)
+    at updateMemoComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16861:14)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18682:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/ResultsButton.test.js:9:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ResultsButton/ResultsButton.test.js:32:32)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="4117f443-2a29-4960-b03d-7cc677960e6d" executionId="976e4d9a-314a-4f9b-b594-f5e42795959b" testName="&lt;FlowContainer/> / is disabled by default" computerName="Helens-iMac.local" duration="00:00:00.137" startTime="2020-07-20T13:56:46.890Z" endTime="2020-07-20T13:56:47.027Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'resetFlow' of '_react.default.useContext(...)' as it is undefined.
+    at /Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/index.js:11:11
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at updateForwardRef (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16816:20)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18645:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/flowContainer.test.js:9:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/flowContainer.test.js:13:29)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="2c7be85e-68d2-461a-b587-17bbf22c2c4d" executionId="c5cd2ccf-b4cd-4eaa-9d0e-e40b07a2aab3" testName="&lt;FlowContainer/> / When First Enabled / Shows the Flow Component" computerName="Helens-iMac.local" duration="00:00:00.137" startTime="2020-07-20T13:56:47.027Z" endTime="2020-07-20T13:56:47.164Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: Cannot destructure property 'resetFlow' of '_react.default.useContext(...)' as it is undefined.
+    at /Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/index.js:11:11
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at updateForwardRef (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:16816:20)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18645:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/flowContainer.test.js:9:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/flowContainer.test.js:21:31)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="7ff175db-0534-4f0e-9ff7-9b6d97336090" executionId="3c3ca61d-52c9-4205-9c96-1d91d5f409a3" testName="&lt;InfoText/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.107" startTime="2020-07-20T13:56:47.150Z" endTime="2020-07-20T13:56:47.257Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: messages.map is not a function
+    at renderErrorRow (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:11:21)
+    at map (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:25:20)
+    at Array.map (&lt;anonymous&gt;)
+    at normalErrors (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:21:19)
+    at renderErrors (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:46:12)
+    at InfoText (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:49:10)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:8:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:11:31)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="e7c0e945-3276-429a-810f-226615eb6cea" executionId="c9432018-6c89-4616-be1f-126471d8728c" testName="&lt;InfoText/> / When it has a load message / Displays load message info" computerName="Helens-iMac.local" duration="00:00:00.107" startTime="2020-07-20T13:56:47.257Z" endTime="2020-07-20T13:56:47.364Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: messages.map is not a function
+    at renderErrorRow (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:11:21)
+    at map (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:25:20)
+    at Array.map (&lt;anonymous&gt;)
+    at normalErrors (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:21:19)
+    at renderErrors (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:46:12)
+    at InfoText (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:49:10)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:8:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:20:37)
+    at Object.asyncJestLifecycle (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:53:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+TypeError: queryByTestId is not a function
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:27:28)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="b9309a5a-742f-4015-bde0-d03280fb09b5" executionId="f533fd8f-8d15-4258-9e96-801e3301ab4f" testName="&lt;InfoText/> / When it has a distance message / Displays distance message info" computerName="Helens-iMac.local" duration="00:00:00.107" startTime="2020-07-20T13:56:47.364Z" endTime="2020-07-20T13:56:47.471Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>TypeError: messages.map is not a function
+    at renderErrorRow (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:11:21)
+    at map (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:25:20)
+    at Array.map (&lt;anonymous&gt;)
+    at normalErrors (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:21:19)
+    at renderErrors (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:46:12)
+    at InfoText (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/index.js:49:10)
+    at renderWithHooks (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:14803:18)
+    at mountIndeterminateComponent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:17482:13)
+    at beginWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:18596:16)
+    at HTMLUnknownElement.callCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:188:14)
+    at innerInvokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:315:27)
+    at invokeEventListeners (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:266:3)
+    at HTMLUnknownElementImpl._dispatch (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:212:11)
+    at HTMLUnknownElementImpl.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:87:17)
+    at HTMLUnknownElement.dispatchEvent (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:144:23)
+    at Object.invokeGuardedCallbackDev (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:237:16)
+    at invokeGuardedCallback (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:292:31)
+    at beginWork$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:23203:7)
+    at performUnitOfWork (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22157:12)
+    at workLoopSync (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:22130:22)
+    at performSyncWorkOnRoot (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21756:9)
+    at scheduleUpdateOnFiber (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21188:7)
+    at updateContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24373:3)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24758:7
+    at unbatchedUpdates (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21903:12)
+    at legacyRenderSubtreeIntoContainer (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24757:5)
+    at Object.render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:24840:10)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:86:25
+    at batchedUpdates$1 (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom.development.js:21856:12)
+    at act (/Users/mike/dev/YW-sludge-modelling-app/node_modules/react-dom/cjs/react-dom-test-utils.development.js:929:14)
+    at render (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/react/dist/pure.js:82:26)
+    at wrapper (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:8:12)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:36:37)
+    at Object.asyncJestLifecycle (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:53:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41
+TypeError: queryByTestId is not a function
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/Help/InfoText/InfoText.test.js:43:28)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="7ce1f81a-fb20-41a1-a26b-c2815f956c70" executionId="9bbffc9b-9f6c-4f1c-b573-94a19243ec3e" testName="&lt;Input/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.074" startTime="2020-07-20T13:56:47.190Z" endTime="2020-07-20T13:56:47.264Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="81becd02-58f7-415e-9aa8-bf0e6efe302f" executionId="ad7bdc36-5883-438d-a0dc-47499185db3d" testName="&lt;Input/> / when disabled / has the disabled class" computerName="Helens-iMac.local" duration="00:00:00.074" startTime="2020-07-20T13:56:47.264Z" endTime="2020-07-20T13:56:47.338Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="ee6fcb42-7e3f-4309-94de-5a3eb40cd03b" executionId="a19c9eea-abaa-4ab2-b6e2-f0fd6da0369c" testName="&lt;Input/> / when disabled / Cannot call uploadData" computerName="Helens-iMac.local" duration="00:00:00.074" startTime="2020-07-20T13:56:47.338Z" endTime="2020-07-20T13:56:47.412Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="9f79b105-add5-4856-8ed2-db97aa072c9d" executionId="3acb4679-a69a-4ddf-a491-a8cb6c456938" testName="&lt;Input/> / when enabled / does not have the disabled class" computerName="Helens-iMac.local" duration="00:00:00.074" startTime="2020-07-20T13:56:47.412Z" endTime="2020-07-20T13:56:47.486Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="9dbb7ce7-0908-408b-9ff8-b794fed40edf" executionId="e625da70-230e-48c2-91dc-6a0a1087ceea" testName="&lt;Input/> / when enabled / when clicked / It calls the uploadData function" computerName="Helens-iMac.local" duration="00:00:00.074" startTime="2020-07-20T13:56:47.486Z" endTime="2020-07-20T13:56:47.560Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="e9a85bc7-ba6a-4f5e-a077-72a5abe8df23" executionId="7b0bfa5a-4b96-4f4f-ab4e-afb684288db1" testName="&lt;Help/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.193" startTime="2020-07-20T13:56:47.573Z" endTime="2020-07-20T13:56:47.766Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="405082c5-fec7-495b-b80a-cc1e31a4f6d9" executionId="e0b2504d-3d7c-4321-8a28-7839c69a7bd5" testName="&lt;Help/> / When there are warnings / Does not display help text" computerName="Helens-iMac.local" duration="00:00:00.193" startTime="2020-07-20T13:56:47.766Z" endTime="2020-07-20T13:56:47.959Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="2fe1b81b-b17c-4000-8088-3cc02388ef0c" executionId="8364625c-fe0b-4731-b60d-0c45eb38439d" testName="renders The App without error" computerName="Helens-iMac.local" duration="00:00:00.541" startTime="2020-07-20T13:56:47.506Z" endTime="2020-07-20T13:56:48.047Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="8e2bfa2e-8404-40ec-8358-b6a04856a143" executionId="bb7df2d8-b87e-4395-bd74-e34bf1f14b8b" testName="&lt;FileUpload/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.066" startTime="2020-07-20T13:56:47.969Z" endTime="2020-07-20T13:56:48.035Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="44551923-c95b-4171-a55e-48daaac278b0" executionId="5750d684-1093-4875-8d9d-e5cca5ec114c" testName="&lt;FileUpload/> / Has a label with default text" computerName="Helens-iMac.local" duration="00:00:00.066" startTime="2020-07-20T13:56:48.035Z" endTime="2020-07-20T13:56:48.101Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="730b2de1-88ed-4f4d-916d-ab190ddda46b" executionId="bb1c8699-e1d8-48f7-8e86-4d3073b7055e" testName="&lt;FileUpload/> / When Clicked / opens a file dialog" computerName="Helens-iMac.local" duration="00:00:00.066" startTime="2020-07-20T13:56:48.101Z" endTime="2020-07-20T13:56:48.167Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a7ead0b2-079d-4c1b-8e07-899ea080dd48" executionId="2b611b11-167a-421b-8b56-7315cb6906b6" testName="&lt;FileUpload/> / When Clicked / When file selected / It calls set file " computerName="Helens-iMac.local" duration="00:00:00.066" startTime="2020-07-20T13:56:48.167Z" endTime="2020-07-20T13:56:48.233Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="6d401ebe-17dc-45f9-9c8a-bcfdfcb15982" executionId="6e9f1558-b986-4586-be78-a1bb7e92580f" testName="&lt;FlowHelp/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.106" startTime="2020-07-20T13:56:48.058Z" endTime="2020-07-20T13:56:48.164Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="90bf7906-cd4c-4594-ada4-ad8009a40609" executionId="1256a7f3-524f-4a65-9773-b453d17823fd" testName="&lt;FlowHelp/> / renders the help text passed to it" computerName="Helens-iMac.local" duration="00:00:00.106" startTime="2020-07-20T13:56:48.164Z" endTime="2020-07-20T13:56:48.270Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="bc947166-3e85-4214-918b-c6d43cbb8f18" executionId="0277d685-55f2-445d-9bff-6ec8cb58a77e" testName="&lt;Arrow /> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.069" startTime="2020-07-20T13:56:48.250Z" endTime="2020-07-20T13:56:48.319Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a9f7d907-0146-4933-93f8-36d177847aa4" executionId="842a4cc2-978f-44ce-a3b3-bc2c8133df18" testName="&lt;Arrow /> / renders without Error when passed a valid set of paths" computerName="Helens-iMac.local" duration="00:00:00.069" startTime="2020-07-20T13:56:48.319Z" endTime="2020-07-20T13:56:48.388Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="6b00ce0e-ba30-4066-be16-b506d16fb8a5" executionId="c4e20aff-166f-4725-b540-516fb1f6dddc" testName="&lt;Arrow /> / takes a child path element and renders it" computerName="Helens-iMac.local" duration="00:00:00.069" startTime="2020-07-20T13:56:48.388Z" endTime="2020-07-20T13:56:48.457Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="f7d41e4d-4b13-4c30-a811-ac0295c7bc48" executionId="788f7b24-4d7f-4996-b0c0-4ff5defd3d2d" testName="&lt;Form/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.101" startTime="2020-07-20T13:56:48.281Z" endTime="2020-07-20T13:56:48.382Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a226c251-54a0-4b16-a8ab-cc60d8b2f457" executionId="7b80646d-2253-4c37-9dfc-32946f6c0e51" testName="&lt;Form/> / renders a form field for every field item" computerName="Helens-iMac.local" duration="00:00:00.101" startTime="2020-07-20T13:56:48.382Z" endTime="2020-07-20T13:56:48.483Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="249885ae-0ab9-4f77-a989-90499cbd7138" executionId="9c8d3eea-7b0e-4246-acd5-8a3f74f5dcf9" testName="&lt;ListItem/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.098" startTime="2020-07-20T13:56:48.468Z" endTime="2020-07-20T13:56:48.566Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="24d9c3e3-5820-46b1-94ac-bb843bf35b9c" executionId="bcff7664-bdbb-46fb-a711-509a95c5aafe" testName="&lt;ListItem/> / When clicked / calls showNext" computerName="Helens-iMac.local" duration="00:00:00.098" startTime="2020-07-20T13:56:48.566Z" endTime="2020-07-20T13:56:48.664Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a6598d6a-9521-4064-ba80-92d48cae560a" executionId="c3995b53-2625-46ca-b124-6b082c1eda84" testName="&lt;Header/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.094" startTime="2020-07-20T13:56:48.493Z" endTime="2020-07-20T13:56:48.587Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="197d796b-dbc5-49e7-9cdc-056863353d0c" executionId="16af3e76-6e7f-47fd-80d3-d41253bc86c4" testName="&lt;Header/> / Displays a user name" computerName="Helens-iMac.local" duration="00:00:00.094" startTime="2020-07-20T13:56:48.587Z" endTime="2020-07-20T13:56:48.681Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="321daa39-ff66-41a5-9279-9eb100c12435" executionId="863004af-0c26-41a6-aef7-1b0b603dfa4e" testName="&lt;Button /> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.065" startTime="2020-07-20T13:56:48.674Z" endTime="2020-07-20T13:56:48.739Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a067738d-4e24-4838-b6ee-ad49cf5c4e2c" executionId="77bb908c-fde4-429e-a35f-431edf84e00e" testName="&lt;Button /> / can be set to be active" computerName="Helens-iMac.local" duration="00:00:00.065" startTime="2020-07-20T13:56:48.739Z" endTime="2020-07-20T13:56:48.804Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="51e2d718-2ca5-4bd3-b3ce-84d9e8ecf488" executionId="2f73bf34-8267-4601-b1ad-7602f2cd2cf2" testName="&lt;Button /> / can accept other classes" computerName="Helens-iMac.local" duration="00:00:00.065" startTime="2020-07-20T13:56:48.804Z" endTime="2020-07-20T13:56:48.869Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="85350878-a5ca-4dc7-b788-dd9dde6ec76e" executionId="c91bf6d8-a4d2-4ea4-9de9-954e63f85232" testName="&lt;FormField/> / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.175" startTime="2020-07-20T13:56:48.696Z" endTime="2020-07-20T13:56:48.871Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="9b31ca2f-84b1-4bbe-97a6-fb99d7a970c7" executionId="295a572f-7ce4-48ae-ad75-482adc64b936" testName="List.test.js" computerName="Helens-iMac.local" duration="0" startTime="2020-07-20T13:56:50.133Z" endTime="2020-07-20T13:56:50.133Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>  [1m● [22mTest suite failed to run
+
+    Cannot find module '../../context/ScenarioContext' from 'List.test.js'
+
+    [0m [90m 3 | [39m[36mimport[39m [33mList[39m from [32m'./index'[39m[33m;[39m[0m
+    [0m [90m 4 | [39m[36mimport[39m userEvent from [32m"@testing-library/user-event"[39m[33m;[39m[0m
+    [0m[31m[1m&gt;[22m[39m[90m 5 | [39m[36mimport[39m { [33mProvider[39m as [33mScenarioProvider[39m } from [32m'../../context/ScenarioContext'[39m[0m
+    [0m [90m   | [39m[31m[1m^[22m[39m[0m
+    [0m [90m 6 | [39m[0m
+    [0m [90m 7 | [39mdescribe([32m'&lt;List/&gt;'[39m[33m,[39m () [33m=&gt;[39m {[0m
+    [0m [90m 8 | [39m  let next [33m=[39m jest[33m.[39mfn()[0m
+
+      [2mat Resolver.resolveModule ([22mnode_modules/jest-resolve/build/index.js[2m:259:17)[22m
+      [2mat Object.&lt;anonymous&gt; ([22m[0m[36msrc/components/List/List.test.js[39m[0m[2m:5:1)[22m
+</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="e537b0a9-01ed-4045-a34a-75add4e19824" executionId="f22c43a5-dc53-40cc-ad50-0150d4dd5cc3" testName="&lt;RefreshButton/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.104" startTime="2020-07-20T13:56:49.085Z" endTime="2020-07-20T13:56:49.189Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="19fc5dab-5f28-443b-ae7e-e2262392cf6b" executionId="2a920440-cf11-46b2-85b1-b3b5b559254a" testName="&lt;RefreshButton/> / on click / it calls refresh method in the context" computerName="Helens-iMac.local" duration="00:00:00.104" startTime="2020-07-20T13:56:49.189Z" endTime="2020-07-20T13:56:49.293Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="b7a0d134-4cbb-494e-bd2f-eb4c7ebc1f55" executionId="32f81305-cb37-44e6-b633-c16866d04121" testName="&lt;Nav/> / renders without error" computerName="Helens-iMac.local" duration="00:00:00.191" startTime="2020-07-20T13:56:49.303Z" endTime="2020-07-20T13:56:49.494Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="1468040c-95fe-480a-936e-665b603d71af" executionId="88c0f68b-6b1b-45b8-bbcc-1594527ec703" testName="useSelectListItem / returns a label text item" computerName="Helens-iMac.local" duration="00:00:00.027" startTime="2020-07-20T13:56:49.505Z" endTime="2020-07-20T13:56:49.532Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="4281c4dd-87f9-4c5d-9629-01a1f1aca068" executionId="48d54b21-7a08-453a-9783-650cbd0acc6e" testName="useSelectListItem / listItemSelectHandler / sets the new label text" computerName="Helens-iMac.local" duration="00:00:00.027" startTime="2020-07-20T13:56:49.532Z" endTime="2020-07-20T13:56:49.559Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="07fe0e71-bd39-4013-9d47-5f99acda1e2e" executionId="156f4f0e-36db-477a-88f0-140db6f667ff" testName="useSelectListItem / listItemSelectHandler / calls build scenario on the new list item" computerName="Helens-iMac.local" duration="00:00:00.027" startTime="2020-07-20T13:56:49.559Z" endTime="2020-07-20T13:56:49.586Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="fc5f31d0-92ef-4662-bcd8-8fa2bddba766" executionId="f20f7930-6ddf-4398-9923-818f467a5c76" testName="useSelectListItem / listItemSelectHandler / calls set selected list item to set which item is selected in the options list" computerName="Helens-iMac.local" duration="00:00:00.027" startTime="2020-07-20T13:56:49.586Z" endTime="2020-07-20T13:56:49.613Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="e242dfc9-76a0-46e6-bd6a-3c927d4cc3a0" executionId="b26f6613-93e4-4c29-a30e-dd8edc3d3c9b" testName="paramsForm / it renders without error" computerName="Helens-iMac.local" duration="00:00:00.135" startTime="2020-07-20T13:56:48.881Z" endTime="2020-07-20T13:56:49.016Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="4256a729-c569-4721-a01d-cbf0c59ba8ab" executionId="2cfcd345-c8ce-4fa7-8c6a-0d3dc1b1cf30" testName="paramsForm / When disabled / params form is hidden" computerName="Helens-iMac.local" duration="00:00:00.135" startTime="2020-07-20T13:56:49.016Z" endTime="2020-07-20T13:56:49.151Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="a9c81c2b-1bfc-415e-9925-1dfb7a12b40b" executionId="d831a8ea-9a88-4aca-904a-9952743bac52" testName="paramsForm / When enabled / params form is shown" computerName="Helens-iMac.local" duration="00:00:00.135" startTime="2020-07-20T13:56:49.151Z" endTime="2020-07-20T13:56:49.286Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="dfdc410b-00bb-41ad-8149-92838f45146b" executionId="61970c69-0b5f-49dc-8f54-aecb178a86a1" testName="paramsForm / When enabled / params form / It has a form" computerName="Helens-iMac.local" duration="00:00:00.135" startTime="2020-07-20T13:56:49.286Z" endTime="2020-07-20T13:56:49.421Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d"/>
+    <UnitTestResult testId="f471ed1e-2beb-4a75-98de-eb2b572878df" executionId="df7ab791-c839-4a4b-b392-54eac2cbb447" testName="paramsForm / When enabled / params form / It has a form title" computerName="Helens-iMac.local" duration="00:00:00.135" startTime="2020-07-20T13:56:49.421Z" endTime="2020-07-20T13:56:49.556Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Error: Unable to find an accessible element with the role "heading"
+
+Here are the accessible roles:
+
+  document:
+
+  Name "":
+  [36m&lt;body /&gt;[39m
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Drivers: Liquid":
+  [36m&lt;input[39m
+    [33mclass[39m=[32m"field-input"[39m
+    [33mid[39m=[32m"driversLiquid"[39m
+    [33mname[39m=[32m"driversLiquid"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m"4"[39m
+  [36m/&gt;[39m
+
+  Name "":
+  [36m&lt;input[39m
+    [33mclass[39m=[32m"field-input"[39m
+    [33mid[39m=[32m"driversLiquid"[39m
+    [33mname[39m=[32m"driversCake"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m"1"[39m
+  [36m/&gt;[39m
+
+  Name "":
+  [36m&lt;input[39m
+    [33mclass[39m=[32m"field-input"[39m
+    [33mid[39m=[32m"driversLiquid"[39m
+    [33mname[39m=[32m"kmperdriverliquid"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m"250"[39m
+  [36m/&gt;[39m
+
+  Name "":
+  [36m&lt;input[39m
+    [33mclass[39m=[32m"field-input"[39m
+    [33mid[39m=[32m"driversLiquid"[39m
+    [33mname[39m=[32m"kmperdrivercake"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m""[39m
+  [36m/&gt;[39m
+
+  Name "":
+  [36m&lt;input[39m
+    [33mclass[39m=[32m"field-input"[39m
+    [33mid[39m=[32m"driversLiquid"[39m
+    [33mname[39m=[32m"distanceCalibration"[39m
+    [33mtype[39m=[32m"text"[39m
+    [33mvalue[39m=[32m"2"[39m
+  [36m/&gt;[39m
+
+  --------------------------------------------------
+
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div[39m
+      [33mdata-testid[39m=[32m"params-component"[39m
+    [36m&gt;[39m
+      [36m&lt;form[39m
+        [33mclass[39m=[32m"params-form"[39m
+        [33mdata-testid[39m=[32m"params-form"[39m
+      [36m&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"driversLiquid"[39m
+            [33mplaceholder[39m=[32m"Input drivers liquid"[39m
+          [36m&gt;[39m
+            [0mDrivers: Liquid[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"driversLiquid"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"4"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"driversCake"[39m
+            [33mplaceholder[39m=[32m"Input drivers cake"[39m
+          [36m&gt;[39m
+            [0mDrivers:Cake[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"driversCake"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"1"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"kmperdriverliquid"[39m
+            [33mplaceholder[39m=[32m"Input km/hour liquid"[39m
+          [36m&gt;[39m
+            [0mKM per Driver: Liquid[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"kmperdriverliquid"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"250"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"kmperdrivercake"[39m
+            [33mplaceholder[39m=[32m"Input km/hour cake"[39m
+          [36m&gt;[39m
+            [0mKM per Driver: Cake[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"kmperdrivercake"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"distanceCalibration"[39m
+            [33mplaceholder[39m=[32m"Distance Calibration"[39m
+          [36m&gt;[39m
+            [0mDistance Calibration[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"distanceCalibration"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"2"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+      [36m&lt;/form&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+    at Object.getElementError (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/config.js:34:12)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/query-helpers.js:71:38
+    at getByRole (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/query-helpers.js:54:17)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ParamsForm/paramsForm.test.js:53:16)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="8e557e97-b1fe-4998-9a75-da889eaf3f2c" executionId="4a3906a3-58e6-472e-98ad-9b5fea2d940f" testName="paramsForm / When enabled / params form / It has a field for drivers liquid" computerName="Helens-iMac.local" duration="00:00:00.135" startTime="2020-07-20T13:56:49.556Z" endTime="2020-07-20T13:56:49.691Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Error: Unable to find a label with the text of: /Drivers:Liquid/
+
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div[39m
+      [33mdata-testid[39m=[32m"params-component"[39m
+    [36m&gt;[39m
+      [36m&lt;form[39m
+        [33mclass[39m=[32m"params-form"[39m
+        [33mdata-testid[39m=[32m"params-form"[39m
+      [36m&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"driversLiquid"[39m
+            [33mplaceholder[39m=[32m"Input drivers liquid"[39m
+          [36m&gt;[39m
+            [0mDrivers: Liquid[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"driversLiquid"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"4"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"driversCake"[39m
+            [33mplaceholder[39m=[32m"Input drivers cake"[39m
+          [36m&gt;[39m
+            [0mDrivers:Cake[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"driversCake"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"1"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"kmperdriverliquid"[39m
+            [33mplaceholder[39m=[32m"Input km/hour liquid"[39m
+          [36m&gt;[39m
+            [0mKM per Driver: Liquid[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"kmperdriverliquid"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"250"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"kmperdrivercake"[39m
+            [33mplaceholder[39m=[32m"Input km/hour cake"[39m
+          [36m&gt;[39m
+            [0mKM per Driver: Cake[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"kmperdrivercake"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"distanceCalibration"[39m
+            [33mplaceholder[39m=[32m"Distance Calibration"[39m
+          [36m&gt;[39m
+            [0mDistance Calibration[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"distanceCalibration"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"2"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+      [36m&lt;/form&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+    at Object.getElementError (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/config.js:34:12)
+    at getAllByLabelText (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/queries/label-text.js:121:38)
+    at getByLabelText (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/query-helpers.js:54:17)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ParamsForm/paramsForm.test.js:57:16)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult testId="126f7cce-23cd-482b-abdc-e0887c10abdc" executionId="0010b207-b8fc-4262-a06f-10e434f7dbb4" testName="paramsForm / When enabled / params form / It has a field for drivers cake" computerName="Helens-iMac.local" duration="00:00:00.135" startTime="2020-07-20T13:56:49.691Z" endTime="2020-07-20T13:56:49.826Z" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d">
+      <Output>
+        <ErrorInfo>
+          <Message>Error: Found a label with the text of: /Drivers:Cake/, however no form control was found associated to that label. Make sure you're using the "for" attribute or "aria-labelledby" attribute correctly.
+
+[36m&lt;body&gt;[39m
+  [36m&lt;div&gt;[39m
+    [36m&lt;div[39m
+      [33mdata-testid[39m=[32m"params-component"[39m
+    [36m&gt;[39m
+      [36m&lt;form[39m
+        [33mclass[39m=[32m"params-form"[39m
+        [33mdata-testid[39m=[32m"params-form"[39m
+      [36m&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"driversLiquid"[39m
+            [33mplaceholder[39m=[32m"Input drivers liquid"[39m
+          [36m&gt;[39m
+            [0mDrivers: Liquid[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"driversLiquid"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"4"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"driversCake"[39m
+            [33mplaceholder[39m=[32m"Input drivers cake"[39m
+          [36m&gt;[39m
+            [0mDrivers:Cake[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"driversCake"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"1"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"kmperdriverliquid"[39m
+            [33mplaceholder[39m=[32m"Input km/hour liquid"[39m
+          [36m&gt;[39m
+            [0mKM per Driver: Liquid[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"kmperdriverliquid"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"250"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"kmperdrivercake"[39m
+            [33mplaceholder[39m=[32m"Input km/hour cake"[39m
+          [36m&gt;[39m
+            [0mKM per Driver: Cake[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"kmperdrivercake"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m""[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+        [36m&lt;div[39m
+          [33mclass[39m=[32m"params-field"[39m
+        [36m&gt;[39m
+          [36m&lt;label[39m
+            [33mclass[39m=[32m"params-label"[39m
+            [33mfor[39m=[32m"distanceCalibration"[39m
+            [33mplaceholder[39m=[32m"Distance Calibration"[39m
+          [36m&gt;[39m
+            [0mDistance Calibration[0m
+          [36m&lt;/label&gt;[39m
+          [36m&lt;input[39m
+            [33mclass[39m=[32m"field-input"[39m
+            [33mid[39m=[32m"driversLiquid"[39m
+            [33mname[39m=[32m"distanceCalibration"[39m
+            [33mtype[39m=[32m"text"[39m
+            [33mvalue[39m=[32m"2"[39m
+          [36m/&gt;[39m
+        [36m&lt;/div&gt;[39m
+      [36m&lt;/form&gt;[39m
+    [36m&lt;/div&gt;[39m
+  [36m&lt;/div&gt;[39m
+[36m&lt;/body&gt;[39m
+    at Object.getElementError (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/config.js:34:12)
+    at getAllByLabelText (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/queries/label-text.js:119:38)
+    at getByLabelText (/Users/mike/dev/YW-sludge-modelling-app/node_modules/@testing-library/dom/dist/query-helpers.js:54:17)
+    at Object.&lt;anonymous&gt; (/Users/mike/dev/YW-sludge-modelling-app/src/components/FlowContainer/ParamsForm/paramsForm.test.js:61:16)
+    at Object.asyncJestTest (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:43:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:26:19)
+    at /Users/mike/dev/YW-sludge-modelling-app/node_modules/jest-jasmine2/build/queueRunner.js:73:41</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

@@ -2,14 +2,29 @@ import React from 'react';
 import {render} from "@testing-library/react";
 import Input from "./index";
 import userEvent from "@testing-library/user-event";
-import { HelpContextProvider} from "../../../context/HelpContext";
 import useUploadData from "../../../hooks/useUploadFiles";
+import {FileContext} from "../../../context/FileContext";
+import {FlowContext} from "../../../context/FlowContext";
 jest.mock('../../../hooks/useUploadFiles');
 
 describe('<Input/>', () => {
+  const files = []
+  const fileContextValues = { files}
+  const finishUpload = jest.fn();
+  const beginUpload = jest.fn();
+  const state = {}
 
-  const wrapper = (props) => {
-    return render(<HelpContextProvider><Input {...props}/></HelpContextProvider>)
+  const flowContextValues = { finishUpload, beginUpload, state}
+
+  const wrapper = (props, flowState) => {
+    debugger;
+    flowContextValues.state = {...flowContextValues.state, ...flowState}
+    return render(
+      <FlowContext.Provider value={ flowContextValues }>
+        <FileContext.Provider value={ fileContextValues}>
+          <Input {...props}/>
+        </FileContext.Provider>
+      </FlowContext.Provider>)
   }
 
   test('it renders without error', () => {
@@ -27,7 +42,7 @@ describe('<Input/>', () => {
       useUploadData.mockImplementation(() => ({
         uploadData: jest.fn()
       }));
-      const {queryByTestId} = wrapper({disabled: true});
+      const {queryByTestId} = wrapper(undefined,{inputDisabled: true});
       const inputBtn = queryByTestId('input-component-btn');
       expect(inputBtn).toHaveClass('disabled');
     });
@@ -37,7 +52,7 @@ describe('<Input/>', () => {
       useUploadData.mockImplementation(() => ({
         uploadData: uploadDataMock
       }));
-      const {queryByTestId} = wrapper({disabled: true});
+      const {queryByTestId} = wrapper(undefined,{inputDisabled: true});
       const inputBtn = queryByTestId('input-component-btn');
       userEvent.click(inputBtn);
       expect(uploadDataMock).not.toHaveBeenCalled();

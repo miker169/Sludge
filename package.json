@@ -113,7 +113,8 @@
     "start": "npm run build  && node index.js",
     "server": "nodemon index.js",
     "client": "node scripts/start.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "node scripts/test.js"
   },
   "eslintConfig": {
     "extends": "react-app"
