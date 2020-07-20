@@ -49,13 +49,9 @@ describe('paramsForm', () => {
         screen.queryByTestId('params-form');
       });
 
-      test('It has a form title', () => {
-        screen.getByRole('heading', /Sludge Modelling Params/);
-      });
-
       test('It has a field for drivers liquid', () => {
-        screen.getByLabelText(/Drivers:Liquid/);
-        screen.getAllByRole('textbox', /Drivers:Liquid/)
+        screen.getByLabelText(/Drivers: Liquid/);
+        screen.getAllByRole('textbox', /Drivers: Liquid/)
       })
       test('It has a field for drivers cake', () => {
         screen.getByLabelText(/Drivers:Cake/);

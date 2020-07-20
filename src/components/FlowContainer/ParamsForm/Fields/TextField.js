@@ -35,7 +35,7 @@ const TextField = React.memo(({name, placeholder, title, setField, value}) => {
   return (
     <div className="params-field">
       <label htmlFor={name} placeholder={placeholder} className={labelClass}>{title}</label>
-      <input id="driversLiquid" onChange={onChangeHandler} name={name} value={value}
+      <input id={name} onChange={onChangeHandler} name={name} value={value}
              className={inputClass} type="text"/>
       {hasError ? <span className="errorSpan">{errorString}</span> : null}
     </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from "@testing-library/react";
 import Update from "./index";
+import {FlowContext} from "../../../context/FlowContext";
 
 describe('<Update/>',  () => {
   const wrapper = (props) => {
-    return render(<Update {...props}/>);
+    return render(<FlowContext.Provider value={}> <Update {...props}/></FlowContext.Provider>);
   }
 
   // let state = {inputArrowDisabled: true, inputArrowRan: false}
