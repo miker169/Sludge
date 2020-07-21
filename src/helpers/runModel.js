@@ -56,6 +56,11 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
           fetch('/logging', {
             method: 'post',
             body: error + JSON.stringify(ex, null, 2),
+          }).then(msg => {
+            stopModel();
+          }).catch(ex => {
+            console.log(ex);
+            stopModel()
           })
         })
       } else {
@@ -79,6 +84,9 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
           method: 'post',
           body: error + JSON.stringify(ex, null, 2),
         }).then(() => {
+          stopModel();
+        }).catch(ex => {
+          console.log('Error writing to logs')
           stopModel();
         })
       })

@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(function(req, res, next){
   res.setTimeout(900000, function(){
     console.log('Request has timed out.');
-    res.send(408);
+    res.status(408).send('Request has timed out');
   });
   next();
 });
