@@ -64,9 +64,10 @@ console.log('2. About to run model')
         }).catch(ex => {
           console.log('Error getting latest output', JSON.stringify(ex, null, 2))
           const error = 'Error getting latest output when there is a filename';
+          ex.customError = error
           fetch('/logging', {
             method: 'post',
-            body: error + JSON.stringify(ex, null, 2),
+            body: JSON.stringify(ex, null, 2),
           }).then(msg => {
             console.log('Succesfully post log and about to stop model arrow')
             stopModel();
@@ -97,9 +98,10 @@ console.log('2. About to run model')
       }).catch(ex => {
         console.log('No initial errors, however errors after getting blob file', JSON.stringify(ex, null, 2))
         const error = 'Error getting latest output when there is no filename';
+        ex.customError = error
         fetch('/logging', {
           method: 'post',
-          body: error + JSON.stringify(ex, null, 2),
+          body: JSON.stringify(ex, null, 2),
         }).then(() => {
           console.log('Succesfully posted log error')
           stopModel();
@@ -112,9 +114,10 @@ console.log('2. About to run model')
   }).catch(ex => {
     console.log('Error after calling run model', JSON.stringify(ex, null, 2))
     const error = 'Error in final catch block';
+    ex.customError = error;
     fetch('/logging', {
       method: 'post',
-      body: error + JSON.stringify(ex, null, 2),
+      body: JSON.stringify(ex, null, 2),
     }).then(msg => {
       console.log('Succesfully saved log and about to call stopModel')
       stopModel();
