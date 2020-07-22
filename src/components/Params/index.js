@@ -109,7 +109,6 @@ const Params = () => {
 
     paramsList[date] = newParams;
     const newParamsList = {...paramsList}
-    modelFinishedRunning
     setParamsList(newParamsList)
   }
   return (
