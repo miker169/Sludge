@@ -17,7 +17,6 @@ describe('<Input/>', () => {
   const flowContextValues = { finishUpload, beginUpload, state}
 
   const wrapper = (props, flowState) => {
-    debugger;
     flowContextValues.state = {...flowContextValues.state, ...flowState}
     return render(
       <FlowContext.Provider value={ flowContextValues }>
