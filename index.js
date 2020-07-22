@@ -24,7 +24,12 @@ app.use(function(req, res, next){
   next();
 });
 
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build'), {
+  etag: false,
+  setHeaders: (res, path) => {
+    res.setHeader('Cache-Control', 'no-cache')
+  }
+}));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
@@ -39,7 +44,6 @@ app.post('/file-upload',async function(req, res) {
 });
 
 app.post('/logging', (req, res) => {
-  console.log(req.body.customError)
   console.log(JSON.stringify(req.body, null, 2))
   console.log('A front end error occured: ' , JSON.stringify(req.body))
   res.status(200).send('ok')
