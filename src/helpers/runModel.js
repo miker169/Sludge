@@ -36,6 +36,8 @@ console.log('2. About to run model')
         'Access-Control-Allow-Origin': '*'
       }
     }).then((res) => {
+      if (!res.ok) { throw res }
+
       console.log('3. Model responded with JSON')
       return res.json();
     })
@@ -119,6 +121,16 @@ console.log('2. About to run model')
         })
       }
     }).catch(ex => {
+      ex.text().then(err => {
+        console.log('This error occured: ', err)
+        fetch('/logging', {
+          method: 'post',
+          body: err,
+          headers: {'Content-Type': 'application/json'}
+        }).then(() => {
+          stopModel()
+        })
+      })
       console.log('Error after calling run model', JSON.stringify(ex, null, 2))
       const error = 'Error in final catch block';
       ex.customError = error;
