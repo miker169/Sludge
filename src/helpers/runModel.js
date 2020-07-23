@@ -21,14 +21,24 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
     paramsList[key] = params;
   }
 
-console.log(paramsList);
+  console.log(paramsList);
 
-console.log('2. About to run model')
+  console.log('2. About to run model')
 
   try {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    setTimeout(() => {
+      console.log('Hit timeout')
+      setErrorText([{error: 'Communication with server timed out.', type: 'server'}])
+      stopModel();
+      controller.abort()
+    }, 450000);
+
     fetch('/run-model', {
       method: 'post',
       body: JSON.stringify(paramsList),
+      signal,
       mode: 'cors',
       headers: {
         'Accept': 'application/json',
@@ -36,7 +46,9 @@ console.log('2. About to run model')
         'Access-Control-Allow-Origin': '*'
       }
     }).then((res) => {
-      if (!res.ok) { throw res }
+      if (!res.ok) {
+        throw res
+      }
 
       console.log('3. Model responded with JSON')
       return res.json();
@@ -148,9 +160,9 @@ console.log('2. About to run model')
       })
 
     });
-  }catch(ex){
+  } catch (ex) {
     console.log('Error caught')
-    console.log(JSON.stringify(ex,null, 2))
+    console.log(JSON.stringify(ex, null, 2))
     fetch('/logging', {
       method: 'post',
       body: JSON.stringify(ex, null, 2),
