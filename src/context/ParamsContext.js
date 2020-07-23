@@ -18,13 +18,16 @@ const enumerateDaysBetweenDates = (startDate, endDate) => {
 }
 let dates = enumerateDaysBetweenDates(startDate, endDate)
 const initialParamsList = {};
+const initialParamsObj = {
+  distanceCalibration: 2,
+  driversLiquid: 4,
+  driversCake: 1,
+  kmperdriverliquid: 250,
+  kmperdrivercake: 225,
+}
 dates.forEach((date) => {
   initialParamsList[date] = {
-    distanceCalibration: 2,
-    driversLiquid: 4,
-    driversCake: 1,
-    kmperdriverliquid: 250,
-    kmperdrivercake: 225,
+    ...initialParamsObj
   }
 })
 

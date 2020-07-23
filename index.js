@@ -44,6 +44,7 @@ app.post('/file-upload',async function(req, res) {
 });
 
 app.post('/logging', (req, res) => {
+  console.log('About to write error log')
   console.log(JSON.stringify(req.body, null, 2))
   console.log('A front end error occured: ' , JSON.stringify(req.body))
   res.status(200).send('ok')
@@ -77,6 +78,7 @@ app.post('/run-model', function(req, res) {
       body: JSON.stringify(req.body),
       headers: { 'Content-Type': 'application/json' },
     }).then(res => {
+      console.log('About to parse json in run-model response')
       console.log(JSON.stringify(res, null, 2))
       return res.json()
     })
@@ -86,6 +88,7 @@ app.post('/run-model', function(req, res) {
         res.send(json);
       })
       .catch(err => {
+        console.log('we have an error in run-model', err.message)
         console.log(JSON.stringify(err, null, 2))
         res.send(err)
       })

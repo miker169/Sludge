@@ -67,9 +67,12 @@ const Params = () => {
     })
 
     for(let date in paramsList){
-      paramsList[date][name] = value;
+
+      const params = {...paramsList[date]}
+      paramsList[date] = {...params, [name]: value}
     }
 
+    console.log('Calling from Set Default Params')
     setParamsList(paramsList)
 
   }
@@ -84,8 +87,10 @@ const Params = () => {
 
     // in params list iterate
     for(let date of weekendDays){
-      paramsList[date][name] = value
+      const params = {...paramsList[date]}
+      paramsList[date] = {...params, [name]: value}
     }
+    console.log('Calling from Set Weekend Defaults Params')
     setParamsList(paramsList)
   }
 
@@ -97,8 +102,10 @@ const Params = () => {
     const weekDays = buildWeekDays(paramsStartDate, endDate);
 
     for(let date of weekDays){
-      paramsList[date][name] = value;
+      const params = {...paramsList[date]}
+      paramsList[date] = {...params, [name]: value}
     }
+    console.log('Calling from Set Weekday defaults Params')
     setParamsList(paramsList)
   }
 
@@ -109,6 +116,7 @@ const Params = () => {
 
     paramsList[date] = newParams;
     const newParamsList = {...paramsList}
+    console.log('Calling from Set Param Item')
     setParamsList(newParamsList)
   }
   return (
