@@ -17,6 +17,7 @@ export default () => {
         complete: (csv) => {
           const date = csv.data[1][5]
           const startDate = new Date(date.split('/')[2], date.split('/')[1] - 1, date.split('/')[0]);
+
           setParamsStartDateHook(moment(startDate))
         }
       });

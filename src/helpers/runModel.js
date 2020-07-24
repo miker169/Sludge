@@ -133,19 +133,12 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
         })
       }
     }).catch(ex => {
-      ex.text().then(err => {
-        console.log('This error occured: ', err)
-        fetch('/logging', {
-          method: 'post',
-          body: err,
-          headers: {'Content-Type': 'application/json'}
-        }).then(() => {
-          stopModel()
-        })
-      })
+      console.log(ex);
+      console.log(JSON.stringify(ex, null, 2));
+
       console.log('Error after calling run model', JSON.stringify(ex, null, 2))
       const error = 'Error in final catch block';
-      ex.customError = error;
+      ex.customError = error + ' '+ex;
       fetch('/logging', {
         method: 'post',
         body: JSON.stringify(ex, null, 2),
