@@ -163,6 +163,8 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
     }).then(msg => {
       console.log('Succesfully saved log and about to call stopModel')
       stopModel();
+    }).catch(ex => {
+      stopModel();
     })
   }
 };
