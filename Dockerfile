@@ -24,4 +24,4 @@ RUN yarn run build
 EXPOSE 8080
 
 # Finally runs the application
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
