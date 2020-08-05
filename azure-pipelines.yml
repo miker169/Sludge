@@ -26,8 +26,8 @@ stages:
             displayName: 'Install Node.js'
 
           - script: |
-              pushd $(projectFolder) && yarn install && popd
-              pushd $(projectFolder) && yarn run build && popd
+              yarn install && popd
+              yarn run build && popd
             displayName: 'npm install, build and test'
 
           - task: ArchiveFiles@2
