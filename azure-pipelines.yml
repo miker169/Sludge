@@ -4,44 +4,68 @@
 pr: ['develop']
 trigger: ['develop']
 
+
 variables:
-  imageName: 'yw-fe'
-  imageRepository: 'YW-frontend'
-  dockerfilePath: 'Dockerfile'
-  dockerRegistryServiceConnection: 'ywwwdevacr'
-  subscriptionID: 'yw-ww-dev-kv-access'
+  azureSubscription: 'yw-brm-dev'
+  pool: 'ase-release-pool'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/'
 
-steps:
-- task: AzureKeyVault@1
-  inputs:
-    azureSubscription: $(subscriptionID)
-    KeyVaultName: 'ywwwksdev'
-    SecretsFilter: '*'
-- task: Docker@2
-  displayName: Login to ACR
-  inputs:
-    command: login
-    containerRegistry: $(dockerRegistryServiceConnection)
-- task: Docker@2
-  displayName: Build an image
-  inputs:
-    command: build
-    arguments: --build-arg client_secret=$(client-secret)
-    repository: $(imageRepository)
-    tags: latest
-- task: Docker@2
-  displayName: Push image
-  inputs:
-    command: push
-    containerRegistry: $(dockerRegistryServiceConnection)
-    repository: $(imageRepository)
-    tags: latest
-- task: Docker@2
-  displayName: Logout of ACR
-  inputs:
-    command: logout
-    containerRegistry: $(dockerRegistryServiceConnection)
+stages:
+  - stage: Build
+    displayName: Build stage
+    jobs:
+      - job: Build
+        displayName: Build
+        pool:
+          name: $(pool)
 
+        steps:
+          - task: NodeTool@0
+            inputs:
+              versionSpec: '10.x'
+            displayName: 'Install Node.js'
 
+          - script: |
+              pushd $(projectFolder) && yarn install && popd
+              pushd $(projectFolder) && yarn run build && popd
+            displayName: 'npm install, build and test'
 
+          - task: ArchiveFiles@2
+            displayName: 'Archive files'
+            inputs:
+              rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+              includeRootFolder: false
+              archiveType: zip
+              archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+              replaceExistingArchive: true
 
+          - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+            artifact: drop
+
+  - stage: Deploy
+
+    displayName: Deploy stage
+    dependsOn: Build
+    condition: succeeded()
+    jobs:
+      - job: Deploy
+        displayName: Deploy
+        pool:
+          name: $(pool)
+          displayName: Deploy
+          environment: $(environmentName)
+
+          strategy:
+            runOnce:
+              deploy:
+                steps:
+                  - task: AzureWebApp@1
+                    displayName: 'Azure Web App Deploy: {{ webAppName }}'
+                    inputs:
+                      azureSubscription: $(azureSubscription)
+                      appType: webAppLinux
+                      appName: $(webAppName)
+                      runtimeStack: 'NODE|10.10'
+                      package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+                      startUpCommand: 'npm run start'
+>>>>>>> Stashed changes
