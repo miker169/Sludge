@@ -9,6 +9,7 @@ variables:
   azureSubscription: 'yw-brm-dev'
   pool: 'ase-release-pool'
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
+  environmentName: 'ywBrmWebAppDe
 
 stages:
   - stage: Build
@@ -63,7 +64,6 @@ stages:
                     displayName: 'Azure Web App Deploy: {{ webAppName }}'
                     inputs:
                       azureSubscription: $(azureSubscription)
-                      appType: webAppLinux
                       appName: $(webAppName)
                       runtimeStack: 'NODE|10.10'
                       package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
