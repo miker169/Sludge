@@ -26,7 +26,7 @@ stages:
             displayName: 'Install Node.js'
 
           - script: |
-              yarn install --verbose && popd
+              yarn install && popd
               yarn run build && popd
             displayName: 'npm install, build and test'
 
