@@ -9,7 +9,7 @@ variables:
   azureSubscription: 'yw-brm-dev'
   pool: 'ase-release-pool'
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
-  environmentName: 'ywBrmWebAppDe
+  environmentName: 'ywBrmWebAppDev'
 
 stages:
   - stage: Build
