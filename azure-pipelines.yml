@@ -9,11 +9,12 @@ variables:
   azureSubscription: 'yw-brm-dev'
   pool: 'ase-release-pool'
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
-  environmentName: 'ywBrmWebAppDev'
   environmentDev: YW-RM-react-app-dev-env
   environmentProd: YW-RM-react-app-deploy-env
   rgDev: yw-brm-dev
   rgProd: yw-brm-dev
+  webAppNameDev: 'ywBrmWebAppDev'
+  webAppNameProd: 'ywBrmWebAppProd'
 
 stages:
   - stage: Build
@@ -91,7 +92,7 @@ stages:
                     azureSubscription: $(azureSubscription)
                     appName: $(webAppName)
                     deployToSlotOrASE: true
-                    resourceGroupName: $(rgDev)
+                    resourceGroupName: $(rgProd)
                     runtimeStack: 'NODE|10.10'
                     package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
                     startUpCommand: 'npm run start'
