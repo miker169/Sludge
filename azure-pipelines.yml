@@ -10,6 +10,10 @@ variables:
   pool: 'ase-release-pool'
   workingDirectory: '$(System.DefaultWorkingDirectory)/'
   environmentName: 'ywBrmWebAppDev'
+  environmentDev: YW-RM-react-app-dev-env
+  environmentProd: YW-RM-react-app-deploy-env
+  rgDev: yw-brm-dev
+  rgProd: yw-brm-dev
 
 stages:
   - stage: Build
@@ -43,19 +47,18 @@ stages:
           - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
             artifact: drop
 
-  - stage: Deploy
+  - stage: Deploy_Dev
 
-    displayName: Deploy stage
+    displayName: Deploy to dev
     dependsOn: Build
     condition: succeeded()
     jobs:
-      - job: Deploy
+      - deployment: Deploy
         displayName: Deploy
-        pool:
-          name: $(pool)
-          displayName: Deploy
-          environment: $(environmentName)
-
+        environment: $(environmentDev)
+          pool:
+            name: $(pool)
+            displayName: Deploy
           strategy:
             runOnce:
               deploy:
@@ -65,6 +68,34 @@ stages:
                     inputs:
                       azureSubscription: $(azureSubscription)
                       appName: $(webAppName)
+                      deployToSlotOrASE: true
+                      resourceGroupName: $(rgDev)
                       runtimeStack: 'NODE|10.10'
                       package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
                       startUpCommand: 'npm run start'
+  - stage: Deploy_Prod
+
+      displayName: Deploy to prod
+      dependsOn: Deploy_Dev
+      condition: succeeded()
+      jobs:
+        - deployment: Deploy
+          displayName: Deploy
+          environment: $(environmentProd)
+            pool:
+              name: $(pool)
+              displayName: Deploy
+            strategy:
+              runOnce:
+                deploy:
+                  steps:
+                    - task: AzureWebApp@1
+                      displayName: 'Azure Web App Deploy: {{ webAppName }}'
+                      inputs:
+                        azureSubscription: $(azureSubscription)
+                        appName: $(webAppName)
+                        deployToSlotOrASE: true
+                        resourceGroupName: $(rgDev)
+                        runtimeStack: 'NODE|10.10'
+                        package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
+                        startUpCommand: 'npm run start'
