@@ -63,10 +63,10 @@ stages:
             deploy:
               steps:
                 - task: AzureWebApp@1
-                  displayName: 'Azure Web App Deploy: {{ webAppName }}'
+                  displayName: 'Azure Web App Deploy: {{ webAppNameDev }}'
                   inputs:
                     azureSubscription: $(azureSubscription)
-                    appName: $(webAppName)
+                    appName: $(webAppNameDev)
                     deployToSlotOrASE: true
                     resourceGroupName: $(rgDev)
                     runtimeStack: 'NODE|10.10'
@@ -87,10 +87,10 @@ stages:
             deploy:
               steps:
                 - task: AzureWebApp@1
-                  displayName: 'Azure Web App Deploy: {{ webAppName }}'
+                  displayName: 'Azure Web App Deploy: {{ webAppNameProd }}'
                   inputs:
                     azureSubscription: $(azureSubscription)
-                    appName: $(webAppName)
+                    appName: $(webAppNameProd)
                     deployToSlotOrASE: true
                     resourceGroupName: $(rgProd)
                     runtimeStack: 'NODE|10.10'
