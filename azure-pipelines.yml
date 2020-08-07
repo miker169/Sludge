@@ -56,9 +56,8 @@ stages:
       - deployment: Deploy
         displayName: Deploy
         environment: $(environmentDev)
-          pool:
-            name: $(pool)
-            displayName: Deploy
+        pool:
+          name: $(pool)
           strategy:
             runOnce:
               deploy:
