@@ -36,11 +36,28 @@ stages:
               yarn run build
             displayName: 'yarn install, build and test'
 
+          - script: |
+              npm pack
+            displayName: 'Package for release'
+
+          - task: CopyFiles@2
+            inputs:
+              contents: '*.tgz'
+              targetFolder: $(Build.ArtifactStagingDirectory)
+            displayName: 'Copy archives to artifacts staging directory'
+
+          - task: CopyFiles@2
+            inputs:
+              sourceFolder: '$(Build.SourcesDirectory)'
+              contents: 'package.json'
+              targetFolder: $(Build.ArtifactStagingDirectory)
+            displayName: 'Copy package.json'
+
           - task: ArchiveFiles@2
             displayName: 'Archive files'
             inputs:
               rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
-              includeRootFolder: false
+              includeRootFolder: true
               archiveType: zip
               archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
               replaceExistingArchive: true
