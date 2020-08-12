@@ -12,7 +12,6 @@ variables:
   webAppNameDev: 'ywBrmWebAppDev'
   webAppNameProd: 'ywBrmWebAppProd'
 
-environment: $(environmentDev)
 pool:
   name: $(pool)
 steps:
