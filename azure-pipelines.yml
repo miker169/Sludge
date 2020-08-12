@@ -29,12 +29,9 @@ stages:
           - task: CmdLine@2
             inputs:
               script: 'yarn' 
-          - task: Npm@1
-            displayName: ‘npm run bundle’
+          - task: CmdLine@2
             inputs:
-              command: custom
-              verbose: false
-              customCommand: ‘run build’
+              script: 'yarn run build'
           - task: ArchiveFiles@2
             displayName: ‘Archive $(System.DefaultWorkingDirectory)’
             inputs:
