@@ -52,7 +52,7 @@ stages:
           displayName: 'Publish Artifact: drop'
           inputs:
             PathtoPublish: ‘$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip’
-  -stage: Deploy_dev
+  - stage: Deploy_dev
     displayName: Deploy to dev
     dependsOn: Build
     condition: succeeded()
