@@ -26,20 +26,15 @@ stages:
             displayName: ‘Use Node 10.x’
             inputs:
               versionSpec: 10.x
-          - task: CmdLine@1
-            displayName: ‘Run yarn’
+          - task: CmdLine@2
             inputs:
-              filename: yarn
-              workingFolder: ‘$(Build.SourcesDirectory)’
+              script: 'yarn' 
           - task: Npm@1
             displayName: ‘npm run bundle’
             inputs:
               command: custom
               verbose: false
               customCommand: ‘run build’
-          - task: CmdLine@2
-            inputs:
-              script: 'yarn'
           - task: ArchiveFiles@2
             displayName: ‘Archive $(System.DefaultWorkingDirectory)’
             inputs:
