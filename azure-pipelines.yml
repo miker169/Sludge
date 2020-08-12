@@ -17,7 +17,7 @@ stages:
   - stage: Build
     displayName: Build stage
     jobs:
-      -job: Build  
+      - job: Build  
       displayName: Build
       pool:
         name: $(poo)
@@ -65,15 +65,15 @@ stages:
         strategy:
           runOnce:
             deploy:
-            steps:
-            - task: AzureRmWebAppDeployment@4
-            displayName: 'Azure Web App Deploy: {{ webAppNameDev }}'
-            inputs:
-              azureSubscription:  $(azureSubscription)
-              WebAppName: $(webAppNameDev)
-              deployToSlotOrASE: true
-              ResourceGroupName: $(rgDev)
-              packageForLinux: ‘$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip’
-              WebConfigParameters: ‘-Handler iisnode -NodeStartFile server.js -appType node’
-              enableCustomDeployment: true
-              AdditionalArguments: ‘-retryAttempts:6 -retryInterval:10000 -allowUntrusted’
+              steps:
+                - task: AzureRmWebAppDeployment@4
+                  displayName: 'Azure Web App Deploy: {{ webAppNameDev }}'
+                  inputs:
+                    azureSubscription:  $(azureSubscription)
+                    WebAppName: $(webAppNameDev)
+                    deployToSlotOrASE: true
+                    ResourceGroupName: $(rgDev)
+                    packageForLinux: ‘$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip’
+                    WebConfigParameters: ‘-Handler iisnode -NodeStartFile server.js -appType node’
+                    enableCustomDeployment: true
+                    AdditionalArguments: ‘-retryAttempts:6 -retryInterval:10000 -allowUntrusted’
