@@ -20,7 +20,7 @@ stages:
       - job: Build  
         displayName: Build
         pool:
-          name: $(poo)
+          name: $(pool)
         steps:
           - task: NodeTool@0
             displayName: ‘Use Node 10.x’
