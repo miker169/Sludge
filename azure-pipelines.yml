@@ -37,12 +37,9 @@ stages:
               command: custom
               verbose: false
               customCommand: ‘run build’
-          - task: CmdLine@1
-            displayName: ‘Run Yarn for Develop’
+          - task: CmdLine@2
             inputs:
-              filename: yarn
-              arguments: ‘--production --force’
-              workingFolder: ‘$(Build.SourcesDirectory)’
+              script: 'yarn'
           - task: ArchiveFiles@2
             displayName: ‘Archive $(System.DefaultWorkingDirectory)’
             inputs:
