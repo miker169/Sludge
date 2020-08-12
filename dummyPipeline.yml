@@ -1,0 +1,59 @@
+pr: ['develop']
+trigger: ['develop']
+
+variables:
+  azureSubscription: 'yw-brm-dev'
+  pool: 'ase-release-pool'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/'
+  environmentDev: YW-RM-react-app-dev-env
+  environmentProd: YW-RM-react-app-deploy-env
+  rgDev: yw-brm-dev
+  rgProd: yw-brm-dev
+  webAppNameDev: 'ywBrmWebAppDev'
+  webAppNameProd: 'ywBrmWebAppProd'
+
+pool:
+  name: Prototypes
+steps:
+  - task: NodeTool@0
+    displayName: ‘Use Node 10.x’
+    inputs:
+      versionSpec: 10.x
+  - task: CmdLine@1
+    displayName: ‘Run yarn’
+    inputs:
+      filename: yarn
+      workingFolder: ‘$(Build.SourcesDirectory)’
+  - task: Npm@1
+    displayName: ‘npm run bundle’
+    inputs:
+      command: custom
+      verbose: false
+      customCommand: ‘run bundle’
+  - task: CmdLine@1
+    displayName: ‘Run Yarn for Production’
+    inputs:
+      filename: yarn
+      arguments: ‘--production --force’
+      workingFolder: ‘$(Build.SourcesDirectory)/bundle’
+  - task: ArchiveFiles@2
+    displayName: ‘Archive $(System.DefaultWorkingDirectory)/bundle’
+    inputs:
+      rootFolderOrFile: ‘$(System.DefaultWorkingDirectory)/bundle’
+      includeRootFolder: false
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
+    inputs:
+      PathtoPublish: ‘$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip’
+  - task: AzureRmWebAppDeployment@4
+    displayName: 'Azure App Service Deploy:'
+    inputs:
+      azureSubscription:  $(azureSubscription)
+      WebAppName: $(webAppNameDev)
+      deployToSlotOrASE: true
+      ResourceGroupName: $(rgDev)
+      packageForLinux: ‘$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip’
+      WebConfigParameters: ‘-Handler iisnode -NodeStartFile server.js -appType node’
+      AppSettings: ‘-OS_API_KEY jRCcLCj8pDxO1ZC2uMZC4ZAmNrVU4FFP -WEBSITE_NODE_DEFAULT_VERSION 8.9.4’
+      enableCustomDeployment: true
+      AdditionalArguments: ‘-retryAttempts:6 -retryInterval:10000 -allowUntrusted’
