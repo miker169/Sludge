@@ -4,7 +4,6 @@ trigger: ['develop']
 variables:
   azureSubscription: 'yw-brm-dev'
   pool: 'ase-release-pool'
-  workingDirectory: '$(System.DefaultWorkingDirectory)/'
   environmentDev: YW-RM-react-app-dev-env
   environmentProd: YW-RM-react-app-deploy-env
   rgDev: yw-brm-dev
@@ -33,9 +32,9 @@ stages:
             inputs:
               script: 'yarn run build'
           - task: ArchiveFiles@2
-            displayName: ‘Archive $(System.DefaultWorkingDirectory)’
+            displayName: ‘Archive files’
             inputs:
-              rootFolderOrFile: ‘$(System.DefaultWorkingDirectory)’
+              rootFolderOrFile: ‘$(System.DefaultWorkingDirectory)/s’
               includeRootFolder: false
           - task: PublishBuildArtifacts@1
             displayName: 'Publish Artifact: drop'
