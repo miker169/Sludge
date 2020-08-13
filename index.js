@@ -51,7 +51,9 @@ app.get('/', function (req, res) {
 
 app.post('/file-upload',async function(req, res) {
 
+  console.log('in file upload')
   const connectionString = getAzureSecret('conn-str');
+  console.log(connectionString);
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('inputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.files.file.name);
@@ -62,7 +64,7 @@ app.post('/file-upload',async function(req, res) {
 app.post('/logging', (req, res) => {
   console.log('About to write error log')
   console.log(JSON.stringify(req.body, null, 2))
-  console.log('A front end error occured: ' , JSON.stringify(req.body))
+  console.log('A front end error occurred: ' , JSON.stringify(req.body))
   res.status(200).send('ok')
 });
 
@@ -82,6 +84,7 @@ app.post('/latest-output', async function(req, res){
 })
 
 const getAzureSecret = (secret_name) => {
+  console.log(secret_name);
   const clientId = process.env.clientId;
   const clientSecret = process.env.clientSecret;
   const tenantId = process.env.tenantId;
@@ -90,6 +93,7 @@ const getAzureSecret = (secret_name) => {
   const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
   const secret_client =  new SecretClient(vault_url, credential);
   const secret = secret_client.getSecret(secret_name);
+  console.log('secret', secret_name);
   return secret.value;
 }
 
