@@ -50,13 +50,9 @@ app.get('/', function (req, res) {
 });
 
 app.post('/file-upload',async function(req, res) {
-  const clientId = process.env.clientId;
-  const clientSecret = process.env.clientSecret;
-  const tenantId = process.env.tenantId;
-  const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-  // const connectionString = process.env.DEV_DATASTORE_KEY;
-  // const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
-  const blobServiceClient = new BlobServiceClient('https://ywbrmdatastoredev.blob.core.windows.net/inputs', credential)
+
+  const connectionString = getAzureSecret('conn-str');
+  const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('inputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.files.file.name);
   const uploadBlobResponse = await blockBlobClient.uploadFile(req.files.file.tempFilePath)
@@ -71,7 +67,7 @@ app.post('/logging', (req, res) => {
 });
 
 app.post('/latest-output', async function(req, res){
-  const connectionString = process.env.DEV_DATASTORE_KEY;
+  const connectionString = getAzureSecret('conn-str');
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('outputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.body.filename);
@@ -84,6 +80,18 @@ app.post('/latest-output', async function(req, res){
   res.end(buffer)
 
 })
+
+const getAzureSecret = (secret_name) => {
+  const clientId = process.env.clientId;
+  const clientSecret = process.env.clientSecret;
+  const tenantId = process.env.tenantId;
+
+  const vault_url = process.env.kvUri;
+  const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
+  const secret_client =  new SecretClient(vault_url, credential);
+  const secret = secret_client.getSecret(secret_name);
+  return secret.value;
+}
 
 app.post('/run-model', function(req, res) {
   req.setTimeout(900000)
