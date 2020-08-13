@@ -1,16 +1,16 @@
 const express = require('express')
-let appInsights = require('applicationinsights');
-appInsights.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
-.setAutoDependencyCorrelation(true)
-.setAutoCollectRequests(true)
-.setAutoCollectPerformance(true, true)
-.setAutoCollectExceptions(true)
-.setAutoCollectDependencies(true)
-.setAutoCollectConsole(true)
-.setUseDiskRetryCaching(true)
-.setSendLiveMetrics(false)
-.setDistributedTracingMode(appInsights.DistributedTracingModes.AI)
-.start();
+// let appInsights = require('applicationinsights');
+// appInsights.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
+// .setAutoDependencyCorrelation(true)
+// .setAutoCollectRequests(true)
+// .setAutoCollectPerformance(true, true)
+// .setAutoCollectExceptions(true)
+// .setAutoCollectDependencies(true)
+// .setAutoCollectConsole(true)
+// .setUseDiskRetryCaching(true)
+// .setSendLiveMetrics(false)
+// .setDistributedTracingMode(appInsights.DistributedTracingModes.AI)
+// .start();
 const path = require('path');
 const fileUpload = require('express-fileupload')
 const cors = require('cors')
@@ -32,6 +32,7 @@ app.use(express.json());
 
 app.use(function(req, res, next){
   res.setTimeout(900000, function(){
+
     console.log('Request has timed out.');
     res.status(408).send('Request has timed out');
   });
@@ -49,12 +50,13 @@ app.get('/', function (req, res) {
 });
 
 app.post('/file-upload',async function(req, res) {
-  const clientId = process.env.clientId;
-  const clientSecret = process.env.clientSecret;
-  const tenantId = process.env.tenantId;
-  const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-
-  const blobServiceClient = new BlobServiceClient(credential)
+  // const clientId = process.env.clientId;
+  // const clientSecret = process.env.clientSecret;
+  // const tenantId = process.env.tenantId;
+  // const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
+  const connectionString = process.env.DEV_DATASTORE_KEY;
+  const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
+  // const blobServiceClient = new BlobServiceClient(credential)
   const containerClient = blobServiceClient.getContainerClient('inputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.files.file.name);
   const uploadBlobResponse = await blockBlobClient.uploadFile(req.files.file.tempFilePath)
