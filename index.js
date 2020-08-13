@@ -1,4 +1,16 @@
 const express = require('express')
+let appInsights = require('applicationinsights');
+appInsights.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
+.setAutoDependencyCorrelation(true)
+.setAutoCollectRequests(true)
+.setAutoCollectPerformance(true, true)
+.setAutoCollectExceptions(true)
+.setAutoCollectDependencies(true)
+.setAutoCollectConsole(true)
+.setUseDiskRetryCaching(true)
+.setSendLiveMetrics(false)
+.setDistributedTracingMode(appInsights.DistributedTracingModes.AI)
+.start();
 const path = require('path');
 const fileUpload = require('express-fileupload')
 const cors = require('cors')
