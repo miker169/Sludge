@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "dependencies": {
+    "@azure/keyvault-secrets": "^4.1.0",
     "ajv-errors": "^1.0.1",
     "body-parser": "^1.19.0",
     "chokidar": "^3.4.0",

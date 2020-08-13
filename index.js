@@ -6,6 +6,8 @@ const { BlobServiceClient } = require("@azure/storage-blob");
 require('dotenv').config()
 const app = express();
 const fetch = require('node-fetch');
+const {ClientSecretCredential} = require('@azure/identity');
+const {SecretClient} = require('@azure/keyvault-secrets');
 
 app.use(fileUpload({
   useTempFiles : true,
@@ -35,8 +37,12 @@ app.get('/', function (req, res) {
 });
 
 app.post('/file-upload',async function(req, res) {
-  const connectionString = process.env.DEV_DATASTORE_KEY;
-  const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
+  const clientId = process.env.clientId;
+  const clientSecret = process.env.clientSecret;
+  const tenantId = process.env.tenantId;
+  const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
+
+  const blobServiceClient = new BlobServiceClient(credential)
   const containerClient = blobServiceClient.getContainerClient('inputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.files.file.name);
   const uploadBlobResponse = await blockBlobClient.uploadFile(req.files.file.tempFilePath)
