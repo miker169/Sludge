@@ -32,10 +32,14 @@ stages:
             inputs:
               script: 'yarn run build'
           - task: ArchiveFiles@2
-            displayName: ‘Archive files’
+            displayName: 'Archive files'
             inputs:
+              rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
               includeRootFolder: false
-              
+              archiveType: zip
+              archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+              replaceExistingArchive: true
+
           - publish: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
             artifact: drop
   - stage: Deploy_dev
