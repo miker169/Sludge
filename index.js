@@ -83,7 +83,7 @@ app.post('/latest-output', async function(req, res){
 
 })
 
-const getAzureSecret = (secret_name) => {
+const getAzureSecret = async (secret_name) => {
   console.log('secret I have asked for ', secret_name);
   const clientId = process.env.clientId;
   console.log('client ID', clientId);
@@ -96,8 +96,8 @@ const getAzureSecret = (secret_name) => {
   console.log('vault url', vault_url);
   const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
   const secret_client =  new SecretClient(vault_url, credential);
-  const secret = secret_client.getSecret(secret_name);
-  console.log('secret', secret_name);
+  const secret = await secret_client.getSecret(secret_name);
+  console.log('secret', secret);
   return secret.value;
 }
 
