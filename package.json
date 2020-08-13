@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "dependencies": {
+    "@azure/identity": "^1.1.0",
     "@azure/keyvault-secrets": "^4.1.0",
     "ajv-errors": "^1.0.1",
     "applicationinsights": "^1.8.5",
