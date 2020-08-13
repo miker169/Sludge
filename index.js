@@ -52,7 +52,7 @@ app.get('/', function (req, res) {
 app.post('/file-upload',async function(req, res) {
 
   console.log('in file upload')
-  const connectionString = getAzureSecret('conn-str');
+  const connectionString = await getAzureSecret('conn-str');
   console.log(connectionString);
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('inputs');
@@ -69,7 +69,7 @@ app.post('/logging', (req, res) => {
 });
 
 app.post('/latest-output', async function(req, res){
-  const connectionString = getAzureSecret('conn-str');
+  const connectionString = await getAzureSecret('conn-str');
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('outputs');
   const blockBlobClient = containerClient.getBlockBlobClient(req.body.filename);
