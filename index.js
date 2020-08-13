@@ -21,6 +21,9 @@ const fetch = require('node-fetch');
 const {ClientSecretCredential} = require('@azure/identity');
 const {SecretClient} = require('@azure/keyvault-secrets');
 
+let runModelLink = '';
+
+
 app.use(fileUpload({
   useTempFiles : true,
   tempFileDir : "/tmp/"
@@ -46,6 +49,18 @@ app.use(express.static(path.join(__dirname, 'build'), {
   }
 }));
 app.get('/', function (req, res) {
+  console.log('About to get url for the container' )
+  fetch(process.env.startContainer, {
+    method: 'get',
+    headers: { 'Content-Type': 'application/json' },
+  }).then(res => {
+    console.log('it returned');
+    console.log(JSON.stringify(res, null, 2))
+    return res.json()
+  }).then(res => {
+    console.log('required json')
+    console.log(JSON.stringify(res, null, 2))
+  })
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
