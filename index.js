@@ -116,14 +116,32 @@ const getAzureSecret = async (secret_name) => {
   return secret.value;
 }
 
-app.post('/run-model', function(req, res) {
+const fetchRunModelUrl = async () => {
+  console.log('About to get url for the container' )
+  fetch(process.env.startContainer, {
+    method: 'get',
+    headers: { 'Content-Type': 'application/json' },
+  }).then(res => {
+    console.log('it returned');
+    console.log(JSON.stringify(res, null, 2))
+    return res.json()
+  }).then(res => {
+    console.log('required json')
+    console.log(JSON.stringify(res, null, 2))
+    return res
+  })
+}
+
+app.post('/run-model', async function(req, res) {
   req.setTimeout(900000)
   const params = req.body;
+
   console.log('Called by app')
 
     console.log('About to call run_model')
     console.log('Calling with' , JSON.stringify(req.body))
-    const runModelUrl = process.env.RUN_MODEL
+    let runModelUrl = await fetchRunModelUrl()
+    console.log('returned run Model Url', runModelUrl);
     fetch(runModelUrl, {
       method: 'post',
       body: JSON.stringify(req.body),
