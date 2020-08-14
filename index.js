@@ -122,12 +122,10 @@ const fetchRunModelUrl = async () => {
     method: 'get',
     headers: { 'Content-Type': 'application/json' },
   }).then(res => {
-    console.log('it returned');
-    console.log(JSON.stringify(res, null, 2))
+    console.log('it returned',JSON.stringify(res, null, 2))
     return res.json()
   }).then(res => {
-    console.log('required json')
-    console.log(JSON.stringify(res, null, 2))
+    console.log('required json',JSON.stringify(res, null, 2))
     return res
   })
 }
