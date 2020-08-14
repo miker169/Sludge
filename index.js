@@ -6,7 +6,7 @@ appInsights.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
 .setAutoCollectPerformance(true, true)
 .setAutoCollectExceptions(true)
 .setAutoCollectDependencies(true)
-.setAutoCollectConsole(true,true)
+.setAutoCollectConsole(true, true)
 .setUseDiskRetryCaching(true)
 .setSendLiveMetrics(false)
 .setDistributedTracingMode(appInsights.DistributedTracingModes.AI)
@@ -14,7 +14,7 @@ appInsights.setup(process.env.APPINSIGHTS_INSTRUMENTATIONKEY)
 const path = require('path');
 const fileUpload = require('express-fileupload')
 const cors = require('cors')
-const { BlobServiceClient } = require("@azure/storage-blob");
+const {BlobServiceClient} = require("@azure/storage-blob");
 require('dotenv').config()
 const app = express();
 const fetch = require('node-fetch');
@@ -25,16 +25,16 @@ let runModelLink = '';
 
 
 app.use(fileUpload({
-  useTempFiles : true,
-  tempFileDir : "/tmp/"
+  useTempFiles: true,
+  tempFileDir: "/tmp/"
 }));
 
 app.use(cors());
 
 app.use(express.json());
 
-app.use(function(req, res, next){
-  res.setTimeout(900000, function(){
+app.use(function (req, res, next) {
+  res.setTimeout(900000, function () {
 
     console.log('Request has timed out.');
     res.status(408).send('Request has timed out');
@@ -49,10 +49,10 @@ app.use(express.static(path.join(__dirname, 'build'), {
   }
 }));
 app.get('/', function (req, res) {
-  console.log('About to get url for the container' )
+  console.log('About to get url for the container')
   fetch(process.env.startContainer, {
     method: 'get',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {'Content-Type': 'application/json'},
   }).then(res => {
     console.log('it returned');
     console.log(JSON.stringify(res, null, 2))
@@ -64,7 +64,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.post('/file-upload',async function(req, res) {
+app.post('/file-upload', async function (req, res) {
 
   console.log('in file upload')
   const connectionString = await getAzureSecret('conn-str');
@@ -79,11 +79,11 @@ app.post('/file-upload',async function(req, res) {
 app.post('/logging', (req, res) => {
   console.log('About to write error log')
   console.log(JSON.stringify(req.body, null, 2))
-  console.log('A front end error occurred: ' , JSON.stringify(req.body))
+  console.log('A front end error occurred: ', JSON.stringify(req.body))
   res.status(200).send('ok')
 });
 
-app.post('/latest-output', async function(req, res){
+app.post('/latest-output', async function (req, res) {
   const connectionString = await getAzureSecret('conn-str');
   const blobServiceClient = await BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient('outputs');
@@ -110,55 +110,63 @@ const getAzureSecret = async (secret_name) => {
   const vault_url = process.env.kvUri;
   console.log('vault url', vault_url);
   const credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
-  const secret_client =  new SecretClient(vault_url, credential);
+  const secret_client = new SecretClient(vault_url, credential);
   const secret = await secret_client.getSecret(secret_name);
   console.log('secret', secret);
   return secret.value;
 }
 
 const fetchRunModelUrl = async () => {
-  console.log('About to get url for the container' )
+  console.log('About to get url for the container')
   fetch(process.env.StartContainer, {
     method: 'get',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {'Content-Type': 'application/json'},
   }).then(res => {
-    console.log('it returned',JSON.stringify(res, null, 2))
+    console.log('it returned', JSON.stringify(res, null, 2))
     return res.json()
   }).then(res => {
-    console.log('required json',JSON.stringify(res, null, 2))
+    console.log('required json', JSON.stringify(res, null, 2))
     return res
   })
 }
 
-app.post('/run-model', async function(req, res) {
+app.post('/run-model', async function (req, res) {
   req.setTimeout(900000)
   const params = req.body;
 
   console.log('Called by app')
 
-    console.log('About to call run_model')
-    console.log('Calling with' , JSON.stringify(req.body))
-    let runModelUrl = await fetchRunModelUrl()
-    console.log('returned run Model Url', runModelUrl);
-    fetch(runModelUrl, {
+  console.log('About to call run_model')
+  fetch(process.env.StartContainer, {
+    method: 'get',
+    headers: {'Content-Type': 'application/json'},
+  }).then(res => {
+    console.log('it returned', JSON.stringify(res, null, 2))
+    return res.json()
+  }).then(res => {
+    console.log('required json', JSON.stringify(res, null, 2))
+    fetch(res.ip + ':500/run_model', {
       method: 'post',
-      body: JSON.stringify(req.body),
-      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+      headers: {'Content-Type': 'application/json'},
     }).then(res => {
       console.log('About to parse json in run-model response')
       console.log(JSON.stringify(res, null, 2))
       return res.json()
     })
-      .then(json => {
-        console.log('Returning back to caller')
-        console.log(JSON.stringify(json, null, 2))
-        res.send(json);
-      })
-      .catch(err => {
-        console.log('we have an error in run-model', err.message)
-        console.log(JSON.stringify(err, null, 2))
-        res.send(err)
-      })
+    .then(json => {
+      console.log('Returning back to caller')
+      console.log(JSON.stringify(json, null, 2))
+      res.send(json);
+    })
+    .catch(err => {
+      console.log('we have an error in run-model', err.message)
+      console.log(JSON.stringify(err, null, 2))
+      res.send(err)
+    })
+  })
+  console.log('returned run Model Url', runModelUrl);
+
 })
 const PORT = process.env.PORT || 8080;
 const server = app.listen(PORT);
