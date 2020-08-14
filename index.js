@@ -140,21 +140,21 @@ app.post('/run-model', async function (req, res) {
   fetch(process.env.StartContainer, {
     method: 'get',
     headers: {'Content-Type': 'application/json'},
-  }).then(res => {
-    console.log('it returned', JSON.stringify(res, null, 2))
-    return res.json()
-  }).then(res => {
+  }).then(result => {
+    console.log('it returned', JSON.stringify(result, null, 2))
+    return result.json()
+  }).then(result => {
     console.log('required json', JSON.stringify(res, null, 2))
-    let runModelUrl = 'http://'+ res.ip + ':5000/run_model';
+    let runModelUrl = 'http://'+ result.ip + ':5000/run_model';
     console.log('About to call:  ', runModelUrl)
     fetch(runModelUrl, {
       method: 'post',
       body: JSON.stringify(params),
       headers: {'Content-Type': 'application/json'},
-    }).then(res => {
+    }).then(result => {
       console.log('About to parse json in run-model response')
       console.log(JSON.stringify(res, null, 2))
-      return res.json()
+      return result.json()
     })
     .then(json => {
       console.log('Returning back to caller')
