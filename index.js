@@ -145,7 +145,9 @@ app.post('/run-model', async function (req, res) {
     return res.json()
   }).then(res => {
     console.log('required json', JSON.stringify(res, null, 2))
-    fetch(res.ip + ':500/run_model', {
+    let runModelUrl = 'http://'+ res.ip + ':5000/run_model';
+    console.log('About to call:  ', runModelUrl)
+    fetch(runModelUrl, {
       method: 'post',
       body: JSON.stringify(params),
       headers: {'Content-Type': 'application/json'},
