@@ -118,7 +118,7 @@ const getAzureSecret = async (secret_name) => {
 
 const fetchRunModelUrl = async () => {
   console.log('About to get url for the container' )
-  fetch(process.env.startContainer, {
+  fetch(process.env.StartContainer, {
     method: 'get',
     headers: { 'Content-Type': 'application/json' },
   }).then(res => {
