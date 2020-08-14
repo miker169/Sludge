@@ -167,7 +167,6 @@ app.post('/run-model', async function (req, res) {
       res.send(err)
     })
   })
-  console.log('returned run Model Url', runModelUrl);
 
 })
 const PORT = process.env.PORT || 8080;
