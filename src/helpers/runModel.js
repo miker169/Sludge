@@ -134,7 +134,7 @@ export const runModel = (setErrorText, modelRan, setHelpText, setDownloadFileNam
       }
     }).catch(ex => {
       console.log(ex);
-      console.log(JSON.stringify(ex, null, 2));
+      //console.log(JSON.stringify(ex, null, 2));
 
       console.log('Error after calling run model', JSON.stringify(ex, null, 2))
       const error = 'Error in final catch block';
