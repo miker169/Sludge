@@ -122,10 +122,10 @@ const fetchRunModelUrl = async () => {
     method: 'get',
     headers: {'Content-Type': 'application/json'},
   }).then(res => {
-    console.log('it returned', JSON.stringify(res, null, 2))
+    //console.log('it returned', JSON.stringify(res, null, 2))
     return res.json()
   }).then(res => {
-    console.log('required json', JSON.stringify(res, null, 2))
+    //console.log('required json', JSON.stringify(res, null, 2))
     return res
   })
 }
@@ -153,17 +153,17 @@ app.post('/run-model', async function (req, res) {
       headers: {'Content-Type': 'application/json'},
     }).then(result => {
       console.log('About to parse json in run-model response')
-      console.log(JSON.stringify(res, null, 2))
+     // console.log(JSON.stringify(res, null, 2))
       return result.json()
     })
     .then(json => {
       console.log('Returning back to caller')
-      console.log(JSON.stringify(json, null, 2))
+      // console.log(JSON.stringify(json, null, 2))
       res.send(json);
     })
     .catch(err => {
       console.log('we have an error in run-model', err.message)
-      console.log(JSON.stringify(err, null, 2))
+      // console.log(JSON.stringify(err, null, 2))
       res.send(err)
     })
   })
