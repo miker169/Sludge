@@ -49,18 +49,6 @@ app.use(express.static(path.join(__dirname, 'build'), {
   }
 }));
 app.get('/', function (req, res) {
-  console.log('About to get url for the container')
-  fetch(process.env.startContainer, {
-    method: 'get',
-    headers: {'Content-Type': 'application/json'},
-  }).then(res => {
-    console.log('it returned');
-    console.log(JSON.stringify(res, null, 2))
-    return res.json()
-  }).then(res => {
-    console.log('required json')
-    console.log(JSON.stringify(res, null, 2))
-  })
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
@@ -123,7 +111,7 @@ app.post('/run-model', async function (req, res) {
 
   console.log('Called by app')
 
-  console.log('About to call run_model')
+  console.log('About to call start container')
   fetch(process.env.StartContainer, {
     method: 'get',
     headers: {'Content-Type': 'application/json'},
@@ -132,7 +120,7 @@ app.post('/run-model', async function (req, res) {
     // console.log('it returned', JSON.stringify(result, null, 2))
     return result.json()
   }).then(result => {
-    console.log('Returned a result from the json will now get the ip string');
+    console.log('Returned a result from start container now gett the ip string');
     // console.log('required json', JSON.stringify(res, null, 2))
     let runModelUrl = 'http://'+ result.ip + ':5000/run_model';
     console.log('About to call:  ', runModelUrl)
@@ -155,6 +143,14 @@ app.post('/run-model', async function (req, res) {
       console.log('we have an error in run-model', err.message)
       // console.log(JSON.stringify(err, null, 2))
       res.send(err)
+    })
+    .finally(() => {
+      fetch(process.env.StopContainer, {
+        method: 'get',
+        headers: {'Content-Type': 'application/json'},
+      }).then(() => {
+        console.log('Called stop container')
+      });
     })
   })
 
