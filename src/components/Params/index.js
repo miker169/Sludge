@@ -122,9 +122,9 @@ const Params = () => {
   return (
     <div data-testid="component-main" className="mainContainer">
       <h2 className="header">Sludge Modelling Parameters</h2>
-      <ParamsAccordion>
-        <ParamsForm disabled={false} setParams={setDefaultParams} params={params} title="Default All" />
-      </ParamsAccordion>
+      {/*<ParamsAccordion>*/}
+      {/*  <ParamsForm disabled={false} setParams={setDefaultParams} params={params} title="Default All" />*/}
+      {/*</ParamsAccordion>*/}
       <WeekendAccordion>
         <ParamsForm disabled={false} setParams={setWeekendDefaults} params={weekendParams} title="Default Weekend" />
       </WeekendAccordion>

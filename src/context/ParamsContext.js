@@ -25,9 +25,31 @@ const initialParamsObj = {
   kmperdriverliquid: 250,
   kmperdrivercake: 225,
 }
+const weekendInitialParams = {
+  distanceCalibration: 2,
+  driversLiquid: 11,
+  driversCake: 22,
+  kmperdriverliquid: 250,
+  kmperdrivercake: 225,
+}
+const weekDayInitialParams = {
+  distanceCalibration: 2,
+  driversLiquid: 30,
+  driversCake: 28,
+  kmperdriverliquid: 250,
+  kmperdrivercake: 225,
+}
 dates.forEach((date) => {
-  initialParamsList[date] = {
-    ...initialParamsObj
+  let theDate = moment(date, "DD/MM/YYYY");
+  let isWeekend  = theDate.isoWeekday() === 6 || theDate.isoWeekday() === 7;
+  if(isWeekend){
+    initialParamsList[date] = {
+      ...weekendInitialParams
+    }
+  }else{
+    initialParamsList[date] = {
+      ...weekDayInitialParams
+    }
   }
 })
 
@@ -44,15 +66,15 @@ export const ParamsContextProvider = ({children}) => {
   const [paramsList, setParamsList] = React.useState(initialParamsList);
   const [weekdayParams, setWeekdayParams] = React.useState({
     distanceCalibration: 2,
-    driversLiquid: 4,
-    driversCake: 1,
+    driversLiquid: 30,
+    driversCake: 28,
     kmperdriverliquid: 250,
     kmperdrivercake: 225,
   })
   const [weekendParams, setWeekEndParams] = React.useState({
     distanceCalibration: 2,
-    driversLiquid: 4,
-    driversCake: 1,
+    driversLiquid: 11,
+    driversCake: 22,
     kmperdriverliquid: 250,
     kmperdrivercake: 225,
   });
