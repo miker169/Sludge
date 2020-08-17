@@ -128,9 +128,11 @@ app.post('/run-model', async function (req, res) {
     method: 'get',
     headers: {'Content-Type': 'application/json'},
   }).then(result => {
+    console.log('Returned a value from start container')
     // console.log('it returned', JSON.stringify(result, null, 2))
     return result.json()
   }).then(result => {
+    console.log('Returned a result from the json will now get the ip string');
     // console.log('required json', JSON.stringify(res, null, 2))
     let runModelUrl = 'http://'+ result.ip + ':5000/run_model';
     console.log('About to call:  ', runModelUrl)
@@ -139,6 +141,7 @@ app.post('/run-model', async function (req, res) {
       body: JSON.stringify(params),
       headers: {'Content-Type': 'application/json'},
     }).then(result => {
+      console.log('Retrieved a result')
       console.log('About to parse json in run-model response')
      // console.log(JSON.stringify(res, null, 2))
       return result.json()
