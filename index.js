@@ -116,19 +116,6 @@ const getAzureSecret = async (secret_name) => {
   return secret.value;
 }
 
-const fetchRunModelUrl = async () => {
-  console.log('About to get url for the container')
-  fetch(process.env.StartContainer, {
-    method: 'get',
-    headers: {'Content-Type': 'application/json'},
-  }).then(res => {
-    //console.log('it returned', JSON.stringify(res, null, 2))
-    return res.json()
-  }).then(res => {
-    //console.log('required json', JSON.stringify(res, null, 2))
-    return res
-  })
-}
 
 app.post('/run-model', async function (req, res) {
   req.setTimeout(900000)
