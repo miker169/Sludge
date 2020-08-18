@@ -1,12 +1,14 @@
 import React from 'react';
 import './InfoText.css';
+import * as errors from  '../../../../errors.json'
 
 const InfoText = ({messages = [], type}) => {
+
 
   const renderErrorRow = (type, messages) => {
     return (
       <>
-        <span className="info-help-title">{`${type} Messages`}</span>
+        <span className="info-help-title">{`${errors[type]} Messages`}</span>
         <div className="infoErrors">
           {messages.map((s, idx) => <span key={idx} data-testid={`${type}-message`}>{s}</span>)}
         </div>

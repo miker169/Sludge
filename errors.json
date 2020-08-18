@@ -1,0 +1,15 @@
+{
+  "wrong_col_number": "Incorrect number of columns",
+  "wrong_col_name": "Incorrect column names",
+  "wrong_col_type": "Incorrect column types (check for characters in numeric columns)",
+  "column_nans": "Missing values in data",
+  "wrong_dates": "Unmatched dates against production file",
+  "incorrect_rank_range": "Incorrect range of site ranks",
+  "duplicate_rank_id_or_type": "Duplicate rank ID or type",
+  "incorrect_types": "Incorrect site types",
+  "incorrect_rank_total": "Incorrect sum of site ranks",
+  "unmatching_ranks_across_sheets": "Sheet has unmatching site ranks vs production file",
+  "unmatching_ids_across_sheets": "Sheet has unmatching site ids vs production file",
+  "unmatching_types_across_sheets": "Sheet has unmatching site types vs production file",
+  "unmatching_catchments_across_sheets": "Sheet has unmatching site catchments vs production file"
+}
