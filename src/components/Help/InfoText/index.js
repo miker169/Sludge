@@ -1,6 +1,6 @@
 import React from 'react';
 import './InfoText.css';
-import * as errors from  '../../../../errors.json'
+import * as errors from '../errors.json'
 
 const InfoText = ({messages = [], type}) => {
 
